@@ -43,9 +43,6 @@ for (const width of [1440, 375]) {
     permissions: ["clipboard-read", "clipboard-write"],
   });
   const page = await context.newPage();
-  const taskSnapshot = page
-    .waitForResponse((r) => new URL(r.url()).pathname === "/api/tasks")
-    .then((r) => r.json());
   const result = {
     width,
     fresh_process: true,
@@ -86,7 +83,10 @@ for (const width of [1440, 375]) {
       graph_revision: 16,
       provider_configured: false,
     });
-    const landing = await page.goto(origin + "/");
+    const landing = await page.goto(origin + "/", {
+      waitUntil: "domcontentloaded",
+      timeout: 30000,
+    });
     expect(landing.status()).toBe(200);
     await expect(page.locator(".hero-counts strong").first()).toHaveText("12", {
       timeout: 15000,
@@ -219,7 +219,9 @@ for (const width of [1440, 375]) {
     await page.getByRole("tab", { name: /03 Action Board/ }).click();
     const cards = page.locator(".task-card");
     await expect(cards.first()).toBeVisible();
-    const tasks = (await taskSnapshot).tasks;
+    const tasks = (
+      await (await context.request.get(origin + "/api/tasks")).json()
+    ).tasks;
     for (const card of await cards.all()) {
       if (
         !(await card
