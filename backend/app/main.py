@@ -2,7 +2,7 @@ import json
 import uuid
 from threading import Lock
 from fastapi import FastAPI, Depends, Query, Request
-from fastapi.responses import JSONResponse, FileResponse
+from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from backend.app.settings import ROOT, settings
 from backend.app.security import require_admin
@@ -322,4 +322,13 @@ if DIST.exists():
     @app.get("/")
     @app.get("/studio")
     def spa():
-        return FileResponse(DIST / "index.html")
+        mode = (
+            settings.mode
+            if settings.mode in ("public-readonly", "local-admin")
+            else "public-readonly"
+        )
+        html = (DIST / "index.html").read_text().replace(
+            'name="decisiondebt-mode" content="unknown"',
+            f'name="decisiondebt-mode" content="{mode}"',
+        )
+        return HTMLResponse(html, headers={"Cache-Control": "no-store"})

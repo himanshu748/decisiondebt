@@ -23,6 +23,22 @@ services:
       args:
         DD_COMMIT: ${DD_COMMIT:-local}
     container_name: decisiondebt-public-api
+    command:
+      - uvicorn
+      - backend.app.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --workers
+      - "1"
+      - --proxy-headers
+      - --forwarded-allow-ips
+      - "${DD_TRUSTED_PROXY_IPS:-}"
+      - --limit-concurrency
+      - "32"
+      - --timeout-keep-alive
+      - "5"
     ports:
       - "${DD_BIND_ADDRESS:-0.0.0.0}:${DD_PUBLIC_PORT:-8081}:8000"
     environment:

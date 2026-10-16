@@ -1,17 +1,20 @@
 import { Check, ArrowUpRight, UserRound } from "lucide-react";
 import { useState } from "react";
 import type { Task } from "../types";
+import { PUBLIC_WRITE_REASON } from "../deployment";
 export default function ActionBoard({
   tasks,
   onApprove,
   onEvidence,
   admin,
+  publicReadOnly = false,
   busy,
 }: {
   tasks: Task[];
   onApprove: (id: string) => void;
   onEvidence: (id: string) => void;
   admin: boolean;
+  publicReadOnly?: boolean;
   busy: boolean;
 }) {
   const [history, setHistory] = useState(false);
@@ -82,6 +85,10 @@ export default function ActionBoard({
                 <button
                   className="button small"
                   disabled={!admin || busy}
+                  title={publicReadOnly ? PUBLIC_WRITE_REASON : undefined}
+                  aria-describedby={
+                    publicReadOnly ? "public-write-reason" : undefined
+                  }
                   onClick={() => onApprove(t.id)}
                 >
                   Approve locally

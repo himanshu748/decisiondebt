@@ -24,6 +24,11 @@ import {
   X,
 } from "lucide-react";
 import { api } from "./api";
+import {
+  deploymentMode,
+  PUBLIC_WRITE_REASON,
+  RECORDED_DEMO,
+} from "./deployment";
 import type {
   Claim,
   Drift,
@@ -79,7 +84,11 @@ export default function App() {
   const [confirm, setConfirm] = useState<{ kind: string; id: string } | null>(
     null,
   );
-  const [mode, setMode] = useState("local-admin");
+  const [mode, setMode] = useState(deploymentMode);
+  const publicReadOnly = mode === "public-readonly";
+  const writeHelp = publicReadOnly
+    ? { title: PUBLIC_WRITE_REASON, "aria-describedby": "public-write-reason" }
+    : {};
   const [agentMode, setAgentMode] = useState("deterministic");
   const [query, setQuery] = useState("OrionAuth");
   const [results, setResults] = useState<
@@ -302,6 +311,11 @@ export default function App() {
     : 0;
   return (
     <div className="app-shell studio">
+      {publicReadOnly && (
+        <p id="public-write-reason" className="sr-only">
+          {PUBLIC_WRITE_REASON}
+        </p>
+      )}
       <aside className="sidebar">
         <a className="brand" href="/" aria-label="DecisionDebt home">
           <span className="brand-mark">
@@ -370,6 +384,7 @@ export default function App() {
         </div>
         <button
           className="admin-link"
+          {...writeHelp}
           disabled={mode === "public-readonly"}
           onClick={() => setAdminDialog(true)}
         >
@@ -391,6 +406,7 @@ export default function App() {
           <div className="topbar-status">
             <button
               className="topbar-import button small"
+              {...writeHelp}
               disabled={!admin || busy}
               onClick={() => setImportDialog(true)}
             >
@@ -499,14 +515,24 @@ export default function App() {
             ) : !preview ? (
               <div className="empty">
                 <Database />
-                <h2>Live graph required</h2>
+                <h2>
+                  {publicReadOnly
+                    ? "Live graph temporarily unavailable"
+                    : "Live graph required"}
+                </h2>
                 <p>
-                  Start FalkorDB and import the synthetic corpus, then retry. No
-                  recorded results replace live data.
+                  {publicReadOnly
+                    ? "The live graph didn't respond. Retry, or watch the recorded demo."
+                    : "Start FalkorDB and import the synthetic corpus, then retry. No recorded results replace live data."}
                 </p>
                 <button className="button primary" onClick={() => void load()}>
                   Retry connection
                 </button>
+                {publicReadOnly && (
+                  <p>
+                    <a href={RECORDED_DEMO}>Watch the recorded demo</a>
+                  </p>
+                )}
               </div>
             ) : (
               <>
@@ -750,12 +776,19 @@ export default function App() {
                         <button
                           className="button primary"
                           disabled={busy || !admin}
+                          {...writeHelp}
                           onClick={() => void investigate()}
                         >
                           <Play size={14} />
                           {busy ? "Investigating…" : "Run investigation"}
                         </button>
-                        {!admin && <small>Unlock local admin to run.</small>}
+                        {!admin && (
+                          <small>
+                            {publicReadOnly
+                              ? PUBLIC_WRITE_REASON
+                              : "Unlock local admin to run."}
+                          </small>
+                        )}
                       </div>
                     </section>
                     <div className="lower-grid">
@@ -800,6 +833,7 @@ export default function App() {
                         <button
                           className="button"
                           disabled={!admin || busy}
+                          {...writeHelp}
                           onClick={() => setImportDialog(true)}
                         >
                           Import new evidence <ArrowRight size={14} />
@@ -959,6 +993,7 @@ export default function App() {
                         <button
                           className="button"
                           disabled={!admin || busy}
+                          {...writeHelp}
                           onClick={() => void investigate()}
                         >
                           <Play size={14} />
@@ -1013,6 +1048,7 @@ export default function App() {
                       <button
                         className="button primary"
                         disabled={!admin || busy}
+                        {...writeHelp}
                         onClick={() => void investigate()}
                       >
                         <Play size={14} />
@@ -1022,6 +1058,7 @@ export default function App() {
                     <ActionBoard
                       tasks={tasks}
                       admin={admin}
+                      publicReadOnly={publicReadOnly}
                       busy={busy}
                       onApprove={(id) => setConfirm({ kind: "task", id })}
                       onEvidence={(id) => void inspect(id)}
@@ -1139,6 +1176,7 @@ export default function App() {
                 <button
                   className="button primary"
                   disabled={!tokenDraft || mode === "public-readonly"}
+                  {...writeHelp}
                   onClick={() => {
                     setToken(tokenDraft);
                     setTokenDraft("");
@@ -1190,7 +1228,8 @@ export default function App() {
                 </button>
                 <button
                   className="button primary"
-                  disabled={busy || !importBody}
+                  disabled={publicReadOnly || busy || !importBody}
+                  {...writeHelp}
                   onClick={() => void doImport()}
                 >
                   Import and refresh live preview <ArrowRight size={14} />
@@ -1212,7 +1251,8 @@ export default function App() {
                 <p className="mono">{confirm?.id}</p>
                 <button
                   className="button primary"
-                  disabled={busy}
+                  disabled={publicReadOnly || busy}
+                  {...writeHelp}
                   onClick={() => void doConfirm()}
                 >
                   Confirm{" "}

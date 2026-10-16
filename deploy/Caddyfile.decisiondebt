@@ -1,0 +1,17 @@
+decisiondebt.52.202.25.181.sslip.io {
+    encode zstd gzip
+    reverse_proxy 172.18.0.1:8081 {
+        header_up X-Forwarded-For {remote_host}
+    }
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+    }
+    log {
+        output file /data/decisiondebt/access.jsonl {
+            roll_size 5MiB
+            roll_keep 5
+        }
+        format json
+    }
+}
