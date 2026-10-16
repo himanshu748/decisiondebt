@@ -17,9 +17,12 @@ DecisionDebt connects a company's people, teams, projects, services, documents a
 | Why FalkorDB is central | [Load-bearing operations and queries](https://github.com/himanshu748/decisiondebt/blob/main/README.md#why-falkordb-is-load-bearing) |
 | Decision lineage | [Live graph records](https://decisiondebt.52.202.25.181.sslip.io/api/decisions) |
 | Agent results and work | [Action Board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) |
+| Live company questions | [Ask the company graph](https://decisiondebt.52.202.25.181.sslip.io/studio#ask-company-graph) · [Read-only templates](https://github.com/himanshu748/decisiondebt/blob/main/backend/app/graph/ask_queries.py) |
 | CI | [GitHub Actions](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml) |
 
 ## What the working demonstration establishes
+
+The question box and client-side ticket exports were added after the [recorded demo](https://youtu.be/_a0vrYwOlME); the video is unchanged. Public visitors can ask the five supported company-question types using deterministic, source-cited FalkorDB reads, and copy/download existing draft tasks without changing the graph or creating external tickets.
 
 All records belong to fictional Aster Works. The [original corpus receipt](https://github.com/himanshu748/decisiondebt/blob/main/evidence/query-results/initial-preview.json) and [synthetic snapshot](https://github.com/himanshu748/decisiondebt/blob/main/evidence/deployment/graph-snapshot-20261016.json) make the dataset reproducible. Native graph queries establish multi-hop impact, ownership, connected projects and document provenance; the browser displays those returned results.
 

@@ -10,7 +10,7 @@
 
 DecisionDebt connects a company's people, teams, projects, documents and decisions in one source-backed graph. It shows which services and projects a proposed decision affects, and who needs to be involved. Its agent investigates missing or conflicting knowledge and proposes remediation drafts for a person to review before local approval.
 
-**All Aster Works records are fictional.** The public demo is read-only and displays a recorded provider investigation; it makes no LLM calls. [Complete local setup](#run-locally) supports the protected import and approval workflows shown in the video.
+**All Aster Works records are fictional.** The public demo answers supported company questions live without an LLM and also displays a recorded provider investigation. [Complete local setup](#run-locally) supports the protected import and approval workflows shown in the video.
 
 ![Decision studio, recorded local screenshot](evidence/screenshots/desktop-preview.png)
 
@@ -30,11 +30,29 @@ The demo imports an additional source, so a used local graph can have 95 sources
 The [Track 03 brief](https://www.wemakedevs.org/hackathons/falkordb#tracks) asks for connected company knowledge that an agent can use to answer questions and get work done. DecisionDebt maps that brief to these working paths:
 
 - **One company graph:** people belong to teams, people own services and author sources, projects use services, and decisions change services. Documents, tickets and chats supply anchored claims. See the [graph model](#graph-model), [extractor](backend/app/ingest/extract.py) and [synthetic graph snapshot](evidence/deployment/graph-snapshot-20261016.json).
-- **Answer a company question:** “What would replacing OrionAuth affect?” The [reverse multi-hop query](backend/app/graph/queries.py) finds services; connected project, owner and document queries add responsibility and review context. Inspect the [live preview](https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview).
+- **Answer a company question:** ask “Who owns Session Broker?” or “What would replacing Auth Gateway affect?” in the [live question box](https://decisiondebt.52.202.25.181.sslip.io/studio#ask-company-graph). [Fixed Cypher templates](backend/app/graph/ask_queries.py) join service dependencies, owners, teams, projects and source evidence. Each answer exposes parameters, row counts, timings and exact source spans; no provider is invoked.
 - **Trace the decision:** the [live decision lineage record](https://decisiondebt.52.202.25.181.sslip.io/api/decisions) preserves the accepted predecessor, proposed successor and approval history. The proposal remains proposed; a `SUPERSEDES` edge is created only after separate acceptance. The [source-anchored preview receipt](evidence/query-results/initial-preview.json) records the intended comparison.
 - **Turn evidence into work:** the [recorded agent trace](evidence/agent-traces/llm-run.json) investigates missing ownership, conflicting primary owners and an unlinked mention. The [action board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) presents its local drafts. The [recorded import/retraction](evidence/query-results/dynamic-import.json) shows how a new source changes the graph and its affected set.
 
 The prototype answers bounded decision-impact and ownership questions. Team membership is stored as source-backed graph knowledge; general company chat and external ticket execution are outside its implemented scope.
+
+## Ask the company graph
+
+Use the [studio question box](https://decisiondebt.52.202.25.181.sslip.io/studio#ask-company-graph) or the landing-page teaser. Deterministic intent matching selects these [parameterized read-only templates](backend/app/graph/ask_queries.py); fuzzy matching reads the current Service nodes and asks you to confirm uncertain names. Unsupported questions list the supported shapes instead of guessing.
+
+| Supported question | Template | Answer |
+|---|---|---|
+| Who owns Session Broker? | `OWNERS` | Verified primary owners, unresolved conflicts or a recorded ownership gap |
+| What depends on Auth Gateway? / What would replacing Auth Gateway affect? | `DEPENDENTS` + `FRONTIER` | Reverse paths bounded to five hops, including the target; the preview's truncation semantics |
+| Which projects use Billing API? | `PROJECTS` | Direct project usage with supporting claims |
+| Who should review a change to Auth Gateway? | `REVIEWERS` | Owners and their connected teams across the bounded affected services, retaining gaps/conflicts |
+| What documents mention Auth Gateway? | `DOCUMENTS` | Native full-text candidates, then an exact alias/body-span recheck against the active source revision |
+
+Every supported answer includes executed Cypher, bound parameters, raw query row counts, total answer rows, client-measured query durations and hash-verified source spans. Document search considers up to 80 candidates per recorded alias; a search score is not certainty. [Intent and ambiguity tests](backend/tests/unit/test_ask.py) · [Native template and public-boundary tests](backend/tests/integrations/test_ask_native.py) · [Browser and ticket-export tests](web/tests/ask-graph.spec.ts).
+
+The [Action Board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) can copy or download each draft as a Markdown ticket with its reason, evidence and suggested owner (or “unassigned: needs decision”). Exports happen entirely in the browser. All graph writes remain forbidden in public mode, with the existing rate limits and no provider key.
+
+The question box and client-side ticket exports were added after the [recorded demo](https://youtu.be/_a0vrYwOlME); the video is unchanged.
 
 ## Run locally
 
