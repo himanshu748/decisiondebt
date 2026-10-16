@@ -1,6 +1,6 @@
 decisiondebt.52.202.25.181.sslip.io {
     encode zstd gzip
-    reverse_proxy 172.18.0.1:8081 {
+    reverse_proxy decisiondebt-public-api:8000 {
         header_up X-Forwarded-For {remote_host}
     }
     header {

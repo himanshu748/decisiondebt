@@ -1,0 +1,9 @@
+# Optional ingress attachment for the existing shared Lightsail proxy.
+# Only DecisionDebt's API joins it; the graph remains on its internal network.
+services:
+  api:
+    networks: [graph, web, shared-proxy]
+networks:
+  shared-proxy:
+    name: embodiweave-net
+    external: true
