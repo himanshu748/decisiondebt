@@ -1,0 +1,3 @@
+Full ffmpeg video/audio decode with fps=30 output filter completed with exit 0; -v error log empty.
+MP4 video packet DTS is strictly increasing across all 5322 packets.
+The first unfiltered null-sink decode warned about three duplicate/rounded sink timestamps; those were not MP4 packet DTS violations or codec errors.

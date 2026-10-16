@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144c6-e67b-73f0-a439-c18ffd93aacf",
+    "sha256": "914549aee01b87e665f61dfc69cf002546256763a9e34994a97e64bccd690346",
+    "created": "2026-10-16T12:54:10.993Z",
+    "duration": 16.12,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "The action board turns those findings into source backed drafts. Approval requires a separate confirmation. This demonstration approves only a local task. It does not assign the disputed owner, execute an external ticket, or accept the migration decision.",
+            "confidence": 0.9973958,
+            "words": [
+              {
+                "word": "the",
+                "start": 0.0,
+                "end": 0.32,
+                "confidence": 0.96777344,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "action",
+                "start": 0.32,
+                "end": 0.64,
+                "confidence": 0.59375,
+                "punctuated_word": "action"
+              },
+              {
+                "word": "board",
+                "start": 0.64,
+                "end": 0.96,
+                "confidence": 0.9892578,
+                "punctuated_word": "board"
+              },
+              {
+                "word": "turns",
+                "start": 0.96,
+                "end": 1.36,
+                "confidence": 0.99902344,
+                "punctuated_word": "turns"
+              },
+              {
+                "word": "those",
+                "start": 1.36,
+                "end": 1.5999999,
+                "confidence": 0.99609375,
+                "punctuated_word": "those"
+              },
+              {
+                "word": "findings",
+                "start": 1.5999999,
+                "end": 2.08,
+                "confidence": 1.0,
+                "punctuated_word": "findings"
+              },
+              {
+                "word": "into",
+                "start": 2.08,
+                "end": 2.3999999,
+                "confidence": 0.9980469,
+                "punctuated_word": "into"
+              },
+              {
+                "word": "source",
+                "start": 2.3999999,
+                "end": 2.8,
+                "confidence": 0.9370117,
+                "punctuated_word": "source"
+              },
+              {
+                "word": "backed",
+                "start": 2.8,
+                "end": 3.12,
+                "confidence": 0.99316406,
+                "punctuated_word": "backed"
+              },
+              {
+                "word": "drafts",
+                "start": 3.12,
+                "end": 4.08,
+                "confidence": 0.9973958,
+                "punctuated_word": "drafts."
+              },
+              {
+                "word": "approval",
+                "start": 4.4,
+                "end": 4.88,
+                "confidence": 0.9970703,
+                "punctuated_word": "Approval"
+              },
+              {
+                "word": "requires",
+                "start": 4.88,
+                "end": 5.3599997,
+                "confidence": 1.0,
+                "punctuated_word": "requires"
+              },
+              {
+                "word": "a",
+                "start": 5.3599997,
+                "end": 5.6,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "separate",
+                "start": 5.6,
+                "end": 5.92,
+                "confidence": 0.9980469,
+                "punctuated_word": "separate"
+              },
+              {
+                "word": "confirmation",
+                "start": 5.92,
+                "end": 6.8,
+                "confidence": 0.9909668,
+                "punctuated_word": "confirmation."
+              },
+              {
+                "word": "this",
+                "start": 7.2,
+                "end": 7.52,
+                "confidence": 0.9741211,
+                "punctuated_word": "This"
+              },
+              {
+                "word": "demonstration",
+                "start": 7.52,
+                "end": 8.08,
+                "confidence": 0.9980469,
+                "punctuated_word": "demonstration"
+              },
+              {
+                "word": "approves",
+                "start": 8.08,
+                "end": 8.639999,
+                "confidence": 0.99902344,
+                "punctuated_word": "approves"
+              },
+              {
+                "word": "only",
+                "start": 8.639999,
+                "end": 8.96,
+                "confidence": 0.99902344,
+                "punctuated_word": "only"
+              },
+              {
+                "word": "a",
+                "start": 8.96,
+                "end": 9.12,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "local",
+                "start": 9.12,
+                "end": 9.44,
+                "confidence": 0.9980469,
+                "punctuated_word": "local"
+              },
+              {
+                "word": "task",
+                "start": 9.44,
+                "end": 10.16,
+                "confidence": 0.76953125,
+                "punctuated_word": "task."
+              },
+              {
+                "word": "it",
+                "start": 10.24,
+                "end": 10.4,
+                "confidence": 0.94970703,
+                "punctuated_word": "It"
+              },
+              {
+                "word": "does",
+                "start": 10.4,
+                "end": 10.639999,
+                "confidence": 0.9980469,
+                "punctuated_word": "does"
+              },
+              {
+                "word": "not",
+                "start": 10.639999,
+                "end": 10.8,
+                "confidence": 0.9980469,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "assign",
+                "start": 10.8,
+                "end": 11.12,
+                "confidence": 0.9970703,
+                "punctuated_word": "assign"
+              },
+              {
+                "word": "the",
+                "start": 11.12,
+                "end": 11.36,
+                "confidence": 0.9980469,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "disputed",
+                "start": 11.36,
+                "end": 11.84,
+                "confidence": 0.9980469,
+                "punctuated_word": "disputed"
+              },
+              {
+                "word": "owner",
+                "start": 11.84,
+                "end": 12.48,
+                "confidence": 0.9916992,
+                "punctuated_word": "owner,"
+              },
+              {
+                "word": "execute",
+                "start": 12.559999,
+                "end": 13.12,
+                "confidence": 0.9980469,
+                "punctuated_word": "execute"
+              },
+              {
+                "word": "an",
+                "start": 13.12,
+                "end": 13.36,
+                "confidence": 0.99902344,
+                "punctuated_word": "an"
+              },
+              {
+                "word": "external",
+                "start": 13.36,
+                "end": 13.759999,
+                "confidence": 0.99609375,
+                "punctuated_word": "external"
+              },
+              {
+                "word": "ticket",
+                "start": 13.759999,
+                "end": 14.48,
+                "confidence": 0.98657227,
+                "punctuated_word": "ticket,"
+              },
+              {
+                "word": "or",
+                "start": 14.48,
+                "end": 14.639999,
+                "confidence": 0.99902344,
+                "punctuated_word": "or"
+              },
+              {
+                "word": "accept",
+                "start": 14.639999,
+                "end": 14.96,
+                "confidence": 0.9970703,
+                "punctuated_word": "accept"
+              },
+              {
+                "word": "the",
+                "start": 14.96,
+                "end": 15.12,
+                "confidence": 0.9951172,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "migration",
+                "start": 15.12,
+                "end": 15.599999,
+                "confidence": 0.9951172,
+                "punctuated_word": "migration"
+              },
+              {
+                "word": "decision",
+                "start": 15.599999,
+                "end": 16.08,
+                "confidence": 0.9255371,
+                "punctuated_word": "decision."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nThe action board turns those findings into source backed drafts. Approval requires a separate confirmation. This demonstration approves only a local task. It does not assign the disputed owner, execute an external ticket, or accept the migration decision.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "The action board turns those findings into source backed drafts.",
+                      "start": 0.0,
+                      "end": 4.08
+                    },
+                    {
+                      "text": "Approval requires a separate confirmation.",
+                      "start": 4.4,
+                      "end": 6.8
+                    },
+                    {
+                      "text": "This demonstration approves only a local task.",
+                      "start": 7.2,
+                      "end": 10.16
+                    },
+                    {
+                      "text": "It does not assign the disputed owner, execute an external ticket, or accept the migration decision.",
+                      "start": 10.24,
+                      "end": 16.08
+                    }
+                  ],
+                  "num_words": 38,
+                  "start": 0.0,
+                  "end": 16.08
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

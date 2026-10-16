@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144c7-04f2-7e43-bad0-602bcff0ce65",
+    "sha256": "8ec63e48ab4360d1d0dccca7d31e75275cf0063e9d9a1c2f2864c706fa47717f",
+    "created": "2026-10-16T12:54:17.762Z",
+    "duration": 4.96,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "DecisionDebt company Brain. Track three. Voiced by Deepgram.",
+            "confidence": 0.9848633,
+            "words": [
+              {
+                "word": "decisiondebt",
+                "start": 0.0,
+                "end": 0.96,
+                "confidence": 0.9848633,
+                "punctuated_word": "DecisionDebt"
+              },
+              {
+                "word": "company",
+                "start": 0.96,
+                "end": 1.36,
+                "confidence": 0.6586914,
+                "punctuated_word": "company"
+              },
+              {
+                "word": "brain",
+                "start": 1.36,
+                "end": 2.1599998,
+                "confidence": 0.609375,
+                "punctuated_word": "Brain."
+              },
+              {
+                "word": "track",
+                "start": 2.32,
+                "end": 2.6399999,
+                "confidence": 0.99902344,
+                "punctuated_word": "Track"
+              },
+              {
+                "word": "three",
+                "start": 2.6399999,
+                "end": 3.4399998,
+                "confidence": 0.96875,
+                "punctuated_word": "three."
+              },
+              {
+                "word": "voiced",
+                "start": 3.6,
+                "end": 4.0,
+                "confidence": 0.81347656,
+                "punctuated_word": "Voiced"
+              },
+              {
+                "word": "by",
+                "start": 4.0,
+                "end": 4.24,
+                "confidence": 1.0,
+                "punctuated_word": "by"
+              },
+              {
+                "word": "deepgram",
+                "start": 4.24,
+                "end": 4.88,
+                "confidence": 0.99853516,
+                "punctuated_word": "Deepgram."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nDecisionDebt company Brain. Track three. Voiced by Deepgram.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "DecisionDebt company Brain.",
+                      "start": 0.0,
+                      "end": 2.1599998
+                    },
+                    {
+                      "text": "Track three.",
+                      "start": 2.32,
+                      "end": 3.4399998
+                    },
+                    {
+                      "text": "Voiced by Deepgram.",
+                      "start": 3.6,
+                      "end": 4.88
+                    }
+                  ],
+                  "num_words": 8,
+                  "start": 0.0,
+                  "end": 4.88
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

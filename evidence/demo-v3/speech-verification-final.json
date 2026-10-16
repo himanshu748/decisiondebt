@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-10-16T13:16:40.642917+00:00",
+  "provider": "Deepgram",
+  "model": "nova-3",
+  "method": "Reused verified per-segment word timestamps only after checking each narration file's exact SHA-256; shifted onto the new actual edit timeline",
+  "checks": {
+    "missing_owner_negation_present": true,
+    "recorded_provider_explicit": true,
+    "no_current_llm_call": true,
+    "closing_names_track": true,
+    "closing_discloses_voice_provider": true,
+    "all_source_audio_hashes_match": true
+  },
+  "passed": true,
+  "caption_cues": 61,
+  "source_transcriptions": [
+    {
+      "id": "01-intro",
+      "path": "evidence/demo-v3/01-intro.wav",
+      "start_seconds": 0.25,
+      "audio_sha256": "fe0b2a48c270bd0c8fca4f0186d847f62b45e6daa6a77c820b02ade136808daf",
+      "request_id": "01a144c6-b957-74a2-8015-68162dada081",
+      "transcript": "Know what a decision breaks before you make it. DecisionDebt connects company knowledge to the evidence behind it. This is a working browser recording using fictional AsterWORKS data."
+    },
+    {
+      "id": "02-impact",
+      "path": "evidence/demo-v3/02-impact.wav",
+      "start_seconds": 15.316666666666666,
+      "audio_sha256": "d0766a2a44626e2de48aaa4d267bb74c267317c32b2cf41e7481b3fafdd17cc5",
+      "request_id": "01a144c6-b956-7d81-bcb8-b79a3962535f",
+      "transcript": "Let's replace OrionAuth with NovaID. Before accepting that decision, FalkorDB traces the incoming dependency paths. 12 services and 12 projects are within five hops. The preview discloses that further consumers exist beyond this boundary."
+    },
+    {
+      "id": "03-conflict",
+      "path": "evidence/demo-v3/03-conflict.wav",
+      "start_seconds": 33.91666666666667,
+      "audio_sha256": "ea9af93102b223a6390625422d5dab7e8524ec72c64b5b27a6c4fc6b0c72b9cf",
+      "request_id": "01a144c6-c6c5-7971-95dd-2d817dbe80dc",
+      "transcript": "Session broker has two verified paths to the proposed change, but two people are claimed as its primary owner. Open the original source to inspect the exact context, claim anchors and source hash. The conflict stays visible."
+    },
+    {
+      "id": "04-unowned",
+      "path": "evidence/demo-v3/04-unowned.wav",
+      "start_seconds": 51.483333333333334,
+      "audio_sha256": "04447bcff15d289b659d14031f82e24cb250c451934130894f804618b3019752",
+      "request_id": "01a144c6-c7de-7472-a7c4-a1b4975da17a",
+      "transcript": "Token Cache presents a different problem. No verified primary owner. A dependency sentence can establish a service connection, but it cannot identify who owns the service. DecisionDebt leaves that owner unassigned."
+    },
+    {
+      "id": "05-drift",
+      "path": "evidence/demo-v3/05-drift.wav",
+      "start_seconds": 67.15,
+      "audio_sha256": "909b7c0f7c6c1c0d4567ade3385424de83f183740685fab76f4e9243a74aa419",
+      "request_id": "01a144c6-d7cb-75a3-b840-c3dce837e6ea",
+      "transcript": "The Evidence view separates an obsolete decision citation, a suspected unlinked mention, and an overdue review. Here, the old OrionAuth name appears in a document. Native full text search finds it, but that mention alone does not prove a Dependency."
+    },
+    {
+      "id": "06-agent",
+      "path": "evidence/demo-v3/06-agent.wav",
+      "start_seconds": 86.98333333333333,
+      "audio_sha256": "93f572c1c8c3d430074f911272e37dbe7bcf62d9ea158d795572ed509b2f5d72",
+      "request_id": "01a144c6-d95f-7df1-b330-cd00712e4136",
+      "transcript": "This is the previously recorded real model investigation, not a new model call. The trace shows coverage of the missing owner, conflicting owners, and unlinked mention. The model's tool calls and corrections remain inspectable alongside the evidence."
+    },
+    {
+      "id": "07-actions",
+      "path": "evidence/demo-v3/07-actions.wav",
+      "start_seconds": 104.18333333333334,
+      "audio_sha256": "914549aee01b87e665f61dfc69cf002546256763a9e34994a97e64bccd690346",
+      "request_id": "01a144c6-e67b-73f0-a439-c18ffd93aacf",
+      "transcript": "The action board turns those findings into source backed drafts. Approval requires a separate confirmation. This demonstration approves only a local task. It does not assign the disputed owner, execute an external ticket, or accept the migration decision."
+    },
+    {
+      "id": "08-import",
+      "path": "evidence/demo-v3/08-import.wav",
+      "start_seconds": 124.71666666666667,
+      "audio_sha256": "5d022d283217a0b0739b0d2305955dd16dd08a4c04a056ec8f3ad06284fee4d4",
+      "request_id": "01a144c6-e836-70b0-bc35-a6c7fcee0d37",
+      "transcript": "Now add a synthetic ticket stating that external portal depends on billing a p one. This is a live import into a separate recording database. The next graph query includes external portal, increasing the affected set from 12 services to 13."
+    },
+    {
+      "id": "09-retract",
+      "path": "evidence/demo-v3/09-retract.wav",
+      "start_seconds": 144.55,
+      "audio_sha256": "6388c72486e02db48fdef90512e8655b1163cdee3442a1f2f0c65f1ebb171de7",
+      "request_id": "01a144c6-f4e8-74c2-96cb-652de9cb599a",
+      "transcript": "Update that same ticket to remove its dependency assertion. Only this source's support retracts, its revision history is retained, and the next preview returns to 12 affected services. The decision itself is still proposed."
+    },
+    {
+      "id": "10-query",
+      "path": "evidence/demo-v3/10-query.wav",
+      "start_seconds": 165.98333333333335,
+      "audio_sha256": "75477e761b12f59107981e4f52e148d49ef014bc6b254df9c9ba44151ce619a0",
+      "request_id": "01a144c6-f74e-7843-96c2-9c25df577f9b",
+      "transcript": "These are the actual parameterized Cypher queries behind the result. FalkorDB computes multi hop reachability and joins the paths to projects, owners, and source claims. Without the database, these operations return graph rather than a cached answer."
+    },
+    {
+      "id": "11-public",
+      "path": "evidence/demo-v3/11-public.wav",
+      "start_seconds": 191.05,
+      "audio_sha256": "3cc00491a8ccd784d6a1643ef83a58299fb2e06e341d769a4c10a9f038edb72c",
+      "request_id": "01a144c7-0189-7ff1-a942-17252d13283e",
+      "transcript": "The deployed demo exposes those live graph reads, while imports, approvals, and model calls are disabled. Use the complete local setup for write workflows."
+    },
+    {
+      "id": "12-closing",
+      "path": "evidence/demo-v3/12-closing.wav",
+      "start_seconds": 201.582682,
+      "audio_sha256": "8ec63e48ab4360d1d0dccca7d31e75275cf0063e9d9a1c2f2864c706fa47717f",
+      "request_id": "01a144c7-04f2-7e43-bad0-602bcff0ce65",
+      "transcript": "DecisionDebt company Brain. Track three. Voiced by Deepgram."
+    }
+  ],
+  "caption_sync_adjustment_seconds": -0.7673180000000173
+}

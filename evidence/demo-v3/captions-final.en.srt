@@ -1,0 +1,276 @@
+1
+00:00:00,250 --> 00:00:03,130
+Know what a decision breaks before you make
+it.
+
+2
+00:00:03,210 --> 00:00:06,960
+DecisionDebt connects company knowledge to
+the evidence behind it.
+
+3
+00:00:06,970 --> 00:00:10,240
+This is a working browser recording using
+fictional Aster Works
+
+4
+00:00:10,250 --> 00:00:10,730
+data.
+
+5
+00:00:15,317 --> 00:00:18,117
+Let's replace OrionAuth with NovaID.
+
+6
+00:00:18,357 --> 00:00:22,747
+Before accepting that decision, FalkorDB
+traces the incoming dependency
+
+7
+00:00:22,757 --> 00:00:23,637
+paths.
+
+8
+00:00:23,877 --> 00:00:28,062
+12 services and 12 projects are within five
+hops.
+
+9
+00:00:28,142 --> 00:00:31,492
+The preview discloses that further consumers
+exist beyond this
+
+10
+00:00:31,502 --> 00:00:31,982
+boundary.
+
+11
+00:00:34,077 --> 00:00:37,267
+Session broker has two verified paths to the
+proposed
+
+12
+00:00:37,277 --> 00:00:40,787
+change, but two people are claimed as its
+primary
+
+13
+00:00:40,797 --> 00:00:41,597
+owner.
+
+14
+00:00:41,837 --> 00:00:45,507
+Open the original source to inspect the
+exact context,
+
+15
+00:00:45,517 --> 00:00:47,757
+claim anchors and source hash.
+
+16
+00:00:47,917 --> 00:00:49,517
+The conflict stays visible.
+
+17
+00:00:51,563 --> 00:00:53,793
+Token Cache presents a different problem.
+
+18
+00:00:53,803 --> 00:00:55,793
+No verified primary owner.
+
+19
+00:00:55,803 --> 00:00:59,073
+A dependency sentence can establish a
+service connection, but
+
+20
+00:00:59,083 --> 00:01:01,563
+it cannot identify who owns the service.
+
+21
+00:01:01,723 --> 00:01:04,043
+DecisionDebt leaves that owner unassigned.
+
+22
+00:01:07,230 --> 00:01:11,300
+The Evidence view separates an obsolete
+decision citation, a
+
+23
+00:01:11,310 --> 00:01:14,830
+suspected unlinked mention, and an overdue
+review.
+
+24
+00:01:14,910 --> 00:01:18,430
+Here, the old OrionAuth name appears in a
+document.
+
+25
+00:01:18,670 --> 00:01:21,780
+Native full text search finds it, but that
+mention
+
+26
+00:01:21,790 --> 00:01:23,845
+alone does not prove a Dependency.
+
+27
+00:01:26,983 --> 00:01:30,733
+This is the previously recorded real model
+investigation, not
+
+28
+00:01:30,743 --> 00:01:32,183
+a new model call.
+
+29
+00:01:32,263 --> 00:01:35,373
+The trace shows coverage of the missing
+owner, conflicting
+
+30
+00:01:35,383 --> 00:01:37,623
+owners, and unlinked mention.
+
+31
+00:01:37,783 --> 00:01:41,533
+The model's tool calls and corrections
+remain inspectable alongside
+
+32
+00:01:41,543 --> 00:01:42,263
+the evidence.
+
+33
+00:01:44,183 --> 00:01:47,293
+The action board turns those findings into
+source backed
+
+34
+00:01:47,303 --> 00:01:48,343
+drafts.
+
+35
+00:01:48,583 --> 00:01:51,063
+Approval requires a separate confirmation.
+
+36
+00:01:51,383 --> 00:01:54,413
+This demonstration approves only a local
+task.
+
+37
+00:01:54,423 --> 00:01:57,533
+It does not assign the disputed owner,
+execute an
+
+38
+00:01:57,543 --> 00:02:00,343
+external ticket, or accept the migration
+decision.
+
+39
+00:02:04,797 --> 00:02:07,587
+Now add a synthetic ticket stating that
+external portal
+
+40
+00:02:07,597 --> 00:02:09,837
+depends on Billing API.
+
+41
+00:02:09,997 --> 00:02:12,467
+This is a live import into a separate
+recording
+
+42
+00:02:12,477 --> 00:02:13,437
+database.
+
+43
+00:02:13,677 --> 00:02:17,187
+The next graph query includes external
+portal, increasing the
+
+44
+00:02:17,197 --> 00:02:19,677
+affected set from 12 services to 13.
+
+45
+00:02:24,950 --> 00:02:28,230
+Update that same ticket to remove its
+dependency assertion.
+
+46
+00:02:28,470 --> 00:02:31,820
+Only this source's support retracts, its
+revision history is
+
+47
+00:02:31,830 --> 00:02:34,940
+retained, and the next preview returns to 12
+affected
+
+48
+00:02:34,950 --> 00:02:35,910
+services.
+
+49
+00:02:36,310 --> 00:02:38,470
+The decision itself is still proposed.
+
+50
+00:02:46,063 --> 00:02:49,253
+These are the actual parameterized Cypher
+queries behind the
+
+51
+00:02:49,263 --> 00:02:50,063
+result.
+
+52
+00:02:50,383 --> 00:02:54,213
+FalkorDB computes multi hop reachability and
+joins the paths
+
+53
+00:02:54,223 --> 00:02:56,783
+to projects, owners, and source claims.
+
+54
+00:02:56,943 --> 00:03:00,878
+Without the database, these operations
+return graph
+
+55
+00:03:00,888 --> 00:03:02,488
+rather than a cached answer.
+
+56
+00:03:11,130 --> 00:03:14,400
+The deployed demo exposes those live graph
+reads, while
+
+57
+00:03:14,410 --> 00:03:17,690
+imports, approvals, and model calls are
+disabled.
+
+58
+00:03:17,770 --> 00:03:20,250
+Use the complete local setup for write
+workflows.
+
+59
+00:03:21,583 --> 00:03:23,823
+DecisionDebt company Brain.
+
+60
+00:03:23,903 --> 00:03:25,103
+Track three.
+
+61
+00:03:25,183 --> 00:03:26,543
+Voiced by Deepgram.

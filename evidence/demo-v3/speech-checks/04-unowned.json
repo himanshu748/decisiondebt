@@ -1,0 +1,283 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144c6-c7de-7472-a7c4-a1b4975da17a",
+    "sha256": "04447bcff15d289b659d14031f82e24cb250c451934130894f804618b3019752",
+    "created": "2026-10-16T12:54:03.469Z",
+    "duration": 12.64,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Token Cache presents a different problem. No verified primary owner. A dependency sentence can establish a service connection, but it cannot identify who owns the service. DecisionDebt leaves that owner unassigned.",
+            "confidence": 0.99902344,
+            "words": [
+              {
+                "word": "token",
+                "start": 0.08,
+                "end": 0.48,
+                "confidence": 0.9609375,
+                "punctuated_word": "Token"
+              },
+              {
+                "word": "cache",
+                "start": 0.48,
+                "end": 0.71999997,
+                "confidence": 0.9770508,
+                "punctuated_word": "Cache"
+              },
+              {
+                "word": "presents",
+                "start": 0.71999997,
+                "end": 1.12,
+                "confidence": 1.0,
+                "punctuated_word": "presents"
+              },
+              {
+                "word": "a",
+                "start": 1.12,
+                "end": 1.28,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "different",
+                "start": 1.28,
+                "end": 1.52,
+                "confidence": 1.0,
+                "punctuated_word": "different"
+              },
+              {
+                "word": "problem",
+                "start": 1.52,
+                "end": 2.24,
+                "confidence": 0.8845215,
+                "punctuated_word": "problem."
+              },
+              {
+                "word": "no",
+                "start": 2.32,
+                "end": 2.56,
+                "confidence": 0.99902344,
+                "punctuated_word": "No"
+              },
+              {
+                "word": "verified",
+                "start": 2.56,
+                "end": 3.04,
+                "confidence": 0.99316406,
+                "punctuated_word": "verified"
+              },
+              {
+                "word": "primary",
+                "start": 3.04,
+                "end": 3.52,
+                "confidence": 0.9970703,
+                "punctuated_word": "primary"
+              },
+              {
+                "word": "owner",
+                "start": 3.52,
+                "end": 4.24,
+                "confidence": 0.98706055,
+                "punctuated_word": "owner."
+              },
+              {
+                "word": "a",
+                "start": 4.3199997,
+                "end": 4.56,
+                "confidence": 0.87597656,
+                "punctuated_word": "A"
+              },
+              {
+                "word": "dependency",
+                "start": 4.56,
+                "end": 5.04,
+                "confidence": 0.99609375,
+                "punctuated_word": "dependency"
+              },
+              {
+                "word": "sentence",
+                "start": 5.04,
+                "end": 5.52,
+                "confidence": 0.9980469,
+                "punctuated_word": "sentence"
+              },
+              {
+                "word": "can",
+                "start": 5.52,
+                "end": 5.7599998,
+                "confidence": 1.0,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "establish",
+                "start": 5.7599998,
+                "end": 6.16,
+                "confidence": 1.0,
+                "punctuated_word": "establish"
+              },
+              {
+                "word": "a",
+                "start": 6.16,
+                "end": 6.3999996,
+                "confidence": 1.0,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "service",
+                "start": 6.3999996,
+                "end": 6.64,
+                "confidence": 0.99902344,
+                "punctuated_word": "service"
+              },
+              {
+                "word": "connection",
+                "start": 6.64,
+                "end": 7.36,
+                "confidence": 0.9838867,
+                "punctuated_word": "connection,"
+              },
+              {
+                "word": "but",
+                "start": 7.44,
+                "end": 7.6,
+                "confidence": 1.0,
+                "punctuated_word": "but"
+              },
+              {
+                "word": "it",
+                "start": 7.6,
+                "end": 7.7599998,
+                "confidence": 1.0,
+                "punctuated_word": "it"
+              },
+              {
+                "word": "cannot",
+                "start": 7.7599998,
+                "end": 8.0,
+                "confidence": 0.99902344,
+                "punctuated_word": "cannot"
+              },
+              {
+                "word": "identify",
+                "start": 8.0,
+                "end": 8.48,
+                "confidence": 0.99902344,
+                "punctuated_word": "identify"
+              },
+              {
+                "word": "who",
+                "start": 8.48,
+                "end": 8.8,
+                "confidence": 1.0,
+                "punctuated_word": "who"
+              },
+              {
+                "word": "owns",
+                "start": 8.8,
+                "end": 9.12,
+                "confidence": 1.0,
+                "punctuated_word": "owns"
+              },
+              {
+                "word": "the",
+                "start": 9.12,
+                "end": 9.28,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "service",
+                "start": 9.28,
+                "end": 9.999999,
+                "confidence": 0.99902344,
+                "punctuated_word": "service."
+              },
+              {
+                "word": "decisiondebt",
+                "start": 10.24,
+                "end": 11.04,
+                "confidence": 0.9897461,
+                "punctuated_word": "DecisionDebt"
+              },
+              {
+                "word": "leaves",
+                "start": 11.04,
+                "end": 11.36,
+                "confidence": 1.0,
+                "punctuated_word": "leaves"
+              },
+              {
+                "word": "that",
+                "start": 11.36,
+                "end": 11.5199995,
+                "confidence": 0.99902344,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "owner",
+                "start": 11.5199995,
+                "end": 11.84,
+                "confidence": 1.0,
+                "punctuated_word": "owner"
+              },
+              {
+                "word": "unassigned",
+                "start": 11.84,
+                "end": 12.48,
+                "confidence": 0.9937744,
+                "punctuated_word": "unassigned."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nToken Cache presents a different problem. No verified primary owner. A dependency sentence can establish a service connection, but it cannot identify who owns the service. DecisionDebt leaves that owner unassigned.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Token Cache presents a different problem.",
+                      "start": 0.08,
+                      "end": 2.24
+                    },
+                    {
+                      "text": "No verified primary owner.",
+                      "start": 2.32,
+                      "end": 4.24
+                    },
+                    {
+                      "text": "A dependency sentence can establish a service connection, but it cannot identify who owns the service.",
+                      "start": 4.3199997,
+                      "end": 9.999999
+                    },
+                    {
+                      "text": "DecisionDebt leaves that owner unassigned.",
+                      "start": 10.24,
+                      "end": 12.48
+                    }
+                  ],
+                  "num_words": 31,
+                  "start": 0.08,
+                  "end": 12.48
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

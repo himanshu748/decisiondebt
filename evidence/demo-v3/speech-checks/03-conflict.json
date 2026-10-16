@@ -1,0 +1,320 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144c6-c6c5-7971-95dd-2d817dbe80dc",
+    "sha256": "ea9af93102b223a6390625422d5dab7e8524ec72c64b5b27a6c4fc6b0c72b9cf",
+    "created": "2026-10-16T12:54:03.266Z",
+    "duration": 15.76,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Session broker has two verified paths to the proposed change, but two people are claimed as its primary owner. Open the original source to inspect the exact context, claim anchors and source hash. The conflict stays visible.",
+            "confidence": 0.99902344,
+            "words": [
+              {
+                "word": "session",
+                "start": 0.16,
+                "end": 0.56,
+                "confidence": 0.9892578,
+                "punctuated_word": "Session"
+              },
+              {
+                "word": "broker",
+                "start": 0.56,
+                "end": 1.04,
+                "confidence": 0.9248047,
+                "punctuated_word": "broker"
+              },
+              {
+                "word": "has",
+                "start": 1.04,
+                "end": 1.28,
+                "confidence": 1.0,
+                "punctuated_word": "has"
+              },
+              {
+                "word": "two",
+                "start": 1.28,
+                "end": 1.5999999,
+                "confidence": 0.9980469,
+                "punctuated_word": "two"
+              },
+              {
+                "word": "verified",
+                "start": 1.5999999,
+                "end": 2.1599998,
+                "confidence": 1.0,
+                "punctuated_word": "verified"
+              },
+              {
+                "word": "paths",
+                "start": 2.1599998,
+                "end": 2.56,
+                "confidence": 1.0,
+                "punctuated_word": "paths"
+              },
+              {
+                "word": "to",
+                "start": 2.56,
+                "end": 2.8,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "the",
+                "start": 2.8,
+                "end": 2.96,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "proposed",
+                "start": 2.96,
+                "end": 3.36,
+                "confidence": 1.0,
+                "punctuated_word": "proposed"
+              },
+              {
+                "word": "change",
+                "start": 3.36,
+                "end": 4.24,
+                "confidence": 0.9448242,
+                "punctuated_word": "change,"
+              },
+              {
+                "word": "but",
+                "start": 4.48,
+                "end": 4.72,
+                "confidence": 0.99902344,
+                "punctuated_word": "but"
+              },
+              {
+                "word": "two",
+                "start": 4.72,
+                "end": 5.04,
+                "confidence": 1.0,
+                "punctuated_word": "two"
+              },
+              {
+                "word": "people",
+                "start": 5.04,
+                "end": 5.2799997,
+                "confidence": 1.0,
+                "punctuated_word": "people"
+              },
+              {
+                "word": "are",
+                "start": 5.2799997,
+                "end": 5.52,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "claimed",
+                "start": 5.52,
+                "end": 5.92,
+                "confidence": 1.0,
+                "punctuated_word": "claimed"
+              },
+              {
+                "word": "as",
+                "start": 5.92,
+                "end": 6.16,
+                "confidence": 1.0,
+                "punctuated_word": "as"
+              },
+              {
+                "word": "its",
+                "start": 6.16,
+                "end": 6.3999996,
+                "confidence": 0.9951172,
+                "punctuated_word": "its"
+              },
+              {
+                "word": "primary",
+                "start": 6.3999996,
+                "end": 6.8799996,
+                "confidence": 0.99902344,
+                "punctuated_word": "primary"
+              },
+              {
+                "word": "owner",
+                "start": 6.8799996,
+                "end": 7.6,
+                "confidence": 0.9916992,
+                "punctuated_word": "owner."
+              },
+              {
+                "word": "open",
+                "start": 7.9199996,
+                "end": 8.32,
+                "confidence": 0.99902344,
+                "punctuated_word": "Open"
+              },
+              {
+                "word": "the",
+                "start": 8.32,
+                "end": 8.559999,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "original",
+                "start": 8.559999,
+                "end": 8.96,
+                "confidence": 0.9980469,
+                "punctuated_word": "original"
+              },
+              {
+                "word": "source",
+                "start": 8.96,
+                "end": 9.28,
+                "confidence": 0.9970703,
+                "punctuated_word": "source"
+              },
+              {
+                "word": "to",
+                "start": 9.28,
+                "end": 9.5199995,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "inspect",
+                "start": 9.5199995,
+                "end": 9.92,
+                "confidence": 1.0,
+                "punctuated_word": "inspect"
+              },
+              {
+                "word": "the",
+                "start": 9.92,
+                "end": 10.16,
+                "confidence": 0.99902344,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "exact",
+                "start": 10.16,
+                "end": 10.559999,
+                "confidence": 0.9980469,
+                "punctuated_word": "exact"
+              },
+              {
+                "word": "context",
+                "start": 10.559999,
+                "end": 11.5199995,
+                "confidence": 0.94384766,
+                "punctuated_word": "context,"
+              },
+              {
+                "word": "claim",
+                "start": 11.599999,
+                "end": 12.0,
+                "confidence": 0.9951172,
+                "punctuated_word": "claim"
+              },
+              {
+                "word": "anchors",
+                "start": 12.0,
+                "end": 12.48,
+                "confidence": 0.99853516,
+                "punctuated_word": "anchors"
+              },
+              {
+                "word": "and",
+                "start": 12.48,
+                "end": 12.719999,
+                "confidence": 0.6669922,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "source",
+                "start": 12.719999,
+                "end": 13.04,
+                "confidence": 0.9863281,
+                "punctuated_word": "source"
+              },
+              {
+                "word": "hash",
+                "start": 13.04,
+                "end": 13.759999,
+                "confidence": 0.921875,
+                "punctuated_word": "hash."
+              },
+              {
+                "word": "the",
+                "start": 14.0,
+                "end": 14.24,
+                "confidence": 0.99902344,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "conflict",
+                "start": 14.24,
+                "end": 14.719999,
+                "confidence": 1.0,
+                "punctuated_word": "conflict"
+              },
+              {
+                "word": "stays",
+                "start": 14.719999,
+                "end": 15.12,
+                "confidence": 1.0,
+                "punctuated_word": "stays"
+              },
+              {
+                "word": "visible",
+                "start": 15.12,
+                "end": 15.5199995,
+                "confidence": 0.99365234,
+                "punctuated_word": "visible."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nSession broker has two verified paths to the proposed change, but two people are claimed as its primary owner. Open the original source to inspect the exact context, claim anchors and source hash. The conflict stays visible.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Session broker has two verified paths to the proposed change, but two people are claimed as its primary owner.",
+                      "start": 0.16,
+                      "end": 7.6
+                    },
+                    {
+                      "text": "Open the original source to inspect the exact context, claim anchors and source hash.",
+                      "start": 7.9199996,
+                      "end": 13.759999
+                    },
+                    {
+                      "text": "The conflict stays visible.",
+                      "start": 14.0,
+                      "end": 15.5199995
+                    }
+                  ],
+                  "num_words": 37,
+                  "start": 0.16,
+                  "end": 15.5199995
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

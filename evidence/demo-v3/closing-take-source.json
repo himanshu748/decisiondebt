@@ -1,0 +1,82 @@
+{
+  "raw_video": "evidence/demo-v3/raw-closing/page@2b4649d2a4e0804255e24e7a054472bc.webm",
+  "started_at": "2026-10-16T12:53:05.067Z",
+  "ended_at": "2026-10-16T12:53:12.699Z",
+  "source_offset_seconds": 4.818,
+  "duration_seconds": 6.966666666666667,
+  "source_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "vp9",
+        "codec_long_name": "Google VP9",
+        "profile": "Profile 0",
+        "codec_type": "video",
+        "codec_tag_string": "[0][0][0][0]",
+        "codec_tag": "0x0000",
+        "mime_codec_string": "vp09.00.50.08",
+        "width": 3840,
+        "height": 2160,
+        "coded_width": 3840,
+        "coded_height": 2160,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": -99,
+        "color_range": "tv",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/1000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "ENCODER": "Lavc61.3.100 libvpx-vp9",
+          "DURATION": "00:00:12.200000000"
+        }
+      }
+    ],
+    "format": {
+      "filename": "evidence/demo-v3/raw-closing/page@2b4649d2a4e0804255e24e7a054472bc.webm",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "matroska,webm",
+      "format_long_name": "Matroska / WebM",
+      "start_time": "0.000000",
+      "duration": "12.200000",
+      "size": "4676316",
+      "bit_rate": "3066436",
+      "probe_score": 100,
+      "tags": {
+        "creation_time": "2026-10-16T12:53:00.249000Z",
+        "ENCODER": "Lavf61.1.100"
+      }
+    }
+  },
+  "sha256": "49b54787d4cf12f3ed9806d87c38ff1bb220067d452210a253e48d6e91256916"
+}

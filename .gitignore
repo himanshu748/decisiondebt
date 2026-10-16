@@ -11,3 +11,8 @@ work/
 .ruff_cache/
 web/*.tsbuildinfo
 evidence/test-results/server.log
+
+# Reproducible video intermediates; the final 4K MP4 and native sources are tracked.
+evidence/demo-v3/decisiondebt-demo-4k-narrated.mp4
+evidence/demo-v3/narration.wav
+evidence/demo-v3/decisiondebt-demo-4k-final.mp4

@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144c6-d7cb-75a3-b840-c3dce837e6ea",
+    "sha256": "909b7c0f7c6c1c0d4567ade3385424de83f183740685fab76f4e9243a74aa419",
+    "created": "2026-10-16T12:54:07.223Z",
+    "duration": 16.8,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "The Evidence view separates an obsolete decision citation, a suspected unlinked mention, and an overdue review. Here, the old OrionAuth name appears in a document. Native full text search finds it, but that mention alone does not prove a Dependency.",
+            "confidence": 0.99902344,
+            "words": [
+              {
+                "word": "the",
+                "start": 0.08,
+                "end": 0.39999998,
+                "confidence": 0.99902344,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "evidence",
+                "start": 0.39999998,
+                "end": 0.88,
+                "confidence": 0.77124023,
+                "punctuated_word": "Evidence"
+              },
+              {
+                "word": "view",
+                "start": 0.88,
+                "end": 1.12,
+                "confidence": 0.6430664,
+                "punctuated_word": "view"
+              },
+              {
+                "word": "separates",
+                "start": 1.12,
+                "end": 1.68,
+                "confidence": 1.0,
+                "punctuated_word": "separates"
+              },
+              {
+                "word": "an",
+                "start": 1.68,
+                "end": 1.92,
+                "confidence": 1.0,
+                "punctuated_word": "an"
+              },
+              {
+                "word": "obsolete",
+                "start": 1.92,
+                "end": 2.32,
+                "confidence": 0.9980469,
+                "punctuated_word": "obsolete"
+              },
+              {
+                "word": "decision",
+                "start": 2.32,
+                "end": 2.8,
+                "confidence": 0.98828125,
+                "punctuated_word": "decision"
+              },
+              {
+                "word": "citation",
+                "start": 2.8,
+                "end": 3.6799998,
+                "confidence": 0.99902344,
+                "punctuated_word": "citation,"
+              },
+              {
+                "word": "a",
+                "start": 3.9199998,
+                "end": 4.16,
+                "confidence": 0.99902344,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "suspected",
+                "start": 4.16,
+                "end": 4.56,
+                "confidence": 1.0,
+                "punctuated_word": "suspected"
+              },
+              {
+                "word": "unlinked",
+                "start": 4.56,
+                "end": 5.2,
+                "confidence": 0.9475911,
+                "punctuated_word": "unlinked"
+              },
+              {
+                "word": "mention",
+                "start": 5.2,
+                "end": 5.92,
+                "confidence": 0.99560547,
+                "punctuated_word": "mention,"
+              },
+              {
+                "word": "and",
+                "start": 6.0,
+                "end": 6.24,
+                "confidence": 0.99902344,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "an",
+                "start": 6.24,
+                "end": 6.3999996,
+                "confidence": 1.0,
+                "punctuated_word": "an"
+              },
+              {
+                "word": "overdue",
+                "start": 6.3999996,
+                "end": 6.7999997,
+                "confidence": 0.9951172,
+                "punctuated_word": "overdue"
+              },
+              {
+                "word": "review",
+                "start": 6.7999997,
+                "end": 7.6,
+                "confidence": 0.99902344,
+                "punctuated_word": "review."
+              },
+              {
+                "word": "here",
+                "start": 7.7599998,
+                "end": 8.24,
+                "confidence": 0.9926758,
+                "punctuated_word": "Here,"
+              },
+              {
+                "word": "the",
+                "start": 8.24,
+                "end": 8.4,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "old",
+                "start": 8.4,
+                "end": 8.639999,
+                "confidence": 0.99902344,
+                "punctuated_word": "old"
+              },
+              {
+                "word": "orionauth",
+                "start": 8.639999,
+                "end": 9.44,
+                "confidence": 0.9863281,
+                "punctuated_word": "OrionAuth"
+              },
+              {
+                "word": "name",
+                "start": 9.44,
+                "end": 9.76,
+                "confidence": 0.9941406,
+                "punctuated_word": "name"
+              },
+              {
+                "word": "appears",
+                "start": 9.76,
+                "end": 10.16,
+                "confidence": 1.0,
+                "punctuated_word": "appears"
+              },
+              {
+                "word": "in",
+                "start": 10.16,
+                "end": 10.4,
+                "confidence": 0.99902344,
+                "punctuated_word": "in"
+              },
+              {
+                "word": "a",
+                "start": 10.4,
+                "end": 10.559999,
+                "confidence": 0.9970703,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "document",
+                "start": 10.559999,
+                "end": 11.2,
+                "confidence": 0.9975586,
+                "punctuated_word": "document."
+              },
+              {
+                "word": "native",
+                "start": 11.5199995,
+                "end": 12.0,
+                "confidence": 0.99902344,
+                "punctuated_word": "Native"
+              },
+              {
+                "word": "full",
+                "start": 12.0,
+                "end": 12.24,
+                "confidence": 0.7734375,
+                "punctuated_word": "full"
+              },
+              {
+                "word": "text",
+                "start": 12.24,
+                "end": 12.48,
+                "confidence": 0.9873047,
+                "punctuated_word": "text"
+              },
+              {
+                "word": "search",
+                "start": 12.48,
+                "end": 12.799999,
+                "confidence": 0.99902344,
+                "punctuated_word": "search"
+              },
+              {
+                "word": "finds",
+                "start": 12.799999,
+                "end": 13.2,
+                "confidence": 1.0,
+                "punctuated_word": "finds"
+              },
+              {
+                "word": "it",
+                "start": 13.2,
+                "end": 13.679999,
+                "confidence": 0.953125,
+                "punctuated_word": "it,"
+              },
+              {
+                "word": "but",
+                "start": 13.84,
+                "end": 14.08,
+                "confidence": 1.0,
+                "punctuated_word": "but"
+              },
+              {
+                "word": "that",
+                "start": 14.08,
+                "end": 14.24,
+                "confidence": 1.0,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "mention",
+                "start": 14.24,
+                "end": 14.639999,
+                "confidence": 0.99902344,
+                "punctuated_word": "mention"
+              },
+              {
+                "word": "alone",
+                "start": 14.639999,
+                "end": 15.04,
+                "confidence": 1.0,
+                "punctuated_word": "alone"
+              },
+              {
+                "word": "does",
+                "start": 15.04,
+                "end": 15.36,
+                "confidence": 0.99902344,
+                "punctuated_word": "does"
+              },
+              {
+                "word": "not",
+                "start": 15.36,
+                "end": 15.599999,
+                "confidence": 1.0,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "prove",
+                "start": 15.599999,
+                "end": 15.839999,
+                "confidence": 0.99902344,
+                "punctuated_word": "prove"
+              },
+              {
+                "word": "a",
+                "start": 15.839999,
+                "end": 16.64,
+                "confidence": 0.99902344,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "dependency",
+                "start": 15.974937,
+                "end": 16.614937,
+                "confidence": 0.96520996,
+                "punctuated_word": "Dependency."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nThe Evidence view separates an obsolete decision citation, a suspected unlinked mention, and an overdue review. Here, the old OrionAuth name appears in a document. Native full text search finds it, but that mention alone does not prove a Dependency.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "The Evidence view separates an obsolete decision citation, a suspected unlinked mention, and an overdue review.",
+                      "start": 0.08,
+                      "end": 7.6
+                    },
+                    {
+                      "text": "Here, the old OrionAuth name appears in a document.",
+                      "start": 7.7599998,
+                      "end": 11.2
+                    },
+                    {
+                      "text": "Native full text search finds it, but that mention alone does not prove a Dependency.",
+                      "start": 11.5199995,
+                      "end": 16.64
+                    }
+                  ],
+                  "num_words": 40,
+                  "start": 0.08,
+                  "end": 16.64
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "provider": "Deepgram",
+  "model": "aura-2-thalia-en",
+  "encoding": "linear16",
+  "sample_rate": 48000,
+  "voice_disclosure": "AI-generated narration",
+  "segments": [
+    {
+      "id": "01-intro",
+      "chapter": "Know what a decision breaks",
+      "text": "Know what a decision breaks before you make it. Decision Debt connects company knowledge to the evidence behind it. This is a working browser recording using fictional Aster Works data.",
+      "path": "evidence/demo-v3/01-intro.wav",
+      "requested_at": "2026-10-16T12:18:46.717764+00:00",
+      "status": 200,
+      "request_id": "01a144a6-8bdf-7db0-b1ec-8123fa30f45d",
+      "characters": 185,
+      "request_elapsed_seconds": 4.538,
+      "duration_seconds": 10.399979,
+      "sha256": "fe0b2a48c270bd0c8fca4f0186d847f62b45e6daa6a77c820b02ade136808daf",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "10.399979",
+          "size": "998442"
+        }
+      }
+    },
+    {
+      "id": "02-impact",
+      "chapter": "Trace the real blast radius",
+      "text": "Let's replace Orion Auth with Nova I D. Before accepting that decision, Falkor D B traces the incoming dependency paths. Twelve services and twelve projects are affected within five hops. The preview discloses that further consumers exist beyond this boundary.",
+      "path": "evidence/demo-v3/02-impact.wav",
+      "requested_at": "2026-10-16T12:18:51.257192+00:00",
+      "status": 200,
+      "request_id": "01a144a6-99ec-7941-a83c-77bf6324a7d5",
+      "characters": 260,
+      "request_elapsed_seconds": 5.565,
+      "duration_seconds": 16.719979,
+      "sha256": "d0766a2a44626e2de48aaa4d267bb74c267317c32b2cf41e7481b3fafdd17cc5",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "16.719979",
+          "size": "1605162"
+        }
+      }
+    },
+    {
+      "id": "03-conflict",
+      "chapter": "Inspect conflicting owners",
+      "text": "Session Broker has two verified paths to the proposed change, but two people are claimed as its primary owner. Open the original source to inspect the exact context, claim anchors, and source hash. The conflict stays visible.",
+      "path": "evidence/demo-v3/03-conflict.wav",
+      "requested_at": "2026-10-16T12:18:56.825516+00:00",
+      "status": 200,
+      "request_id": "01a144a6-af9f-7f93-acb0-71642e9ab199",
+      "characters": 225,
+      "request_elapsed_seconds": 6.035,
+      "duration_seconds": 15.759979,
+      "sha256": "ea9af93102b223a6390625422d5dab7e8524ec72c64b5b27a6c4fc6b0c72b9cf",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "15.759979",
+          "size": "1513002"
+        }
+      }
+    },
+    {
+      "id": "04-unowned",
+      "chapter": "Keep missing knowledge explicit",
+      "text": "Token Cache presents a different problem: no verified primary owner. A dependency sentence can establish a service connection, but it cannot identify who owns the service. Decision Debt leaves that owner unassigned.",
+      "path": "evidence/demo-v3/04-unowned.wav",
+      "requested_at": "2026-10-16T12:19:02.863136+00:00",
+      "status": 200,
+      "request_id": "01a144a6-c737-7720-aafa-e03090c63a57",
+      "characters": 215,
+      "request_elapsed_seconds": 6.668,
+      "duration_seconds": 12.639979,
+      "sha256": "04447bcff15d289b659d14031f82e24cb250c451934130894f804618b3019752",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "12.639979",
+          "size": "1213482"
+        }
+      }
+    },
+    {
+      "id": "05-drift",
+      "chapter": "Separate three kinds of drift",
+      "text": "The evidence view separates an obsolete decision citation, a suspected unlinked mention, and an overdue review. Here, the old Orion Auth name appears in a document. Native full text search finds it, but that mention alone does not prove a dependency.",
+      "path": "evidence/demo-v3/05-drift.wav",
+      "requested_at": "2026-10-16T12:19:09.533082+00:00",
+      "status": 200,
+      "request_id": "01a144a6-e458-7701-b76b-33e61c237f79",
+      "characters": 250,
+      "request_elapsed_seconds": 7.91,
+      "duration_seconds": 16.799979,
+      "sha256": "909b7c0f7c6c1c0d4567ade3385424de83f183740685fab76f4e9243a74aa419",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "16.799979",
+          "size": "1612842"
+        }
+      }
+    },
+    {
+      "id": "06-agent",
+      "chapter": "Inspect the genuine recorded LLM run",
+      "text": "This is the previously recorded real model investigation, not a new model call. The trace shows coverage of the missing owner, conflicting owners, and unlinked mention. The model's tool calls and corrections remain inspectable alongside the evidence.",
+      "path": "evidence/demo-v3/06-agent.wav",
+      "requested_at": "2026-10-16T12:19:17.445658+00:00",
+      "status": 200,
+      "request_id": "01a144a7-0025-7bc1-aed0-039d53d2bd95",
+      "characters": 250,
+      "request_elapsed_seconds": 4.691,
+      "duration_seconds": 15.399979,
+      "sha256": "93f572c1c8c3d430074f911272e37dbe7bcf62d9ea158d795572ed509b2f5d72",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "15.399979",
+          "size": "1478442"
+        }
+      }
+    },
+    {
+      "id": "07-actions",
+      "chapter": "Review drafts before local approval",
+      "text": "The action board turns those findings into source backed drafts. Approval requires a separate confirmation. This demonstration approves only a local task: it does not assign the disputed owner, execute an external ticket, or accept the migration decision.",
+      "path": "evidence/demo-v3/07-actions.wav",
+      "requested_at": "2026-10-16T12:19:22.140163+00:00",
+      "status": 200,
+      "request_id": "01a144a7-1290-7891-9a2e-25b71a98f01e",
+      "characters": 255,
+      "request_elapsed_seconds": 4.903,
+      "duration_seconds": 16.119979,
+      "sha256": "914549aee01b87e665f61dfc69cf002546256763a9e34994a97e64bccd690346",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "16.119979",
+          "size": "1547562"
+        }
+      }
+    },
+    {
+      "id": "08-import",
+      "chapter": "Add a source and change the graph",
+      "text": "Now add a synthetic ticket stating that External Portal depends on Billing A P I. This is a live import into a separate recording database. The next graph query includes External Portal, increasing the affected set from twelve services to thirteen.",
+      "path": "evidence/demo-v3/08-import.wav",
+      "requested_at": "2026-10-16T12:19:27.045505+00:00",
+      "status": 200,
+      "request_id": "01a144a7-25a8-7a21-b968-91b7752f68ea",
+      "characters": 248,
+      "request_elapsed_seconds": 4.603,
+      "duration_seconds": 15.039979,
+      "sha256": "5d022d283217a0b0739b0d2305955dd16dd08a4c04a056ec8f3ad06284fee4d4",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "15.039979",
+          "size": "1443882"
+        }
+      }
+    },
+    {
+      "id": "09-retract",
+      "chapter": "Retract only one source's support",
+      "text": "Update that same ticket to remove its dependency assertion. Only this source's support retracts, its revision history is retained, and the next preview returns to twelve affected services. The decision itself is still proposed.",
+      "path": "evidence/demo-v3/09-retract.wav",
+      "requested_at": "2026-10-16T12:19:31.650554+00:00",
+      "status": 200,
+      "request_id": "01a144a7-3793-7323-bb70-40bde2aeda57",
+      "characters": 227,
+      "request_elapsed_seconds": 4.287,
+      "duration_seconds": 13.959979,
+      "sha256": "6388c72486e02db48fdef90512e8655b1163cdee3442a1f2f0c65f1ebb171de7",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "13.959979",
+          "size": "1340202"
+        }
+      }
+    },
+    {
+      "id": "10-query",
+      "chapter": "FalkorDB is the reasoning substrate",
+      "text": "These are the actual parameterized Cypher queries behind the result. Falkor D B computes multi hop reachability and joins the paths to projects, owners, and source claims. Without the database, these operations return graph unavailable rather than a cached answer.",
+      "path": "evidence/demo-v3/10-query.wav",
+      "requested_at": "2026-10-16T12:19:35.939627+00:00",
+      "status": 200,
+      "request_id": "01a144a7-485d-7561-8535-7c4f22e361bc",
+      "characters": 264,
+      "request_elapsed_seconds": 4.953,
+      "duration_seconds": 16.519979,
+      "sha256": "75477e761b12f59107981e4f52e148d49ef014bc6b254df9c9ba44151ce619a0",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "16.519979",
+          "size": "1585962"
+        }
+      }
+    },
+    {
+      "id": "11-public",
+      "chapter": "Try the public read-only demo",
+      "text": "The deployed demo exposes those live graph reads, while imports, approvals, and model calls are disabled. Use the complete local setup for write workflows. Decision Debt: Company Brain, Track Three. Narration is generated with Deepgram.",
+      "path": "evidence/demo-v3/11-public.wav",
+      "requested_at": "2026-10-16T12:19:40.894468+00:00",
+      "status": 200,
+      "request_id": "01a144a7-5bd1-7d43-86d0-46f83c0810b1",
+      "characters": 236,
+      "request_elapsed_seconds": 3.11,
+      "duration_seconds": 9.519979,
+      "sha256": "3cc00491a8ccd784d6a1643ef83a58299fb2e06e341d769a4c10a9f038edb72c",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "9.519979",
+          "size": "913962"
+        }
+      }
+    }
+  ]
+}

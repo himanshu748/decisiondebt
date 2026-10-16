@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144e5-1191-76d3-ab60-674b71ca669f",
+    "sha256": "75477e761b12f59107981e4f52e148d49ef014bc6b254df9c9ba44151ce619a0",
+    "created": "2026-10-16T13:27:09.576Z",
+    "duration": 16.52,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "These are the actual parameterized Cypher queries behind the result. Falcore DB computes multi hop reachability and joins the paths to projects, owners, and source claims. Without the database, these operations return graph rather than a cached answer.",
+            "confidence": 0.99609375,
+            "words": [
+              {
+                "word": "these",
+                "start": 0.08,
+                "end": 0.48,
+                "confidence": 0.99121094,
+                "punctuated_word": "These"
+              },
+              {
+                "word": "are",
+                "start": 0.48,
+                "end": 0.64,
+                "confidence": 1.0,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "the",
+                "start": 0.64,
+                "end": 0.79999995,
+                "confidence": 0.9980469,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "actual",
+                "start": 0.79999995,
+                "end": 1.12,
+                "confidence": 0.99902344,
+                "punctuated_word": "actual"
+              },
+              {
+                "word": "parameterized",
+                "start": 1.12,
+                "end": 1.92,
+                "confidence": 0.9682617,
+                "punctuated_word": "parameterized"
+              },
+              {
+                "word": "cypher",
+                "start": 1.92,
+                "end": 2.3999999,
+                "confidence": 0.94661456,
+                "punctuated_word": "Cypher"
+              },
+              {
+                "word": "queries",
+                "start": 2.3999999,
+                "end": 2.72,
+                "confidence": 0.99902344,
+                "punctuated_word": "queries"
+              },
+              {
+                "word": "behind",
+                "start": 2.72,
+                "end": 3.12,
+                "confidence": 0.9980469,
+                "punctuated_word": "behind"
+              },
+              {
+                "word": "the",
+                "start": 3.12,
+                "end": 3.28,
+                "confidence": 1.0,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "result",
+                "start": 3.28,
+                "end": 3.9999998,
+                "confidence": 0.97753906,
+                "punctuated_word": "result."
+              },
+              {
+                "word": "falcore",
+                "start": 4.48,
+                "end": 5.04,
+                "confidence": 0.80737305,
+                "punctuated_word": "Falcore"
+              },
+              {
+                "word": "db",
+                "start": 5.04,
+                "end": 5.44,
+                "confidence": 0.8178711,
+                "punctuated_word": "DB"
+              },
+              {
+                "word": "computes",
+                "start": 5.44,
+                "end": 5.92,
+                "confidence": 0.99853516,
+                "punctuated_word": "computes"
+              },
+              {
+                "word": "multi",
+                "start": 5.92,
+                "end": 6.24,
+                "confidence": 0.94921875,
+                "punctuated_word": "multi"
+              },
+              {
+                "word": "hop",
+                "start": 6.24,
+                "end": 6.56,
+                "confidence": 0.7841797,
+                "punctuated_word": "hop"
+              },
+              {
+                "word": "reachability",
+                "start": 6.56,
+                "end": 7.12,
+                "confidence": 0.9980469,
+                "punctuated_word": "reachability"
+              },
+              {
+                "word": "and",
+                "start": 7.12,
+                "end": 7.44,
+                "confidence": 0.9921875,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "joins",
+                "start": 7.44,
+                "end": 7.7599998,
+                "confidence": 1.0,
+                "punctuated_word": "joins"
+              },
+              {
+                "word": "the",
+                "start": 7.7599998,
+                "end": 7.9199996,
+                "confidence": 0.99902344,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "paths",
+                "start": 7.9199996,
+                "end": 8.24,
+                "confidence": 0.9863281,
+                "punctuated_word": "paths"
+              },
+              {
+                "word": "to",
+                "start": 8.24,
+                "end": 8.4,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "projects",
+                "start": 8.4,
+                "end": 9.12,
+                "confidence": 0.9921875,
+                "punctuated_word": "projects,"
+              },
+              {
+                "word": "owners",
+                "start": 9.12,
+                "end": 9.599999,
+                "confidence": 0.9421387,
+                "punctuated_word": "owners,"
+              },
+              {
+                "word": "and",
+                "start": 9.599999,
+                "end": 9.679999,
+                "confidence": 0.99902344,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "source",
+                "start": 9.679999,
+                "end": 10.0,
+                "confidence": 0.9980469,
+                "punctuated_word": "source"
+              },
+              {
+                "word": "claims",
+                "start": 10.0,
+                "end": 10.719999,
+                "confidence": 0.9980469,
+                "punctuated_word": "claims."
+              },
+              {
+                "word": "without",
+                "start": 10.96,
+                "end": 11.36,
+                "confidence": 0.9902344,
+                "punctuated_word": "Without"
+              },
+              {
+                "word": "the",
+                "start": 11.36,
+                "end": 11.5199995,
+                "confidence": 0.9970703,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "database",
+                "start": 11.5199995,
+                "end": 12.32,
+                "confidence": 0.99853516,
+                "punctuated_word": "database,"
+              },
+              {
+                "word": "these",
+                "start": 12.32,
+                "end": 12.639999,
+                "confidence": 0.9951172,
+                "punctuated_word": "these"
+              },
+              {
+                "word": "operations",
+                "start": 12.639999,
+                "end": 13.12,
+                "confidence": 0.99609375,
+                "punctuated_word": "operations"
+              },
+              {
+                "word": "return",
+                "start": 13.12,
+                "end": 13.5199995,
+                "confidence": 0.9951172,
+                "punctuated_word": "return"
+              },
+              {
+                "word": "graph",
+                "start": 13.5199995,
+                "end": 15.36,
+                "confidence": 0.7207031,
+                "punctuated_word": "graph"
+              },
+              {
+                "word": "rather",
+                "start": 14.905001,
+                "end": 15.305,
+                "confidence": 0.8339844,
+                "punctuated_word": "rather"
+              },
+              {
+                "word": "than",
+                "start": 15.305,
+                "end": 15.545,
+                "confidence": 1.0,
+                "punctuated_word": "than"
+              },
+              {
+                "word": "a",
+                "start": 15.545,
+                "end": 15.705,
+                "confidence": 0.9941406,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "cached",
+                "start": 15.705,
+                "end": 16.025,
+                "confidence": 0.9951172,
+                "punctuated_word": "cached"
+              },
+              {
+                "word": "answer",
+                "start": 16.025,
+                "end": 16.425,
+                "confidence": 0.99609375,
+                "punctuated_word": "answer."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

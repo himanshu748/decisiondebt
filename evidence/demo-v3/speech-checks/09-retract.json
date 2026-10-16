@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a144c6-f4e8-74c2-96cb-652de9cb599a",
+    "sha256": "6388c72486e02db48fdef90512e8655b1163cdee3442a1f2f0c65f1ebb171de7",
+    "created": "2026-10-16T12:54:14.159Z",
+    "duration": 13.96,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Update that same ticket to remove its dependency assertion. Only this source's support retracts, its revision history is retained, and the next preview returns to 12 affected services. The decision itself is still proposed.",
+            "confidence": 0.99902344,
+            "words": [
+              {
+                "word": "update",
+                "start": 0.39999998,
+                "end": 0.79999995,
+                "confidence": 0.98291016,
+                "punctuated_word": "Update"
+              },
+              {
+                "word": "that",
+                "start": 0.79999995,
+                "end": 0.96,
+                "confidence": 0.9970703,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "same",
+                "start": 0.96,
+                "end": 1.1999999,
+                "confidence": 1.0,
+                "punctuated_word": "same"
+              },
+              {
+                "word": "ticket",
+                "start": 1.1999999,
+                "end": 1.4399999,
+                "confidence": 1.0,
+                "punctuated_word": "ticket"
+              },
+              {
+                "word": "to",
+                "start": 1.4399999,
+                "end": 1.68,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "remove",
+                "start": 1.68,
+                "end": 1.92,
+                "confidence": 1.0,
+                "punctuated_word": "remove"
+              },
+              {
+                "word": "its",
+                "start": 1.92,
+                "end": 2.1599998,
+                "confidence": 0.99902344,
+                "punctuated_word": "its"
+              },
+              {
+                "word": "dependency",
+                "start": 2.1599998,
+                "end": 2.6399999,
+                "confidence": 0.9970703,
+                "punctuated_word": "dependency"
+              },
+              {
+                "word": "assertion",
+                "start": 2.6399999,
+                "end": 3.6,
+                "confidence": 0.98860675,
+                "punctuated_word": "assertion."
+              },
+              {
+                "word": "only",
+                "start": 3.9199998,
+                "end": 4.16,
+                "confidence": 0.99902344,
+                "punctuated_word": "Only"
+              },
+              {
+                "word": "this",
+                "start": 4.16,
+                "end": 4.4,
+                "confidence": 0.9921875,
+                "punctuated_word": "this"
+              },
+              {
+                "word": "source's",
+                "start": 4.4,
+                "end": 4.88,
+                "confidence": 0.98413086,
+                "punctuated_word": "source's"
+              },
+              {
+                "word": "support",
+                "start": 4.88,
+                "end": 5.12,
+                "confidence": 0.9980469,
+                "punctuated_word": "support"
+              },
+              {
+                "word": "retracts",
+                "start": 5.12,
+                "end": 6.08,
+                "confidence": 0.97786456,
+                "punctuated_word": "retracts,"
+              },
+              {
+                "word": "its",
+                "start": 6.08,
+                "end": 6.3199997,
+                "confidence": 0.9941406,
+                "punctuated_word": "its"
+              },
+              {
+                "word": "revision",
+                "start": 6.3199997,
+                "end": 6.72,
+                "confidence": 0.9941406,
+                "punctuated_word": "revision"
+              },
+              {
+                "word": "history",
+                "start": 6.72,
+                "end": 7.12,
+                "confidence": 1.0,
+                "punctuated_word": "history"
+              },
+              {
+                "word": "is",
+                "start": 7.12,
+                "end": 7.2799997,
+                "confidence": 0.99902344,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "retained",
+                "start": 7.2799997,
+                "end": 8.08,
+                "confidence": 0.99658203,
+                "punctuated_word": "retained,"
+              },
+              {
+                "word": "and",
+                "start": 8.16,
+                "end": 8.32,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "the",
+                "start": 8.32,
+                "end": 8.48,
+                "confidence": 0.99902344,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "next",
+                "start": 8.48,
+                "end": 8.72,
+                "confidence": 0.9980469,
+                "punctuated_word": "next"
+              },
+              {
+                "word": "preview",
+                "start": 8.72,
+                "end": 9.12,
+                "confidence": 1.0,
+                "punctuated_word": "preview"
+              },
+              {
+                "word": "returns",
+                "start": 9.12,
+                "end": 9.5199995,
+                "confidence": 1.0,
+                "punctuated_word": "returns"
+              },
+              {
+                "word": "to",
+                "start": 9.5199995,
+                "end": 9.679999,
+                "confidence": 1.0,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "12",
+                "start": 9.679999,
+                "end": 10.0,
+                "confidence": 0.99902344,
+                "punctuated_word": "12"
+              },
+              {
+                "word": "affected",
+                "start": 10.0,
+                "end": 10.4,
+                "confidence": 0.9970703,
+                "punctuated_word": "affected"
+              },
+              {
+                "word": "services",
+                "start": 10.4,
+                "end": 11.28,
+                "confidence": 0.9980469,
+                "punctuated_word": "services."
+              },
+              {
+                "word": "the",
+                "start": 11.759999,
+                "end": 12.0,
+                "confidence": 1.0,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "decision",
+                "start": 12.0,
+                "end": 12.4,
+                "confidence": 1.0,
+                "punctuated_word": "decision"
+              },
+              {
+                "word": "itself",
+                "start": 12.4,
+                "end": 12.88,
+                "confidence": 0.9970703,
+                "punctuated_word": "itself"
+              },
+              {
+                "word": "is",
+                "start": 12.88,
+                "end": 13.12,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "still",
+                "start": 13.12,
+                "end": 13.36,
+                "confidence": 1.0,
+                "punctuated_word": "still"
+              },
+              {
+                "word": "proposed",
+                "start": 13.36,
+                "end": 13.84,
+                "confidence": 0.9794922,
+                "punctuated_word": "proposed."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nUpdate that same ticket to remove its dependency assertion. Only this source's support retracts, its revision history is retained, and the next preview returns to 12 affected services. The decision itself is still proposed.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Update that same ticket to remove its dependency assertion.",
+                      "start": 0.39999998,
+                      "end": 3.6
+                    },
+                    {
+                      "text": "Only this source's support retracts, its revision history is retained, and the next preview returns to 12 affected services.",
+                      "start": 3.9199998,
+                      "end": 11.28
+                    },
+                    {
+                      "text": "The decision itself is still proposed.",
+                      "start": 11.759999,
+                      "end": 13.84
+                    }
+                  ],
+                  "num_words": 34,
+                  "start": 0.39999998,
+                  "end": 13.84
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

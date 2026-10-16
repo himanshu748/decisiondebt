@@ -1,0 +1,703 @@
+{
+  "format": "Edited continuous native 4K Chromium compositor recording",
+  "source": "evidence/demo-v3/raw/page@0bdaafaba7eeac2a3057357fe0596847.webm",
+  "source_sha256": "b2c2da11c24db7a53cbd079cf9cc74e107616ef59bf35f7e191844b9132e8a4c",
+  "source_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "vp9",
+        "codec_long_name": "Google VP9",
+        "profile": "Profile 0",
+        "codec_type": "video",
+        "codec_tag_string": "[0][0][0][0]",
+        "codec_tag": "0x0000",
+        "mime_codec_string": "vp09.00.50.08",
+        "width": 3840,
+        "height": 2160,
+        "coded_width": 3840,
+        "coded_height": 2160,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": -99,
+        "color_range": "tv",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/1000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "ENCODER": "Lavc61.3.100 libvpx-vp9",
+          "DURATION": "00:03:30.233000000"
+        }
+      }
+    ],
+    "format": {
+      "filename": "evidence/demo-v3/raw/page@0bdaafaba7eeac2a3057357fe0596847.webm",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "matroska,webm",
+      "format_long_name": "Matroska / WebM",
+      "start_time": "0.000000",
+      "duration": "210.233000",
+      "size": "97361249",
+      "bit_rate": "3704889",
+      "probe_score": 100,
+      "tags": {
+        "creation_time": "2026-10-16T13:02:00.228000Z",
+        "ENCODER": "Lavf61.1.100"
+      }
+    }
+  },
+  "wall_clock_offset_seconds": 0.12800002098083496,
+  "output_size": [
+    3840,
+    2160
+  ],
+  "fps": 30,
+  "screenshots_used_as_video": false,
+  "closeups": "Digital reframing of live video frames captured at native 3840x2160; no still-image montage",
+  "omitted": "Initial load and private local-admin setup; chronological application actions otherwise retained",
+  "segments": [
+    {
+      "id": "01-intro",
+      "chapter": "Know what a decision breaks",
+      "source_start_seconds": 2.243000020980835,
+      "source_end_seconds": 17.3096666876475,
+      "start_seconds": 0.0,
+      "duration_seconds": 15.066666666666666,
+      "frames": 452,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.0259999999999998,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.3259999999999998,
+          1.1538461538461537,
+          1920.0,
+          960.0
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/01-intro.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/01-intro.mp4"
+    },
+    {
+      "id": "02-impact",
+      "chapter": "Trace the real blast radius",
+      "source_start_seconds": 17.315000020980836,
+      "source_end_seconds": 35.91500002098084,
+      "start_seconds": 15.066666666666666,
+      "duration_seconds": 18.6,
+      "frames": 558,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.01799999999999713,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.3179999999999972,
+          1.0911074740861977,
+          2080.3200000000006,
+          1012.765625
+        ],
+        [
+          9.343999999999998,
+          1.0911074740861977,
+          2080.3200000000006,
+          1012.765625
+        ],
+        [
+          10.643999999999998,
+          1.9,
+          1825.0,
+          947.453125
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/02-impact.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/02-impact.mp4"
+    },
+    {
+      "id": "03-conflict",
+      "chapter": "Inspect conflicting owners",
+      "source_start_seconds": 35.93500002098084,
+      "source_end_seconds": 53.5016666876475,
+      "start_seconds": 33.66666666666667,
+      "duration_seconds": 17.566666666666666,
+      "frames": 527,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          3.628,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          4.928,
+          1.9,
+          2829.4736842105262,
+          880.453125
+        ],
+        [
+          8.730999999999995,
+          1.9,
+          2829.4736842105262,
+          880.453125
+        ],
+        [
+          10.030999999999995,
+          1.1538461538461537,
+          1919.9999389648438,
+          936.0000000000001
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/03-conflict.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/03-conflict.mp4"
+    },
+    {
+      "id": "04-unowned",
+      "chapter": "Keep missing knowledge explicit",
+      "source_start_seconds": 53.50400002098083,
+      "source_end_seconds": 69.1706666876475,
+      "start_seconds": 51.233333333333334,
+      "duration_seconds": 15.666666666666666,
+      "frames": 470,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          3.8430000000000035,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          5.143000000000003,
+          1.9,
+          2829.4736842105262,
+          879.453125
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/04-unowned.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/04-unowned.mp4"
+    },
+    {
+      "id": "05-drift",
+      "chapter": "Separate three kinds of drift",
+      "source_start_seconds": 69.18800002098084,
+      "source_end_seconds": 89.02133335431417,
+      "start_seconds": 66.9,
+      "duration_seconds": 19.833333333333332,
+      "frames": 595,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          4.518999999999991,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          5.818999999999991,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ],
+        [
+          10.387,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ],
+        [
+          11.687000000000001,
+          1.0,
+          1920.0,
+          1080.0
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/05-drift.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/05-drift.mp4"
+    },
+    {
+      "id": "06-agent",
+      "chapter": "Inspect the genuine recorded LLM run",
+      "source_start_seconds": 89.04000002098084,
+      "source_end_seconds": 106.24000002098084,
+      "start_seconds": 86.73333333333333,
+      "duration_seconds": 17.2,
+      "frames": 516,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.007999999999995566,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.3079999999999956,
+          1.1270780501549733,
+          2136.48,
+          958.2299999999999
+        ],
+        [
+          9.861999999999995,
+          1.1270780501549733,
+          2136.48,
+          958.2299999999999
+        ],
+        [
+          11.161999999999995,
+          1.1270780501549733,
+          2136.48,
+          958.2299999999999
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/06-agent.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/06-agent.mp4"
+    },
+    {
+      "id": "07-actions",
+      "chapter": "Review drafts before local approval",
+      "source_start_seconds": 112.74300002098083,
+      "source_end_seconds": 133.27633335431418,
+      "start_seconds": 103.93333333333334,
+      "duration_seconds": 20.533333333333335,
+      "frames": 616,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.014000000000010004,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.31400000000001,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ],
+        [
+          6.365000000000009,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ],
+        [
+          7.665000000000009,
+          1.9,
+          1919.9999389648438,
+          1103.9999694824219
+        ],
+        [
+          14.097000000000008,
+          1.9,
+          1919.9999389648438,
+          1103.9999694824219
+        ],
+        [
+          15.39700000000001,
+          1.9,
+          1125.328125,
+          746.1484375
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/07-actions.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/07-actions.mp4"
+    },
+    {
+      "id": "08-import",
+      "chapter": "Add a source and change the graph",
+      "source_start_seconds": 133.29600002098084,
+      "source_end_seconds": 153.12933335431418,
+      "start_seconds": 124.46666666666667,
+      "duration_seconds": 19.833333333333332,
+      "frames": 595,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.03299999999998704,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.332999999999987,
+          1.9,
+          1919.9999389648438,
+          1104.0
+        ],
+        [
+          11.590000000000003,
+          1.9,
+          1919.9999389648438,
+          1104.0
+        ],
+        [
+          12.890000000000004,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ],
+        [
+          17.59899999999999,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ],
+        [
+          18.89899999999999,
+          1.9,
+          1825.0,
+          947.453125
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/08-import.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/08-import.mp4"
+    },
+    {
+      "id": "09-retract",
+      "chapter": "Retract only one source's support",
+      "source_start_seconds": 153.13300002098083,
+      "source_end_seconds": 174.56633335431417,
+      "start_seconds": 144.3,
+      "duration_seconds": 21.433333333333334,
+      "frames": 643,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          8.236000000000018,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          9.53600000000002,
+          1.888165529178058,
+          1920.0,
+          1080.0
+        ],
+        [
+          13.272999999999996,
+          1.888165529178058,
+          1920.0,
+          1080.0
+        ],
+        [
+          14.572999999999997,
+          1.0911074740861977,
+          2080.3200000000006,
+          989.8199999999998
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/09-retract.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/09-retract.mp4"
+    },
+    {
+      "id": "10-query",
+      "chapter": "FalkorDB is the reasoning substrate",
+      "source_start_seconds": 174.58800002098084,
+      "source_end_seconds": 199.6546666876475,
+      "start_seconds": 165.73333333333335,
+      "duration_seconds": 25.066666666666666,
+      "frames": 752,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.00899999999998613,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.3089999999999862,
+          1.1270780501549733,
+          2136.48,
+          958.2299999999999
+        ],
+        [
+          10.292000000000002,
+          1.1270780501549733,
+          2136.48,
+          958.2299999999999
+        ],
+        [
+          11.592000000000002,
+          1.1270780501549733,
+          2136.48,
+          1201.77
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/10-query.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/10-query.mp4"
+    },
+    {
+      "id": "11-public",
+      "chapter": "Try the public read-only demo",
+      "source_start_seconds": 199.68700002098083,
+      "source_end_seconds": 210.98700002098084,
+      "start_seconds": 190.8,
+      "duration_seconds": 11.3,
+      "frames": 339,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          0.03900000000001569,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.3390000000000157,
+          1.0,
+          1920.0,
+          1080.0
+        ]
+      ],
+      "narration_file": "evidence/demo-v3/11-public.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/demo-4k/render/11-public.mp4"
+    }
+  ],
+  "output": "evidence/demo-v3/decisiondebt-demo-4k-narrated.mp4",
+  "duration_seconds": 202.10000000000002,
+  "sha256": "ef7487a56f181b0277606c41fae8ac90a2fcf110a3646ca3926f6332330916b6",
+  "output_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640033",
+        "width": 3840,
+        "height": 2160,
+        "coded_width": 3840,
+        "coded_height": 2160,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 51,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "9277440/309247",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 3092470,
+        "duration": "201.332682",
+        "bit_rate": "2126801",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "6040",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.102 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 1,
+        "channel_layout": "mono",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 9663456,
+        "duration": "201.322000",
+        "bit_rate": "155209",
+        "nb_frames": "9438",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "evidence/demo-v3/decisiondebt-demo-4k-narrated.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "201.332682",
+      "size": "57652980",
+      "bit_rate": "2290854",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.102"
+      }
+    }
+  }
+}

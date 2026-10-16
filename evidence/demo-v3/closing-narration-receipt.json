@@ -1,0 +1,12 @@
+{
+  "requested_at": "2026-10-16T12:51:27.635715+00:00",
+  "provider": "Deepgram",
+  "model": "aura-2-thalia-en",
+  "status": 200,
+  "request_id": "01a144c4-6c27-7862-bea9-329bf30ea7f0",
+  "text": "Decision Debt. Company Brain, Track Three. Voice by Deepgram.",
+  "characters": 61,
+  "path": "evidence/demo-v3/12-closing.wav",
+  "duration_seconds": 4.959979,
+  "sha256": "8ec63e48ab4360d1d0dccca7d31e75275cf0063e9d9a1c2f2864c706fa47717f"
+}

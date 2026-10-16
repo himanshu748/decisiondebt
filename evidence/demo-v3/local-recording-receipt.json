@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-16T13:13:21.238324+00:00",
+  "health_before_cleanup": {
+    "recording": {
+      "status": "ok",
+      "graph_revision": 19,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "local-admin"
+    },
+    "original_local": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": true,
+      "mode": "local-admin"
+    },
+    "public": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    }
+  },
+  "local_recording_port": 8002,
+  "local_recording_db_port": 16381,
+  "synthetic_recording_graph": "decisiondebt_public",
+  "recording_db_image": "falkordb/falkordb:6.0.2",
+  "original_local_and_public_revision_unchanged": true,
+  "recording_api_stopped": true,
+  "recording_db_state": "exited",
+  "provider_llm_calls_in_new_recording": 0,
+  "note": "Only the newly created recording API and database were stopped. Original local and deployed services were not changed."
+}
