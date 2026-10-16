@@ -1,0 +1,155 @@
+{
+  "checked_at": "2026-10-16T12:01:54.422283+00:00",
+  "status": "local_checks_pass",
+  "checks": {
+    "required_files": true,
+    "local_document_links": true,
+    "corpus_graph": true,
+    "proposed_preview": true,
+    "preview_readonly": true,
+    "all_active_edges_anchored": true,
+    "three_drift_tiers": true,
+    "owner_ambiguities": true,
+    "precision_recall": true,
+    "pytest": true,
+    "browser": true,
+    "outage_persistence": true,
+    "dynamic_import_retraction": true,
+    "recorded_provider_proof": true,
+    "recorded_demo": true
+  },
+  "missing": [],
+  "broken_links": [],
+  "pytest_passed": 46,
+  "live_summary": {
+    "counts": {
+      "service": 60,
+      "person": 24,
+      "team": 8,
+      "project": 12,
+      "source": 95,
+      "sourcerevision": 96,
+      "claim": 322,
+      "task": 16,
+      "decision": 3,
+      "semantic_edges": 316
+    },
+    "source_types": [
+      {
+        "kind": "chat",
+        "count": 24
+      },
+      {
+        "kind": "doc",
+        "count": 40
+      },
+      {
+        "kind": "ticket",
+        "count": 31
+      }
+    ],
+    "claim_statuses": [
+      {
+        "status": "candidate",
+        "count": 4
+      },
+      {
+        "status": "retracted",
+        "count": 2
+      },
+      {
+        "status": "verified",
+        "count": 316
+      }
+    ],
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "elapsed_ms": 15.89
+  },
+  "preview_counts": {
+    "services": 12,
+    "projects": 12,
+    "drift_t1": 1,
+    "drift_t2": 1,
+    "drift_t3": 3,
+    "owner_gaps": 1,
+    "owner_conflicts": 1
+  },
+  "max_hops": 5,
+  "truncated": true,
+  "precision_recall": {
+    "expected": 315,
+    "actual": 315,
+    "true_positives": 315,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positives": [],
+    "false_negatives": []
+  },
+  "llm": {
+    "verified": true,
+    "run_id": "run-07fef4a6b0464a57b15fb2e809e30e02",
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "https://openrouter.ai/api/v1",
+    "provider_call_count": 8,
+    "cases": {
+      "unowned": {
+        "target_id": "svc-token-cache",
+        "ownership_inspected": true,
+        "additional_source_ids": [
+          "ticket-047"
+        ],
+        "outcome_ids": [
+          "task-ec6bc7d10728fc930aae4cb8"
+        ],
+        "passed": true
+      },
+      "conflicting_owners": {
+        "target_id": "svc-session-broker",
+        "ownership_inspected": true,
+        "primary_claim_ids": [
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "read_claim_ids": [
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "outcome_ids": [
+          "task-98752902c2c69b3b7f1766b0"
+        ],
+        "passed": true
+      },
+      "unlinked_mention": {
+        "target_id": "doc-002",
+        "native_search_used": true,
+        "source_context_read": true,
+        "outcome_ids": [
+          "task-ee6e0bfcdabd37376f08d931"
+        ],
+        "passed": true
+      }
+    },
+    "problems": []
+  },
+  "demo": {
+    "path": "evidence/decisiondebt-demo.mp4",
+    "ui_version": "graphite redesign",
+    "investigation": "genuine recorded provider run",
+    "format": "edited walkthrough of actual CUA browser captures",
+    "continuous_native_recording": false,
+    "run_id": "run-07fef4a6b0464a57b15fb2e809e30e02",
+    "duration_seconds": 90.0,
+    "resolution": [
+      1280,
+      960
+    ],
+    "fps": "30/1"
+  },
+  "limitations": [
+    "Public read-only deployment and video publication have separate receipts. The event form has not been submitted.",
+    "Single API worker only; CLI ingestion requires API stopped.",
+    "Extraction accuracy is measured on the synthetic fixture, not arbitrary enterprise language."
+  ]
+}

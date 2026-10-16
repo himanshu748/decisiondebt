@@ -1,0 +1,216 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/22.23.3/x64/bin/node",
+      "/home/runner/work/decisiondebt/decisiondebt/web/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/home/runner/work/decisiondebt/decisiondebt/web/playwright.config.ts",
+    "rootDir": "/home/runner/work/decisiondebt/decisiondebt/web/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/himanshu748/decisiondebt/commit/439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+        "commitHash": "439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+        "buildHref": "https://github.com/himanshu748/decisiondebt/actions/runs/38896361671"
+      },
+      "gitCommit": {
+        "shortHash": "439e4c6",
+        "hash": "439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+        "subject": "Resolve service container ID in the CI test step",
+        "body": "Resolve service container ID in the CI test step\n",
+        "author": {
+          "name": "himanshu748",
+          "email": "jhahimanshu653@gmail.com",
+          "time": 1792151378000
+        },
+        "committer": {
+          "name": "himanshu748",
+          "email": "jhahimanshu653@gmail.com",
+          "time": 1792151378000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/decisiondebt/decisiondebt/work/ci-evidence/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/himanshu748/decisiondebt/commit/439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+            "commitHash": "439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+            "buildHref": "https://github.com/himanshu748/decisiondebt/actions/runs/38896361671"
+          },
+          "gitCommit": {
+            "shortHash": "439e4c6",
+            "hash": "439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+            "subject": "Resolve service container ID in the CI test step",
+            "body": "Resolve service container ID in the CI test step\n",
+            "author": {
+              "name": "himanshu748",
+              "email": "jhahimanshu653@gmail.com",
+              "time": 1792151378000
+            },
+            "committer": {
+              "name": "himanshu748",
+              "email": "jhahimanshu653@gmail.com",
+              "time": 1792151378000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/decisiondebt/decisiondebt/web/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/runner/work/decisiondebt/decisiondebt/work/ci-evidence/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/himanshu748/decisiondebt/commit/439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+            "commitHash": "439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+            "buildHref": "https://github.com/himanshu748/decisiondebt/actions/runs/38896361671"
+          },
+          "gitCommit": {
+            "shortHash": "439e4c6",
+            "hash": "439e4c6fe316a86746ff4292bb7e91a9ecf0bbe5",
+            "subject": "Resolve service container ID in the CI test step",
+            "body": "Resolve service container ID in the CI test step\n",
+            "author": {
+              "name": "himanshu748",
+              "email": "jhahimanshu653@gmail.com",
+              "time": 1792151378000
+            },
+            "committer": {
+              "name": "himanshu748",
+              "email": "jhahimanshu653@gmail.com",
+              "time": 1792151378000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/home/runner/work/decisiondebt/decisiondebt/web/tests",
+        "snapshotDir": "/home/runner/work/decisiondebt/decisiondebt/web/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8001",
+          "browserName": "chromium",
+          "viewport": {
+            "width": 1440,
+            "height": 1100
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../work/ci-evidence/ui-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "smoke.spec.ts",
+      "file": "smoke.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "public company-brain workflow uses live graph evidence and blocks writes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T11:50:57.748Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-4394b9733d3933745432",
+          "file": "smoke.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-16T11:50:57.265Z",
+    "duration": 5048.015,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

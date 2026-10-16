@@ -1,0 +1,118 @@
+{
+  "before": {
+    "counts": {
+      "service": 60,
+      "person": 24,
+      "team": 8,
+      "project": 12,
+      "source": 95,
+      "sourcerevision": 96,
+      "claim": 322,
+      "task": 16,
+      "decision": 3,
+      "semantic_edges": 316
+    },
+    "source_types": [
+      {
+        "kind": "chat",
+        "count": 24
+      },
+      {
+        "kind": "doc",
+        "count": 40
+      },
+      {
+        "kind": "ticket",
+        "count": 31
+      }
+    ],
+    "claim_statuses": [
+      {
+        "status": "candidate",
+        "count": 4
+      },
+      {
+        "status": "retracted",
+        "count": 2
+      },
+      {
+        "status": "verified",
+        "count": 316
+      }
+    ],
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "elapsed_ms": 9.05
+  },
+  "/api/decisions/dec-auth-002/preview": {
+    "status": 503,
+    "body": {
+      "error": {
+        "code": "GRAPH_UNAVAILABLE",
+        "message": "FalkorDB is unavailable; no live impact was computed.",
+        "request_id": "ee15ca7cbeae4ca98f1a3d933b76e75f"
+      }
+    }
+  },
+  "/api/admin/agent/runs": {
+    "status": 503,
+    "body": {
+      "error": {
+        "code": "GRAPH_UNAVAILABLE",
+        "message": "FalkorDB is unavailable; no live impact was computed.",
+        "request_id": "6dc05c1fec13450e9350e74b6a3e3af5"
+      }
+    }
+  },
+  "after": {
+    "counts": {
+      "service": 60,
+      "person": 24,
+      "team": 8,
+      "project": 12,
+      "source": 95,
+      "sourcerevision": 96,
+      "claim": 322,
+      "task": 16,
+      "decision": 3,
+      "semantic_edges": 316
+    },
+    "source_types": [
+      {
+        "kind": "chat",
+        "count": 24
+      },
+      {
+        "kind": "doc",
+        "count": 40
+      },
+      {
+        "kind": "ticket",
+        "count": 31
+      }
+    ],
+    "claim_statuses": [
+      {
+        "status": "candidate",
+        "count": 4
+      },
+      {
+        "status": "retracted",
+        "count": 2
+      },
+      {
+        "status": "verified",
+        "count": 316
+      }
+    ],
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "elapsed_ms": 7.92
+  },
+  "persistence_passed": true,
+  "image": "[\"falkordb/falkordb@sha256:107455e862a824e45e8e9f5a7fbfdf5e00a08b14e13eae2577c72fd9e3f59ba6\"] arm64",
+  "aof": "appendonly\nyes",
+  "smoke_marker_persisted": true
+}

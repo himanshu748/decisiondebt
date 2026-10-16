@@ -1,0 +1,15 @@
+
+> decisiondebt-studio@1.0.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 2152 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.21 kB │ gzip:  0.59 kB
+dist/assets/index-CvjDU1Xf.css   97.31 kB │ gzip: 20.75 kB
+dist/assets/motion-BhE2f7cB.js  131.75 kB │ gzip: 43.28 kB
+dist/assets/graph-Dw4Jvv4x.js   183.93 kB │ gzip: 59.93 kB
+dist/assets/index-B6yaY4d-.js   257.45 kB │ gzip: 79.90 kB
+✓ built in 3.69s

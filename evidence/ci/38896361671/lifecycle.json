@@ -1,0 +1,110 @@
+{
+  "before": {
+    "counts": {
+      "service": 60,
+      "person": 24,
+      "team": 8,
+      "project": 12,
+      "source": 94,
+      "sourcerevision": 94,
+      "claim": 319,
+      "task": 0,
+      "decision": 3,
+      "semantic_edges": 315
+    },
+    "source_types": [
+      {
+        "kind": "chat",
+        "count": 24
+      },
+      {
+        "kind": "doc",
+        "count": 40
+      },
+      {
+        "kind": "ticket",
+        "count": 30
+      }
+    ],
+    "claim_statuses": [
+      {
+        "status": "candidate",
+        "count": 4
+      },
+      {
+        "status": "verified",
+        "count": 315
+      }
+    ],
+    "graph_revision": 1,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "elapsed_ms": 5.89
+  },
+  "/api/decisions/dec-auth-002/preview": {
+    "status": 503,
+    "body": {
+      "error": {
+        "code": "GRAPH_UNAVAILABLE",
+        "message": "FalkorDB is unavailable; no live impact was computed.",
+        "request_id": "5696d86c917e4c04a45edb50e14974c5"
+      }
+    }
+  },
+  "/api/admin/agent/runs": {
+    "status": 503,
+    "body": {
+      "error": {
+        "code": "GRAPH_UNAVAILABLE",
+        "message": "FalkorDB is unavailable; no live impact was computed.",
+        "request_id": "288671f38aa2402697b06ab37e2eb431"
+      }
+    }
+  },
+  "after": {
+    "counts": {
+      "service": 60,
+      "person": 24,
+      "team": 8,
+      "project": 12,
+      "source": 94,
+      "sourcerevision": 94,
+      "claim": 319,
+      "task": 0,
+      "decision": 3,
+      "semantic_edges": 315
+    },
+    "source_types": [
+      {
+        "kind": "chat",
+        "count": 24
+      },
+      {
+        "kind": "doc",
+        "count": 40
+      },
+      {
+        "kind": "ticket",
+        "count": 30
+      }
+    ],
+    "claim_statuses": [
+      {
+        "status": "candidate",
+        "count": 4
+      },
+      {
+        "status": "verified",
+        "count": 315
+      }
+    ],
+    "graph_revision": 1,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "elapsed_ms": 7.43
+  },
+  "persistence_passed": true,
+  "image": "[\"falkordb/falkordb@sha256:107455e862a824e45e8e9f5a7fbfdf5e00a08b14e13eae2577c72fd9e3f59ba6\"] amd64",
+  "aof": "appendonly\nyes",
+  "smoke_marker_persisted": true
+}

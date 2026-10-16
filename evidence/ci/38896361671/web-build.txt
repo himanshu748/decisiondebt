@@ -1,0 +1,15 @@
+
+> decisiondebt-studio@1.0.0 build
+> tsc -b && vite build
+
+[36mvite v7.3.7 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 2152 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  1.21 kB[22m[1m[22m[2m │ gzip:  0.59 kB[22m
+[2mdist/[22m[2massets/[22m[35mindex-CvjDU1Xf.css  [39m[1m[2m 97.31 kB[22m[1m[22m[2m │ gzip: 20.65 kB[22m
+[2mdist/[22m[2massets/[22m[36mmotion-BhE2f7cB.js  [39m[1m[2m131.75 kB[22m[1m[22m[2m │ gzip: 43.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mgraph-Dw4Jvv4x.js   [39m[1m[2m183.93 kB[22m[1m[22m[2m │ gzip: 60.16 kB[22m
+[2mdist/[22m[2massets/[22m[36mindex-B6yaY4d-.js   [39m[1m[2m257.45 kB[22m[1m[22m[2m │ gzip: 79.91 kB[22m
+[32m✓ built in 3.52s[39m

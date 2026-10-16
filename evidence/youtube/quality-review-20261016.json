@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-16T12:06:36.118668+00:00",
+  "video_url": "https://youtu.be/_9faaH35xPI",
+  "source_file": "evidence/decisiondebt-demo.mp4",
+  "source_sha256": "12b9d404ae2c5b2a9d59af16fbb355ed0d9542906c8d796db8783f74f055960b",
+  "source_ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 960,
+        "r_frame_rate": "30/1",
+        "bit_rate": "358845"
+      },
+      {
+        "codec_name": "mov_text",
+        "r_frame_rate": "0/0",
+        "bit_rate": "148"
+      }
+    ],
+    "format": {
+      "duration": "90.000000",
+      "size": "4072000",
+      "bit_rate": "361955"
+    }
+  },
+  "observed_youtube_settings": {
+    "selected": "Auto (720p)",
+    "available": [
+      "720p",
+      "360p",
+      "144p",
+      "Auto"
+    ]
+  },
+  "observation_method": "Signed-in YouTube watch page Settings > Quality through in-app browser",
+  "assessment": "Full dashboard views contain small text; 1280x960 source frames and current 720p playback constrain legibility. Higher-resolution fresh capture and closer framing would improve readability. No claim is made that processing is still pending.",
+  "source_modified": false,
+  "playback_setting_modified": false
+}

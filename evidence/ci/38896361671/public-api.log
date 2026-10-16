@@ -1,0 +1,31 @@
+INFO:     Started server process [3314]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56646 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48682 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48682 - "GET /api/decisions/dec-auth-002/preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48694 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48702 - "GET /assets/index-CvjDU1Xf.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48694 - "GET /assets/index-B6yaY4d-.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48726 - "GET /assets/graph-Dw4Jvv4x.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48714 - "GET /assets/motion-BhE2f7cB.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48714 - "GET /assets/knowledge-still-life.webp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48694 - "GET /api/decisions/dec-auth-002/preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48726 - "GET /api/company/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48702 - "GET /api/agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48702 - "GET /studio HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48694 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48702 - "GET /api/decisions/dec-auth-002/preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48714 - "GET /api/company/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48726 - "GET /api/tasks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48714 - "GET /api/agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48726 - "GET /api/claims?status=candidate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48726 - "GET /api/claims/claim-a95d41576b896f0d8b140a35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48702 - "GET /api/claims/claim-244be9185948c365a6b206dc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48714 - "GET /api/claims/claim-14c45e7d019b11ff49072d05 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48714 - "GET /api/sources/chat-077 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48682 - "POST /api/admin/import HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:48682 - "POST /api/admin/agent/runs HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:48682 - "POST /api/admin/tasks/test/approve HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:48682 - "POST /api/admin/decisions/dec-auth-002/accept HTTP/1.1" 403 Forbidden

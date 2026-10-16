@@ -1,0 +1,20 @@
+{
+  "host_architecture": "x86_64",
+  "write": [
+    [
+      "smoke"
+    ]
+  ],
+  "read": [
+    {
+      "id": "smoke"
+    }
+  ],
+  "index": [],
+  "fulltext": [
+    {
+      "id": "smoke",
+      "score": 1.0
+    }
+  ]
+}

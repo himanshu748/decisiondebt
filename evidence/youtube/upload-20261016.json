@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-16T11:59:57.901Z",
+  "url": "https://youtu.be/_9faaH35xPI",
+  "video_id": "_9faaH35xPI",
+  "channel_id": "UCMe9HOY01O4CSSaM3JIE4Hg",
+  "channel_name": "Himanshu Jha",
+  "visibility": "unlisted",
+  "status": "Video published; persisted visibility verified in Studio",
+  "title": "DecisionDebt: Know what a decision breaks | Company Brain | FalkorDB Graph Hacks",
+  "description": "Know what a decision breaks before you make it.\n\nTrack: Company Brain (Track 03) \u2014 WeMakeDevs x FalkorDB Graph Hacks.\n\nDecisionDebt connects a company's people, teams, projects, documents, services and decisions in FalkorDB. It traces which services and projects a proposed decision affects, with exact source excerpts behind each relationship. A bounded agent investigates uncertainty and proposes local remediation drafts for human approval.\n\nLive read-only demo: http://decisiondebt.52.202.25.181.sslip.io:8081/\nRepository and complete local setup: https://github.com/himanshu748/decisiondebt\nGraph model: https://github.com/himanshu748/decisiondebt#graph-model\nCypher queries: https://github.com/himanshu748/decisiondebt/blob/main/backend/app/graph/queries.py\nRecorded real LLM proof: https://github.com/himanshu748/decisiondebt/blob/main/evidence/agent-traces/llm-proof.json\n\nThe genuine OpenRouter investigation inspected missing Token Cache ownership, both conflicting Session Broker owner claims, and the unlinked OrionAuth mention. Owners remain unassigned where evidence is missing or conflicting. The document mention supports qualified review, not a dependency claim.\n\nThis is an edited walkthrough of actual browser captures using fictional Aster Works data. The original silent MP4 is unchanged; English captions are supplied separately. Local task approval and import/retraction are recorded demonstrations. The public deployment disables every write route and provider call.\n\nAI disclosure: Codex generated most of the implementation, tests and styling. Participant contribution and personal-verification fields are explicitly left for the participant to complete in the README: https://github.com/himanshu748/decisiondebt#ai-coding-disclosure\n\nChapters\n00:00 Proposed decision and connected company\n00:13 Conflicting owners and original sources\n00:31 Knowledge drift and the unlinked mention\n00:42 Real provider investigation and its trace\n00:55 Source-backed drafts and local approval\n01:10 Live import and source-specific retraction",
+  "source_file": "evidence/decisiondebt-demo.mp4",
+  "caption_file": "evidence/demo.srt",
+  "captions": "English by you; published",
+  "narration": "none; original silent video uploaded unchanged",
+  "platform_thumbnail_duration": "1:30",
+  "copyright_check": "No issues found at upload",
+  "publish_confirmation": "evidence/youtube/published-20261016.png",
+  "external_description_links": "URLs saved; Studio says channel verification is needed to make external links clickable",
+  "playback_verified": true,
+  "english_captions_visible_during_playback": true,
+  "source_sha256": "12b9d404ae2c5b2a9d59af16fbb355ed0d9542906c8d796db8783f74f055960b",
+  "captions_sha256": "125f50cf22d3a1333b8a4ecf2403d89c6f9c59637d1a4d0fbead3468b6b48ec7"
+}
