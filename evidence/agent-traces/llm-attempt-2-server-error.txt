@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/Users/himanshujha/Documents/Codex/2026-10-16/files-mentioned-by-the-user-spec/outputs/decisiondebt/tools/run_llm.py", line 59, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/himanshujha/Documents/Codex/2026-10-16/files-mentioned-by-the-user-spec/outputs/decisiondebt/tools/run_llm.py", line 28, in main
+    error = response.json().get("error", {})
+            ^^^^^^^^^^^^^^^
+  File "/Users/himanshujha/Documents/Codex/2026-10-16/files-mentioned-by-the-user-spec/outputs/decisiondebt/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

@@ -90,6 +90,10 @@ def test_drift_tiers(graph):
         for q in p["query_trace"]
     )
     assert search(graph, "OrionAuth") and not search(graph, "OrionAuthentication")
+    by_id = search(graph, "svc-token-cache", kind="chat")
+    assert by_id and all(row["excerpt"].casefold() == "token cache" for row in by_id)
+    assert all("Finley Rao" not in row["context"] for row in by_id)
+    assert search(graph, "unrecognized-hyphenated-alias") == []
 
 
 def test_every_active_edge_anchored(graph):

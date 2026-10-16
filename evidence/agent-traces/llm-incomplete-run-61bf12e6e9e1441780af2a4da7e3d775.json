@@ -1,0 +1,784 @@
+{
+  "id": "run-61bf12e6e9e1441780af2a4da7e3d775",
+  "mode": "llm",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "decision_id": "dec-auth-002",
+  "status": "turn_limit",
+  "graph_revision": 6,
+  "trace": [
+    {
+      "tool": "get_impact_summary",
+      "args": {
+        "decision_id": "dec-auth-002"
+      },
+      "at": "2026-10-16T10:27:16.915290+00:00",
+      "result": {
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "impacts": [
+          {
+            "service_id": "svc-auth-gateway",
+            "name": "Auth Gateway",
+            "depth": 0,
+            "priority": "P0",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-session-broker",
+            "name": "Session Broker",
+            "depth": 2,
+            "priority": "P1",
+            "owner_status": "conflict"
+          },
+          {
+            "service_id": "svc-login-gateway",
+            "name": "Login Gateway",
+            "depth": 1,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-identity-api",
+            "name": "Identity API",
+            "depth": 1,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-billing-api",
+            "name": "Billing API",
+            "depth": 2,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-token-cache",
+            "name": "Token Cache",
+            "depth": 3,
+            "priority": "P1",
+            "owner_status": "unowned"
+          },
+          {
+            "service_id": "svc-invoice-engine",
+            "name": "Invoice Engine",
+            "depth": 2,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-checkout-api",
+            "name": "Checkout API",
+            "depth": 3,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-payment-router",
+            "name": "Payment Router",
+            "depth": 3,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-support-console",
+            "name": "Support Console",
+            "depth": 3,
+            "priority": "P2",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-credential-vault",
+            "name": "Credential Vault",
+            "depth": 4,
+            "priority": "P2",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-access-proxy",
+            "name": "Access Proxy",
+            "depth": 5,
+            "priority": "P2",
+            "owner_status": "single_primary"
+          }
+        ],
+        "graph_revision": 6
+      },
+      "status": "ok",
+      "elapsed_ms": 2.52
+    },
+    {
+      "tool": "investigate_ownership",
+      "args": {
+        "service_id": "svc-token-cache"
+      },
+      "at": "2026-10-16T10:27:19.393982+00:00",
+      "result": {
+        "owner_status": "unowned",
+        "owner_ids": [],
+        "ownership_claims": [],
+        "evidence": [],
+        "service_id": "svc-token-cache",
+        "supporting_path_evidence": [
+          {
+            "id": "claim-c692f47033683572befa0b30",
+            "status": "verified",
+            "source_id": "doc-005",
+            "relation": "DEPENDS_ON",
+            "anchor_field": "body",
+            "start": 138,
+            "end": 197,
+            "excerpt": "Token Cache calls Session Broker during request validation.",
+            "method": "explicit_rule",
+            "source_sha256": "76d798a62a96d31cfc620cabe267fa18c475d8f3dc29bcfcaaf8576566079480",
+            "anchor_verified": true
+          }
+        ],
+        "evidence_ids": [
+          "claim-c692f47033683572befa0b30"
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 3.94
+    },
+    {
+      "tool": "investigate_ownership",
+      "args": {
+        "service_id": "svc-session-broker"
+      },
+      "at": "2026-10-16T10:27:23.226376+00:00",
+      "result": {
+        "owner_status": "conflict",
+        "owner_ids": [
+          "person-004",
+          "person-020"
+        ],
+        "ownership_claims": [
+          {
+            "owner_id": "person-004",
+            "name": "Devon Shah",
+            "role": "primary",
+            "claim_id": "claim-a95d41576b896f0d8b140a35"
+          },
+          {
+            "owner_id": "person-020",
+            "name": "Taylor Roy",
+            "role": "primary",
+            "claim_id": "claim-14c45e7d019b11ff49072d05"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "claim-a95d41576b896f0d8b140a35",
+            "status": "verified",
+            "source_id": "doc-021",
+            "relation": "OWNS",
+            "anchor_field": "body",
+            "start": 203,
+            "end": 241,
+            "excerpt": "Session Broker is owned by Devon Shah.",
+            "method": "explicit_rule",
+            "source_sha256": "2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-14c45e7d019b11ff49072d05",
+            "status": "verified",
+            "source_id": "chat-077",
+            "relation": "OWNS",
+            "anchor_field": "body",
+            "start": 180,
+            "end": 211,
+            "excerpt": "Taylor Roy owns Session Broker.",
+            "method": "explicit_rule",
+            "source_sha256": "7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d",
+            "anchor_verified": true
+          }
+        ],
+        "service_id": "svc-session-broker",
+        "supporting_path_evidence": [],
+        "evidence_ids": [
+          "claim-a95d41576b896f0d8b140a35",
+          "claim-14c45e7d019b11ff49072d05"
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 5.15
+    },
+    {
+      "tool": "search_sources",
+      "args": {
+        "alias": "OrionAuth",
+        "limit": 10
+      },
+      "at": "2026-10-16T10:27:25.055631+00:00",
+      "result": {
+        "sources": [
+          {
+            "source_id": "doc-002",
+            "title": "Login Gateway: operating notes",
+            "kind": "doc",
+            "ft_score": 1.0,
+            "excerpt": "OrionAuth",
+            "context": "s Login Gateway. Review the linked evidence before changing its operating procedure.\n\nThe OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to veri",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "mention_id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319",
+            "exact_match": true
+          },
+          {
+            "source_id": "doc-001",
+            "title": "Auth Gateway: operating notes",
+            "kind": "doc",
+            "ft_score": 0.8,
+            "excerpt": "OrionAuth",
+            "context": "e before changing its operating procedure.\n\nThis procedure follows decision dec-auth-001. OrionAuth remains the named legacy provider in this historical procedure.\n\nKeep this record with the original context and source author so future revi",
+            "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+            "mention_id": "mention:doc-001:f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b:363:372",
+            "exact_match": true
+          }
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 12.25
+    },
+    {
+      "tool": "read_evidence",
+      "args": {
+        "source_id": "doc-002"
+      },
+      "at": "2026-10-16T10:27:29.895335+00:00",
+      "result": {
+        "source_id": "doc-002",
+        "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+        "untrusted_source_text": "Synthetic Aster Works doc record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nIdentity API calls Auth Gateway during request validation.\n\nThis document describes Login Gateway. Review the linked evidence before changing its operating procedure.\n\nThe OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.\n",
+        "claims": [
+          {
+            "id": "claim-2194ad61d74e55ea3f16d5e4",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "AUTHORED",
+            "anchor_field": "raw_text",
+            "start": 54,
+            "end": 75,
+            "excerpt": "author_id: person-002",
+            "method": "metadata",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-497235829aed4ac6e94ef50c",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "DESCRIBES",
+            "anchor_field": "body",
+            "start": 198,
+            "end": 236,
+            "excerpt": "This document describes Login Gateway.",
+            "method": "explicit_rule",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-f329a336521bc8fa5ffd0dca",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "DEPENDS_ON",
+            "anchor_field": "body",
+            "start": 138,
+            "end": 196,
+            "excerpt": "Identity API calls Auth Gateway during request validation.",
+            "method": "explicit_rule",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          }
+        ],
+        "source_text_budget_remaining": 11336
+      },
+      "status": "ok",
+      "elapsed_ms": 8.4
+    },
+    {
+      "tool": "list_drift",
+      "args": {
+        "decision_id": "dec-auth-002"
+      },
+      "at": "2026-10-16T10:27:40.815709+00:00",
+      "result": {
+        "drifts": [
+          {
+            "id": "T1:doc-001",
+            "tier": 1,
+            "certainty": "confirmed_reference_obsolete",
+            "source_id": "doc-001",
+            "excerpt": "This procedure follows decision dec-auth-001.",
+            "evidence_claim_ids": [
+              "claim-34289390bf0a5e99b8c95fb6"
+            ],
+            "related_service_ids": [
+              "svc-auth-gateway"
+            ],
+            "reason": "Explicitly cites the decision this proposal would supersede. Technical content still requires review."
+          },
+          {
+            "id": "T2:doc-002:OrionAuth",
+            "tier": 2,
+            "certainty": "suspected_drift",
+            "source_id": "doc-002",
+            "excerpt": "OrionAuth",
+            "evidence_claim_ids": [],
+            "mention_id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319",
+            "related_service_ids": [
+              "svc-login-gateway"
+            ],
+            "reason": "Native full-text match verified against an exact alias. Mention alone does not prove usage."
+          },
+          {
+            "id": "T3:doc-001",
+            "tier": 3,
+            "certainty": "needs_review",
+            "source_id": "doc-001",
+            "excerpt": "This document describes Auth Gateway.",
+            "evidence_claim_ids": [
+              "claim-f944a248f5d4caa5ad414717"
+            ],
+            "related_service_ids": [
+              "svc-auth-gateway"
+            ],
+            "reason": "Last reviewed 2026-06-20T10:00:00+05:30; at least 90 days old and before the proposal."
+          },
+          {
+            "id": "T3:doc-002",
+            "tier": 3,
+            "certainty": "needs_review",
+            "source_id": "doc-002",
+            "excerpt": "This document describes Login Gateway.",
+            "evidence_claim_ids": [
+              "claim-497235829aed4ac6e94ef50c"
+            ],
+            "related_service_ids": [
+              "svc-login-gateway"
+            ],
+            "reason": "Last reviewed 2026-06-20T10:00:00+05:30; at least 90 days old and before the proposal."
+          },
+          {
+            "id": "T3:doc-004",
+            "tier": 3,
+            "certainty": "needs_review",
+            "source_id": "doc-004",
+            "excerpt": "This document describes Session Broker.",
+            "evidence_claim_ids": [
+              "claim-b80965575f21726fe60fb130"
+            ],
+            "related_service_ids": [
+              "svc-session-broker"
+            ],
+            "reason": "Last reviewed 2026-06-20T10:00:00+05:30; at least 90 days old and before the proposal."
+          }
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 2.35
+    },
+    {
+      "tool": "trace_dependency",
+      "args": {
+        "service_id": "svc-token-cache",
+        "max_hops": 5
+      },
+      "at": "2026-10-16T10:27:43.988898+00:00",
+      "result": {
+        "service_id": "svc-token-cache",
+        "depth": 3,
+        "paths": [
+          [
+            "svc-token-cache",
+            "svc-session-broker",
+            "svc-identity-api",
+            "svc-auth-gateway"
+          ],
+          [
+            "svc-token-cache",
+            "svc-session-broker",
+            "svc-login-gateway",
+            "svc-auth-gateway"
+          ],
+          [
+            "svc-token-cache",
+            "svc-credential-vault",
+            "svc-token-cache",
+            "svc-session-broker",
+            "svc-identity-api",
+            "svc-auth-gateway"
+          ]
+        ],
+        "path_claim_ids": [
+          [
+            "claim-c692f47033683572befa0b30",
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ],
+          [
+            "claim-c692f47033683572befa0b30",
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-509cb005f4c9750a255b2a9f"
+          ],
+          [
+            "claim-535fda068fafe46ec343e33e",
+            "claim-3a26cecaf3eafb107d6df567",
+            "claim-c692f47033683572befa0b30",
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        ],
+        "evidence_ids": [
+          "claim-0ff32af1aa8343172c979c3a",
+          "claim-244be9185948c365a6b206dc",
+          "claim-3a26cecaf3eafb107d6df567",
+          "claim-509cb005f4c9750a255b2a9f",
+          "claim-535fda068fafe46ec343e33e",
+          "claim-c692f47033683572befa0b30",
+          "claim-f329a336521bc8fa5ffd0dca"
+        ],
+        "max_hops": 5,
+        "outside_requested_depth": false
+      },
+      "status": "ok",
+      "elapsed_ms": 2.19
+    },
+    {
+      "tool": "trace_dependency",
+      "args": {
+        "service_id": "svc-session-broker",
+        "max_hops": 5
+      },
+      "at": "2026-10-16T10:27:51.710287+00:00",
+      "result": {
+        "service_id": "svc-session-broker",
+        "depth": 2,
+        "paths": [
+          [
+            "svc-session-broker",
+            "svc-identity-api",
+            "svc-auth-gateway"
+          ],
+          [
+            "svc-session-broker",
+            "svc-login-gateway",
+            "svc-auth-gateway"
+          ]
+        ],
+        "path_claim_ids": [
+          [
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ],
+          [
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-509cb005f4c9750a255b2a9f"
+          ]
+        ],
+        "evidence_ids": [
+          "claim-0ff32af1aa8343172c979c3a",
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-244be9185948c365a6b206dc",
+          "claim-509cb005f4c9750a255b2a9f",
+          "claim-a95d41576b896f0d8b140a35",
+          "claim-f329a336521bc8fa5ffd0dca"
+        ],
+        "max_hops": 5,
+        "outside_requested_depth": false
+      },
+      "status": "ok",
+      "elapsed_ms": 1.96
+    }
+  ],
+  "tool_calls": 8,
+  "provider": "https://openrouter.ai/api/v1",
+  "started_at": "2026-10-16T10:27:12.669621+00:00",
+  "turns": 8,
+  "usage_json": "{\"prompt_tokens\": 6645, \"completion_tokens\": 60, \"total_tokens\": 6705, \"cost\": 0, \"is_byok\": false, \"prompt_tokens_details\": {\"cached_tokens\": 4576, \"cache_write_tokens\": 0, \"audio_tokens\": 0, \"video_tokens\": 0}, \"cost_details\": {\"upstream_inference_cost\": 0, \"upstream_inference_prompt_cost\": 0, \"upstream_inference_completions_cost\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 0, \"image_tokens\": 0, \"audio_tokens\": 0}, \"provider_response_id\": \"gen-1792146464-vDrxzvJOMpaMRFx390yT\", \"provider_model\": \"nvidia/nemotron-3-super-120b-a12b:free\", \"upstream_provider\": \"Nvidia\", \"finish_reason\": \"tool_calls\", \"provider_request_id\": null}",
+  "provider_verified": true,
+  "provider_calls": [
+    {
+      "turn": 1,
+      "prompt_tokens": 2185,
+      "completion_tokens": 67,
+      "total_tokens": 2252,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146433-ZgIxejQzny31ww4Gr1Ry",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 2,
+      "prompt_tokens": 2825,
+      "completion_tokens": 70,
+      "total_tokens": 2895,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146437-K5JIRCeo6z3JnS6mS1QX",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 3,
+      "prompt_tokens": 3162,
+      "completion_tokens": 35,
+      "total_tokens": 3197,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146439-6AoqhQNE0nROrxYj7lP2",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 4,
+      "prompt_tokens": 3795,
+      "completion_tokens": 64,
+      "total_tokens": 3859,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146443-Tqjp75BAmslmlBIMLPbW",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 5,
+      "prompt_tokens": 4366,
+      "completion_tokens": 57,
+      "total_tokens": 4423,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146445-2lluZcKdoEx03hsnQx9l",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 6,
+      "prompt_tokens": 5166,
+      "completion_tokens": 52,
+      "total_tokens": 5218,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146451-IVxJMgpEWQ7cfoqtahoX",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 7,
+      "prompt_tokens": 5973,
+      "completion_tokens": 60,
+      "total_tokens": 6033,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4576,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146462-Xygn48Tg8cuA1UZuFjDy",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 8,
+      "prompt_tokens": 6645,
+      "completion_tokens": 60,
+      "total_tokens": 6705,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4576,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792146464-vDrxzvJOMpaMRFx390yT",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    }
+  ],
+  "execution_kind": "llm",
+  "coverage": {
+    "cases": {
+      "unowned": {
+        "target_id": "svc-token-cache",
+        "ownership_inspected": true,
+        "additional_source_ids": [],
+        "outcome_ids": [],
+        "passed": false
+      },
+      "conflicting_owners": {
+        "target_id": "svc-session-broker",
+        "ownership_inspected": true,
+        "primary_claim_ids": [
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "read_claim_ids": [
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "outcome_ids": [],
+        "passed": false
+      },
+      "unlinked_mention": {
+        "target_id": "doc-002",
+        "native_search_used": true,
+        "source_context_read": true,
+        "outcome_ids": [],
+        "passed": false
+      }
+    },
+    "all_passed": false
+  },
+  "token_usage": {
+    "prompt_tokens": 34117,
+    "completion_tokens": 465,
+    "total_tokens": 34582
+  },
+  "elapsed_ms": 39043.01,
+  "source_chars": 1820,
+  "tasks": [],
+  "saved_revision": 7
+}

@@ -46,7 +46,11 @@ Task validation checks the live affected service, unchanged revision, allowed re
 
 The loop allows 8 turns, 12 tools, 90 seconds, at most 20 sourced records per tool, 3,000-character tool messages, a 12,000-character source-text budget and 2,000 requested completion tokens per call. One investigation runs at a time. Traces record tool arguments, bounded results, errors, rejections, model identity and timing. Source excerpts are data, never higher-priority instructions.
 
-No key was supplied. The included rule run inspects both conflicting-owner sources, searches additional evidence for the unowned service, reviews the unlinked OrionAuth document, proposes three local drafts, and abstains from guessing an owner. It is deterministic. Mocked provider tests prove the loop can execute different model-selected tool choices and reject invalid calls; they cannot establish that a real provider ran.
+The recorded real OpenRouter run inspected both Session Broker ownership claims, retrieved the additional Token Cache ticket, and used native OrionAuth search plus full source context. It proposed three unassigned drafts in eight model turns and eleven tool calls. The exact trace includes rejected evidence IDs and two rejected mention-backed ownership proposals, followed by the model's corrections. The qualified document task retains `uncertainty=suspected_drift`.
+
+The controller supplies factual progress and remaining budgets after each turn. Once retrieval for all three cases is complete, only proposal and abstention tools are offered. This reserves the remaining bounded turns for outcomes; it does not supply a scripted answer, owner, title or citation. Tool schemas enumerate actual live service IDs and evidence the model has received. Ownership investigation may include one native matching ticket (or chat fallback); its source excerpt is recorded and audited. Search returns the matching paragraph so an unrelated preceding owner statement does not substitute for relevant context.
+
+Provider requests use a hard `asyncio.wait_for` deadline: HTTP read timeouts alone allowed keep-alive traffic to stretch an earlier failed attempt beyond the run budget. That attempt remains incomplete in the evidence archive. Mocked tests prove controller behavior but are excluded from provider proof. The genuine proof requires real response IDs/model identity, completed status, all three case outcomes and measured limits.
 
 ## Reproduce and explain
 

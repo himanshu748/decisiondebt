@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "run_id": "run-07fef4a6b0464a57b15fb2e809e30e02",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "https://openrouter.ai/api/v1",
+  "provider_call_count": 8,
+  "cases": {
+    "unowned": {
+      "target_id": "svc-token-cache",
+      "ownership_inspected": true,
+      "additional_source_ids": [
+        "ticket-047"
+      ],
+      "outcome_ids": [
+        "task-ec6bc7d10728fc930aae4cb8"
+      ],
+      "passed": true
+    },
+    "conflicting_owners": {
+      "target_id": "svc-session-broker",
+      "ownership_inspected": true,
+      "primary_claim_ids": [
+        "claim-14c45e7d019b11ff49072d05",
+        "claim-a95d41576b896f0d8b140a35"
+      ],
+      "read_claim_ids": [
+        "claim-14c45e7d019b11ff49072d05",
+        "claim-a95d41576b896f0d8b140a35"
+      ],
+      "outcome_ids": [
+        "task-98752902c2c69b3b7f1766b0"
+      ],
+      "passed": true
+    },
+    "unlinked_mention": {
+      "target_id": "doc-002",
+      "native_search_used": true,
+      "source_context_read": true,
+      "outcome_ids": [
+        "task-ee6e0bfcdabd37376f08d931"
+      ],
+      "passed": true
+    }
+  },
+  "problems": []
+}

@@ -1,0 +1,1013 @@
+{
+  "id": "run-e4f6961ca35d408ca54e32d7d5cc2a07",
+  "mode": "llm",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "decision_id": "dec-auth-002",
+  "status": "incomplete_investigation",
+  "graph_revision": 11,
+  "trace": [
+    {
+      "tool": "get_impact_summary",
+      "args": {
+        "decision_id": "dec-auth-002"
+      },
+      "at": "2026-10-16T10:46:58.587934+00:00",
+      "result": {
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "impacts": [
+          {
+            "service_id": "svc-auth-gateway",
+            "name": "Auth Gateway",
+            "depth": 0,
+            "priority": "P0",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-session-broker",
+            "name": "Session Broker",
+            "depth": 2,
+            "priority": "P1",
+            "owner_status": "conflict"
+          },
+          {
+            "service_id": "svc-login-gateway",
+            "name": "Login Gateway",
+            "depth": 1,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-identity-api",
+            "name": "Identity API",
+            "depth": 1,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-billing-api",
+            "name": "Billing API",
+            "depth": 2,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-token-cache",
+            "name": "Token Cache",
+            "depth": 3,
+            "priority": "P1",
+            "owner_status": "unowned"
+          },
+          {
+            "service_id": "svc-invoice-engine",
+            "name": "Invoice Engine",
+            "depth": 2,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-checkout-api",
+            "name": "Checkout API",
+            "depth": 3,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-payment-router",
+            "name": "Payment Router",
+            "depth": 3,
+            "priority": "P1",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-support-console",
+            "name": "Support Console",
+            "depth": 3,
+            "priority": "P2",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-credential-vault",
+            "name": "Credential Vault",
+            "depth": 4,
+            "priority": "P2",
+            "owner_status": "single_primary"
+          },
+          {
+            "service_id": "svc-access-proxy",
+            "name": "Access Proxy",
+            "depth": 5,
+            "priority": "P2",
+            "owner_status": "single_primary"
+          }
+        ],
+        "graph_revision": 11
+      },
+      "status": "ok",
+      "elapsed_ms": 3.06
+    },
+    {
+      "tool": "investigate_ownership",
+      "args": {
+        "service_id": "svc-token-cache"
+      },
+      "at": "2026-10-16T10:47:01.443543+00:00",
+      "result": {
+        "owner_status": "unowned",
+        "owner_ids": [],
+        "ownership_claims": [],
+        "evidence": [],
+        "service_id": "svc-token-cache",
+        "supporting_path_evidence": [
+          {
+            "id": "claim-c692f47033683572befa0b30",
+            "status": "verified",
+            "source_id": "doc-005",
+            "relation": "DEPENDS_ON",
+            "anchor_field": "body",
+            "start": 138,
+            "end": 197,
+            "excerpt": "Token Cache calls Session Broker during request validation.",
+            "method": "explicit_rule",
+            "source_sha256": "76d798a62a96d31cfc620cabe267fa18c475d8f3dc29bcfcaaf8576566079480",
+            "anchor_verified": true
+          }
+        ],
+        "evidence_ids": [
+          "claim-c692f47033683572befa0b30"
+        ],
+        "additional_sources": [
+          {
+            "source_id": "ticket-047",
+            "title": "Cohort Engine: handoff record",
+            "kind": "ticket",
+            "ft_score": 2.0,
+            "excerpt": "Token Cache",
+            "context": " is owned by Finley Rao.\n\nEllis Reed is a member of Insights Team.\n\nProject Waypoint uses Token Cache for its delivery milestone.\n\nProject Waypoint uses Payment Router for its delivery milestone.\n\nKeep this record with the original context and source author so ",
+            "start": 311,
+            "end": 322,
+            "source_sha256": "11a1c6d2dcc689b2d06ce48363a1257a40dfdfb58906bd87dded9f857d67234f",
+            "mention_id": "mention:ticket-047:11a1c6d2dcc689b2d06ce48363a1257a40dfdfb58906bd87dded9f857d67234f:311:322",
+            "exact_match": true
+          }
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 23.62
+    },
+    {
+      "tool": "investigate_ownership",
+      "args": {
+        "service_id": "svc-session-broker"
+      },
+      "at": "2026-10-16T10:47:01.467187+00:00",
+      "result": {
+        "owner_status": "conflict",
+        "owner_ids": [
+          "person-004",
+          "person-020"
+        ],
+        "ownership_claims": [
+          {
+            "owner_id": "person-004",
+            "name": "Devon Shah",
+            "role": "primary",
+            "claim_id": "claim-a95d41576b896f0d8b140a35"
+          },
+          {
+            "owner_id": "person-020",
+            "name": "Taylor Roy",
+            "role": "primary",
+            "claim_id": "claim-14c45e7d019b11ff49072d05"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "claim-a95d41576b896f0d8b140a35",
+            "status": "verified",
+            "source_id": "doc-021",
+            "relation": "OWNS",
+            "anchor_field": "body",
+            "start": 203,
+            "end": 241,
+            "excerpt": "Session Broker is owned by Devon Shah.",
+            "method": "explicit_rule",
+            "source_sha256": "2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-14c45e7d019b11ff49072d05",
+            "status": "verified",
+            "source_id": "chat-077",
+            "relation": "OWNS",
+            "anchor_field": "body",
+            "start": 180,
+            "end": 211,
+            "excerpt": "Taylor Roy owns Session Broker.",
+            "method": "explicit_rule",
+            "source_sha256": "7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d",
+            "anchor_verified": true
+          }
+        ],
+        "service_id": "svc-session-broker",
+        "supporting_path_evidence": [],
+        "evidence_ids": [
+          "claim-a95d41576b896f0d8b140a35",
+          "claim-14c45e7d019b11ff49072d05"
+        ],
+        "additional_sources": []
+      },
+      "status": "ok",
+      "elapsed_ms": 2.72
+    },
+    {
+      "tool": "search_sources",
+      "args": {
+        "alias": "OrionAuth",
+        "kind": "doc",
+        "limit": 10
+      },
+      "at": "2026-10-16T10:47:04.713319+00:00",
+      "result": {
+        "sources": [
+          {
+            "source_id": "doc-002",
+            "title": "Login Gateway: operating notes",
+            "kind": "doc",
+            "ft_score": 1.0,
+            "excerpt": "OrionAuth",
+            "context": "s Login Gateway. Review the linked evidence before changing its operating procedure.\n\nThe OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to veri",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "mention_id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319",
+            "exact_match": true
+          },
+          {
+            "source_id": "doc-001",
+            "title": "Auth Gateway: operating notes",
+            "kind": "doc",
+            "ft_score": 0.8,
+            "excerpt": "OrionAuth",
+            "context": "e before changing its operating procedure.\n\nThis procedure follows decision dec-auth-001. OrionAuth remains the named legacy provider in this historical procedure.\n\nKeep this record with the original context and source author so future revi",
+            "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+            "mention_id": "mention:doc-001:f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b:363:372",
+            "exact_match": true
+          }
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 14.4
+    },
+    {
+      "tool": "read_evidence",
+      "args": {
+        "source_id": "doc-002"
+      },
+      "at": "2026-10-16T10:47:04.727738+00:00",
+      "result": {
+        "source_id": "doc-002",
+        "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+        "untrusted_source_text": "Synthetic Aster Works doc record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nIdentity API calls Auth Gateway during request validation.\n\nThis document describes Login Gateway. Review the linked evidence before changing its operating procedure.\n\nThe OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.\n",
+        "claims": [
+          {
+            "id": "claim-2194ad61d74e55ea3f16d5e4",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "AUTHORED",
+            "anchor_field": "raw_text",
+            "start": 54,
+            "end": 75,
+            "excerpt": "author_id: person-002",
+            "method": "metadata",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-497235829aed4ac6e94ef50c",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "DESCRIBES",
+            "anchor_field": "body",
+            "start": 198,
+            "end": 236,
+            "excerpt": "This document describes Login Gateway.",
+            "method": "explicit_rule",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-f329a336521bc8fa5ffd0dca",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "DEPENDS_ON",
+            "anchor_field": "body",
+            "start": 138,
+            "end": 196,
+            "excerpt": "Identity API calls Auth Gateway during request validation.",
+            "method": "explicit_rule",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          }
+        ],
+        "source_text_budget_remaining": 11064
+      },
+      "status": "ok",
+      "elapsed_ms": 6.77
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-token-cache",
+        "kind": "verify_owner",
+        "title": "Assign ownership of Token Cache to Finley Rao based on handoff record",
+        "reason": "Ticket-047 contains a handoff record stating 'Token Cache is owned by Finley Rao.' This provides clear ownership evidence for the currently unowned service. The service also has a verified dependency relationship with Session Broker (claim-c692f47033683572befa0b30) showing it calls Session Broker during request validation.",
+        "evidence_ids": [
+          "ticket-047",
+          "claim-c692f47033683572befa0b30"
+        ],
+        "owner_id": "person-004"
+      },
+      "at": "2026-10-16T10:47:26.160875+00:00",
+      "result": {
+        "error": "INVALID_EVIDENCE",
+        "message": "('INVALID_EVIDENCE', 'Task must cite evidence actually retrieved during this run')"
+      },
+      "status": "rejected",
+      "elapsed_ms": 11.79
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-session-broker",
+        "kind": "verify_owner",
+        "title": "Resolve ownership conflict for Session Broker between Devon Shah and Taylor Roy",
+        "reason": "Conflicting ownership claims exist: doc-021 states 'Session Broker is owned by Devon Shah' (claim-a95d41576b896f0d8b140a35) while chat-077 states 'Taylor Roy owns Session Broker' (claim-14c45e7d019b11ff49072d05). Both claims are verified and from different sources, creating an ownership conflict that requires resolution through additional stakeholder consultation or documentation review.",
+        "evidence_ids": [
+          "claim-a95d41576b896f0d8b140a35",
+          "claim-14c45e7d019b11ff49072d05"
+        ]
+      },
+      "at": "2026-10-16T10:47:26.172700+00:00",
+      "result": {
+        "draft_task": {
+          "id": "task-ee6941897797f3e562a9bd82",
+          "decision_id": "dec-auth-002",
+          "service_id": "svc-session-broker",
+          "kind": "verify_owner",
+          "title": "Resolve ownership conflict for Session Broker between Devon Shah and Taylor Roy",
+          "reason": "Conflicting ownership claims exist: doc-021 states 'Session Broker is owned by Devon Shah' (claim-a95d41576b896f0d8b140a35) while chat-077 states 'Taylor Roy owns Session Broker' (claim-14c45e7d019b11ff49072d05). Both claims are verified and from different sources, creating an ownership conflict that requires resolution through additional stakeholder consultation or documentation review.",
+          "evidence_ids": [
+            "claim-a95d41576b896f0d8b140a35",
+            "claim-14c45e7d019b11ff49072d05"
+          ],
+          "owner_id": "",
+          "owner_status": "conflict",
+          "status": "proposed",
+          "priority": "P1",
+          "score": 65,
+          "analysis_revision": 11,
+          "path_json": "[\"svc-session-broker\", \"svc-identity-api\", \"svc-auth-gateway\"]",
+          "path_claim_ids": [
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ],
+          "uncertainty": ""
+        }
+      },
+      "status": "ok",
+      "elapsed_ms": 8.12
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "doc-002",
+        "kind": "review_doc",
+        "title": "Remove obsolete OrionAuth reference from Login Gateway operating notes",
+        "reason": "The document contains an obsolete reference to OrionAuth ('The OrionAuth token rotation checklist is still pinned here') but the accompanying text explicitly states 'This mention alone does not establish a provider dependency.' Since OrionAuth is listed in the obsolete_terms for decision dec-auth-002 and the document acknowledges this is merely a pinned checklist without functional dependency, the reference should be removed to prevent confusion during operating procedure changes.",
+        "evidence_ids": [
+          "doc-002"
+        ]
+      },
+      "at": "2026-10-16T10:47:26.180826+00:00",
+      "result": {
+        "error": "INVALID_TASK",
+        "message": "('INVALID_TASK', 'Service must exist in the live affected set')"
+      },
+      "status": "rejected",
+      "elapsed_ms": 1.34
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-token-cache",
+        "kind": "verify_owner",
+        "title": "Assign ownership of Token Cache to Finley Rao based on handoff record",
+        "reason": "Ticket-047 contains a handoff record stating 'Token Cache is owned by Finley Rao.' This provides clear ownership evidence for the currently unowned service. The service also has a verified dependency relationship with Session Broker (claim-c692f47033683572befa0b30) showing it calls Session Broker during request validation.",
+        "evidence_ids": [
+          "ticket-047:mention:ticket-047:11a1c6d2dcc689b2d06ce48363a1257a40dfdfb58906bd87dded9f857d67234f:311:322",
+          "claim-c692f47033683572befa0b30"
+        ],
+        "owner_id": "person-004"
+      },
+      "at": "2026-10-16T10:47:37.777433+00:00",
+      "result": {
+        "error": "INVALID_EVIDENCE",
+        "message": "('INVALID_EVIDENCE', 'Task must cite evidence actually retrieved during this run')"
+      },
+      "status": "rejected",
+      "elapsed_ms": 3.71
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "doc-002",
+        "kind": "review_doc",
+        "title": "Remove obsolete OrionAuth reference from Login Gateway operating notes",
+        "reason": "The document contains an obsolete reference to OrionAuth ('The OrionAuth token rotation checklist is still pinned here') but the accompanying text explicitly states 'This mention alone does not establish a provider dependency.' Since OrionAuth is listed in the obsolete_terms for decision dec-auth-002 and the document acknowledges this is merely a pinned checklist without functional dependency, the reference should be removed to prevent confusion during operating procedure changes.",
+        "evidence_ids": [
+          "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319"
+        ]
+      },
+      "at": "2026-10-16T10:47:37.781167+00:00",
+      "result": {
+        "error": "INVALID_TASK",
+        "message": "('INVALID_TASK', 'Service must exist in the live affected set')"
+      },
+      "status": "rejected",
+      "elapsed_ms": 1.66
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-token-cache",
+        "kind": "verify_owner",
+        "title": "Assign ownership of Token Cache to Finley Rao based on handoff record",
+        "reason": "Ticket-047 contains a handoff record stating 'Token Cache is owned by Finley Rao.' This provides clear ownership evidence for the currently unowned service. The service also has a verified dependency relationship with Session Broker showing it calls Session Broker during request validation.",
+        "evidence_ids": [
+          "ticket-047",
+          "claim-c692f47033683572befa0b30"
+        ],
+        "owner_id": "person-004"
+      },
+      "at": "2026-10-16T10:47:45.456993+00:00",
+      "result": {
+        "error": "INVALID_EVIDENCE",
+        "message": "('INVALID_EVIDENCE', 'Task must cite evidence actually retrieved during this run')"
+      },
+      "status": "rejected",
+      "elapsed_ms": 3.03
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "doc-002",
+        "kind": "review_doc",
+        "title": "Remove obsolete OrionAuth reference from Login Gateway operating notes",
+        "reason": "The document contains an obsolete reference to OrionAuth ('The OrionAuth token rotation checklist is still pinned here') but the accompanying text explicitly states 'This mention alone does not establish a provider dependency.' Since OrionAuth is listed in the obsolete_terms for decision dec-auth-002 and the document acknowledges this is merely a pinned checklist without functional dependency, the reference should be removed to prevent confusion during operating procedure changes.",
+        "evidence_ids": [
+          "doc-002"
+        ]
+      },
+      "at": "2026-10-16T10:47:45.460036+00:00",
+      "result": {
+        "error": "INVALID_TASK",
+        "message": "('INVALID_TASK', 'Service must exist in the live affected set')"
+      },
+      "status": "rejected",
+      "elapsed_ms": 1.72
+    }
+  ],
+  "tool_calls": 12,
+  "provider": "https://openrouter.ai/api/v1",
+  "started_at": "2026-10-16T10:46:54.951390+00:00",
+  "turns": 6,
+  "usage_json": "{\"prompt_tokens\": 8426, \"completion_tokens\": 368, \"total_tokens\": 8794, \"cost\": 0, \"is_byok\": false, \"prompt_tokens_details\": {\"cached_tokens\": 4576, \"cache_write_tokens\": 0, \"audio_tokens\": 0, \"video_tokens\": 0}, \"cost_details\": {\"upstream_inference_cost\": 0, \"upstream_inference_prompt_cost\": 0, \"upstream_inference_completions_cost\": 0}, \"completion_tokens_details\": {\"reasoning_tokens\": 0, \"image_tokens\": 0, \"audio_tokens\": 0}, \"provider_response_id\": \"gen-1792147658-oZNJfTrSTaU5X25Kt0vT\", \"provider_model\": \"nvidia/nemotron-3-super-120b-a12b:free\", \"upstream_provider\": \"Nvidia\", \"finish_reason\": \"tool_calls\", \"provider_request_id\": null}",
+  "provider_verified": true,
+  "provider_calls": [
+    {
+      "turn": 1,
+      "prompt_tokens": 2584,
+      "completion_tokens": 71,
+      "total_tokens": 2655,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792147615-X8Y1wsSwUM4lm94caQaQ",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 2,
+      "prompt_tokens": 3524,
+      "completion_tokens": 107,
+      "total_tokens": 3631,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792147618-QkYDQCvMiADyxtP4kERj",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 3,
+      "prompt_tokens": 5131,
+      "completion_tokens": 122,
+      "total_tokens": 5253,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792147621-NZIJcVAHgKKWFuW0Peu1",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 4,
+      "prompt_tokens": 5784,
+      "completion_tokens": 775,
+      "total_tokens": 6559,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792147625-OnKID8dSr9LXers6ZoKE",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 5,
+      "prompt_tokens": 7421,
+      "completion_tokens": 546,
+      "total_tokens": 7967,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4576,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792147646-q0YvOu13L6ZUEy74OBKk",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    },
+    {
+      "turn": 6,
+      "prompt_tokens": 8426,
+      "completion_tokens": 368,
+      "total_tokens": 8794,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4576,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "provider_response_id": "gen-1792147658-oZNJfTrSTaU5X25Kt0vT",
+      "provider_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "upstream_provider": "Nvidia",
+      "finish_reason": "tool_calls",
+      "provider_request_id": null
+    }
+  ],
+  "progress_feedback": [
+    {
+      "budget": {
+        "model_turns_remaining": 7,
+        "tool_calls_remaining": 11
+      },
+      "verified_progress": {
+        "cases": {
+          "unowned": {
+            "target_id": "svc-token-cache",
+            "ownership_inspected": false,
+            "additional_source_ids": [],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "conflicting_owners": {
+            "target_id": "svc-session-broker",
+            "ownership_inspected": false,
+            "primary_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "read_claim_ids": [],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "unlinked_mention": {
+            "target_id": "doc-002",
+            "native_search_used": false,
+            "source_context_read": false,
+            "outcome_ids": [],
+            "passed": false
+          }
+        },
+        "all_passed": false
+      },
+      "instruction": "Complete each unresolved investigation with an evidence-backed draft or qualified abstention before the budget ends. Inspect an additional ticket/chat for missing ownership. Reuse retrieved evidence. You may batch independent tool calls in one response. Choose your own order and evidence-based outcomes."
+    },
+    {
+      "budget": {
+        "model_turns_remaining": 6,
+        "tool_calls_remaining": 9
+      },
+      "verified_progress": {
+        "cases": {
+          "unowned": {
+            "target_id": "svc-token-cache",
+            "ownership_inspected": true,
+            "additional_source_ids": [
+              "ticket-047"
+            ],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "conflicting_owners": {
+            "target_id": "svc-session-broker",
+            "ownership_inspected": true,
+            "primary_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "read_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "unlinked_mention": {
+            "target_id": "doc-002",
+            "native_search_used": false,
+            "source_context_read": false,
+            "outcome_ids": [],
+            "passed": false
+          }
+        },
+        "all_passed": false
+      },
+      "instruction": "Complete each unresolved investigation with an evidence-backed draft or qualified abstention before the budget ends. Inspect an additional ticket/chat for missing ownership. Reuse retrieved evidence. You may batch independent tool calls in one response. Choose your own order and evidence-based outcomes."
+    },
+    {
+      "budget": {
+        "model_turns_remaining": 5,
+        "tool_calls_remaining": 7
+      },
+      "verified_progress": {
+        "cases": {
+          "unowned": {
+            "target_id": "svc-token-cache",
+            "ownership_inspected": true,
+            "additional_source_ids": [
+              "ticket-047"
+            ],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "conflicting_owners": {
+            "target_id": "svc-session-broker",
+            "ownership_inspected": true,
+            "primary_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "read_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "unlinked_mention": {
+            "target_id": "doc-002",
+            "native_search_used": true,
+            "source_context_read": true,
+            "outcome_ids": [],
+            "passed": false
+          }
+        },
+        "all_passed": false
+      },
+      "instruction": "Complete each unresolved investigation with an evidence-backed draft or qualified abstention before the budget ends. Inspect an additional ticket/chat for missing ownership. Reuse retrieved evidence. You may batch independent tool calls in one response. Choose your own order and evidence-based outcomes."
+    },
+    {
+      "budget": {
+        "model_turns_remaining": 4,
+        "tool_calls_remaining": 4
+      },
+      "verified_progress": {
+        "cases": {
+          "unowned": {
+            "target_id": "svc-token-cache",
+            "ownership_inspected": true,
+            "additional_source_ids": [
+              "ticket-047"
+            ],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "conflicting_owners": {
+            "target_id": "svc-session-broker",
+            "ownership_inspected": true,
+            "primary_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "read_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "outcome_ids": [
+              "task-ee6941897797f3e562a9bd82"
+            ],
+            "passed": true
+          },
+          "unlinked_mention": {
+            "target_id": "doc-002",
+            "native_search_used": true,
+            "source_context_read": true,
+            "outcome_ids": [],
+            "passed": false
+          }
+        },
+        "all_passed": false
+      },
+      "instruction": "Complete each unresolved investigation with an evidence-backed draft or qualified abstention before the budget ends. Inspect an additional ticket/chat for missing ownership. Reuse retrieved evidence. You may batch independent tool calls in one response. Choose your own order and evidence-based outcomes."
+    },
+    {
+      "budget": {
+        "model_turns_remaining": 3,
+        "tool_calls_remaining": 2
+      },
+      "verified_progress": {
+        "cases": {
+          "unowned": {
+            "target_id": "svc-token-cache",
+            "ownership_inspected": true,
+            "additional_source_ids": [
+              "ticket-047"
+            ],
+            "outcome_ids": [],
+            "passed": false
+          },
+          "conflicting_owners": {
+            "target_id": "svc-session-broker",
+            "ownership_inspected": true,
+            "primary_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "read_claim_ids": [
+              "claim-14c45e7d019b11ff49072d05",
+              "claim-a95d41576b896f0d8b140a35"
+            ],
+            "outcome_ids": [
+              "task-ee6941897797f3e562a9bd82"
+            ],
+            "passed": true
+          },
+          "unlinked_mention": {
+            "target_id": "doc-002",
+            "native_search_used": true,
+            "source_context_read": true,
+            "outcome_ids": [],
+            "passed": false
+          }
+        },
+        "all_passed": false
+      },
+      "instruction": "Complete each unresolved investigation with an evidence-backed draft or qualified abstention before the budget ends. Inspect an additional ticket/chat for missing ownership. Reuse retrieved evidence. You may batch independent tool calls in one response. Choose your own order and evidence-based outcomes."
+    }
+  ],
+  "tool_offers": [
+    {
+      "turn": 1,
+      "tools": [
+        "get_impact_summary",
+        "trace_dependency",
+        "search_sources",
+        "read_evidence",
+        "investigate_ownership",
+        "list_drift",
+        "propose_remediation",
+        "abstain"
+      ]
+    },
+    {
+      "turn": 2,
+      "tools": [
+        "get_impact_summary",
+        "trace_dependency",
+        "search_sources",
+        "read_evidence",
+        "investigate_ownership",
+        "list_drift",
+        "propose_remediation",
+        "abstain"
+      ]
+    },
+    {
+      "turn": 3,
+      "tools": [
+        "get_impact_summary",
+        "trace_dependency",
+        "search_sources",
+        "read_evidence",
+        "investigate_ownership",
+        "list_drift",
+        "propose_remediation",
+        "abstain"
+      ]
+    },
+    {
+      "turn": 4,
+      "tools": [
+        "propose_remediation",
+        "abstain"
+      ]
+    },
+    {
+      "turn": 5,
+      "tools": [
+        "propose_remediation",
+        "abstain"
+      ]
+    },
+    {
+      "turn": 6,
+      "tools": [
+        "propose_remediation",
+        "abstain"
+      ]
+    }
+  ],
+  "execution_kind": "llm",
+  "coverage": {
+    "cases": {
+      "unowned": {
+        "target_id": "svc-token-cache",
+        "ownership_inspected": true,
+        "additional_source_ids": [
+          "ticket-047"
+        ],
+        "outcome_ids": [],
+        "passed": false
+      },
+      "conflicting_owners": {
+        "target_id": "svc-session-broker",
+        "ownership_inspected": true,
+        "primary_claim_ids": [
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "read_claim_ids": [
+          "claim-14c45e7d019b11ff49072d05",
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "outcome_ids": [
+          "task-ee6941897797f3e562a9bd82"
+        ],
+        "passed": true
+      },
+      "unlinked_mention": {
+        "target_id": "doc-002",
+        "native_search_used": true,
+        "source_context_read": true,
+        "outcome_ids": [],
+        "passed": false
+      }
+    },
+    "all_passed": false
+  },
+  "token_usage": {
+    "prompt_tokens": 32870,
+    "completion_tokens": 1989,
+    "total_tokens": 34859
+  },
+  "elapsed_ms": 50510.72,
+  "source_chars": 1665,
+  "tasks": [
+    {
+      "id": "task-ee6941897797f3e562a9bd82",
+      "decision_id": "dec-auth-002",
+      "service_id": "svc-session-broker",
+      "kind": "verify_owner",
+      "title": "Resolve ownership conflict for Session Broker between Devon Shah and Taylor Roy",
+      "reason": "Conflicting ownership claims exist: doc-021 states 'Session Broker is owned by Devon Shah' (claim-a95d41576b896f0d8b140a35) while chat-077 states 'Taylor Roy owns Session Broker' (claim-14c45e7d019b11ff49072d05). Both claims are verified and from different sources, creating an ownership conflict that requires resolution through additional stakeholder consultation or documentation review.",
+      "evidence_ids": [
+        "claim-a95d41576b896f0d8b140a35",
+        "claim-14c45e7d019b11ff49072d05"
+      ],
+      "owner_id": "",
+      "owner_status": "conflict",
+      "status": "proposed",
+      "priority": "P1",
+      "score": 65,
+      "analysis_revision": 11,
+      "path_json": "[\"svc-session-broker\", \"svc-identity-api\", \"svc-auth-gateway\"]",
+      "path_claim_ids": [
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ],
+      "uncertainty": ""
+    }
+  ],
+  "saved_revision": 12
+}

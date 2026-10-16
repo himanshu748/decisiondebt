@@ -33,6 +33,12 @@ class Coverage:
             self.conflict_claims.update(
                 e["id"] for e in result.get("evidence", []) if e.get("id")
             )
+            entity = self.catalog.by_id.get(args.get("service_id"), {})
+            for source in result.get("additional_sources", []):
+                if source.get("kind") in ("ticket", "chat") and source.get("context"):
+                    self.additional_sources.add(
+                        (entity.get("name", "").casefold(), source["source_id"])
+                    )
         elif name == "search_sources":
             for src in result.get("sources", []):
                 if src.get("kind") in ("chat", "ticket"):
@@ -129,3 +135,19 @@ class Coverage:
             "cases": cases,
             "all_passed": len(cases) == 3 and all(c["passed"] for c in cases.values()),
         }
+
+    def ready_to_resolve(self):
+        cases = self.report()["cases"]
+        if len(cases) != 3:
+            return False
+        gap, conflict, mention = (
+            cases[k] for k in ("unowned", "conflicting_owners", "unlinked_mention")
+        )
+        return bool(
+            gap["ownership_inspected"]
+            and gap["additional_source_ids"]
+            and conflict["ownership_inspected"]
+            and conflict["primary_claim_ids"] == conflict["read_claim_ids"]
+            and mention["native_search_used"]
+            and mention["source_context_read"]
+        )

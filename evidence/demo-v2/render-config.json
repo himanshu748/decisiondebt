@@ -1,0 +1,252 @@
+{
+  "duration": 90,
+  "fps": 30,
+  "output_size": [
+    1280,
+    960
+  ],
+  "source_size": [
+    1280,
+    960
+  ],
+  "cursor_asset": "cursor.png",
+  "cursor_hotspot": [
+    13,
+    8
+  ],
+  "cursor_scale": 1.4,
+  "click_strength": 15,
+  "rotation_strength_degrees": 2,
+  "shots": {
+    "1": "frames/01-landing.png",
+    "2": "frames/02-preview.png",
+    "3": "frames/03-conflicting-owners.png",
+    "4": "frames/04-source-proof.png",
+    "5": "frames/05-unowned.png",
+    "6": "frames/06-evidence.png",
+    "7": "frames/07-unlinked-mention.png",
+    "8": "frames/08-provider-trace.png",
+    "9": "frames/09-action-board.png",
+    "10": "frames/10-approval-dialog.png",
+    "11": "frames/11-approved.png",
+    "12": "frames/12-import-dialog.png",
+    "13": "frames/13-expanded-impact.png",
+    "14": "frames/14-retraction-dialog.png",
+    "15": "frames/15-retracted.png"
+  },
+  "scene_starts": [
+    [
+      0,
+      "1",
+      "fade"
+    ],
+    [
+      6,
+      "2",
+      "fade"
+    ],
+    [
+      13,
+      "3",
+      "fade"
+    ],
+    [
+      19,
+      "4",
+      "fade"
+    ],
+    [
+      25,
+      "5",
+      "fade"
+    ],
+    [
+      31,
+      "6",
+      "fade"
+    ],
+    [
+      36,
+      "7",
+      "fade"
+    ],
+    [
+      42,
+      "8",
+      "fade"
+    ],
+    [
+      55,
+      "9",
+      "fade"
+    ],
+    [
+      63,
+      "10",
+      "fade"
+    ],
+    [
+      67,
+      "11",
+      "fade"
+    ],
+    [
+      70,
+      "12",
+      "fade"
+    ],
+    [
+      74,
+      "13",
+      "fade"
+    ],
+    [
+      81,
+      "14",
+      "fade"
+    ],
+    [
+      85,
+      "15",
+      "fade"
+    ]
+  ],
+  "cursor_keys": [
+    [
+      0,
+      1060,
+      535
+    ],
+    [
+      5,
+      565,
+      489
+    ],
+    [
+      6,
+      565,
+      489
+    ],
+    [
+      12,
+      699,
+      730
+    ],
+    [
+      18,
+      1110,
+      805
+    ],
+    [
+      24,
+      1090,
+      750
+    ],
+    [
+      30,
+      367,
+      700
+    ],
+    [
+      35,
+      855,
+      720
+    ],
+    [
+      41,
+      1010,
+      500
+    ],
+    [
+      54,
+      115,
+      335
+    ],
+    [
+      62,
+      1180,
+      847
+    ],
+    [
+      66,
+      640,
+      570
+    ],
+    [
+      69,
+      1120,
+      635
+    ],
+    [
+      73,
+      1020,
+      620
+    ],
+    [
+      80,
+      1045,
+      582
+    ],
+    [
+      84,
+      1020,
+      620
+    ],
+    [
+      89,
+      630,
+      720
+    ]
+  ],
+  "camera_keys": [
+    [
+      0,
+      640,
+      480,
+      1
+    ],
+    [
+      42,
+      640,
+      480,
+      1
+    ],
+    [
+      44,
+      680,
+      430,
+      1.05
+    ],
+    [
+      53,
+      680,
+      430,
+      1.05
+    ],
+    [
+      55,
+      640,
+      480,
+      1
+    ],
+    [
+      89,
+      640,
+      480,
+      1
+    ]
+  ],
+  "click_times": [
+    5.7,
+    18.7,
+    24.7,
+    35.7,
+    41.7,
+    62.7,
+    66.7,
+    73.7,
+    84.7
+  ],
+  "preset": "veryfast",
+  "crf": 18
+}

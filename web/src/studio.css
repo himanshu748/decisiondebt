@@ -1850,6 +1850,43 @@
 .studio .mobile-service-picker {
   display: none;
 }
+.studio .action-scope {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 24px 0 18px;
+  color: #abb9d0;
+  font-size: 12px;
+}
+.studio .action-scope select {
+  background: #172238;
+  border: 1px solid #3c4b64;
+  color: #e4edff;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font: inherit;
+}
+.studio .action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.studio .action-grid .task-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.studio .action-grid .task-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1100px) {
+  .studio .action-grid {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 700px) {
   .studio .mobile-service-picker {
     display: grid;

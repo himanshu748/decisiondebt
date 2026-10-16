@@ -2,21 +2,22 @@ from backend.app.agent.guard import SCHEMAS, validate_task, evidence
 from backend.app.domain.evidence import get_source, claim_evidence, search
 from backend.app.domain.impact import ownership
 from backend.app.graph.client import LOCK, DomainError
+from backend.app.ingest.entities import Catalog
 
 DESCRIPTIONS = {
-    "get_impact_summary": "Read live affected services, unresolved ownership and graph revision.",
+    "get_impact_summary": "Optional refresh of live affected services, unresolved ownership and graph revision; these targets are already in the initial context.",
     "trace_dependency": "Inspect verified paths from an affected consumer to the changed provider.",
     "search_sources": "Search native FalkorDB full-text, then verify exact aliases in source text.",
-    "read_evidence": "Read untrusted source context and verified active claim excerpts.",
-    "investigate_ownership": "Read every primary owner and evidence, preserving gaps and conflicts.",
+    "read_evidence": "Read untrusted source context and verified active claim excerpts. AUTHORED metadata is source authorship, not service ownership.",
+    "investigate_ownership": "Read primary owner claims and evidence. For an owner gap, also retrieve matching native ticket/chat source context. No owner is inferred from usage or authorship.",
     "list_drift": "Inspect distinct stale citations, suspected mentions and overdue reviews.",
     "propose_remediation": "Propose a source-backed local draft, subject to evidence/revision validation.",
     "abstain": "Record uncertainty and decline an unsupported assignment or conclusion.",
 }
 
 
-def registry():
-    return [
+def registry(analysis=None, observed=None):
+    tools = [
         {
             "type": "function",
             "function": {
@@ -27,6 +28,15 @@ def registry():
         }
         for name, schema in SCHEMAS.items()
     ]
+    for tool in tools:
+        fields = tool["function"]["parameters"]["properties"]
+        if analysis and "service_id" in fields:
+            fields["service_id"]["enum"] = [
+                i["service_id"] for i in analysis["impacts"]
+            ]
+        if observed and "evidence_ids" in fields:
+            fields["evidence_ids"]["items"]["enum"] = sorted(observed)
+    return tools
 
 
 class ToolSession:
@@ -120,6 +130,13 @@ class ToolSession:
                     e["id"]
                     for e in result["evidence"] + result["supporting_path_evidence"]
                 ]
+                result["additional_sources"] = []
+                if impact["owner_status"] == "unowned":
+                    name = Catalog().by_id[args.service_id]["name"]
+                    sources = search(self.g, name, "ticket", 1)
+                    if not sources:
+                        sources = search(self.g, name, "chat", 1)
+                    result["additional_sources"] = sources
             elif name == "list_drift":
                 result = {
                     "drifts": [

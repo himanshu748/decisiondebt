@@ -236,7 +236,13 @@ def agent_run(ident: str, g=Depends(graph)):
             raise DomainError("NOT_FOUND", "Unknown run", 404)
         r = rows[0]["run"]
         r["trace"] = json.loads(r.pop("trace_json"))
-        for key in ("coverage", "provider_calls", "token_usage"):
+        for key in (
+            "coverage",
+            "provider_calls",
+            "token_usage",
+            "progress_feedback",
+            "tool_offers",
+        ):
             if key + "_json" in r:
                 r[key] = json.loads(r.pop(key + "_json"))
         return r

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-16T10:04:49.922Z",
+  "checked_at": "2026-10-16T11:01:11.450Z",
   "browser": "Codex in-app browser, cua_repl",
   "url": "http://127.0.0.1:8000/studio",
   "title": "DecisionDebt | Decision studio",
@@ -32,8 +32,10 @@
     "claim opens source dialog with hash and exact spans",
     "native alias search returns 2 verified source matches",
     "all three drift tiers render",
-    "action board displays 6 API tasks",
-    "mobile preview and evidence"
+    "mobile preview and evidence",
+    "latest action board: 3 drafts; history: 16 retained tasks",
+    "separate local Token Cache task approval, still unassigned",
+    "UI import/retraction: 12 to 13 to 12"
   ],
   "checks": {
     "studioDesktopCheck": {
@@ -95,6 +97,21 @@
       "count": "12",
       "overflow": false,
       "width": 360
+    },
+    "latestActionMobile": {
+      "cards": 3,
+      "overflow": false,
+      "width": 375
+    },
+    "finalPreviewMobile": {
+      "count": "12",
+      "overflow": false,
+      "width": 375
+    },
+    "finalPreviewDesktop": {
+      "count": "12",
+      "overflow": false,
+      "width": 1440
     }
   },
   "console_errors": [],
@@ -105,6 +122,6 @@
     "hero_settled": true,
     "reduced_motion": "JS and CSS guards inspected; OS preference not changed"
   },
-  "provider": "pending owner key after UI review",
-  "video": "original UI and deterministic run retained until genuine-provider recording"
+  "provider": "genuine OpenRouter run verified, all three cases passed",
+  "video": "90s edited walkthrough of actual CUA captures, real provider trace"
 }

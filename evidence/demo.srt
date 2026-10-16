@@ -1,49 +1,79 @@
 1
-00:00:00,000 --> 00:00:09,900
-DecisionDebt | Synthetic Aster Works data
-Proposed migration. Counts come from live FalkorDB.
+00:00:00,000 --> 00:00:06,000
+DecisionDebt: a fictional company, with real local FalkorDB results.
+Edited walkthrough of actual browser captures.
 
 2
-00:00:10,000 --> 00:00:14,900
-Two source-backed paths. One affected service.
-Conflicting primary owners stay unresolved.
+00:00:06,000 --> 00:00:13,000
+Preview the OrionAuth migration while it remains proposed.
+12 affected services, with a disclosed five-hop boundary.
 
 3
-00:00:15,000 --> 00:00:21,900
-Every relationship has an exact source quote,
-Claim ID, immutable revision and SHA-256 hash.
+00:00:13,000 --> 00:00:19,000
+Session Broker has two verified dependency paths.
+Its primary ownership claims conflict.
 
 4
-00:00:22,000 --> 00:00:27,900
-Native full-text search finds an unlinked mention.
-T1 citation, T2 suspect, T3 overdue review.
+00:00:19,000 --> 00:00:25,000
+Inspect the original source, exact claim span and SHA-256.
+Both competing owner claims remain visible.
 
 5
-00:00:28,000 --> 00:00:39,900
-Deterministic rule run, clearly labeled.
-12 bounded tools inspect evidence and draft local tasks.
+00:00:25,000 --> 00:00:31,000
+Token Cache has no verified primary owner.
+A dependency does not establish ownership.
 
 6
-00:00:40,000 --> 00:00:49,900
-Missing and disputed owners remain unassigned.
-Human approval is a separate local action.
+00:00:31,000 --> 00:00:36,000
+Three drift tiers: stale citation, suspected mention, overdue review.
+Native full-text retrieval verifies the exact source text.
 
 7
-00:00:50,000 --> 00:00:55,900
+00:00:36,000 --> 00:00:42,000
+The OrionAuth checklist mention needs a document review.
+It does not establish a provider dependency.
+
+8
+00:00:42,000 --> 00:00:49,000
+Genuine OpenRouter run: Nemotron 3 Super free.
+8 model turns, 11 tools, 51.6 seconds; reported cost $0.
+
+9
+00:00:49,000 --> 00:00:55,000
+All three ambiguity checks passed.
+Rejected calls and the model's corrections remain in the trace.
+
+10
+00:00:55,000 --> 00:01:03,000
+Three source-backed drafts from analysis revision 12.
+Ownership stays unresolved; the mention remains suspected drift.
+
+11
+00:01:03,000 --> 00:01:07,000
+Human approval is a separate local confirmation.
+It approves a task, without assigning an owner or accepting the migration.
+
+12
+00:01:07,000 --> 00:01:10,000
+Token Cache task approved locally; owner still unassigned.
+Every approval retains an audit event.
+
+13
+00:01:10,000 --> 00:01:14,000
 Import one synthetic ticket:
 External Portal depends on Billing API.
 
-8
-00:00:56,000 --> 00:01:04,900
-New source, new claim, new Cypher result.
-The affected service count increases by one.
+14
+00:01:14,000 --> 00:01:21,000
+Fresh FalkorDB queries now find 13 affected services.
+The added claim supplies the new dependency path.
 
-9
-00:01:05,000 --> 00:01:21,900
-Inspect the new path, then remove the source assertion.
-Only that source's dependency support retracts.
+15
+00:01:21,000 --> 00:01:25,000
+Update the same source to remove its dependency assertion.
+Only that source's support retracts.
 
-10
-00:01:22,000 --> 00:01:30,000
-The count returns. The decision is still proposed.
-Source text to verified claim to reviewable action.
+16
+00:01:25,000 --> 00:01:30,000
+The live affected set returns to 12.
+Evidence and history persist; the decision remains proposed.

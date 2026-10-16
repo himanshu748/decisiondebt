@@ -40,18 +40,30 @@ class DriftArgs(DecisionArgs):
 
 
 class ProposeArgs(Strict):
-    service_id: str = Field(pattern=ID)
+    service_id: str = Field(
+        pattern=ID,
+        description="An affected svc-* service ID from the preview, never a doc-* or source ID. For document review use its related_service_ids.",
+    )
     kind: Literal[
         "review_doc",
         "verify_owner",
         "migrate_client",
         "update_runbook",
         "test_integration",
-    ]
+    ] = Field(
+        description="Use verify_owner for missing or conflicting primary ownership. Use review_doc for source-content review, including suspected obsolete mentions."
+    )
     title: str = Field(min_length=8, max_length=160)
     reason: str = Field(min_length=10, max_length=1000)
-    evidence_ids: list[str] = Field(min_length=1, max_length=20)
-    owner_id: str | None = None
+    evidence_ids: list[str] = Field(
+        min_length=1,
+        max_length=20,
+        description="Copy complete retrieved Claim IDs or mention IDs. Source IDs are not evidence IDs. Ownership review cites ownership/path Claim IDs; mention IDs support only document review.",
+    )
+    owner_id: str | None = Field(
+        default=None,
+        description="Leave null for unowned or conflicting services. Source authors and users are not verified primary owners.",
+    )
 
 
 class AbstainArgs(Strict):

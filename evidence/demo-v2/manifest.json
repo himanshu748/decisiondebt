@@ -1,0 +1,162 @@
+{
+  "format": "edited walkthrough of actual CUA browser captures",
+  "continuous_native_recording": false,
+  "duration_seconds": 90,
+  "resolution": [
+    1280,
+    960
+  ],
+  "fps": 30,
+  "audio": "none",
+  "captions": "embedded English mov_text, default",
+  "ui_version": "graphite redesign",
+  "run_id": "run-07fef4a6b0464a57b15fb2e809e30e02",
+  "investigation": "genuine recorded provider run",
+  "capture_browser": "Codex in-app browser through cua_repl",
+  "capture_date": "2026-10-16",
+  "states": "Actual local browser states assembled in narrative order. Revision labels retain capture-time values. No UI or provider result is fabricated.",
+  "approval_task_id": "task-ec6bc7d10728fc930aae4cb8",
+  "import_revisions": [
+    14,
+    15,
+    16
+  ],
+  "archive": "evidence/archive/original-ui/",
+  "frames": [
+    {
+      "path": "evidence/demo-v2/frames/01-landing.png",
+      "sha256": "91b1827613c96c13f401ac78f335438801a8918511a32d9d49b720992c1c64a0",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:39:57.240970+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/02-preview.png",
+      "sha256": "940bc05cb82e94ccfa3daacc6361ad975d32e040cb9177621d3036341aa37cb6",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:57:15.646347+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/03-conflicting-owners.png",
+      "sha256": "bf981717661416962ced7e8b2a0293acae06a0b970ab67729ba90097838cfc74",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:57:16.567374+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/04-source-proof.png",
+      "sha256": "68e573eb512450d3af5ae62274a16403bd8e8597e5f3d1393a4013a9378cde0a",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:57:17.073381+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/05-unowned.png",
+      "sha256": "f5e75f519d9cee70006d1f87c4f59d40298d239ab975cac88822c5b764197017",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:57:22.934740+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/06-evidence.png",
+      "sha256": "0d595e38d617af34890dacc869ea4bff89985ed4414224cfcffefdb1758ff013",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:56:38.861851+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/07-unlinked-mention.png",
+      "sha256": "94cdb31dc73ff1d94a2c9cbd49eeba75ad03f60330f70d3bbcfc9453f1a039c4",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:57:23.845098+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/08-provider-trace.png",
+      "sha256": "b185fad96d5841d390d98513152cdf31c4be600e8fa807a78f1d33e260963be7",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:56:39.265831+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/09-action-board.png",
+      "sha256": "185165b601bae563b92ee7d4f9cb88928f734d2d5e22090f2a597b660a2a201c",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:55:38.773782+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/10-approval-dialog.png",
+      "sha256": "83d70f7272595683fbd3a9d3f059f1136b646af032c1316a32128b7ee9875685",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:55:43.950721+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/11-approved.png",
+      "sha256": "0a66938e1daa84469478d852fdd9f9535a7db3eb3fc88b8765fffb01f4bfc201",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:55:44.453355+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/12-import-dialog.png",
+      "sha256": "dba25269581a2d6d299e605d6189eba5e54c302dac3a17cecc675723fcf32a1b",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:56:00.926209+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/13-expanded-impact.png",
+      "sha256": "087041a393bb29d8ff2cc074c8bc937784aba188afe29d264808beb9fa1d8fb9",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:56:16.131185+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/14-retraction-dialog.png",
+      "sha256": "33c6569c783f1def813b7c587b83d90c4ad566f48c938febe2af4886fb8f18b0",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:56:17.038636+00:00"
+    },
+    {
+      "path": "evidence/demo-v2/frames/15-retracted.png",
+      "sha256": "c2fa11ddec9c53858a71e2225eae303b6f497a95e6f088ed7b73391298c58254",
+      "size": [
+        1280,
+        960
+      ],
+      "captured_at": "2026-10-16T10:56:32.795973+00:00"
+    }
+  ]
+}

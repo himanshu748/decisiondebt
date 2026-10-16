@@ -1,58 +1,55 @@
-# DecisionDebt: working demo and 90-second script
+# DecisionDebt: 90-second working demo
 
-The measured capture is 97.8 seconds, including its final hold. The scripted action sequence is 90 seconds.
+[Watch the demo](evidence/decisiondebt-demo.mp4). It shows the redesigned landing at `/`, studio at `/studio`, recorded genuine OpenRouter investigation, explicit local approval, and actual source import/retraction.
 
-The supplied video records the original UI. The redesigned landing is at `/` and the studio is at `/studio`; current screenshots show the redesign. The owner requested UI review before adding the Groq key. A new recording and genuine-provider trace are pending that key and have not been substituted with a mocked run.
+This is an **edited walkthrough of actual Codex in-app browser captures**, assembled in narrative order with cursor motion and an embedded default English caption track. It is 1280×960, 30 fps, exactly 90 seconds, silent. It is not a continuous native video or a claim of 4K/60 fps. No UI result was fabricated. Captured revision labels retain their actual values; replay does not execute another model request. The provider ran before the trace was displayed.
 
-Aster Works is fictional. All source data is synthetic. The database and all counts shown in this recording are live local FalkorDB results. The investigation is a **Deterministic rule run**, not an LLM provider call. The delivered MP4 is a recorded local browser session, not a deployment.
+Aster Works is fictional. The database and counts come from real local FalkorDB. The model is `nvidia/nemotron-3-super-120b-a12b:free` through OpenRouter. Groq was not used. The user approved private key reuse and the free run. No credentials appear in the recording.
 
-## Assets
+## Evidence
 
-- `evidence/decisiondebt-demo.mp4`: actual browser capture, 1280x960, with an embedded explanatory caption track, no spoken narration.
-- `evidence/decisiondebt-demo.webm`: original native Chromium capture.
-- `evidence/demo.srt`: caption/narration script.
-- `evidence/test-results/video-metadata.json`: ffprobe verification.
-- `evidence/query-results/dynamic-import.json`: actual before, after, and retraction query receipts with event times.
-- `evidence/screenshots/`: recorded desktop, 375 px, exact-source and changed-impact states.
+- [Capture manifest](evidence/demo-v2/manifest.json): all 15 actual browser frames, SHA-256, capture times, provider run ID and edit format.
+- [Render configuration](evidence/demo-v2/render-config.json): scene, cursor and camera keyframes; paths relative to `evidence/demo-v2`.
+- [Captions](evidence/demo.srt) and [ffprobe receipt](evidence/test-results/video-metadata.json).
+- [Real provider trace](evidence/agent-traces/llm-run.json), [coverage proof](evidence/agent-traces/llm-proof.json), and [findings](evidence/LLM-INVESTIGATION.md).
+- [Live import/retraction receipts](evidence/query-results/dynamic-import.json): 12 → 13 → 12, graph revisions 14 → 15 → 16.
+- [Original continuous recording](evidence/archive/original-ui/decisiondebt-demo.mp4) and [native WebM](evidence/archive/original-ui/decisiondebt-demo.webm): original UI, deterministic investigation, 97.8 seconds. Retained as historical evidence, not the new provider demo.
 
-The dedicated Browser plugin was unavailable, so capture used installed Playwright and bundled Chromium. This is a real session capture rather than a screenshot animation. It uses the native capture frame rate and 4:3 viewport; it is not claimed as 4K/60 fps.
+The `browser-video-recording` skill's screenshot-sequence renderer was used because no native recording capability was exposed by the available CUA browser. Frames were captured through CUA. The cursor asset comes from the local macOS system pointer resource; no alternate UI automation or desktop capture was used.
 
-## Timed narration and actions
+## Timed walkthrough
 
-| Time | On screen | Suggested spoken script |
+| Time | Actual browser state | Caption story |
 |---|---|---|
-| 0-10s | Preview proposed migration; service count and live graph | “This is DecisionDebt. Aster Works is a synthetic 60-service company. We are previewing an OrionAuth migration before accepting it. Every number comes from FalkorDB.” |
-| 10-15s | Select Session Broker, inspect diamond and ownership | “The graph follows consumer dependencies backward. Session Broker appears once, even though two claim-backed paths connect it to the change. Its primary owners disagree.” |
-| 15-22s | Open exact source evidence | “Each relationship has a source quote, immutable revision, exact character span and hash. These are extracted claims, not hand-seeded graph answers.” |
-| 22-28s | Native full-text search and drift tiers | “There are three different findings: an old decision citation, a suspected unlinked OrionAuth mention, and overdue document reviews. A mention is not proof of usage.” |
-| 28-40s | Run deterministic investigation; expand tool trace | “No model key was supplied, so this is explicitly a deterministic rule run. It investigates both owner claims and missing ownership, reads extra context, and proposes local drafts without inventing an owner.” |
-| 40-50s | Action board and explicit approval | “Drafts stay unassigned where evidence is missing or disputed. Human approval is a separate protected operation that changes only the local task.” |
-| 50-65s | Import the new dependency ticket; live preview gains External Portal | “Now add one source: External Portal depends on Billing API. The importer verifies that sentence and activates its claim. A fresh Cypher query finds one more affected service.” |
-| 65-82s | Inspect new path; update same ticket to remove assertion | “This is a changed graph result. Removing the assertion retracts only this source's support. The service leaves the blast radius, while the migration remains proposed.” |
-| 82-90s | Return to owner gap and live paths | “DecisionDebt keeps evidence, uncertainty and human authority visible. The five-hop boundary is disclosed, and a database outage fails explicitly instead of serving invented results.” |
+| 0–6s | Landing page, live preview card | Fictional company, real FalkorDB results; edited browser walkthrough. |
+| 6–13s | Proposed migration, 12 affected services | Preview before human acceptance; the five-hop limit is disclosed. |
+| 13–19s | Session Broker selected | Two verified paths and competing primary ownership claims. |
+| 19–25s | Exact source dialog | Original context, SHA-256, claim IDs and character spans. |
+| 25–31s | Token Cache selected | No verified primary owner; dependency evidence does not identify an owner. |
+| 31–36s | Evidence view | Three distinct drift tiers; native full-text search. |
+| 36–42s | Full `doc-002` context | The unlinked OrionAuth mention supports review, not a provider dependency. |
+| 42–55s | Completed real provider trace | Eight turns, eleven tools, 51.6 seconds, $0 reported cost. All three cases pass; rejected calls and corrections remain visible. |
+| 55–63s | Latest analysis action board | Three source-backed drafts, unresolved owners, qualified suspected drift. |
+| 63–70s | Separate approval dialog and result | Approves the Token Cache task locally; no owner assignment or decision acceptance. |
+| 70–74s | Import dialog | Add the explicit External Portal → Billing API sentence. |
+| 74–81s | Live preview | A fresh query returns 13 affected services. |
+| 81–85s | Same source, retraction text | Remove only this source's dependency support. |
+| 85–90s | Recomputed preview | Returns to 12; retained source history and proposed decision. |
 
 ## Reproduce by hand
 
-1. Follow README setup. Import the original corpus, open `http://127.0.0.1:8000/` for the landing page, then select Open studio or visit `/studio`.
-2. Verify Proposed status and the live initial service count. Repeated Refresh preview must not change graph revision.
-3. Select Session Broker; read its two dependency paths and competing owners. Select Token Cache for the owner gap. Open a proof card to see source text and Claim anchors.
-4. Open Evidence, search `OrionAuth`, and inspect all three drift tiers. Expand Query proof to see actual Cypher and parameters.
-5. Unlock Local admin using the server's `.env` token. Select deterministic mode and click Run investigation. Inspect the saved trace. A genuine provider run requires the explicit server configuration described in README.
-6. Open Action Board. Approve one local task with the confirmation dialog. Do not accept the decision during the main walkthrough.
-7. Open Preview and Import new evidence. Use this ticket body:
+1. Follow README setup. Open `http://127.0.0.1:8000/`, select Open studio, or visit `/studio`.
+2. Verify Proposed status and the initial 12-service result. Refresh does not change graph revision.
+3. Select Session Broker and inspect both primary claims; select Token Cache and inspect the owner gap. Open a proof card to verify source context and anchors.
+4. Open Evidence, search `OrionAuth`, inspect all three tiers and expand Query proof. Inspect the recorded provider trace and its three coverage cards.
+5. To execute a new real run, configure a private provider key as described in README, unlock Local admin and choose Configured LLM. `python tools/run_llm.py` is the equivalent protected local API call. Do not describe a deterministic selection as a provider run.
+6. Open Action Board. Latest analysis shows the new drafts; All history shows earlier attempts. Approve one local task through its separate confirmation dialog. Keep the migration proposed.
+7. Open Import source. The default `ticket-live-portal` body is:
 
    `External Portal depends on Billing API for customer identity verification. This synthetic ticket adds the documented consumer connection.`
 
-   The dialog uses ID `ticket-live-portal`. Observe the next live preview gain `svc-external-portal` and inspect its Claim-backed path.
-8. Open the import dialog again and choose Use retraction text, then import. The same source ID creates a new revision, retracts the former dependency claim, and restores the original affected-service count.
-9. To prove graph necessity, run `python tools/check_lifecycle.py` while the local API is running and no browser interaction is in progress. It stops only `decisiondebt-db`, asserts real 503 responses, starts it again in a `finally` block, and checks persisted state.
+   Import and observe 13 affected services. Select External Portal to inspect its newly anchored path.
+8. Open Import source again, choose Use retraction text and import. The same source gets a new immutable revision, its previous support retracts, and the affected count returns to 12.
+9. Run `DD_TEST_LIFECYCLE=1 pytest -q` with the local API running and no browser mutations in progress. It stops only `decisiondebt-db`, verifies 503, restarts it in a `finally` block and verifies persisted state.
 
-The five-hop result intentionally reports `truncated=true`. Do not narrate it as the complete unlimited blast radius. The demo may leave an extra retained Source and source history; that is expected audit data, not an additional initial fixture record.
-
-## Submission gates
-
-The local build, source evidence, tests, screenshots and recorded browser demo are provided. A real configured LLM run, public Git remote, deployment and hackathon portal submission remain distinct external gates. No remote push or portal action was performed.
-
-## Replacement recording after UI review
-
-After saving the Groq key and restarting the local server, run `python tools/run_llm.py`. Verify `evidence/agent-traces/llm-proof.json` has `verified: true` and all three cases pass. Record the new `/studio` investigation trace with its actual provider identity, tool choices, evidence and outcomes. Retain any incomplete attempts honestly. Replace the video and captions only after this real run exists, then rerun `python tools/verify_submission.py` and inspect the exported video. Do not narrate the deterministic recording as a provider run.
+The canonical preview is truncated beyond five hops. The used demo graph retains 95 sources and source revision history. Public deployment, remote push and portal submission were not performed.

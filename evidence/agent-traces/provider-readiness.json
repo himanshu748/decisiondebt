@@ -1,14 +1,19 @@
 {
-  "checked_at": "2026-10-16T09:57:10.038988+00:00",
-  "key_present": false,
-  "llm_mode_enabled": false,
-  "status": "pending_owner_key_after_ui_review",
-  "provider_calls_made": 0,
-  "required_cases": [
-    "unowned",
-    "conflicting_owners",
-    "unlinked_mention"
-  ],
-  "run_command": ".venv/bin/python tools/run_llm.py",
-  "replacement_demo": "pending genuine provider run"
+  "status": "configured",
+  "provider": "OpenRouter",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "key_present": true,
+  "key_source": "owner-approved reuse of EmbodiWeave runtime credential, retained only in ignored .env",
+  "free_model_verified": true,
+  "price_caps": {
+    "prompt": 0,
+    "completion": 0
+  },
+  "paid_fallbacks": false,
+  "provider_configured": true,
+  "recorded_run_id": "run-07fef4a6b0464a57b15fb2e809e30e02",
+  "verified_all_three_cases": true,
+  "reported_success_cost_usd": 0,
+  "private_env_mode": "0o600",
+  "env_ignored": true
 }

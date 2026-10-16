@@ -2,6 +2,8 @@ import hashlib
 import re
 from backend.app.graph.client import DomainError
 from backend.app.graph.queries import Q5, Q7
+from backend.app.ingest.entities import Catalog
+from redis.exceptions import ResponseError
 
 
 def claim_evidence(g, ident, trace=None, require_active=True):
@@ -57,14 +59,25 @@ def get_source(g, ident, trace=None):
 
 
 def search(g, alias, kind=None, limit=20, trace=None, internal=False):
-    # Quoted phrase contains only controlled characters; no RediSearch operators from user input.
+    # Native full-text receives plain word tokens, never query operators.
     if not re.fullmatch(r"[A-Za-z][A-Za-z0-9 _-]{2,79}", alias):
         raise DomainError(
             "INVALID_QUERY", "Use a plain entity alias of 3 to 80 characters"
         )
     limit = max(1, min(limit, 80 if internal else 20))
-    safe = '"' + alias + '"'
-    rows = g.read(Q7, {"safe_query": safe}, "Q7", trace)
+    if alias.casefold().startswith("svc-"):
+        entity = Catalog().by_id.get(alias.casefold())
+        if entity:
+            alias = entity["name"]
+    safe = '"' + " ".join(re.findall(r"[A-Za-z0-9]+", alias)) + '"'
+    try:
+        rows = g.read(Q7, {"safe_query": safe}, "Q7", trace)
+    except ResponseError as error:
+        raise DomainError(
+            "SEARCH_UNAVAILABLE",
+            "Native search rejected this alias; try a plain entity name.",
+            503,
+        ) from error
     result = []
     pattern = re.compile(r"(?<!\w)" + re.escape(alias) + r"(?!\w)", re.I)
     for row in rows:
@@ -73,11 +86,14 @@ def search(g, alias, kind=None, limit=20, trace=None, internal=False):
         if not m or (kind and src["kind"] != kind):
             continue
         mention_id = f"mention:{src['id']}:{src['sha256']}:{m.start()}:{m.end()}"
+        begin = src["body"].rfind("\n", 0, m.start()) + 1
+        end = src["body"].find("\n", m.end())
+        paragraph = src["body"][begin : end if end >= 0 else len(src["body"])]
         result.append(
             {
                 **row,
                 "excerpt": m[0],
-                "context": src["body"][max(0, m.start() - 90) : m.end() + 160],
+                "context": paragraph[:1000],
                 "start": m.start(),
                 "end": m.end(),
                 "source_sha256": src["sha256"],

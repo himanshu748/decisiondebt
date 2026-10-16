@@ -18,7 +18,7 @@ Aster Works and all source records are synthetic. Measurements below describe th
 | Drift | T1 explicit old citation; T2 native full-text with exact check; T3 linked doc reviewed at least 90 days ago and before proposal |
 | Priority | `clamp(60-10*depth+5*criticality+12*unowned+8*conflict+6*T1+4*T2+2*T3,0,100)`; P0 >=70, P1 >=45 |
 | Agent | Eight allowlisted tools; 8 model turns, 12 calls, 90 seconds; no external business writes |
-| Provider example | Groq-compatible endpoint, `openai/gpt-oss-120b`; requires supplied key and explicit LLM mode |
+| Recorded provider | Owner-approved OpenRouter reuse; `nvidia/nemotron-3-super-120b-a12b:free`; zero-price routing, fallback disabled |
 | Documentation | README, DECISIONS, LEARNING, DEMO, measured evidence logs |
 
 ## Measurement-backed log
@@ -30,12 +30,12 @@ Aster Works and all source records are synthetic. Measurements below describe th
 | 2026-10-16 | Handle exact `already indexed` initialization error | Second full-suite setup returned `Attribute 'id' is already indexed`; repeated setup passes after ignoring only that response | This image does not silently ignore duplicate index DDL | Setup is repeatable; unrelated schema errors still fail |
 | 2026-10-16 | DB-only Docker CLI fallback on this host | Docker 29.9.0 client, server 29.5.2; `docker compose` reports unknown command | Compose plugin absent | `tools/db.sh` runs the same pinned image, loopback port and volume; `compose.yaml` ships for hosts with Compose |
 | 2026-10-16 | Keep official Python client 1.8.0 | Locked `requirements.txt`; real DB integration suite | Resolved client works with the image | No alternative graph client or Python topology fallback |
-| 2026-10-16 | Deterministic demonstration | `evidence/agent-traces/deterministic.json`: 12 tools, 3 local drafts, abstention | No provider key was supplied for this project | Genuine LLM proof remains unverified; mocked tests are not provider evidence |
+| 2026-10-16 | Deterministic demonstration | `evidence/agent-traces/deterministic.json`: 12 tools, 3 local drafts, abstention | No provider key was supplied for this project | Historical deterministic trace retained; later real proof is recorded separately |
 | 2026-10-16 | Bundled Chromium capture | `evidence/test-results/ui-smoke.json`; desktop and 375 px screenshots | Dedicated Browser plugin absent; installed Playwright/Chromium works | Capture is an actual local browser session; no public deployment is claimed |
 | 2026-10-16 | Split graph and motion browser bundles | `evidence/test-results/web-build.txt` | Initial single JS bundle exceeded Vite's 500 kB warning | Separate graph, motion and app chunks; identical API behavior |
 | 2026-10-16 | Landing at `/`, studio at `/studio` | Owner's explicit route choice; current UI screenshots | The owner requested a separate landing and a Manu Arora inspired dashboard redesign | Original graphite/cobalt composition, larger graph, separate evidence rail, generated concept art and restrained Motion for React transitions |
 | 2026-10-16 | Bound structured tool results before recording observed evidence | `backend/tests/unit/test_agent_bounds.py` | Slicing serialized JSON could hide IDs or source context while still counting it as retrieved | Valid JSON under 3000 characters; only delivered references become observed evidence |
-| 2026-10-16 | Require three-case coverage and provider identity for real proof | `backend/tests/integrations/test_agent_api.py`, `tools/run_llm.py` | A saved record with mode `llm` alone is insufficient proof | Eight-turn mocked regression covers all cases but is explicitly excluded from genuine provider proof; actual Groq key remains pending UI review |
+| 2026-10-16 | Require three-case coverage and provider identity for real proof | `backend/tests/integrations/test_agent_api.py`, `tools/run_llm.py` | A saved record with mode `llm` alone is insufficient proof | Eight-turn mocked regression covers all cases but is explicitly excluded from genuine provider proof; real OpenRouter run now passes all three cases |
 
 ## Runtime receipt
 
@@ -50,4 +50,18 @@ Aster Works and all source records are synthetic. Measurements below describe th
 
 The application uses one API worker and an in-process RLock for graph-dependent operations. CLI ingestion runs with the API stopped. This is neither a distributed lock nor snapshot isolation. Source validation precedes writes, but a process crash during a multi-query source batch can require rerunning the importer; no transactional recovery guarantee is claimed. Single-instance local operation is the supported mode.
 
-Public mode is supported in code and tested locally. The user authorized a bounded real Groq investigation and will supply the key after reviewing the redesigned UI. No provider call has been performed. Publishing, remote Git push, and hackathon portal submission have not been authorized or performed.
+Public mode is supported in code and tested locally. The user explicitly approved reusing the existing EmbodiWeave OpenRouter key for this private local project and the bounded free-model run. The successful run used eight turns, eleven tools and 51.6 seconds, with $0 reported cost. Groq remains an optional configuration, not the recorded provider. Publishing, remote Git push, and hackathon portal submission have not been authorized or performed.
+
+## Real-run corrections and outcome
+
+- Hyphenated service IDs caused a native full-text parser error. Resolve service IDs to catalog names and quote safe alphanumeric query tokens; native search errors remain explicit.
+- A clipped context could show an unrelated person's name before the matching service. Return the whole matching paragraph while preserving exact match offsets and hashes. The task guard rejected unsupported owner assignments.
+- Live service/evidence enums prevent invented references. Progress feedback states the remaining retrieval and outcome work; after evidence retrieval, only propose/abstain tools are offered. Outcome content remains the provider's choice.
+- An earlier attempt overran 90 seconds when HTTP keep-alives defeated the read timeout. Wrap the request in a hard total deadline, test cancellation, and retain that attempt as failed evidence.
+- Run `run-07fef4a6b0464a57b15fb2e809e30e02`: all three cases passed; 8 turns, 11 tools, 51,618.37 ms, 1,233 source characters, 56,976 aggregate tokens, $0 provider-reported cost. No ambiguous owner was assigned. Three rejected calls and corrections remain in the trace.
+- The action board now opens on the latest analysis (three drafts). All history retains 16 tasks across earlier analysis revisions. A separate local approval changed only the new Token Cache task's status. The import/retraction demo then verified 12 → 13 → 12 at graph revisions 14 → 15 → 16; no decision acceptance occurred.
+- The new 90-second demo uses actual CUA browser captures assembled in narrative order, with an embedded English caption track. It is labeled as an edited walkthrough, not continuous native recording. Original native video remains archived.
+
+See [investigation findings](evidence/LLM-INVESTIGATION.md), [provider proof](evidence/agent-traces/llm-proof.json) and [capture manifest](evidence/demo-v2/manifest.json).
+
+The outcome-stage tool restriction is applied per provider response: completing coverage during a batch does not revoke tools already offered in that response. The next turn receives the narrowed tool set. Both single-call and batched retrieval variants pass the eight-turn regression.

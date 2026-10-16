@@ -288,6 +288,13 @@ export default function App() {
     };
   }, [dialogOpen]);
   const admin = !!token && mode !== "public-readonly";
+  const latestTaskRevision = Math.max(
+    0,
+    ...tasks.map((t) => t.analysis_revision),
+  );
+  const latestTaskCount = tasks.filter(
+    (t) => t.analysis_revision === latestTaskRevision,
+  ).length;
   const driftCount = preview
     ? preview.counts.drift_t1 +
       preview.counts.drift_t2 +
@@ -325,7 +332,7 @@ export default function App() {
               <n.icon size={17} />
               {n.name}
               {n.name === "Action Board" && tasks.length > 0 && (
-                <span className="nav-count">{tasks.length}</span>
+                <span className="nav-count">{latestTaskCount}</span>
               )}
             </button>
           ))}
@@ -440,7 +447,7 @@ export default function App() {
                   <span className="tab-num">0{i + 1}</span>
                   {t}
                   {t === "Action Board" && (
-                    <span className="count-pill">{tasks.length}</span>
+                    <span className="count-pill">{latestTaskCount}</span>
                   )}
                 </button>
               ))}

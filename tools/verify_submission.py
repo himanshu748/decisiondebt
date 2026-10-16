@@ -1,6 +1,7 @@
 """Read-only submission audit. It never deploys, pushes, approves or invokes a model."""
 
 import json
+import hashlib
 import re
 import sys
 from pathlib import Path
@@ -37,6 +38,9 @@ def verify():
         "evidence/agent-traces/deterministic.json",
         "evidence/test-results/lifecycle.json",
         "evidence/query-results/dynamic-import.json",
+        "evidence/agent-traces/llm-run.json",
+        "evidence/agent-traces/llm-proof.json",
+        "evidence/demo-v2/manifest.json",
     ]
     checks["required_files"] = all(
         (ROOT / p).is_file() and (ROOT / p).stat().st_size > 0 for p in required
@@ -122,9 +126,35 @@ def verify():
                 run[key] = json.loads(run[key + "_json"])
         proofs.append(llm_proof(run))
     llm = next((p for p in proofs if p["verified"]), None)
+    recorded = json.loads((ROOT / "evidence/agent-traces/llm-run.json").read_text())
+    recorded_proof = llm_proof(recorded)
+    checks["recorded_provider_proof"] = (
+        recorded_proof["verified"]
+        and llm is not None
+        and recorded_proof["run_id"] == llm["run_id"]
+        and recorded_proof
+        == json.loads((ROOT / "evidence/agent-traces/llm-proof.json").read_text())
+    )
+    demo = json.loads((ROOT / "evidence/demo-v2/manifest.json").read_text())
+    video = json.loads((ROOT / "evidence/test-results/video-metadata.json").read_text())
+    v = next(s for s in video["streams"] if s["codec_type"] == "video")
+    checks["recorded_demo"] = (
+        demo["run_id"] == recorded_proof["run_id"]
+        and demo["investigation"] == "genuine recorded provider run"
+        and demo["continuous_native_recording"] is False
+        and float(video["format"]["duration"]) == 90
+        and v["width"] == 1280
+        and v["height"] == 960
+        and v["r_frame_rate"] == "30/1"
+        and any(s["codec_type"] == "subtitle" for s in video["streams"])
+        and all(
+            hashlib.sha256((ROOT / f["path"]).read_bytes()).hexdigest() == f["sha256"]
+            for f in demo["frames"]
+        )
+    )
     if not llm:
         limitations.append(
-            "A genuine provider run covering all three ambiguity cases is pending the user-supplied Groq key. Recorded demo and traces remain explicitly deterministic."
+            "No genuine provider run covering all three ambiguity cases passed the proof gate."
         )
     limitations.extend(
         [
@@ -147,14 +177,19 @@ def verify():
         llm=llm
         or {
             "verified": False,
-            "status": "pending_user_key",
+            "status": "unverified",
             "attempts": proofs,
         },
         demo={
             "path": "evidence/decisiondebt-demo.mp4",
-            "ui_version": "original",
-            "investigation": "deterministic",
-            "replacement": "pending genuine provider run after UI review",
+            "ui_version": demo["ui_version"],
+            "investigation": demo["investigation"],
+            "format": demo["format"],
+            "continuous_native_recording": demo["continuous_native_recording"],
+            "run_id": demo["run_id"],
+            "duration_seconds": float(video["format"]["duration"]),
+            "resolution": [v["width"], v["height"]],
+            "fps": v["r_frame_rate"],
         },
         limitations=limitations,
     )

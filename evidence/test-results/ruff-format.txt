@@ -1,0 +1,4 @@
+Downloading ruff (8.8MiB)
+ Downloading ruff
+Installed 1 package in 76ms
+9 files reformatted, 31 files left unchanged

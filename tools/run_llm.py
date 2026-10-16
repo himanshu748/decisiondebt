@@ -16,7 +16,7 @@ def main():
         health.raise_for_status()
         if not health.json().get("provider_configured"):
             print(
-                "Groq is not configured in the running server. Save DD_LLM_API_KEY and DD_AGENT_MODE=llm in .env, then restart the local API. No provider call was made."
+                "The provider is not configured in the running server. Save DD_LLM_API_KEY and DD_AGENT_MODE=llm in .env, then restart the local API. No provider call was made."
             )
             return 2
         response = client.post(
@@ -25,7 +25,13 @@ def main():
             json={"decision_id": "dec-auth-002", "mode": "llm"},
         )
         if response.status_code != 200:
-            error = response.json().get("error", {})
+            try:
+                error = response.json().get("error", {})
+            except ValueError:
+                error = {
+                    "code": "SERVER_ERROR",
+                    "message": "Local API returned a non-JSON error. Inspect the private server log.",
+                }
             print(
                 json.dumps(
                     {

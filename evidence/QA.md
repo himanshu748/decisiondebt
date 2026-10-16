@@ -1,32 +1,32 @@
 # Local workflow verification
 
-The flow under test was: local proposed preview, graph-node selection, source evidence, native alias search, drift tiers, deterministic investigation, local task approval, new-ticket import and source-specific retraction.
+The verified flow is the redesigned landing (`/`) and studio (`/studio`), proposed preview, graph selection, exact-source proof, native alias search and three drift tiers, a genuine bounded provider run covering all three ambiguities, separate local task approval, and source import/retraction.
 
-Current UI environment: landing at `http://127.0.0.1:8000/`, studio at `/studio`, tested through the Codex in-app browser with `cua_repl`. Viewports were 1440x1100 and 375x900. Normal motion was visually inspected after settling; JavaScript and CSS reduced-motion guards were inspected without changing the OS preference. The original video used bundled Chromium via Playwright and the original UI.
+The real run used OpenRouter with `nvidia/nemotron-3-super-120b-a12b:free`: **8 turns, 11 tools, 51.6 seconds, $0 reported cost**. All three cases pass the provider proof gate. Missing and conflicting owners remain blank; the unlinked mention creates a qualified review with suspected-drift uncertainty. Rejected calls and corrections are retained. See [findings](LLM-INVESTIGATION.md), [trace](agent-traces/llm-run.json) and [machine proof](agent-traces/llm-proof.json).
 
 | Check | Result | Evidence |
 |---|---|---|
-| Page identity and meaningful render | Pass | `test-results/ui-smoke.json`, desktop screenshot |
-| Framework error overlay | Absent | Rendered screenshots and successful target interactions |
-| Console health | Pass, no console/page errors | `test-results/ui-smoke.json` |
-| Displayed service count matches API | Pass at desktop and 375 px | `test-results/ui-smoke.json` |
-| Horizontal page overflow | Absent at both widths | `test-results/ui-smoke.json` |
-| Node click reveals actual claim path | Pass | `screenshots/source-evidence.png` |
-| Search and all three drift tiers | Pass | `screenshots/desktop-evidence.png` |
-| Local action board | Pass | `screenshots/action-board.png`, native recording |
-| Import/retraction changes live result | 12 to 13 to 12 | `query-results/dynamic-import.json` |
-| Real DB outage and persistence | Both API operations return 503, restart retains state | `test-results/lifecycle.json` |
-| Full pytest suite | 38 passed, one dependency deprecation warning | `test-results/pytest.txt` |
-| Separate landing/studio routes | Both return 200; CTA reaches studio | `test-results/ui-api-check.json`, landing screenshots |
-| Original generated artwork | Loaded at both widths, 1536 px source | `test-results/ui-smoke.json`, `../web/public/assets/ASSETS.md` |
-| Conflicting primary claims | Both proof cards visible together; owner stays unresolved | `screenshots/desktop-preview.png` |
-| Mobile service selection | Picker updates selected service and evidence | `screenshots/mobile-preview.png` |
-| Static production build | Pass | `test-results/web-build.txt` |
+| Landing and studio routes | 200; CTA reaches studio | `test-results/ui-api-check.json`, landing screenshots |
+| Meaningful render and console | Pass, no console errors | `test-results/ui-smoke.json` |
+| Displayed service count matches API | 12 at desktop and mobile | `test-results/ui-smoke.json` |
+| Horizontal page overflow | Absent at 1440, 375 and 360 px | `test-results/ui-smoke.json` |
+| Conflicting claims visible together | Both primary proofs; unresolved owner | `screenshots/desktop-preview.png` |
+| Mobile service selection | Picker updates evidence | `screenshots/mobile-preview.png` |
+| Source proof | Actual source, SHA-256, exact spans | `demo-v2/frames/04-source-proof.png` |
+| Three distinct drift tiers | All render; native search verifies exact matches | `demo-v2/frames/06-evidence.png` |
+| Genuine provider coverage | All three cases pass, eight real response identities | `agent-traces/llm-proof.json` |
+| Latest action board | 3 current actions; all history retains 16 tasks | `screenshots/action-board.png` |
+| Mobile action board | 3 cards, no horizontal overflow at 375 px | `screenshots/mobile-actions.png`, UI receipt |
+| Separate local task approval | Token Cache approved, owner blank; migration proposed | `demo-v2/frames/10-approval-dialog.png`, `11-approved.png` |
+| Live import and retraction | 12 → 13 → 12; revisions 14 → 15 → 16 | `query-results/dynamic-import.json` |
+| Database outage and persistence | Both protected agent call and preview return 503; restart retains state | `test-results/lifecycle.json` |
+| Full pytest suite | **42 passed**, one dependency deprecation warning | `test-results/pytest.txt` |
+| Production build | Pass | `test-results/web-build.txt` |
+| Original generated concept artwork | Loaded at desktop and mobile, 1536 px source | `test-results/ui-smoke.json`, `../web/public/assets/ASSETS.md` |
+| Video encoding and full decode | H.264 1280×960, 30 fps, 90s, English subtitle track; decode has no errors | `test-results/video-metadata.json`, `video-decode.txt` |
 
-The retained recording shows the original UI served from FastAPI; current screenshots show the redesign. A replacement recording is pending a genuine Groq run after the owner reviews the UI. It is 1280x960 H.264, native capture 25 fps, 97.8 seconds, with an embedded English caption track and no spoken narration. `test-results/video-metadata.json` is the ffprobe receipt. A mid-video thumbnail was visually inspected.
+Browser interactions used Codex in-app browser through `cua_repl`. Normal motion was visually inspected after settling. Motion for React and CSS reduced-motion guards were inspected; the OS preference was not changed. Temporary viewport overrides were reset. Tests cover Chromium, not Safari/Firefox or physical devices.
 
-Remaining risks: no genuine configured-provider trace, no Safari/Firefox/hardware testing, no public deployment, and no portal submission. Extraction accuracy is measured on synthetic explicit statements. Optional reviewer confirmation and model-assisted extraction are not implemented. Missing-provider and graph-outage behavior remain explicit errors.
+The new demo is an edited walkthrough of 15 actual browser captures, with cursor/camera motion and captions, not a continuous native recording. Its manifest retains frame hashes, capture times and the genuine provider run ID. Revision values preserve each captured state; the narrative order is edited. The original 97.8-second continuous recording is archived and explicitly labeled original UI/deterministic. A thumbnail from the new exported video was visually inspected.
 
-Screenshots are recorded evidence, not a replacement for live graph queries. After the demo, the graph retains the new source and its retracted revision history; the affected set returns to 12 services. Later graph revisions can change screenshots and live counts.
-
-The provider proof gate now requires response IDs/model identity, successful status, all three ambiguity cases and the configured run limits. The new eight-turn regression uses mocked model choices and explicitly fails the genuine-provider proof gate. `agent-traces/provider-readiness.json` records the missing key without retaining credentials. No provider request has been made.
+All model evidence is synthetic. The private provider key is server-only in the ignored `.env`. Earlier incomplete attempts, including the transport deadline overrun and full-text parser failure, remain labeled as failures. The source import is retracted in the final live preview, with history retained. No decision acceptance, remote push, public deployment or portal submission occurred. Single-worker local operation and explicit extraction rules remain the supported scope.

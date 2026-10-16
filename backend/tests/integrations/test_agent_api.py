@@ -253,7 +253,8 @@ def test_graph_unavailable_handler(client):
         assert r.status_code == 503 and r.json()["error"]["code"] == "GRAPH_UNAVAILABLE"
 
 
-def test_all_three_cases_can_be_evidenced_in_eight_model_turns(graph):
+@pytest.mark.parametrize("batch_extra", [False, True])
+def test_all_three_cases_can_be_evidenced_in_eight_model_turns(graph, batch_extra):
     from backend.app.agent.proof import llm_proof
 
     analysis = preview(graph, "dec-auth-002")
@@ -264,6 +265,11 @@ def test_all_three_cases_can_be_evidenced_in_eight_model_turns(graph):
     def fake(messages, tools, timeout):
         answers = [json.loads(m["content"]) for m in messages if m["role"] == "tool"]
         n = len(answers)
+        if n:
+            feedback = json.loads(messages[-1]["content"])
+            turns = sum(m["role"] == "assistant" for m in messages)
+            assert feedback["budget"]["model_turns_remaining"] == 8 - turns
+            assert "verified_progress" in feedback
         if n == 0:
             name, args = "investigate_ownership", {"service_id": gap["service_id"]}
         elif n == 1:
@@ -323,21 +329,37 @@ def test_all_three_cases_can_be_evidenced_in_eight_model_turns(graph):
                     "owner_id": None,
                 },
             )
+        calls = [
+            {
+                "id": str(n),
+                "type": "function",
+                "function": {"name": name, "arguments": json.dumps(args)},
+            }
+        ]
+        if n == 6 and batch_extra:
+            # Completing coverage mid-batch must not revoke tools already offered
+            # for this response. The next model turn receives the narrowed tools.
+            calls.append(
+                {
+                    "id": "same-batch-summary",
+                    "type": "function",
+                    "function": {
+                        "name": "get_impact_summary",
+                        "arguments": '{"decision_id":"dec-auth-002"}',
+                    },
+                }
+            )
         return {
             "role": "assistant",
             "content": None,
-            "tool_calls": [
-                {
-                    "id": str(n),
-                    "type": "function",
-                    "function": {"name": name, "arguments": json.dumps(args)},
-                }
-            ],
+            "tool_calls": calls,
         }, {"total_tokens": 10}
 
     result = run(graph, "dec-auth-002", "llm", complete=fake)
     assert result["status"] == "completed" and result["coverage"]["all_passed"]
-    assert result["turns"] == 8 and result["tool_calls"] == 8
+    assert result["turns"] == 8 and result["tool_calls"] == 8 + int(batch_extra)
+    assert all(t["status"] == "ok" for t in result["trace"])
+    assert set(result["tool_offers"][-1]["tools"]) == {"propose_remediation", "abstain"}
     assert all(not t["owner_id"] for t in result["tasks"])
     assert not llm_proof(result)[
         "verified"
