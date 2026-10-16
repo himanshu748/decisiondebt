@@ -116,6 +116,29 @@ class SearchResponse(Strict):
     graph_revision: int
 
 
+class AskResponse(Strict):
+    status: str
+    question: str
+    intent: str | None
+    service: dict | None
+    message: str
+    supported_shapes: list[str]
+    suggestions: list[dict]
+    rows: list[dict]
+    citations: list[dict]
+    counts: dict[str, int]
+    row_count: int
+    graph_revision: int
+    max_hops: int
+    truncated: bool
+    truncation_examples: list[TruncationExample]
+    cycle_detected: bool
+    query_trace: list[dict]
+    query_ms: float
+    elapsed_ms: float
+    source_mode: str
+
+
 class SourceResponse(Strict):
     id: str
     kind: str

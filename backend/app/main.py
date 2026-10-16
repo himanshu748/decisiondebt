@@ -25,8 +25,10 @@ from backend.app.domain.models import (
     ApprovalResponse,
     ImportResponse,
     ClaimResponse,
+    AskResponse,
 )
 from backend.app.domain.company import summary, topology
+from backend.app.domain.ask import ask
 from backend.app.domain.impact import preview, DEFAULT_AS_OF
 from backend.app.domain.evidence import get_source, claim_evidence, search
 from backend.app.ingest.entities import Catalog
@@ -151,6 +153,11 @@ def company(g=Depends(graph)):
 @app.get("/api/company/graph", response_model=TopologyResponse)
 def company_graph(g=Depends(graph)):
     return topology(g)
+
+
+@app.get("/api/company/ask", response_model=AskResponse)
+def ask_company(q: str = Query(min_length=1, max_length=240), g=Depends(graph)):
+    return ask(g, q)
 
 
 @app.get("/api/decisions", response_model=DecisionsResponse)
