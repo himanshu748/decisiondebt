@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-10-16T12:06:36.127137+00:00",
+  "preflight_evidence": "evidence/deployment/embodiweave-before-20261016.txt",
+  "outage_test_evidence": "evidence/deployment/receipt-20261016.json",
+  "observation": "The original preflight and later outage-test receipt show different EmbodiWeave container IDs and start times. EmbodiWeave changed between those observations; the cause was not established by the DecisionDebt checks.",
+  "outage_test_before_after_match": true,
+  "scope": "DecisionDebt deployment commands built/started its own containers and added port 8081; they did not modify, restart or reconfigure EmbodiWeave. The before/after identity proof applies specifically to the DecisionDebt database outage test, not the entire deployment interval."
+}

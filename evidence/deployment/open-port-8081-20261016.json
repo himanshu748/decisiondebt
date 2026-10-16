@@ -1,0 +1,17 @@
+{
+    "operation": {
+        "id": "4a6455d7-ec9c-4fe5-97d9-2d85c8597b9d",
+        "resourceName": "embodiweave-demo",
+        "resourceType": "Instance",
+        "createdAt": "2026-10-16T17:21:47.184000+05:30",
+        "location": {
+            "availabilityZone": "us-east-1a",
+            "regionName": "us-east-1"
+        },
+        "isTerminal": true,
+        "operationDetails": "8081/tcp",
+        "operationType": "OpenInstancePublicPorts",
+        "status": "Succeeded",
+        "statusChangedAt": "2026-10-16T17:21:47.184000+05:30"
+    }
+}

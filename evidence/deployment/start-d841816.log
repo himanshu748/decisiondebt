@@ -1,0 +1,29 @@
+ db Pulling 
+ db Pulled 
+ Network decisiondebt-public_graph  Creating
+ Network decisiondebt-public_graph  Created
+ Volume decisiondebt-public-data  Creating
+ Volume decisiondebt-public-data  Created
+ Container decisiondebt-public-db  Creating
+ Container decisiondebt-public-db  Created
+ Container decisiondebt-public-db  Starting
+ Container decisiondebt-public-db  Started
+ Network decisiondebt-public_web  Creating
+ Network decisiondebt-public_web  Created
+ Container decisiondebt-public-db  Running
+{
+  "status": "seeded_recorded_synthetic_snapshot",
+  "graph": "decisiondebt_public",
+  "graph_revision": 16,
+  "nodes": 648,
+  "edges": 774,
+  "sha256": "5f8e979789311ee5e5528540648deba7a6951f13118d28232fc8f9cd8df62a47",
+  "provider_calls": 0
+}
+ Container decisiondebt-public-db  Running
+ Container decisiondebt-public-api  Creating
+ Container decisiondebt-public-api  Created
+ Container decisiondebt-public-db  Waiting
+ Container decisiondebt-public-db  Healthy
+ Container decisiondebt-public-api  Starting
+ Container decisiondebt-public-api  Started

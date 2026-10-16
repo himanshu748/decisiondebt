@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-10-16T11:53:43.736071+00:00",
+  "url": "http://decisiondebt.52.202.25.181.sslip.io:8081",
+  "source_commit": "d841816965610aa307f961d51dbbf1328c799daa",
+  "graph": "decisiondebt_public",
+  "falkordb_image": "falkordb/falkordb:6.0.2",
+  "embodiweave_before": [
+    {
+      "name": "ew-api",
+      "id": "456c02452b9de76c4aedb7a5f15acaaee55193c42a557e0953f0f13899d701ff",
+      "started_at": "2026-10-16T11:53:24.347823429Z",
+      "image": "embodiweave:9dee4a1f85dd",
+      "ports": {
+        "3000/tcp": null,
+        "6379/tcp": null,
+        "8000/tcp": null
+      }
+    },
+    {
+      "name": "ew-proxy",
+      "id": "60a417b8630f1c99aba476ae22ec4d9b32f67a2a0933dd078eb8d82f739a8375",
+      "started_at": "2026-10-16T11:53:24.700079936Z",
+      "image": "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+      "ports": {
+        "2019/tcp": null,
+        "443/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "443"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "443"
+          }
+        ],
+        "443/udp": null,
+        "80/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "80"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "80"
+          }
+        ]
+      }
+    }
+  ],
+  "before": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    }
+  },
+  "image_id": "sha256:bbf6e1368caf992dcf3eb7f214316c87f6372095aacc8ad17d2c7433b0e03139",
+  "db_image_id": "sha256:107455e862a824e45e8e9f5a7fbfdf5e00a08b14e13eae2577c72fd9e3f59ba6",
+  "db_published_ports": {
+    "3000/tcp": null,
+    "6379/tcp": null
+  },
+  "credential_check": {
+    "mode": "public-readonly",
+    "api_key_present": false,
+    "admin_token_present": false,
+    "env_file_present": false
+  },
+  "without_falkordb": {
+    "/api/decisions/dec-auth-002/preview": {
+      "status": 503,
+      "body": {
+        "error": {
+          "code": "GRAPH_UNAVAILABLE",
+          "message": "FalkorDB is unavailable; no live impact was computed.",
+          "request_id": "7c84a37df3874694a6c7080c9a8893d7"
+        }
+      }
+    },
+    "/api/company/summary": {
+      "status": 503,
+      "body": {
+        "error": {
+          "code": "GRAPH_UNAVAILABLE",
+          "message": "FalkorDB is unavailable; no live impact was computed.",
+          "request_id": "b059eb9c43054b418b8ace4adf9931cf"
+        }
+      }
+    },
+    "/api/agent/runs": {
+      "status": 503,
+      "body": {
+        "error": {
+          "code": "GRAPH_UNAVAILABLE",
+          "message": "FalkorDB is unavailable; no live impact was computed.",
+          "request_id": "3994b5fc9a59418f84d6be083263cbb1"
+        }
+      }
+    }
+  },
+  "after": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    }
+  },
+  "embodiweave_after": [
+    {
+      "name": "ew-api",
+      "id": "456c02452b9de76c4aedb7a5f15acaaee55193c42a557e0953f0f13899d701ff",
+      "started_at": "2026-10-16T11:53:24.347823429Z",
+      "image": "embodiweave:9dee4a1f85dd",
+      "ports": {
+        "3000/tcp": null,
+        "6379/tcp": null,
+        "8000/tcp": null
+      }
+    },
+    {
+      "name": "ew-proxy",
+      "id": "60a417b8630f1c99aba476ae22ec4d9b32f67a2a0933dd078eb8d82f739a8375",
+      "started_at": "2026-10-16T11:53:24.700079936Z",
+      "image": "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+      "ports": {
+        "2019/tcp": null,
+        "443/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "443"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "443"
+          }
+        ],
+        "443/udp": null,
+        "80/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "80"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "80"
+          }
+        ]
+      }
+    }
+  ],
+  "passed": true,
+  "public_http_smoke_evidence": "evidence/deployment/public-smoke-20261016.json",
+  "public_ui_smoke_evidence": "evidence/deployment/ui-public-report.json",
+  "transport": "HTTP on separate port 8081; no existing HTTPS proxy configuration changed"
+}

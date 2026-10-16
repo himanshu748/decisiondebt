@@ -1,0 +1,2 @@
+"/ew-api" "a409562eafa19ebf3cce48bafc8c1648c011d04ff5fd1da3666c9e203dedec23" "2026-10-16T11:11:38.95881463Z" "embodiweave:cad7b0637db6" {"3000/tcp":null,"6379/tcp":null,"8000/tcp":null}
+"/ew-proxy" "3253c9ade2fc21da5104a7a189c895b2238b82ad66284a96844d81099bb5856c" "2026-10-16T11:11:39.279364891Z" "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af" {"2019/tcp":null,"443/tcp":[{"HostIp":"0.0.0.0","HostPort":"443"},{"HostIp":"::","HostPort":"443"}],"443/udp":null,"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"80"},{"HostIp":"::","HostPort":"80"}]}
