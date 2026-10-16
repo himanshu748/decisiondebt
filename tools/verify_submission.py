@@ -11,6 +11,7 @@ from backend.app.graph.client import Graph
 from backend.app.domain.company import summary
 from backend.app.domain.impact import preview
 from backend.app.domain.evidence import claim_evidence
+from backend.app.agent.proof import llm_proof
 
 
 def verify():
@@ -29,6 +30,9 @@ def verify():
         "web/package-lock.json",
         "evidence/screenshots/desktop-preview.png",
         "evidence/screenshots/mobile-preview.png",
+        "evidence/screenshots/landing-desktop.png",
+        "evidence/screenshots/landing-mobile.png",
+        "web/public/assets/knowledge-still-life.webp",
         "evidence/decisiondebt-demo.mp4",
         "evidence/agent-traces/deterministic.json",
         "evidence/test-results/lifecycle.json",
@@ -107,12 +111,20 @@ def verify():
         )
     else:
         checks["dynamic_import_retraction"] = False
-    llm = graph.read(
-        "MATCH (r:AgentRun {mode:'llm'}) RETURN r.id AS id,r.status AS status"
+    runs = graph.read(
+        "MATCH (r:AgentRun {mode:'llm'}) RETURN properties(r) AS run ORDER BY r.started_at DESC"
     )
+    proofs = []
+    for row in runs:
+        run = row["run"]
+        for key in ("coverage", "provider_calls"):
+            if key + "_json" in run:
+                run[key] = json.loads(run[key + "_json"])
+        proofs.append(llm_proof(run))
+    llm = next((p for p in proofs if p["verified"]), None)
     if not llm:
         limitations.append(
-            "No genuine LLM provider trace. The included investigation is explicitly deterministic."
+            "A genuine provider run covering all three ambiguity cases is pending the user-supplied Groq key. Recorded demo and traces remain explicitly deterministic."
         )
     limitations.extend(
         [
@@ -132,6 +144,18 @@ def verify():
         max_hops=p["max_hops"],
         truncated=p["truncated"],
         precision_recall=score,
+        llm=llm
+        or {
+            "verified": False,
+            "status": "pending_user_key",
+            "attempts": proofs,
+        },
+        demo={
+            "path": "evidence/decisiondebt-demo.mp4",
+            "ui_version": "original",
+            "investigation": "deterministic",
+            "replacement": "pending genuine provider run after UI review",
+        },
         limitations=limitations,
     )
     (ROOT / "evidence/submission-report.json").write_text(

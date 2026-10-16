@@ -39,6 +39,8 @@ import ImpactGraph from "./components/ImpactGraph";
 import EvidenceDrawer from "./components/EvidenceDrawer";
 import InvestigationTrace from "./components/InvestigationTrace";
 import ActionBoard from "./components/ActionBoard";
+import "./studio.css";
+import StudioView from "./components/StudioView";
 const decision = "dec-auth-002";
 function badge(d: Drift) {
   return d.tier === 1
@@ -49,7 +51,13 @@ function badge(d: Drift) {
 }
 export default function App() {
   const reduced = useReducedMotion();
-  const [tab, setTab] = useState("Preview");
+  const [tab, setTab] = useState(
+    ["Preview", "Evidence", "Action Board"].includes(
+      new URLSearchParams(window.location.search).get("tab") || "",
+    )
+      ? new URLSearchParams(window.location.search).get("tab")!
+      : "Preview",
+  );
   const [preview, setPreview] = useState<Preview | null>(null);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -62,7 +70,7 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
-  const [depth, setDepth] = useState(5);
+  const [depth, setDepth] = useState(3);
   const [full, setFull] = useState<Topology | null>(null);
   const [token, setToken] = useState("");
   const [tokenDraft, setTokenDraft] = useState("");
@@ -91,12 +99,13 @@ export default function App() {
         api<Preview>("/decisions/" + decision + "/preview"),
         api<Summary>("/company/summary"),
         api<{ tasks: Task[] }>("/tasks"),
-        api<{ mode: string }>("/health"),
+        api<{ mode: string; provider_configured: boolean }>("/health"),
       ]);
       setPreview(p);
       setSummary(s);
       setTasks(t.tasks);
       setMode(h.mode);
+      if (h.provider_configured) setAgentMode("llm");
       const [rs, cs] = await Promise.all([
         api<{ runs: { id: string }[] }>("/agent/runs"),
         api<{ claims: Claim[] }>("/claims?status=candidate"),
@@ -111,6 +120,7 @@ export default function App() {
     }
   }, []);
   useEffect(() => {
+    document.title = "DecisionDebt | Decision studio";
     void load();
   }, [load]);
   const item: Impact | undefined = preview?.impacts.find(
@@ -123,8 +133,8 @@ export default function App() {
     setProofLoading(true);
     const ids = [
       ...new Set([
-        ...(item.path_claim_ids[0] || []),
         ...item.ownership_claims.map((o) => o.claim_id),
+        ...(item.path_claim_ids[0] || []),
         ...item.evidence_ids,
       ]),
     ].slice(0, 3);
@@ -284,7 +294,7 @@ export default function App() {
       preview.counts.drift_t3
     : 0;
   return (
-    <div className="app-shell">
+    <div className="app-shell studio">
       <aside className="sidebar">
         <a className="brand" href="/" aria-label="DecisionDebt home">
           <span className="brand-mark">
@@ -322,11 +332,7 @@ export default function App() {
         </nav>
         <div className="sidebar-note">
           <Network size={21} />
-          <strong>
-            Company knowledge,
-            <br />
-            connected.
-          </strong>
+          <strong>No consequence without a source.</strong>
           <p>Every consequence has a path. Every path has a source.</p>
           <span>
             <ShieldCheck size={13} />
@@ -361,13 +367,21 @@ export default function App() {
           <ChevronRight size={13} />
         </button>
       </aside>
-      <main>
+      <main className="studio-main">
         <header className="topbar">
           <div>
             Aster Works <ChevronRight size={13} />
             <strong>Decision studio</strong>
           </div>
           <div className="topbar-status">
+            <button
+              className="topbar-import button small"
+              disabled={!admin || busy}
+              onClick={() => setImportDialog(true)}
+            >
+              <Plus size={14} />
+              Import source
+            </button>
             <span
               className={"connection " + (error && !preview ? "offline" : "")}
             >
@@ -395,10 +409,7 @@ export default function App() {
                 </div>
                 <h1>
                   {tab === "Preview" ? (
-                    <>
-                      Know what a decision breaks
-                      <br className="desktop-break" /> before you make it.
-                    </>
+                    <>Decision workspace</>
                   ) : tab === "Evidence" ? (
                     "Follow the evidence."
                   ) : (
@@ -407,7 +418,7 @@ export default function App() {
                 </h1>
                 <p>
                   {tab === "Preview"
-                    ? "Trace the consequences of your next decision through the knowledge you already have."
+                    ? "Preview the change. Follow the evidence. Keep uncertainty in view."
                     : tab === "Evidence"
                       ? "Original sources, exact excerpts, and an investigation you can inspect."
                       : "Source-backed proposals. Human judgment. Local approval."}
@@ -527,7 +538,7 @@ export default function App() {
                   </div>
                 </section>
                 {tab === "Preview" && (
-                  <>
+                  <StudioView>
                     <div className="metrics">
                       {[
                         {
@@ -615,6 +626,32 @@ export default function App() {
                           </button>
                         </div>
                       </div>
+                      <label className="mobile-service-picker">
+                        Inspect a service
+                        <select
+                          aria-label="Inspect an affected service"
+                          value={selected}
+                          onChange={(event) => {
+                            setSelected(event.target.value);
+                            const target = preview.impacts.find(
+                              (i) => i.service_id === event.target.value,
+                            );
+                            if (target && target.depth > depth)
+                              setDepth(target.depth);
+                          }}
+                        >
+                          {preview.impacts.map((i) => (
+                            <option key={i.service_id} value={i.service_id}>
+                              {i.name}
+                              {i.owner_status === "conflict"
+                                ? " · Conflicting owners"
+                                : i.owner_status === "unowned"
+                                  ? " · Owner unassigned"
+                                  : ""}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
                       <div className="graph-layout">
                         <ImpactGraph
                           preview={preview}
@@ -740,10 +777,10 @@ export default function App() {
                         </button>
                       </section>
                     </div>
-                  </>
+                  </StudioView>
                 )}
                 {tab === "Evidence" && (
-                  <>
+                  <StudioView>
                     <div className="evidence-summary">
                       {summary?.source_types.map((t) => (
                         <span key={t.kind}>
@@ -935,10 +972,10 @@ export default function App() {
                         </div>
                       ))}
                     </details>
-                  </>
+                  </StudioView>
                 )}
                 {tab === "Action Board" && (
-                  <>
+                  <StudioView>
                     <div className="action-intro">
                       <span>
                         <LockKeyhole size={16} />
@@ -960,7 +997,7 @@ export default function App() {
                       onApprove={(id) => setConfirm({ kind: "task", id })}
                       onEvidence={(id) => void inspect(id)}
                     />
-                  </>
+                  </StudioView>
                 )}
                 <footer>
                   <span>

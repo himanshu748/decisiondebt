@@ -2,6 +2,8 @@
 
 The measured capture is 97.8 seconds, including its final hold. The scripted action sequence is 90 seconds.
 
+The supplied video records the original UI. The redesigned landing is at `/` and the studio is at `/studio`; current screenshots show the redesign. The owner requested UI review before adding the Groq key. A new recording and genuine-provider trace are pending that key and have not been substituted with a mocked run.
+
 Aster Works is fictional. All source data is synthetic. The database and all counts shown in this recording are live local FalkorDB results. The investigation is a **Deterministic rule run**, not an LLM provider call. The delivered MP4 is a recorded local browser session, not a deployment.
 
 ## Assets
@@ -31,7 +33,7 @@ The dedicated Browser plugin was unavailable, so capture used installed Playwrig
 
 ## Reproduce by hand
 
-1. Follow README setup. Import the original corpus and open `http://127.0.0.1:8000`.
+1. Follow README setup. Import the original corpus, open `http://127.0.0.1:8000/` for the landing page, then select Open studio or visit `/studio`.
 2. Verify Proposed status and the live initial service count. Repeated Refresh preview must not change graph revision.
 3. Select Session Broker; read its two dependency paths and competing owners. Select Token Cache for the owner gap. Open a proof card to see source text and Claim anchors.
 4. Open Evidence, search `OrionAuth`, and inspect all three drift tiers. Expand Query proof to see actual Cypher and parameters.
@@ -50,3 +52,7 @@ The five-hop result intentionally reports `truncated=true`. Do not narrate it as
 ## Submission gates
 
 The local build, source evidence, tests, screenshots and recorded browser demo are provided. A real configured LLM run, public Git remote, deployment and hackathon portal submission remain distinct external gates. No remote push or portal action was performed.
+
+## Replacement recording after UI review
+
+After saving the Groq key and restarting the local server, run `python tools/run_llm.py`. Verify `evidence/agent-traces/llm-proof.json` has `verified: true` and all three cases pass. Record the new `/studio` investigation trace with its actual provider identity, tool choices, evidence and outcomes. Retain any incomplete attempts honestly. Replace the video and captions only after this real run exists, then rerun `python tools/verify_submission.py` and inspect the exported video. Do not narrate the deterministic recording as a provider run.

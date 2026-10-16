@@ -86,8 +86,8 @@ export default function ImpactGraph({
         id: i.service_id,
         type: "service",
         position: {
-          x: i.depth * 240,
-          y: order * 125 - ((totals.get(i.depth) || 1) - 1) * 62.5 + 220,
+          x: i.depth * 245,
+          y: order * 130 - ((totals.get(i.depth) || 1) - 1) * 65 + 230,
         },
         data: {
           name: i.name,
@@ -107,10 +107,10 @@ export default function ImpactGraph({
         target: e.target,
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: path.has(e.claim_id) ? "#3159df" : "#aeb9cc",
+          color: path.has(e.claim_id) ? "#9ebcff" : "#536785",
         },
         style: {
-          stroke: path.has(e.claim_id) ? "#3159df" : "#c2cbd9",
+          stroke: path.has(e.claim_id) ? "#9ebcff" : "#445673",
           strokeWidth: path.has(e.claim_id) ? 2.5 : 1.3,
         },
         zIndex: path.has(e.claim_id) ? 2 : 0,
@@ -135,7 +135,7 @@ export default function ImpactGraph({
         onNodeClick={(_, n) => onSelect(n.id)}
         proOptions={{ hideAttribution: false }}
       >
-        <Background color="#d9dfeb" gap={22} size={1} />
+        <Background color="#354560" gap={24} size={0.7} />
         <Controls showInteractive={false} />
       </ReactFlow>
       <div className="graph-key">

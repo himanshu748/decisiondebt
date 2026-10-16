@@ -32,7 +32,16 @@ def save_run(g, run, tasks, revision):
                         "MATCH (t:Task {id:$task}),(c:Claim {id:$claim}) MERGE (t)-[:CITES]->(c)",
                         {"task": task["id"], "claim": ident},
                     )
-        props = {k: v for k, v in run.items() if k != "trace"}
+        props = {}
+        for key, value in run.items():
+            if key == "trace":
+                continue
+            if isinstance(value, dict) or (
+                isinstance(value, list) and any(isinstance(v, dict) for v in value)
+            ):
+                props[key + "_json"] = json.dumps(value, ensure_ascii=False)
+            else:
+                props[key] = value
         props["trace_json"] = json.dumps(run["trace"], ensure_ascii=False)
         g.write("CREATE (r:AgentRun) SET r += $props", {"props": props})
         g.bump()

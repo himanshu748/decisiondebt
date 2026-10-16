@@ -43,7 +43,7 @@
     "graph_revision": 6,
     "synthetic": true,
     "source_mode": "live_falkordb",
-    "elapsed_ms": 8.04
+    "elapsed_ms": 8.43
   },
   "/api/decisions/dec-auth-002/preview": {
     "status": 503,
@@ -51,7 +51,7 @@
       "error": {
         "code": "GRAPH_UNAVAILABLE",
         "message": "FalkorDB is unavailable; no live impact was computed.",
-        "request_id": "039653e0f86547f78f4489717de71e5f"
+        "request_id": "847e069709bb4658b29719c4ba5f0b44"
       }
     }
   },
@@ -61,7 +61,7 @@
       "error": {
         "code": "GRAPH_UNAVAILABLE",
         "message": "FalkorDB is unavailable; no live impact was computed.",
-        "request_id": "2f2b037decbf4ce38e72d014b2231f8d"
+        "request_id": "af7792898ffd4c2a87ea549a02640b16"
       }
     }
   },
@@ -109,7 +109,7 @@
     "graph_revision": 6,
     "synthetic": true,
     "source_mode": "live_falkordb",
-    "elapsed_ms": 9.09
+    "elapsed_ms": 11.12
   },
   "persistence_passed": true,
   "image": "[\"falkordb/falkordb@sha256:107455e862a824e45e8e9f5a7fbfdf5e00a08b14e13eae2577c72fd9e3f59ba6\"] arm64",

@@ -35,7 +35,20 @@ def completion(messages, tools, timeout=30):
                 503,
             )
         data = r.json()
-        return data["choices"][0]["message"], data.get("usage", {})
+        choice = data["choices"][0]
+        message = {
+            k: v
+            for k, v in choice["message"].items()
+            if k in ("role", "content", "tool_calls")
+        }
+        usage = {
+            **data.get("usage", {}),
+            "provider_response_id": data.get("id"),
+            "provider_model": data.get("model"),
+            "finish_reason": choice.get("finish_reason"),
+            "provider_request_id": r.headers.get("x-request-id"),
+        }
+        return message, usage
     except (httpx.HTTPError, KeyError, ValueError) as e:
         raise DomainError(
             "AGENT_PROVIDER_UNAVAILABLE",

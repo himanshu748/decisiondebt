@@ -1,28 +1,110 @@
 {
-  "browser": "Bundled Chromium, Playwright",
-  "fallback": "Browser plugin not available",
-  "url": "http://127.0.0.1:8000/",
+  "checked_at": "2026-10-16T10:04:49.922Z",
+  "browser": "Codex in-app browser, cua_repl",
+  "url": "http://127.0.0.1:8000/studio",
   "title": "DecisionDebt | Decision studio",
   "viewports": [
     [
       1440,
-      1200
+      1100
     ],
     [
       375,
+      900
+    ],
+    [
+      360,
       900
     ]
   ],
   "api_services": 12,
   "count_matches": true,
   "no_horizontal_overflow": true,
+  "routes": {
+    "/": 200,
+    "/studio": 200
+  },
   "interactions": [
-    "node selection reveals unowned status",
-    "claim opens source modal",
-    "native search returns exact aliases",
-    "three drift tiers render",
-    "action board count matches graph tasks",
+    "landing CTA opens /studio",
+    "both conflicting primary claim cards visible",
+    "Token Cache selection shows unassigned owner",
+    "mobile service picker changes selected evidence",
+    "claim opens source dialog with hash and exact spans",
+    "native alias search returns 2 verified source matches",
+    "all three drift tiers render",
+    "action board displays 6 API tasks",
     "mobile preview and evidence"
   ],
-  "console_errors": []
+  "checks": {
+    "studioDesktopCheck": {
+      "count": "12",
+      "overflow": false,
+      "title": "DecisionDebt | Decision studio",
+      "width": 1440
+    },
+    "studioMobileCheck": {
+      "count": "12",
+      "overflow": false,
+      "title": "DecisionDebt | Decision studio",
+      "width": 375
+    },
+    "landingDesktopCheck": {
+      "counts": [
+        "12",
+        "2",
+        "5"
+      ],
+      "heroStyle": "opacity: 1; transform: none;",
+      "overflow": false,
+      "title": "DecisionDebt | See the consequence",
+      "width": 1440
+    },
+    "landingMobileCheck": {
+      "counts": [
+        "12",
+        "2",
+        "5"
+      ],
+      "overflow": false,
+      "title": "DecisionDebt | See the consequence",
+      "width": 375
+    },
+    "mobileEvidenceCheck": {
+      "overflow": false,
+      "tiers": [
+        "Explicit stale citations",
+        "Unlinked obsolete mentions",
+        "Overdue document reviews"
+      ]
+    },
+    "mobileArtCheck": {
+      "alt": "Concept artwork: ivory source cards, an archive clip and a cobalt glass slab on graphite",
+      "loaded": true,
+      "naturalWidth": 1536
+    },
+    "desktopArtCheck": {
+      "alt": "Concept artwork: ivory source cards, an archive clip and a cobalt glass slab on graphite",
+      "loaded": true,
+      "naturalWidth": 1536
+    },
+    "landing360Check": {
+      "overflow": false,
+      "width": 360
+    },
+    "studio360Check": {
+      "count": "12",
+      "overflow": false,
+      "width": 360
+    }
+  },
+  "console_errors": [],
+  "console_warnings": [],
+  "motion": {
+    "framework": "Motion for React",
+    "personality": "precise",
+    "hero_settled": true,
+    "reduced_motion": "JS and CSS guards inspected; OS preference not changed"
+  },
+  "provider": "pending owner key after UI review",
+  "video": "original UI and deterministic run retained until genuine-provider recording"
 }

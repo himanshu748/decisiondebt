@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-16T09:57:10.038988+00:00",
+  "key_present": false,
+  "llm_mode_enabled": false,
+  "status": "pending_owner_key_after_ui_review",
+  "provider_calls_made": 0,
+  "required_cases": [
+    "unowned",
+    "conflicting_owners",
+    "unlinked_mention"
+  ],
+  "run_command": ".venv/bin/python tools/run_llm.py",
+  "replacement_demo": "pending genuine provider run"
+}

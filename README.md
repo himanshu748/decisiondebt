@@ -12,7 +12,7 @@ A FalkorDB-native company-intelligence agent for **WeMakeDevs x FalkorDB Graph H
 
 - A real FalkorDB 6.0.2 stores dependencies, ownership, project usage, full-text source search, claims, revisions, decision lineage, draft tasks and investigation traces.
 - A Python 3.12 FastAPI process parses raw Markdown, JSON tickets and JSONL chats, validates exact source spans, writes verified claims, and assembles live Cypher results.
-- A Vite + React + TypeScript studio presents Preview, Evidence, and Action Board. React Flow arranges backend-provided nodes and edges. The browser never computes a second impact graph.
+- A Vite + React + TypeScript landing page at `/` introduces the product using live graph results. The studio at `/studio` presents Preview, Evidence, and Action Board. React Flow arranges backend-provided nodes and edges. The browser never computes a second impact graph.
 - An optional OpenAI-compatible model chooses bounded tools. Without a supplied key, the product explicitly runs **Deterministic rule run**. The included trace is deterministic, not a real LLM recording.
 
 Initial measured import: **60 services, 8 teams, 24 people, 12 projects, 94 sources, 315 verified semantic edges, 4 candidates**. Canonical proposed preview: **12 services**, including a two-path diamond and a cycle, with three distinct drift tiers. See [recorded query results](evidence/query-results/initial-preview.json), [test output](evidence/test-results/pytest.txt), [precision/recall](evidence/test-results/precision-recall.json), [outage/persistence proof](evidence/test-results/lifecycle.json), and [browser checks](evidence/test-results/ui-smoke.json).
@@ -47,7 +47,7 @@ cd ..
 uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-Open [the local app](http://127.0.0.1:8000). FastAPI serves built assets on the same origin as `/api`. For separate frontend development, run `npm run dev -- --host 127.0.0.1 --port 5173` in `web/`; Vite proxies `/api` to 8000. Rebuild assets before using the single-origin server.
+Open [the landing page](http://127.0.0.1:8000/) or [the decision studio](http://127.0.0.1:8000/studio). FastAPI serves built assets on the same origin as `/api`. For separate frontend development, run `npm run dev -- --host 127.0.0.1 --port 5173` in `web/`; Vite proxies `/api` to 8000. Rebuild assets before using the single-origin server.
 
 A fresh workspace created in this session already has a random local `.env` token. Use that token to unlock **Local admin** in the UI. It stays in browser memory and is sent only with explicit local write actions. Restarting the browser locks the UI again. The server checks the token on every write; the visual unlock alone is not authorization.
 
@@ -68,7 +68,19 @@ DD_LLM_MODEL=openai/gpt-oss-120b
 DD_LLM_API_KEY=your-supplied-key
 ```
 
-Select **Configured LLM** and explicitly run the investigation. A missing key returns `503 AGENT_PROVIDER_UNAVAILABLE`. Provider HTTP 429 stops the run and records rate limiting. No credits were purchased and no provider call was made for the supplied evidence. The default model is an example from the spec, not a verified account entitlement. Only synthetic evidence is sent.
+Keep the key out of chat and source control. The local `.env` already contains an empty `DD_LLM_API_KEY` field for the owner to fill after reviewing the UI. Select **Configured LLM** and run the investigation, or use:
+
+```bash
+.venv/bin/python tools/run_llm.py
+```
+
+The CLI calls the protected local API once. It saves `llm-run.json` only when the provider returns response IDs and model identity, all three ambiguity cases pass evidence coverage, and run limits hold. Incomplete attempts have separate filenames and remain visible as incomplete. A mock never satisfies this proof gate. The three checks are: inspect missing ownership plus an additional ticket/chat, inspect both conflicting primary claims, and use native obsolete-term search plus source context for the unlinked mention. Ambiguous owners stay unassigned; the mention supports only qualified document review or an abstention.
+
+A missing key returns `503 AGENT_PROVIDER_UNAVAILABLE`. Provider HTTP 429 stops the run and records rate limiting. No credits were purchased and no provider call was made for the supplied evidence. The default model is an example from the spec, not a verified account entitlement. Only synthetic evidence is sent. The real trace and replacement demo remain pending the owner-supplied key.
+
+### Visual design
+
+The redesign uses the requested `custom-design` guide and explicitly requested `motion-design` skill, with Motion for React, a shared precise easing curve, restrained page/tab/dialog transitions, once-only section reveals and reduced-motion guards. Manu Arora's [Aceternity sidebar](https://ui.aceternity.com/components/sidebar), [bento grid](https://ui.aceternity.com/components/bento-grid) and [background beams](https://ui.aceternity.com/components/background-beams) informed surface depth and hierarchy. The layout and code are original; no paid components were copied. The original generated concept artwork is bundled locally with its [prompt and provenance](web/public/assets/ASSETS.md). It is labeled as concept art, separate from live source evidence.
 
 ### Public read-only mode
 
@@ -76,7 +88,7 @@ Run with `DD_MODE=public-readonly`. All `/api/admin/*` calls return 403 before w
 
 ## The 90-second story
 
-See [DEMO.md](DEMO.md) for exact actions and narration. The 98-second [recorded browser demo](evidence/decisiondebt-demo.mp4) is a local working capture, not a hosted deployment or genuine LLM run.
+See [DEMO.md](DEMO.md) for exact actions and narration. The 98-second [recorded browser demo](evidence/decisiondebt-demo.mp4) shows the original UI and a deterministic local investigation. Current screenshots show the redesigned UI. A replacement recording awaits the genuine provider run after UI review.
 
 1. Preview `dec-auth-002` while it remains proposed. `dec-auth-001` stays accepted, with no `SUPERSEDES` edge until explicit acceptance.
 2. Select Session Broker. Its two actual claim-backed paths form a diamond. Token Cache exposes a missing owner; Session Broker has competing primary owners.

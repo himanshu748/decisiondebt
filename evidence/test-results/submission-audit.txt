@@ -17,7 +17,7 @@
   },
   "missing": [],
   "broken_links": [],
-  "pytest_passed": 34,
+  "pytest_passed": 38,
   "live_summary": {
     "counts": {
       "service": 60,
@@ -62,7 +62,7 @@
     "graph_revision": 6,
     "synthetic": true,
     "source_mode": "live_falkordb",
-    "elapsed_ms": 59.23
+    "elapsed_ms": 21.6
   },
   "preview_counts": {
     "services": 12,
@@ -84,8 +84,19 @@
     "false_positives": [],
     "false_negatives": []
   },
+  "llm": {
+    "verified": false,
+    "status": "pending_user_key",
+    "attempts": []
+  },
+  "demo": {
+    "path": "evidence/decisiondebt-demo.mp4",
+    "ui_version": "original",
+    "investigation": "deterministic",
+    "replacement": "pending genuine provider run after UI review"
+  },
   "limitations": [
-    "No genuine LLM provider trace. The included investigation is explicitly deterministic.",
+    "A genuine provider run covering all three ambiguity cases is pending the user-supplied Groq key. Recorded demo and traces remain explicitly deterministic.",
     "No remote push, public deployment or portal submission was performed.",
     "Single API worker only; CLI ingestion requires API stopped.",
     "Extraction accuracy is measured on the synthetic fixture, not arbitrary enterprise language."

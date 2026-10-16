@@ -33,6 +33,9 @@ Aster Works and all source records are synthetic. Measurements below describe th
 | 2026-10-16 | Deterministic demonstration | `evidence/agent-traces/deterministic.json`: 12 tools, 3 local drafts, abstention | No provider key was supplied for this project | Genuine LLM proof remains unverified; mocked tests are not provider evidence |
 | 2026-10-16 | Bundled Chromium capture | `evidence/test-results/ui-smoke.json`; desktop and 375 px screenshots | Dedicated Browser plugin absent; installed Playwright/Chromium works | Capture is an actual local browser session; no public deployment is claimed |
 | 2026-10-16 | Split graph and motion browser bundles | `evidence/test-results/web-build.txt` | Initial single JS bundle exceeded Vite's 500 kB warning | Separate graph, motion and app chunks; identical API behavior |
+| 2026-10-16 | Landing at `/`, studio at `/studio` | Owner's explicit route choice; current UI screenshots | The owner requested a separate landing and a Manu Arora inspired dashboard redesign | Original graphite/cobalt composition, larger graph, separate evidence rail, generated concept art and restrained Motion for React transitions |
+| 2026-10-16 | Bound structured tool results before recording observed evidence | `backend/tests/unit/test_agent_bounds.py` | Slicing serialized JSON could hide IDs or source context while still counting it as retrieved | Valid JSON under 3000 characters; only delivered references become observed evidence |
+| 2026-10-16 | Require three-case coverage and provider identity for real proof | `backend/tests/integrations/test_agent_api.py`, `tools/run_llm.py` | A saved record with mode `llm` alone is insufficient proof | Eight-turn mocked regression covers all cases but is explicitly excluded from genuine provider proof; actual Groq key remains pending UI review |
 
 ## Runtime receipt
 
@@ -47,4 +50,4 @@ Aster Works and all source records are synthetic. Measurements below describe th
 
 The application uses one API worker and an in-process RLock for graph-dependent operations. CLI ingestion runs with the API stopped. This is neither a distributed lock nor snapshot isolation. Source validation precedes writes, but a process crash during a multi-query source batch can require rerunning the importer; no transactional recovery guarantee is claimed. Single-instance local operation is the supported mode.
 
-Public mode is supported in code and tested locally. Publishing, remote Git push, a live provider call, and hackathon portal submission have not been authorized or performed.
+Public mode is supported in code and tested locally. The user authorized a bounded real Groq investigation and will supply the key after reviewing the redesigned UI. No provider call has been performed. Publishing, remote Git push, and hackathon portal submission have not been authorized or performed.

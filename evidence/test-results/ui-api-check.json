@@ -1,0 +1,10 @@
+{
+  "services": 12,
+  "tasks": 6,
+  "revision": 6,
+  "routes": {
+    "/": 200,
+    "/studio": 200
+  },
+  "provider_configured": false
+}

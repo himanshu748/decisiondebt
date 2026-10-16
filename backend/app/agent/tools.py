@@ -102,7 +102,24 @@ class ToolSession:
                     claim_evidence(self.g, r["claim_id"])
                     for r in result["ownership_claims"]
                 ][:20]
-                result["evidence_ids"] = [e["id"] for e in result["evidence"]]
+                result["service_id"] = args.service_id
+                impact = next(
+                    i
+                    for i in self.analysis["impacts"]
+                    if i["service_id"] == args.service_id
+                )
+                path_ids = (
+                    impact["path_claim_ids"][0][:1]
+                    if impact["owner_status"] == "unowned"
+                    else []
+                )
+                result["supporting_path_evidence"] = [
+                    claim_evidence(self.g, ident) for ident in path_ids
+                ]
+                result["evidence_ids"] = [
+                    e["id"]
+                    for e in result["evidence"] + result["supporting_path_evidence"]
+                ]
             elif name == "list_drift":
                 result = {
                     "drifts": [

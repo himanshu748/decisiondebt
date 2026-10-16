@@ -251,3 +251,99 @@ def test_graph_unavailable_handler(client):
     ]:
         r = client.get(url)
         assert r.status_code == 503 and r.json()["error"]["code"] == "GRAPH_UNAVAILABLE"
+
+
+def test_all_three_cases_can_be_evidenced_in_eight_model_turns(graph):
+    from backend.app.agent.proof import llm_proof
+
+    analysis = preview(graph, "dec-auth-002")
+    gap = next(i for i in analysis["impacts"] if i["owner_status"] == "unowned")
+    conflict = next(i for i in analysis["impacts"] if i["owner_status"] == "conflict")
+    suspect = next(d for d in analysis["drifts"] if d["tier"] == 2)
+
+    def fake(messages, tools, timeout):
+        answers = [json.loads(m["content"]) for m in messages if m["role"] == "tool"]
+        n = len(answers)
+        if n == 0:
+            name, args = "investigate_ownership", {"service_id": gap["service_id"]}
+        elif n == 1:
+            name, args = (
+                "search_sources",
+                {"alias": gap["name"], "kind": "chat", "limit": 2},
+            )
+        elif n == 2:
+            name, args = (
+                "propose_remediation",
+                {
+                    "service_id": gap["service_id"],
+                    "kind": "verify_owner",
+                    "title": "Verify the missing primary owner",
+                    "reason": "No verified primary owner exists. Review the additional source before assigning anyone.",
+                    "evidence_ids": answers[0]["evidence_ids"],
+                    "owner_id": None,
+                },
+            )
+        elif n == 3:
+            name, args = "investigate_ownership", {"service_id": conflict["service_id"]}
+        elif n == 4:
+            name, args = (
+                "propose_remediation",
+                {
+                    "service_id": conflict["service_id"],
+                    "kind": "verify_owner",
+                    "title": "Review the conflicting primary claims",
+                    "reason": "Both source-backed primary claims require human reconciliation. No winner is assigned.",
+                    "evidence_ids": answers[3]["evidence_ids"],
+                    "owner_id": None,
+                },
+            )
+        elif n == 5:
+            name, args = (
+                "search_sources",
+                {"alias": "OrionAuth", "kind": "doc", "limit": 4},
+            )
+        elif n == 6:
+            name, args = (
+                "read_evidence",
+                {"source_id": suspect["source_id"], "max_chars": 700},
+            )
+        else:
+            name, args = (
+                "propose_remediation",
+                {
+                    "service_id": suspect["related_service_ids"][0],
+                    "kind": "review_doc",
+                    "title": "Review the possible obsolete provider mention",
+                    "reason": "Verify this unlinked mention. It is suspected drift and does not establish an integration dependency.",
+                    "evidence_ids": [
+                        s["mention_id"]
+                        for s in answers[5]["sources"]
+                        if s["source_id"] == suspect["source_id"]
+                    ],
+                    "owner_id": None,
+                },
+            )
+        return {
+            "role": "assistant",
+            "content": None,
+            "tool_calls": [
+                {
+                    "id": str(n),
+                    "type": "function",
+                    "function": {"name": name, "arguments": json.dumps(args)},
+                }
+            ],
+        }, {"total_tokens": 10}
+
+    result = run(graph, "dec-auth-002", "llm", complete=fake)
+    assert result["status"] == "completed" and result["coverage"]["all_passed"]
+    assert result["turns"] == 8 and result["tool_calls"] == 8
+    assert all(not t["owner_id"] for t in result["tasks"])
+    assert not llm_proof(result)[
+        "verified"
+    ]  # A mock can never satisfy real-provider proof.
+    assert all(
+        len(json.dumps(entry["result"], ensure_ascii=False)) <= 3000
+        for entry in result["trace"]
+        if "result" in entry
+    )

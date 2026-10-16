@@ -236,6 +236,9 @@ def agent_run(ident: str, g=Depends(graph)):
             raise DomainError("NOT_FOUND", "Unknown run", 404)
         r = rows[0]["run"]
         r["trace"] = json.loads(r.pop("trace_json"))
+        for key in ("coverage", "provider_calls", "token_usage"):
+            if key + "_json" in r:
+                r[key] = json.loads(r.pop(key + "_json"))
         return r
 
 
@@ -289,5 +292,6 @@ if DIST.exists():
     app.mount("/assets", StaticFiles(directory=DIST / "assets"), name="assets")
 
     @app.get("/")
+    @app.get("/studio")
     def spa():
         return FileResponse(DIST / "index.html")

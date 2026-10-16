@@ -116,6 +116,13 @@ export interface Trace {
   message?: string;
 }
 export interface Run {
+  execution_kind?: string;
+  provider_verified?: boolean;
+  coverage?: {
+    all_passed: boolean;
+    cases: Record<string, { passed: boolean; target_id: string }>;
+  };
+  provider?: string;
   id: string;
   mode: string;
   model: string;
