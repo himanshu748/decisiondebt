@@ -1,0 +1,113 @@
+Browser tab: 6, Title: "DecisionDebt | Decision studio", URL: "http://decisiondebt.52.202.25.181.sslip.io:8081/studio".
+1 AXWebArea DecisionDebt | Decision studio, URL: decisiondebt.52.202.25.181.sslip.io:8081/studio
+	2 container root
+		3 container
+			4 link Description: DecisionDebt home, Value: decisiondebt.52.202.25.181.sslip.io:8081/
+			5 text A Aster Works Synthetic company
+			6 image
+			7 text WORKSPACE
+			8 container Studio navigation
+				9 button Preview
+					10 image
+					11 text Preview
+				12 button Evidence
+					13 image
+					14 text Evidence
+				15 button Action Board 3
+					16 image
+					17 text Action Board
+					18 text 3
+			19 image
+			20 text No consequence without a source. Every consequence has a path. Every path has a source.
+			21 image
+			22 text FalkorDB native Graph connected
+			23 image
+			24 text 60 services 95 sources Entirely fictional data · seed 42
+			25 button (disabled) Public read-only demo
+				26 image
+				27 text Public read-only demo
+				28 image
+		29 container
+			30 text Aster Works
+			31 image
+			32 text Decision studio
+			33 button (disabled) Import source
+				34 image
+				35 text Import source
+			36 text Live FalkorDB AW DECISION INTELLIGENCE
+			37 heading Turn uncertainty into action., Value: 1
+				246 text Turn uncertainty into action.
+			39 text Source-backed proposals. Human judgment. Local approval. COMPANY BRAIN 03
+			40 tab group Decision views
+				41 tab (selectable, settable, boolean) 01 Preview, Value: 0
+0
+1
+Preview
+				42 tab (selectable, settable, boolean) 02 Evidence, Value: 0
+0
+2
+Evidence
+				43 tab (selected, settable, boolean) 03 Action Board 3, Value: 1
+0
+3
+Action Board
+3
+				44 text Revision 16
+			45 image
+			46 text dec-auth-002 PROPOSED
+			47 heading Replace OrionAuth with NovaID, Value: 2
+				48 text Replace OrionAuth with NovaID
+			49 container
+				50 text Comparison: dec-auth-001 / Acceptance is a separate human action.
+			51 button Refresh preview
+				52 image
+				53 text Refresh preview
+			247 image
+			248 text Local drafts only. Approval creates an audit event.
+			249 button (disabled) Run investigation
+				250 image
+				251 text Run investigation
+			252 text 3  actions · Analysis revision 12 Action history
+			253 pop up button (collapsed, settable) Description: Action history, Value: Latest analysis, Secondary Actions: Expand
+				254 menu
+					255 (selected) Latest analysis
+					256 All history (16)
+			257 text P1 session-broker Proposed
+			258 heading Resolve conflicting ownership claims for Session Broker, Value: 3
+				259 text Resolve conflicting ownership claims for Session Broker
+			260 text Session Broker has conflicting primary ownership claims between Devon Shah (claim-a95d41576b896f0d8b140a35) and Taylor Roy (claim-14c45e7d019b11ff49072d05). Both claims are verified and from explicit rule sources (doc-021 and chat-077 respectively). This conflict needs resolution to establish clear operational responsibility and accountability for the service.
+			261 image
+			262 text Needs owner resolution
+			263 container
+				264 text Analysis revision  12  · Score  65
+			265 button Inspect evidence
+				266 text Inspect evidence
+				267 image
+			268 button (disabled) Approve locally
+			269 text P1 login-gateway Proposed
+			270 heading Review and potentially remove obsolete OrionAuth reference in Login Gateway documentation, Value: 3
+				271 text Review and potentially remove obsolete OrionAuth reference in Login Gateway documentation
+			272 text Document doc-002 (Login Gateway: operating notes) contains an obsolete reference to 'OrionAuth' token rotation checklist. The mention appears in context: 'The OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.' This suggests the reference is historical and may no longer be relevant. The document describes Login Gateway and has AUTHORED metadata from person-002. Review is needed to determine if this obsolete term should be removed or updated.
+			273 image
+			274 text Unassigned
+			275 container
+				276 text Analysis revision  12  · Score  61
+			277 button Inspect evidence
+				278 text Inspect evidence
+				279 image
+			280 button (disabled) Approve locally
+			281 text P1 token-cache Approved
+			282 heading Establish clear ownership for Token Cache service, Value: 3
+				283 text Establish clear ownership for Token Cache service
+			284 text Token Cache service currently has no assigned primary owner. Ownership investigation shows no ownership claims exist for this service. Supporting evidence shows Token Cache depends on Session Broker during request validation (DEPENDS_ON relationship from doc-005). Clear ownership needs to be established for operational accountability.
+			285 image
+			286 text Unassigned
+			287 container
+				288 text Analysis revision  12  · Score  52
+			289 button Inspect evidence
+				290 text Inspect evidence
+				291 image
+			244 image
+			245 text Source text → verified claim → live graph → reviewable action Aster Works is synthetic. All counts come from FalkorDB.
+
+The focused UI element is 15 button Action Board 3

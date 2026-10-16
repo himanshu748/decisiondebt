@@ -1,0 +1,332 @@
+{
+  "checked_at": "2026-10-16T13:47:36.359052+00:00",
+  "source_commit_before_disclosure": "f5c494a60ea7dba01c0e1d6537b8eec7601aceca",
+  "verdict": "Technical deliverables pass with named limitations; participant understanding and event-form state are not independently assessed.",
+  "checks": {
+    "required_links_present": true,
+    "track_03_named": true,
+    "disclosure_todos_replaced": true,
+    "four_requested_disclosure_headings_present": true,
+    "submission_relative_links_removed": true,
+    "prior_evidence_unchanged": true,
+    "public_smoke_passed": true,
+    "no_configured_secret_literals_in_working_files": true,
+    "synthetic_data_still_identified": true
+  },
+  "passed_technical_checks": true,
+  "rules_url": "https://www.wemakedevs.org/hackathons/falkordb/rules",
+  "track_url": "https://www.wemakedevs.org/hackathons/falkordb#tracks",
+  "deadline": "2026-10-18T23:59:00+05:30",
+  "reviewed_documents": [
+    "README.md",
+    "docs/submission.md",
+    "DECISIONS.md"
+  ],
+  "link_checks": [
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/README.md#run-locally",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/README.md#graph-model",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/backend/app/graph/queries.py",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/README.md#why-falkordb-is-load-bearing",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/query-results/initial-preview.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/deployment/graph-snapshot-20261016.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/agent-traces/llm-run.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/agent-traces/llm-proof.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/query-results/dynamic-import.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/deployment/public-smoke-20261016.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/deployment/receipt-20261016.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/deployment/isolation-review-20261016.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/ci/38896361671/pytest.txt",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/ci/run-38896361671.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v3/decisiondebt-demo-4k-under3.mp4",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v3/capture-receipt.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v3/under3-edit-receipt.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v3/speech-verification-under3.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v3/verification.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v3/youtube-upload-receipt.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/decisiondebt-demo.mp4",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v2/manifest.json",
+      "local_target_exists": true
+    },
+    {
+      "document": "docs/submission.md",
+      "url": "https://github.com/himanshu748/decisiondebt/blob/main/README.md#ai-coding-disclosure",
+      "local_target_exists": true
+    }
+  ],
+  "live_ui_checks": [
+    "Landing loads live revision 16 and synthetic company counts.",
+    "Studio preview shows 12 affected services and 12 projects, missing Token Cache owner and conflicting Session Broker owners.",
+    "Source doc-021 opens original text, verified claim offsets and SHA-256.",
+    "Evidence view shows T1/T2/T3, three-case coverage and the previously recorded genuine provider trace, including rejected tool calls.",
+    "Action Board shows three latest-analysis tasks, disabled public approvals and disabled investigation."
+  ],
+  "youtube": {
+    "url": "https://youtu.be/_a0vrYwOlME",
+    "watch_page_reopened": true,
+    "duration_seconds": 177.4,
+    "native_4k_and_caption_proof": "../demo-v3/youtube-upload-receipt.json",
+    "current_file_sha256": "c52960b5a6f67ea1af36d3a19d4853fcc3be988df6a6f1a913c81916c03591cd",
+    "disclosure_synchronized_receipt": "youtube-disclosure-update.json"
+  },
+  "disclosure_basis": "Participant confirmed the core idea and UI direction; AI expanded the specification. Only recorded product decisions are attributed to the participant. Personal verification details are omitted; automated receipts remain attributed to Codex.",
+  "preservation": {
+    "previous_evidence_files": 225,
+    "all_sha256_unchanged": true
+  },
+  "secret_scan": {
+    "scope": "Known-pattern scan of tracked working files, plus exact configured-key/token scan of full tracked and new review files, including binary files.",
+    "known_pattern_findings": [
+      {
+        "path": ".env.openrouter.example",
+        "resolution": "Intentional template; DD_LLM_API_KEY blank."
+      }
+    ],
+    "exact_values_checked": 3,
+    "exact_matches": 0,
+    "limits": "Pattern scanner omits binaries/oversized files and unknown formats. Exact literal scan covers configured local credentials. Git history not scanned. Deepgram media key exclusion is separately recorded in the unchanged demo-v3 credential scan.",
+    "known_pattern_omitted_files": 95
+  },
+  "limits": [
+    "Core idea and UI direction are participant statements; no manual code authorship has been asserted.",
+    "Participant technical understanding and personal checks were not independently assessed; rules 12 and 13 remain participant responsibilities.",
+    "Portal registration, team membership and saved submission record were not inspected; no submission was sent.",
+    "Existing live deployment source commit differs from documentation head; no application code changed in these disclosure edits.",
+    "Historical database outage proof was reviewed without causing a new public outage.",
+    "Public service uses HTTP on a separate port, as documented; complete local setup is included."
+  ],
+  "ci_before_disclosure": {
+    "conclusion": "success",
+    "databaseId": 38909040400,
+    "headSha": "f5c494a60ea7dba01c0e1d6537b8eec7601aceca",
+    "jobs": [
+      {
+        "completedAt": "2026-10-16T13:37:09Z",
+        "conclusion": "success",
+        "databaseId": 116999903369,
+        "name": "verify",
+        "startedAt": "2026-10-16T13:35:41Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-16T13:35:44Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-16T13:35:42Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:35:57Z",
+            "conclusion": "success",
+            "name": "Initialize containers",
+            "number": 2,
+            "startedAt": "2026-10-16T13:35:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:07Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 3,
+            "startedAt": "2026-10-16T13:35:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:09Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 4,
+            "startedAt": "2026-10-16T13:36:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:12Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+            "number": 5,
+            "startedAt": "2026-10-16T13:36:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:28Z",
+            "conclusion": "success",
+            "name": "Install backend and build frontend",
+            "number": 6,
+            "startedAt": "2026-10-16T13:36:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:30Z",
+            "conclusion": "success",
+            "name": "Seed synthetic corpus and prove native database operations",
+            "number": 7,
+            "startedAt": "2026-10-16T13:36:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:36Z",
+            "conclusion": "success",
+            "name": "Pytest including real outage and restart persistence",
+            "number": 8,
+            "startedAt": "2026-10-16T13:36:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:36:37Z",
+            "conclusion": "success",
+            "name": "Start credential-free public mode",
+            "number": 9,
+            "startedAt": "2026-10-16T13:36:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:02Z",
+            "conclusion": "success",
+            "name": "Chromium UI smoke at desktop and mobile",
+            "number": 10,
+            "startedAt": "2026-10-16T13:36:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:04Z",
+            "conclusion": "success",
+            "name": "Upload separately labeled CI evidence",
+            "number": 11,
+            "startedAt": "2026-10-16T13:37:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:04Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+            "number": 19,
+            "startedAt": "2026-10-16T13:37:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:04Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 20,
+            "startedAt": "2026-10-16T13:37:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:04Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 21,
+            "startedAt": "2026-10-16T13:37:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:07Z",
+            "conclusion": "success",
+            "name": "Stop containers",
+            "number": 22,
+            "startedAt": "2026-10-16T13:37:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-16T13:37:07Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-16T13:37:07Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/himanshu748/decisiondebt/actions/runs/38909040400/job/116999903369"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/himanshu748/decisiondebt/actions/runs/38909040400"
+  },
+  "copy_review": "Public disclosure and submission copy reviewed against the no-ai-slop editing guide; confirmed role statements preserved, unsupported personal-check claims excluded."
+}

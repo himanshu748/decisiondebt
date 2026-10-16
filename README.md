@@ -267,26 +267,30 @@ The extractor recognizes explicit supported language. Negated, hedged, unresolve
 - Browser checks cover Chromium at 1440 px and 375 px, not every browser/device. Fonts use Google Fonts and degrade to sans-serif offline.
 - The public read-only deployment and unlisted YouTube upload are linked above. No release, hackathon form submission or external business ticket/email operation was performed.
 
+The [final automated submission review](evidence/submission-review-20261016/review.json) rechecks the public workflow, submission links, disclosure scope and preservation of earlier evidence. Participant technical understanding and the event-form record remain outside automated verification.
+
 ## AI coding disclosure
 
-Codex generated most of the implementation, tests and styling, along with the synthetic fixture, documentation and browser automation. Automated verification and the recorded provider run are linked evidence; they do not establish that the participant personally verified or understands the implementation. The participant must complete the following fields truthfully before submitting under [Rules 11–13](https://www.wemakedevs.org/hackathons/falkordb/rules).
+I originated the core idea for DecisionDebt and directed its UI. AI expanded the idea into the detailed specification. Codex generated most of the implementation, tests and styling. The sections below record my contribution, the generated work and the automated checks. [Rules 11–13](https://www.wemakedevs.org/hackathons/falkordb/rules) govern AI disclosure and participant responsibility.
 
 ### What I designed
 
-TODO: Describe only the graph model, node/edge types and drift tiers you personally designed or materially changed. Identify the relevant code or commit; do not claim generated design as your own.
+I supplied the core idea and the UI direction. I asked for a separate landing page and decision studio, and requested a Manu Arora inspired dashboard redesign. The graph model, node/edge code and drift-tier implementation are part of the AI-assisted build described below.
 
 ### Decisions I made
 
-TODO: Identify the decisions you personally made and why. Link the relevant entries in [DECISIONS.md](DECISIONS.md#measurement-backed-log), [frozen choices](DECISIONS.md#frozen-choices) or [real-run corrections](DECISIONS.md#real-run-corrections-and-outcome). Those implementation records alone do not establish participant authorship.
+I chose the landing page at `/` and the studio at `/studio`, and gave redesign feedback on the dashboard ([route and visual choices](DECISIONS.md#measurement-backed-log)). I required the public deployment to be read-only and separate from EmbodiWeave, with imports and provider calls disabled ([deployment decision](DECISIONS.md#public-deployment-and-ci--2026-10-16)).
+
+I required a genuine LLM investigation covering all three ambiguity cases ([recorded outcome](DECISIONS.md#real-run-corrections-and-outcome)). I also required a replacement demo using actual 4K browser recording, close-ups and Deepgram narration, and asked for a cut below three minutes ([demo decision](DECISIONS.md#native-4k-narrated-demo--2026-10-16)). These are my requirements and review decisions; the linked records also contain implementation choices made by Codex.
 
 ### What I verified myself
 
-TODO: Record the workflows and queries you personally ran, what you checked in their sources/results, and what you learned. Link your own dated evidence. Codex's [CI](evidence/ci/run-38896361671.json), [deployment smoke](evidence/deployment/public-smoke-20261016.json) and [outage receipt](evidence/deployment/receipt-20261016.json) remain automated verification.
+Personal verification details are not included in this submission. The linked [CI](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml), [deployment smoke](evidence/deployment/public-smoke-20261016.json), [database outage](evidence/deployment/receipt-20261016.json), [provider proof](evidence/agent-traces/llm-proof.json) and [video checks](evidence/demo-v3/verification.json) describe checks performed by Codex automation.
 
 ### What Codex generated
 
-Codex generated most of the implementation, tests and styling. TODO: Review and complete the scope of generated work, including fixture data, documentation, UI, agent integration, deployment/CI configuration and video editing, and identify any portions you subsequently rewrote.
+Codex generated most of the implementation, tests and styling, including backend and frontend code, the synthetic corpus, graph/query and drift logic, source verification, agent integration, deployment and CI configuration, documentation, browser automation and video editing. AI expanded the detailed specification from my core idea. Deepgram generated the demo's narration; the original generated concept artwork has [asset provenance](web/public/assets/ASSETS.md).
 
-The remaining owner actions are to complete these contribution/verification fields honestly and submit the [submission draft](docs/submission.md) through the event form before **October 18, 2026, 11:59 PM IST**. No form has been submitted by this automation.
+I remain responsible for understanding and explaining the submitted graph model, queries, architecture and technical choices under Rules 12–13. This disclosure does not turn automated checks into personal verification. The [submission draft](docs/submission.md) has not been submitted through the event form. The deadline is **October 18, 2026, 11:59 PM IST**.
 
 Official references: [FalkorDB Python client](https://github.com/FalkorDB/falkordb-py), [full-text documentation](https://docs.falkordb.com/cypher/indexing/fulltext-index), [event rules](https://www.wemakedevs.org/hackathons/falkordb/rules). Test results here, not those reference pages, establish this repository's measured behavior.

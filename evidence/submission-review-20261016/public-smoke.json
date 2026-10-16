@@ -1,0 +1,1598 @@
+{
+  "url": "http://decisiondebt.52.202.25.181.sslip.io:8081/",
+  "checked_at": "2026-10-16T13:42:46.397070+00:00",
+  "checks": {
+    "public_mode_without_provider": true,
+    "synthetic_live_graph": true,
+    "preview_has_anchored_multihop_paths": true,
+    "decision_still_proposed": true,
+    "both_ownership_ambiguities_preserved": true,
+    "native_search_returns_exact_mention": true,
+    "three_drift_tiers": true,
+    "all_write_routes_forbidden": true,
+    "reads_and_blocked_writes_preserve_revision": true,
+    "landing_and_studio": true
+  },
+  "responses": {
+    "/api/health": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    },
+    "/api/company/summary": {
+      "counts": {
+        "service": 60,
+        "person": 24,
+        "team": 8,
+        "project": 12,
+        "source": 95,
+        "sourcerevision": 96,
+        "claim": 322,
+        "task": 16,
+        "decision": 3,
+        "semantic_edges": 316
+      },
+      "source_types": [
+        {
+          "kind": "chat",
+          "count": 24
+        },
+        {
+          "kind": "doc",
+          "count": 40
+        },
+        {
+          "kind": "ticket",
+          "count": 31
+        }
+      ],
+      "claim_statuses": [
+        {
+          "status": "candidate",
+          "count": 4
+        },
+        {
+          "status": "retracted",
+          "count": 2
+        },
+        {
+          "status": "verified",
+          "count": 316
+        }
+      ],
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "elapsed_ms": 5.94
+    },
+    "/api/decisions/dec-auth-002/preview": {
+      "decision_id": "dec-auth-002",
+      "decision_status": "proposed",
+      "analysis_mode": "preview",
+      "graph_revision": 16,
+      "as_of": "2026-10-15T12:00:00+05:30",
+      "max_hops": 5,
+      "truncated": true,
+      "cycle_detected": true,
+      "review_date_issues": [],
+      "counts": {
+        "services": 12,
+        "projects": 12,
+        "drift_t1": 1,
+        "drift_t2": 1,
+        "drift_t3": 3,
+        "owner_gaps": 1,
+        "owner_conflicts": 1
+      },
+      "impacts": [
+        {
+          "service_id": "svc-auth-gateway",
+          "name": "Auth Gateway",
+          "criticality": 3,
+          "depth": 0,
+          "paths": [
+            [
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            []
+          ],
+          "alternative_path_count": 1,
+          "score": 83,
+          "priority": "P0",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-001"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-001",
+              "name": "Avery Chen",
+              "role": "primary",
+              "claim_id": "claim-20cbac30d9a12302b952980f"
+            }
+          ],
+          "drift_ids": [
+            "T1:doc-001",
+            "T3:doc-001"
+          ],
+          "evidence_ids": [
+            "claim-20cbac30d9a12302b952980f",
+            "claim-77df49f83499a96ea511d5ec"
+          ]
+        },
+        {
+          "service_id": "svc-session-broker",
+          "name": "Session Broker",
+          "criticality": 3,
+          "depth": 2,
+          "paths": [
+            [
+              "svc-session-broker",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ],
+            [
+              "svc-session-broker",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-244be9185948c365a6b206dc",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ],
+            [
+              "claim-0ff32af1aa8343172c979c3a",
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 2,
+          "score": 65,
+          "priority": "P1",
+          "owner_status": "conflict",
+          "owner_ids": [
+            "person-004",
+            "person-020"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-004",
+              "name": "Devon Shah",
+              "role": "primary",
+              "claim_id": "claim-a95d41576b896f0d8b140a35"
+            },
+            {
+              "owner_id": "person-020",
+              "name": "Taylor Roy",
+              "role": "primary",
+              "claim_id": "claim-14c45e7d019b11ff49072d05"
+            }
+          ],
+          "drift_ids": [
+            "T3:doc-004"
+          ],
+          "evidence_ids": [
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-14c45e7d019b11ff49072d05",
+            "claim-244be9185948c365a6b206dc",
+            "claim-509cb005f4c9750a255b2a9f",
+            "claim-a95d41576b896f0d8b140a35",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-login-gateway",
+          "name": "Login Gateway",
+          "criticality": 1,
+          "depth": 1,
+          "paths": [
+            [
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 1,
+          "score": 61,
+          "priority": "P1",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-002"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-002",
+              "name": "Blair Iyer",
+              "role": "primary",
+              "claim_id": "claim-0058df25b590c71fc98f5c1a"
+            }
+          ],
+          "drift_ids": [
+            "T2:doc-002:OrionAuth",
+            "T3:doc-002"
+          ],
+          "evidence_ids": [
+            "claim-0058df25b590c71fc98f5c1a",
+            "claim-509cb005f4c9750a255b2a9f"
+          ]
+        },
+        {
+          "service_id": "svc-identity-api",
+          "name": "Identity API",
+          "criticality": 1,
+          "depth": 1,
+          "paths": [
+            [
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-f329a336521bc8fa5ffd0dca"
+            ]
+          ],
+          "alternative_path_count": 1,
+          "score": 55,
+          "priority": "P1",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-003"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-003",
+              "name": "Casey Park",
+              "role": "primary",
+              "claim_id": "claim-9b210f1b65119ef13a2f5be4"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-9b210f1b65119ef13a2f5be4",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-billing-api",
+          "name": "Billing API",
+          "criticality": 3,
+          "depth": 2,
+          "paths": [
+            [
+              "svc-billing-api",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-0b2160acde6623e6576a2435",
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 1,
+          "score": 55,
+          "priority": "P1",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-011"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-011",
+              "name": "Kai Sen",
+              "role": "primary",
+              "claim_id": "claim-034e2891495e0e7ef6a605aa"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-034e2891495e0e7ef6a605aa",
+            "claim-0b2160acde6623e6576a2435",
+            "claim-509cb005f4c9750a255b2a9f"
+          ]
+        },
+        {
+          "service_id": "svc-token-cache",
+          "name": "Token Cache",
+          "criticality": 2,
+          "depth": 3,
+          "paths": [
+            [
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ],
+            [
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ],
+            [
+              "svc-token-cache",
+              "svc-credential-vault",
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-c692f47033683572befa0b30",
+              "claim-244be9185948c365a6b206dc",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ],
+            [
+              "claim-c692f47033683572befa0b30",
+              "claim-0ff32af1aa8343172c979c3a",
+              "claim-509cb005f4c9750a255b2a9f"
+            ],
+            [
+              "claim-535fda068fafe46ec343e33e",
+              "claim-3a26cecaf3eafb107d6df567",
+              "claim-c692f47033683572befa0b30",
+              "claim-244be9185948c365a6b206dc",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ]
+          ],
+          "alternative_path_count": 4,
+          "score": 52,
+          "priority": "P1",
+          "owner_status": "unowned",
+          "owner_ids": [],
+          "ownership_claims": [],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-244be9185948c365a6b206dc",
+            "claim-3a26cecaf3eafb107d6df567",
+            "claim-509cb005f4c9750a255b2a9f",
+            "claim-535fda068fafe46ec343e33e",
+            "claim-c692f47033683572befa0b30",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-invoice-engine",
+          "name": "Invoice Engine",
+          "criticality": 1,
+          "depth": 2,
+          "paths": [
+            [
+              "svc-invoice-engine",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-3096967890b648a261427afa",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ]
+          ],
+          "alternative_path_count": 1,
+          "score": 45,
+          "priority": "P1",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-021"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-021",
+              "name": "Uma Cole",
+              "role": "primary",
+              "claim_id": "claim-e7ef172821f60c23985c5be1"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-3096967890b648a261427afa",
+            "claim-e7ef172821f60c23985c5be1",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-checkout-api",
+          "name": "Checkout API",
+          "criticality": 3,
+          "depth": 3,
+          "paths": [
+            [
+              "svc-checkout-api",
+              "svc-billing-api",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-a05b7a4ff8de87419be2313f",
+              "claim-0b2160acde6623e6576a2435",
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 1,
+          "score": 45,
+          "priority": "P1",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-012"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-012",
+              "name": "Lane Mehta",
+              "role": "primary",
+              "claim_id": "claim-05596242083ef66ae5d84dee"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-05596242083ef66ae5d84dee",
+            "claim-0b2160acde6623e6576a2435",
+            "claim-509cb005f4c9750a255b2a9f",
+            "claim-a05b7a4ff8de87419be2313f"
+          ]
+        },
+        {
+          "service_id": "svc-payment-router",
+          "name": "Payment Router",
+          "criticality": 3,
+          "depth": 3,
+          "paths": [
+            [
+              "svc-payment-router",
+              "svc-invoice-engine",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-3280c74c2324389f5f275d4c",
+              "claim-3096967890b648a261427afa",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ]
+          ],
+          "alternative_path_count": 1,
+          "score": 45,
+          "priority": "P1",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-022"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-022",
+              "name": "Val River",
+              "role": "primary",
+              "claim_id": "claim-3c41402c438a85b6106deaa1"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-3096967890b648a261427afa",
+            "claim-3280c74c2324389f5f275d4c",
+            "claim-3c41402c438a85b6106deaa1",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-support-console",
+          "name": "Support Console",
+          "criticality": 2,
+          "depth": 3,
+          "paths": [
+            [
+              "svc-support-console",
+              "svc-session-broker",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ],
+            [
+              "svc-support-console",
+              "svc-session-broker",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-eba780ecc9158b463749be71",
+              "claim-244be9185948c365a6b206dc",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ],
+            [
+              "claim-eba780ecc9158b463749be71",
+              "claim-0ff32af1aa8343172c979c3a",
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 2,
+          "score": 40,
+          "priority": "P2",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-007"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-007",
+              "name": "Gray Kim",
+              "role": "primary",
+              "claim_id": "claim-7c8758a92171fe536361ad70"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-244be9185948c365a6b206dc",
+            "claim-509cb005f4c9750a255b2a9f",
+            "claim-7c8758a92171fe536361ad70",
+            "claim-eba780ecc9158b463749be71",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-credential-vault",
+          "name": "Credential Vault",
+          "criticality": 1,
+          "depth": 4,
+          "paths": [
+            [
+              "svc-credential-vault",
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ],
+            [
+              "svc-credential-vault",
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-3a26cecaf3eafb107d6df567",
+              "claim-c692f47033683572befa0b30",
+              "claim-244be9185948c365a6b206dc",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ],
+            [
+              "claim-3a26cecaf3eafb107d6df567",
+              "claim-c692f47033683572befa0b30",
+              "claim-0ff32af1aa8343172c979c3a",
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 2,
+          "score": 25,
+          "priority": "P2",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-006"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-006",
+              "name": "Finley Rao",
+              "role": "primary",
+              "claim_id": "claim-d1419438d9105f3a4f094e3e"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-244be9185948c365a6b206dc",
+            "claim-3a26cecaf3eafb107d6df567",
+            "claim-509cb005f4c9750a255b2a9f",
+            "claim-c692f47033683572befa0b30",
+            "claim-d1419438d9105f3a4f094e3e",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        },
+        {
+          "service_id": "svc-access-proxy",
+          "name": "Access Proxy",
+          "criticality": 1,
+          "depth": 5,
+          "paths": [
+            [
+              "svc-access-proxy",
+              "svc-credential-vault",
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-identity-api",
+              "svc-auth-gateway"
+            ],
+            [
+              "svc-access-proxy",
+              "svc-credential-vault",
+              "svc-token-cache",
+              "svc-session-broker",
+              "svc-login-gateway",
+              "svc-auth-gateway"
+            ]
+          ],
+          "path_claim_ids": [
+            [
+              "claim-f6995a8d7ba4ff4f6ccb4fbf",
+              "claim-3a26cecaf3eafb107d6df567",
+              "claim-c692f47033683572befa0b30",
+              "claim-244be9185948c365a6b206dc",
+              "claim-f329a336521bc8fa5ffd0dca"
+            ],
+            [
+              "claim-f6995a8d7ba4ff4f6ccb4fbf",
+              "claim-3a26cecaf3eafb107d6df567",
+              "claim-c692f47033683572befa0b30",
+              "claim-0ff32af1aa8343172c979c3a",
+              "claim-509cb005f4c9750a255b2a9f"
+            ]
+          ],
+          "alternative_path_count": 2,
+          "score": 15,
+          "priority": "P2",
+          "owner_status": "single_primary",
+          "owner_ids": [
+            "person-007"
+          ],
+          "ownership_claims": [
+            {
+              "owner_id": "person-007",
+              "name": "Gray Kim",
+              "role": "primary",
+              "claim_id": "claim-db1e5ffe6e6046496163dab0"
+            }
+          ],
+          "drift_ids": [],
+          "evidence_ids": [
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-244be9185948c365a6b206dc",
+            "claim-3a26cecaf3eafb107d6df567",
+            "claim-509cb005f4c9750a255b2a9f",
+            "claim-c692f47033683572befa0b30",
+            "claim-db1e5ffe6e6046496163dab0",
+            "claim-f329a336521bc8fa5ffd0dca",
+            "claim-f6995a8d7ba4ff4f6ccb4fbf"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "project_id": "project-001",
+          "name": "Project Atlas",
+          "via_service": "svc-auth-gateway",
+          "claim_id": "claim-afcb1b8f7c99f42ad4970ee1"
+        },
+        {
+          "project_id": "project-001",
+          "name": "Project Atlas",
+          "via_service": "svc-billing-api",
+          "claim_id": "claim-f7c286184f8b668c3370a91b"
+        },
+        {
+          "project_id": "project-002",
+          "name": "Project Beacon",
+          "via_service": "svc-checkout-api",
+          "claim_id": "claim-c16143aea723549e156e608d"
+        },
+        {
+          "project_id": "project-002",
+          "name": "Project Beacon",
+          "via_service": "svc-login-gateway",
+          "claim_id": "claim-48d0f793177342ebf9160384"
+        },
+        {
+          "project_id": "project-003",
+          "name": "Project Compass",
+          "via_service": "svc-identity-api",
+          "claim_id": "claim-986852224d093e9c7c3e052f"
+        },
+        {
+          "project_id": "project-004",
+          "name": "Project Daybreak",
+          "via_service": "svc-session-broker",
+          "claim_id": "claim-2ba4681f9760fd3d9f851586"
+        },
+        {
+          "project_id": "project-005",
+          "name": "Project Evergreen",
+          "via_service": "svc-token-cache",
+          "claim_id": "claim-ab72acb89dac97f212f009df"
+        },
+        {
+          "project_id": "project-006",
+          "name": "Project Foundry",
+          "via_service": "svc-credential-vault",
+          "claim_id": "claim-96ef30ca876f0d8fb3820e70"
+        },
+        {
+          "project_id": "project-007",
+          "name": "Project Harbor",
+          "via_service": "svc-access-proxy",
+          "claim_id": "claim-ea69945739a3a91f9c152519"
+        },
+        {
+          "project_id": "project-008",
+          "name": "Project Keystone",
+          "via_service": "svc-auth-gateway",
+          "claim_id": "claim-22e2df57cea83c9f1073c7d4"
+        },
+        {
+          "project_id": "project-009",
+          "name": "Project Lantern",
+          "via_service": "svc-login-gateway",
+          "claim_id": "claim-86ea8a7f873708dc5516a182"
+        },
+        {
+          "project_id": "project-010",
+          "name": "Project Meridian",
+          "via_service": "svc-identity-api",
+          "claim_id": "claim-0bc71e937880333e732d18f0"
+        },
+        {
+          "project_id": "project-011",
+          "name": "Project Northstar",
+          "via_service": "svc-invoice-engine",
+          "claim_id": "claim-3d7b966f557b87e2c072ac3b"
+        },
+        {
+          "project_id": "project-011",
+          "name": "Project Northstar",
+          "via_service": "svc-session-broker",
+          "claim_id": "claim-34f9ff115e55e66c105f9601"
+        },
+        {
+          "project_id": "project-012",
+          "name": "Project Waypoint",
+          "via_service": "svc-payment-router",
+          "claim_id": "claim-05eac7e94a8f372248fd96ef"
+        },
+        {
+          "project_id": "project-012",
+          "name": "Project Waypoint",
+          "via_service": "svc-token-cache",
+          "claim_id": "claim-87c67bef63161046d82ae850"
+        }
+      ],
+      "drifts": [
+        {
+          "id": "T1:doc-001",
+          "tier": 1,
+          "kind": "explicit_stale_reference",
+          "certainty": "confirmed_reference_obsolete",
+          "source_id": "doc-001",
+          "excerpt": "This procedure follows decision dec-auth-001.",
+          "evidence_claim_ids": [
+            "claim-34289390bf0a5e99b8c95fb6"
+          ],
+          "related_service_ids": [
+            "svc-auth-gateway"
+          ],
+          "reason": "Explicitly cites the decision this proposal would supersede. Technical content still requires review."
+        },
+        {
+          "id": "T2:doc-002:OrionAuth",
+          "tier": 2,
+          "kind": "unlinked_obsolete_mention",
+          "certainty": "suspected_drift",
+          "source_id": "doc-002",
+          "excerpt": "OrionAuth",
+          "context": "The OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.",
+          "evidence_claim_ids": [],
+          "mention_id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319",
+          "related_service_ids": [
+            "svc-login-gateway"
+          ],
+          "reason": "Native full-text match verified against an exact alias. Mention alone does not prove usage."
+        },
+        {
+          "id": "T3:doc-001",
+          "tier": 3,
+          "kind": "overdue_review",
+          "certainty": "needs_review",
+          "source_id": "doc-001",
+          "excerpt": "This document describes Auth Gateway.",
+          "evidence_claim_ids": [
+            "claim-f944a248f5d4caa5ad414717"
+          ],
+          "related_service_ids": [
+            "svc-auth-gateway"
+          ],
+          "reason": "Last reviewed 2026-06-20T10:00:00+05:30; at least 90 days old and before the proposal."
+        },
+        {
+          "id": "T3:doc-002",
+          "tier": 3,
+          "kind": "overdue_review",
+          "certainty": "needs_review",
+          "source_id": "doc-002",
+          "excerpt": "This document describes Login Gateway.",
+          "evidence_claim_ids": [
+            "claim-497235829aed4ac6e94ef50c"
+          ],
+          "related_service_ids": [
+            "svc-login-gateway"
+          ],
+          "reason": "Last reviewed 2026-06-20T10:00:00+05:30; at least 90 days old and before the proposal."
+        },
+        {
+          "id": "T3:doc-004",
+          "tier": 3,
+          "kind": "overdue_review",
+          "certainty": "needs_review",
+          "source_id": "doc-004",
+          "excerpt": "This document describes Session Broker.",
+          "evidence_claim_ids": [
+            "claim-b80965575f21726fe60fb130"
+          ],
+          "related_service_ids": [
+            "svc-session-broker"
+          ],
+          "reason": "Last reviewed 2026-06-20T10:00:00+05:30; at least 90 days old and before the proposal."
+        }
+      ],
+      "query_trace": [
+        {
+          "query_id": "Q1",
+          "cypher": "MATCH (d:Decision {id:$decision_id})-[c:CHANGES]->(s:Service)\nRETURN d.id AS decision_id,d.status AS status,d.title AS title,d.created_at AS created_at,\nd.proposed_supersedes_id AS old_id,d.obsolete_terms AS obsolete_terms,s.id AS root_id,c.claim_id AS claim_id ORDER BY root_id",
+          "params": {
+            "decision_id": "dec-auth-002"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.588,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "PREVIOUS_DECISION",
+          "cypher": "MATCH (d:Decision {id:$id}) RETURN d.status AS status",
+          "params": {
+            "id": "dec-auth-001"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.396,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q2",
+          "cypher": "MATCH p=(consumer:Service)-[:DEPENDS_ON*1..5]->(root:Service {id:$root_id})\nRETURN consumer.id AS service_id,length(p) AS hops,[n IN nodes(p) | n.id] AS service_path,\n[r IN relationships(p) | r.claim_id] AS claim_path ORDER BY hops,service_id",
+          "params": {
+            "root_id": "svc-auth-gateway"
+          },
+          "row_count": 18,
+          "elapsed_ms": 1.517,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SERVICES",
+          "cypher": "MATCH (s:Service) WHERE s.id IN $ids RETURN s.id AS id,s.name AS name,s.criticality AS criticality",
+          "params": {
+            "ids": [
+              "svc-access-proxy",
+              "svc-auth-gateway",
+              "svc-billing-api",
+              "svc-checkout-api",
+              "svc-credential-vault",
+              "svc-identity-api",
+              "svc-invoice-engine",
+              "svc-login-gateway",
+              "svc-payment-router",
+              "svc-session-broker",
+              "svc-support-console",
+              "svc-token-cache"
+            ]
+          },
+          "row_count": 12,
+          "elapsed_ms": 0.622,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_LINKS",
+          "cypher": "MATCH (s:Source)-[d:DESCRIBES]->(v:Service) RETURN s.id AS source_id,v.id AS service_id,d.claim_id AS claim_id",
+          "params": {},
+          "row_count": 40,
+          "elapsed_ms": 1.002,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q6",
+          "cypher": "MATCH (s:Source)-[ref:REFERENCES]->(old:Decision {id:$old_id})\nRETURN s.id AS source_id,s.kind AS kind,ref.claim_id AS claim_id ORDER BY source_id",
+          "params": {
+            "old_id": "dec-auth-001"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.441,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q5",
+          "cypher": "MATCH (c:Claim {id:$claim_id})-[:SUPPORTED_BY]->(r:SourceRevision)\nRETURN properties(c) AS claim,r.source_id AS source_id,r.sha256 AS source_sha256,r.body AS source_body,r.raw_text AS source_raw_text",
+          "params": {
+            "claim_id": "claim-34289390bf0a5e99b8c95fb6"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.574,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q7",
+          "cypher": "CALL db.idx.fulltext.queryNodes('Source',$safe_query) YIELD node,score\nRETURN node.id AS source_id,node.title AS title,node.kind AS kind,score AS ft_score ORDER BY ft_score DESC LIMIT 80",
+          "params": {
+            "safe_query": "\"OrionAuth\""
+          },
+          "row_count": 4,
+          "elapsed_ms": 0.488,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-002"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.53,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-002"
+          },
+          "row_count": 3,
+          "elapsed_ms": 0.765,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-002"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.397,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-003"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.55,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-003"
+          },
+          "row_count": 4,
+          "elapsed_ms": 0.748,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-003"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.398,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-039"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.361,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-039"
+          },
+          "row_count": 6,
+          "elapsed_ms": 1.049,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-039"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.391,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-001"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.359,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-001"
+          },
+          "row_count": 4,
+          "elapsed_ms": 0.793,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-001"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.336,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q8",
+          "cypher": "MATCH (doc:Source {kind:'doc'})-[d:DESCRIBES]->(s:Service) WHERE s.id IN $affected_ids\nRETURN doc.id AS source_id,doc.last_reviewed_at AS last_reviewed_at,s.id AS service_id,d.claim_id AS claim_id ORDER BY source_id",
+          "params": {
+            "affected_ids": [
+              "svc-access-proxy",
+              "svc-auth-gateway",
+              "svc-billing-api",
+              "svc-checkout-api",
+              "svc-credential-vault",
+              "svc-identity-api",
+              "svc-invoice-engine",
+              "svc-login-gateway",
+              "svc-payment-router",
+              "svc-session-broker",
+              "svc-support-console",
+              "svc-token-cache"
+            ]
+          },
+          "row_count": 12,
+          "elapsed_ms": 0.931,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q5",
+          "cypher": "MATCH (c:Claim {id:$claim_id})-[:SUPPORTED_BY]->(r:SourceRevision)\nRETURN properties(c) AS claim,r.source_id AS source_id,r.sha256 AS source_sha256,r.body AS source_body,r.raw_text AS source_raw_text",
+          "params": {
+            "claim_id": "claim-f944a248f5d4caa5ad414717"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.753,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q5",
+          "cypher": "MATCH (c:Claim {id:$claim_id})-[:SUPPORTED_BY]->(r:SourceRevision)\nRETURN properties(c) AS claim,r.source_id AS source_id,r.sha256 AS source_sha256,r.body AS source_body,r.raw_text AS source_raw_text",
+          "params": {
+            "claim_id": "claim-497235829aed4ac6e94ef50c"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.595,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q5",
+          "cypher": "MATCH (c:Claim {id:$claim_id})-[:SUPPORTED_BY]->(r:SourceRevision)\nRETURN properties(c) AS claim,r.source_id AS source_id,r.sha256 AS source_sha256,r.body AS source_body,r.raw_text AS source_raw_text",
+          "params": {
+            "claim_id": "claim-b80965575f21726fe60fb130"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.724,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-auth-gateway"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.62,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-identity-api"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.559,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-login-gateway"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.374,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-billing-api"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.394,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-invoice-engine"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.473,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-session-broker"
+          },
+          "row_count": 2,
+          "elapsed_ms": 0.424,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-checkout-api"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.379,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-payment-router"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.375,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-support-console"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.377,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-token-cache"
+          },
+          "row_count": 0,
+          "elapsed_ms": 0.327,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-credential-vault"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.381,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q4",
+          "cypher": "MATCH (p:Person)-[o:OWNS]->(s:Service {id:$service_id})\nRETURN p.id AS owner_id,p.name AS name,o.role AS role,o.claim_id AS claim_id ORDER BY owner_id",
+          "params": {
+            "service_id": "svc-access-proxy"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.362,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "Q3",
+          "cypher": "MATCH (p:Project)-[u:USES]->(s:Service) WHERE s.id IN $affected_ids\nRETURN DISTINCT p.id AS project_id,p.name AS name,s.id AS via_service,u.claim_id AS claim_id ORDER BY project_id,via_service",
+          "params": {
+            "affected_ids": [
+              "svc-access-proxy",
+              "svc-auth-gateway",
+              "svc-billing-api",
+              "svc-checkout-api",
+              "svc-credential-vault",
+              "svc-identity-api",
+              "svc-invoice-engine",
+              "svc-login-gateway",
+              "svc-payment-router",
+              "svc-session-broker",
+              "svc-support-console",
+              "svc-token-cache"
+            ]
+          },
+          "row_count": 16,
+          "elapsed_ms": 1.664,
+          "graph_revision": 16
+        },
+        {
+          "query_id": "TRUNCATION",
+          "cypher": "MATCH (s:Service)-[:DEPENDS_ON]->(b:Service) WHERE b.id IN $boundary AND NOT s.id IN $ids RETURN DISTINCT s.id AS id",
+          "params": {
+            "boundary": [
+              "svc-access-proxy"
+            ],
+            "ids": [
+              "svc-access-proxy",
+              "svc-auth-gateway",
+              "svc-billing-api",
+              "svc-checkout-api",
+              "svc-credential-vault",
+              "svc-identity-api",
+              "svc-invoice-engine",
+              "svc-login-gateway",
+              "svc-payment-router",
+              "svc-session-broker",
+              "svc-support-console",
+              "svc-token-cache"
+            ]
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.629,
+          "graph_revision": 16
+        }
+      ],
+      "source_mode": "live_falkordb",
+      "roots": [
+        "svc-auth-gateway"
+      ],
+      "edges": [
+        {
+          "source": "svc-identity-api",
+          "target": "svc-auth-gateway",
+          "claim_id": "claim-f329a336521bc8fa5ffd0dca"
+        },
+        {
+          "source": "svc-login-gateway",
+          "target": "svc-auth-gateway",
+          "claim_id": "claim-509cb005f4c9750a255b2a9f"
+        },
+        {
+          "source": "svc-billing-api",
+          "target": "svc-login-gateway",
+          "claim_id": "claim-0b2160acde6623e6576a2435"
+        },
+        {
+          "source": "svc-invoice-engine",
+          "target": "svc-identity-api",
+          "claim_id": "claim-3096967890b648a261427afa"
+        },
+        {
+          "source": "svc-session-broker",
+          "target": "svc-identity-api",
+          "claim_id": "claim-244be9185948c365a6b206dc"
+        },
+        {
+          "source": "svc-session-broker",
+          "target": "svc-login-gateway",
+          "claim_id": "claim-0ff32af1aa8343172c979c3a"
+        },
+        {
+          "source": "svc-checkout-api",
+          "target": "svc-billing-api",
+          "claim_id": "claim-a05b7a4ff8de87419be2313f"
+        },
+        {
+          "source": "svc-payment-router",
+          "target": "svc-invoice-engine",
+          "claim_id": "claim-3280c74c2324389f5f275d4c"
+        },
+        {
+          "source": "svc-support-console",
+          "target": "svc-session-broker",
+          "claim_id": "claim-eba780ecc9158b463749be71"
+        },
+        {
+          "source": "svc-token-cache",
+          "target": "svc-session-broker",
+          "claim_id": "claim-c692f47033683572befa0b30"
+        },
+        {
+          "source": "svc-credential-vault",
+          "target": "svc-token-cache",
+          "claim_id": "claim-3a26cecaf3eafb107d6df567"
+        },
+        {
+          "source": "svc-access-proxy",
+          "target": "svc-credential-vault",
+          "claim_id": "claim-f6995a8d7ba4ff4f6ccb4fbf"
+        },
+        {
+          "source": "svc-token-cache",
+          "target": "svc-credential-vault",
+          "claim_id": "claim-535fda068fafe46ec343e33e"
+        }
+      ],
+      "decision": {
+        "decision_id": "dec-auth-002",
+        "status": "proposed",
+        "title": "Replace OrionAuth with NovaID",
+        "created_at": "2026-10-09T10:00:00+05:30",
+        "old_id": "dec-auth-001",
+        "obsolete_terms": [
+          "OrionAuth"
+        ],
+        "root_id": "svc-auth-gateway",
+        "claim_id": "claim-77df49f83499a96ea511d5ec"
+      },
+      "elapsed_ms": 24.52
+    },
+    "/api/decisions": {
+      "decisions": [
+        {
+          "id": "dec-auth-001",
+          "name": "dec-auth-001",
+          "aliases": [
+            "dec-auth-001"
+          ],
+          "status": "accepted",
+          "title": "Retain OrionAuth through Q4",
+          "created_at": "2026-06-01T10:00:00+05:30",
+          "source_id": "doc-039",
+          "proposed_supersedes_id": "",
+          "obsolete_terms": [
+            "OrionAuth"
+          ]
+        },
+        {
+          "id": "dec-auth-002",
+          "name": "dec-auth-002",
+          "aliases": [
+            "dec-auth-002"
+          ],
+          "status": "proposed",
+          "title": "Replace OrionAuth with NovaID",
+          "created_at": "2026-10-09T10:00:00+05:30",
+          "source_id": "doc-003",
+          "proposed_supersedes_id": "dec-auth-001",
+          "obsolete_terms": [
+            "OrionAuth"
+          ]
+        },
+        {
+          "id": "dec-auth-003",
+          "name": "dec-auth-003",
+          "aliases": [
+            "dec-auth-003"
+          ],
+          "status": "accepted",
+          "title": "Standardize event retention",
+          "created_at": "2026-06-01T10:00:00+05:30",
+          "source_id": "doc-040",
+          "proposed_supersedes_id": "",
+          "obsolete_terms": [
+            "OldRetention"
+          ]
+        }
+      ],
+      "approvals": [
+        {
+          "id": "approval-6b1f0844ce914679a9e58b8346edd58c",
+          "actor": "local-admin",
+          "at": "2026-10-16T09:09:59.858933+00:00",
+          "target_id": "task-0b8a62f3dd4769d03e467d96",
+          "action": "approve_task"
+        },
+        {
+          "id": "approval-edbafb5bab234689aa1e075a87ccdf0c",
+          "actor": "local-admin",
+          "at": "2026-10-16T10:55:44.006360+00:00",
+          "target_id": "task-ec6bc7d10728fc930aae4cb8",
+          "action": "approve_task"
+        }
+      ],
+      "graph_revision": 16
+    },
+    "/api/sources/search?q=OrionAuth": {
+      "sources": [
+        {
+          "source_id": "doc-002",
+          "title": "Login Gateway: operating notes",
+          "kind": "doc",
+          "ft_score": 1.0,
+          "excerpt": "OrionAuth",
+          "context": "The OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.",
+          "start": 310,
+          "end": 319,
+          "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+          "mention_id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319",
+          "exact_match": true
+        },
+        {
+          "source_id": "doc-001",
+          "title": "Auth Gateway: operating notes",
+          "kind": "doc",
+          "ft_score": 0.8,
+          "excerpt": "OrionAuth",
+          "context": "This procedure follows decision dec-auth-001. OrionAuth remains the named legacy provider in this historical procedure.",
+          "start": 363,
+          "end": 372,
+          "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+          "mention_id": "mention:doc-001:f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b:363:372",
+          "exact_match": true
+        }
+      ],
+      "query_trace": [
+        {
+          "query_id": "Q7",
+          "cypher": "CALL db.idx.fulltext.queryNodes('Source',$safe_query) YIELD node,score\nRETURN node.id AS source_id,node.title AS title,node.kind AS kind,score AS ft_score ORDER BY ft_score DESC LIMIT 80",
+          "params": {
+            "safe_query": "\"OrionAuth\""
+          },
+          "row_count": 4,
+          "elapsed_ms": 0.722
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-002"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.477
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-002"
+          },
+          "row_count": 3,
+          "elapsed_ms": 0.719
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-002"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.459
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-003"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.384
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-003"
+          },
+          "row_count": 4,
+          "elapsed_ms": 0.767
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-003"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.367
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-039"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.366
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-039"
+          },
+          "row_count": 6,
+          "elapsed_ms": 0.924
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-039"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.396
+        },
+        {
+          "query_id": "SOURCE",
+          "cypher": "MATCH (s:Source {id:$id}) RETURN properties(s) AS source",
+          "params": {
+            "id": "doc-001"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.372
+        },
+        {
+          "query_id": "SOURCE_CLAIMS",
+          "cypher": "MATCH (c:Claim {source_id:$id}) RETURN properties(c) AS claim ORDER BY c.id",
+          "params": {
+            "id": "doc-001"
+          },
+          "row_count": 4,
+          "elapsed_ms": 0.85
+        },
+        {
+          "query_id": "SOURCE_HISTORY",
+          "cypher": "MATCH (r:SourceRevision {source_id:$id}) RETURN r.id AS id,r.sha256 AS sha256,r.created_at AS created_at",
+          "params": {
+            "id": "doc-001"
+          },
+          "row_count": 1,
+          "elapsed_ms": 0.334
+        }
+      ],
+      "graph_revision": 16
+    }
+  },
+  "write_statuses": {
+    "/api/admin/import": 403,
+    "/api/admin/agent/runs": 403,
+    "/api/admin/tasks/test/approve": 403,
+    "/api/admin/decisions/dec-auth-002/accept": 403
+  },
+  "passed": true
+}
