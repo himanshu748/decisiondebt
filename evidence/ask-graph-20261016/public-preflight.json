@@ -1,0 +1,159 @@
+{
+  "at": "2026-10-16T16:47:29.279508+00:00",
+  "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/ask?q=Who+owns+Session+Broker%3F",
+  "answer": {
+    "status": "answered",
+    "question": "Who owns Session Broker?",
+    "intent": "owners",
+    "service": {
+      "id": "svc-session-broker",
+      "name": "Session Broker"
+    },
+    "message": "Ownership conflict: Session Broker has 2 recorded primary owners. Reconcile both source assertions before assigning work.",
+    "supported_shapes": [
+      "Who owns <service>?",
+      "What depends on <service>?",
+      "What would replacing <service> affect?",
+      "Which projects use <service>?",
+      "Who should review a change to <service>?",
+      "What documents mention <service>?"
+    ],
+    "suggestions": [],
+    "rows": [
+      {
+        "service_id": "svc-session-broker",
+        "service": "Session Broker",
+        "owner_id": "person-004",
+        "owner": "Devon Shah",
+        "claim_id": "claim-a95d41576b896f0d8b140a35",
+        "label": "Devon Shah",
+        "owner_status": "conflict",
+        "detail": "Session Broker \u00b7 conflict",
+        "evidence_ids": [
+          "claim-a95d41576b896f0d8b140a35"
+        ]
+      },
+      {
+        "service_id": "svc-session-broker",
+        "service": "Session Broker",
+        "owner_id": "person-020",
+        "owner": "Taylor Roy",
+        "claim_id": "claim-14c45e7d019b11ff49072d05",
+        "label": "Taylor Roy",
+        "owner_status": "conflict",
+        "detail": "Session Broker \u00b7 conflict",
+        "evidence_ids": [
+          "claim-14c45e7d019b11ff49072d05"
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "id": "claim-14c45e7d019b11ff49072d05",
+        "source_id": "chat-077",
+        "anchor_field": "body",
+        "start": 180,
+        "end": 211,
+        "excerpt": "Taylor Roy owns Session Broker.",
+        "source_sha256": "7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d",
+        "anchor_verified": true
+      },
+      {
+        "id": "claim-a95d41576b896f0d8b140a35",
+        "source_id": "doc-021",
+        "anchor_field": "body",
+        "start": 203,
+        "end": 241,
+        "excerpt": "Session Broker is owned by Devon Shah.",
+        "source_sha256": "2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590",
+        "anchor_verified": true
+      },
+      {
+        "id": "claim-b80965575f21726fe60fb130",
+        "source_id": "doc-004",
+        "anchor_field": "body",
+        "start": 211,
+        "end": 250,
+        "excerpt": "This document describes Session Broker.",
+        "source_sha256": "c67f3cebbae6d951a3a9077661e63dfa1c43e551a8956cc2fe78aa031a756808",
+        "anchor_verified": true
+      }
+    ],
+    "counts": {
+      "owners": 2
+    },
+    "row_count": 2,
+    "graph_revision": 16,
+    "max_hops": 5,
+    "truncated": false,
+    "truncation_examples": [],
+    "cycle_detected": false,
+    "query_trace": [
+      {
+        "query_id": "ASK_REVISION",
+        "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+        "params": {},
+        "row_count": 1,
+        "elapsed_ms": 0.478,
+        "graph_revision": 16
+      },
+      {
+        "query_id": "ASK_ENTITIES",
+        "cypher": "MATCH (s:Service) RETURN s.id AS id,s.name AS name,s.aliases AS aliases ORDER BY s.id",
+        "params": {},
+        "row_count": 60,
+        "elapsed_ms": 2.449,
+        "graph_revision": 16
+      },
+      {
+        "query_id": "ASK_OWNERS",
+        "cypher": "MATCH (s:Service) WHERE s.id IN $ids\nOPTIONAL MATCH (p:Person)-[o:OWNS {role:'primary'}]->(s)\nRETURN s.id AS service_id,s.name AS service,p.id AS owner_id,p.name AS owner,o.claim_id AS claim_id\nORDER BY service_id,owner_id",
+        "params": {
+          "ids": [
+            "svc-session-broker"
+          ]
+        },
+        "row_count": 2,
+        "elapsed_ms": 1.555,
+        "graph_revision": 16
+      },
+      {
+        "query_id": "ASK_DESCRIPTIONS",
+        "cypher": "MATCH (doc:Source)-[d:DESCRIBES]->(s:Service) WHERE s.id IN $ids\nRETURN d.claim_id AS claim_id ORDER BY claim_id",
+        "params": {
+          "ids": [
+            "svc-session-broker"
+          ]
+        },
+        "row_count": 1,
+        "elapsed_ms": 0.539,
+        "graph_revision": 16
+      },
+      {
+        "query_id": "ASK_CITATIONS",
+        "cypher": "MATCH (c:Claim)-[:SUPPORTED_BY]->(r:SourceRevision) WHERE c.id IN $claim_ids\nRETURN properties(c) AS claim,r.sha256 AS source_sha256,r.body AS source_body,\nr.raw_text AS source_raw_text ORDER BY c.id",
+        "params": {
+          "claim_ids": [
+            "claim-14c45e7d019b11ff49072d05",
+            "claim-a95d41576b896f0d8b140a35",
+            "claim-b80965575f21726fe60fb130"
+          ]
+        },
+        "row_count": 3,
+        "elapsed_ms": 0.95,
+        "graph_revision": 16
+      },
+      {
+        "query_id": "ASK_REVISION",
+        "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+        "params": {},
+        "row_count": 1,
+        "elapsed_ms": 0.527,
+        "graph_revision": 16
+      }
+    ],
+    "query_ms": 6.498,
+    "elapsed_ms": 12.44,
+    "source_mode": "live_falkordb"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "verified_at": "2026-10-16T16:53:21.571468+00:00",
+  "live_url": "https://decisiondebt.52.202.25.181.sslip.io/",
+  "application_commit": "05d3d1d6025e7be64e5fdbcfc113adc21f2bccfe",
+  "probe_commit": "f1bc6ee6a8e47bb6ef700ffddcd829dd01da660d",
+  "application_ci": {
+    "url": "https://github.com/himanshu748/decisiondebt/actions/runs/38933649450",
+    "conclusion": "success",
+    "pytest": "ci-pytest.txt",
+    "browser_tests": "ci-ui-report.json"
+  },
+  "external": {
+    "url": "https://github.com/himanshu748/decisiondebt/actions/runs/38934696793",
+    "receipt": "external/receipt.json",
+    "widths": [
+      1440,
+      375
+    ],
+    "passed": true
+  },
+  "example_answers_1440": [
+    {
+      "intent": "owners",
+      "question": "Who owns Session Broker?",
+      "status": "answered",
+      "message": "Ownership conflict: Session Broker has 2 recorded primary owners. Reconcile both source assertions before assigning work.",
+      "row_count": 2,
+      "query_ms": 5.397,
+      "graph_revision": 16,
+      "screenshot": "1440-owners.png",
+      "answer_file": "1440-owners.json"
+    },
+    {
+      "intent": "dependents",
+      "question": "What would replacing Auth Gateway affect?",
+      "status": "answered",
+      "message": "11 downstream services plus Auth Gateway itself are in the verified 5-hop scope; 12 projects use those services.",
+      "row_count": 12,
+      "query_ms": 23.345,
+      "graph_revision": 16,
+      "screenshot": "1440-dependents.png",
+      "answer_file": "1440-dependents.json"
+    },
+    {
+      "intent": "projects",
+      "question": "Which projects use Billing API?",
+      "status": "answered",
+      "message": "1 project has a verified direct USES relationship to Billing API.",
+      "row_count": 1,
+      "query_ms": 4.343,
+      "graph_revision": 16,
+      "screenshot": "1440-projects.png",
+      "answer_file": "1440-projects.json"
+    },
+    {
+      "intent": "reviewers",
+      "question": "Who should review a change to Auth Gateway?",
+      "status": "answered",
+      "message": "Suggest 11 recorded owners and 7 connected teams for review across 12 services. Conflicts and gaps still need a human decision; this assigns no work.",
+      "row_count": 13,
+      "query_ms": 21.57,
+      "graph_revision": 16,
+      "screenshot": "1440-reviewers.png",
+      "answer_file": "1440-reviewers.json"
+    },
+    {
+      "intent": "documents",
+      "question": "What documents mention Auth Gateway?",
+      "status": "answered",
+      "message": "5 documents match a recorded alias for Auth Gateway, with exact body-text spans rechecked after native full-text search (up to 80 candidates per alias).",
+      "row_count": 5,
+      "query_ms": 13.255,
+      "graph_revision": 16,
+      "screenshot": "1440-documents.png",
+      "answer_file": "1440-documents.json"
+    }
+  ],
+  "write_checks": "Five forbidden POST endpoints at each width; all returned 403. Browser question/export interactions sent no write requests.",
+  "graph_revision_before_after": 16,
+  "provider_configured": false,
+  "credential_exclusion": {
+    "api_key_present": false,
+    "admin_token_present": false,
+    "env_file_present": false
+  },
+  "exports": "Both existing draft tasks copied and downloaded at each width; clipboard and file contents matched. Approved tasks were not exported.",
+  "isolation": "isolation.json",
+  "initial_external_attempt": {
+    "run": "external-attempt-1-run.json",
+    "failure_log": "external-attempt-1-log.txt",
+    "note": "Started at 16:45:09 UTC, before API rollout completed at 16:45:24 UTC after SSH certificate refresh. No artifacts were produced by that failed probe. Post-deployment verification is separately recorded in external/."
+  },
+  "historical_evidence": {
+    "baseline_files": 302,
+    "historical_tracked_files": 298,
+    "all_historical_tracked_files_byte_identical": true,
+    "other_unchanged_files": 301,
+    "ignored_runtime_file_changes": [
+      {
+        "path": "evidence/test-results/server.log",
+        "before_sha256": "4ce1e5562677e11245bdcf71c73cb11ab3b8d89b17d957769ea1fe2e042797d1",
+        "observed_sha256": "ca0ec33178bc890ea269bb77b724c389cfc1c45d53fc2ce736ed4750bda363f5",
+        "tracked": false
+      }
+    ],
+    "runtime_note": "The ignored server.log is open for output by another Python process (PID 40302 observed with lsof). This task did not edit or stage it and did not interrupt that process. All archived measurements, traces and video are unchanged.",
+    "baseline_inventory": "historical-evidence-sha256.json"
+  },
+  "ai_disclosure_unchanged": true,
+  "video_changed": false,
+  "submitted": false
+}

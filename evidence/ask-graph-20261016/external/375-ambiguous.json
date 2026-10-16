@@ -1,0 +1,63 @@
+{
+  "status": "ambiguous",
+  "question": "Who owns Gateway?",
+  "intent": "owners",
+  "service": null,
+  "message": "Did you mean…",
+  "supported_shapes": [
+    "Who owns <service>?",
+    "What depends on <service>?",
+    "What would replacing <service> affect?",
+    "Which projects use <service>?",
+    "Who should review a change to <service>?",
+    "What documents mention <service>?"
+  ],
+  "suggestions": [
+    {
+      "id": "svc-auth-gateway",
+      "name": "Auth Gateway"
+    },
+    {
+      "id": "svc-login-gateway",
+      "name": "Login Gateway"
+    }
+  ],
+  "rows": [],
+  "citations": [],
+  "counts": {},
+  "row_count": 0,
+  "graph_revision": 16,
+  "max_hops": 5,
+  "truncated": false,
+  "truncation_examples": [],
+  "cycle_detected": false,
+  "query_trace": [
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.43,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_ENTITIES",
+      "cypher": "MATCH (s:Service) RETURN s.id AS id,s.name AS name,s.aliases AS aliases ORDER BY s.id",
+      "params": {},
+      "row_count": 60,
+      "elapsed_ms": 2.038,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.441,
+      "graph_revision": 16
+    }
+  ],
+  "query_ms": 2.909,
+  "elapsed_ms": 6.078,
+  "source_mode": "live_falkordb"
+}

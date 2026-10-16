@@ -1,0 +1,213 @@
+{
+  "status": "answered",
+  "question": "What documents mention Auth Gateway?",
+  "intent": "documents",
+  "service": {
+    "id": "svc-auth-gateway",
+    "name": "Auth Gateway"
+  },
+  "message": "5 documents match a recorded alias for Auth Gateway, with exact body-text spans rechecked after native full-text search (up to 80 candidates per alias).",
+  "supported_shapes": [
+    "Who owns <service>?",
+    "What depends on <service>?",
+    "What would replacing <service> affect?",
+    "Which projects use <service>?",
+    "Who should review a change to <service>?",
+    "What documents mention <service>?"
+  ],
+  "suggestions": [],
+  "rows": [
+    {
+      "label": "Auth Gateway: operating notes",
+      "detail": "Login Gateway depends on Auth Gateway for the documented request flow.",
+      "source_id": "doc-001",
+      "ft_score": 4,
+      "evidence_ids": [
+        "mention:doc-001:f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b:163:175"
+      ]
+    },
+    {
+      "label": "Replace OrionAuth with NovaID",
+      "detail": "Decision dec-auth-002 changes service Auth Gateway. This is a proposal awaiting explicit human acceptance.",
+      "source_id": "doc-003",
+      "ft_score": 2.5,
+      "evidence_ids": [
+        "mention:doc-003:9038489736e92a16e12dd2c45b7575a305b20db8891cac9155a49d13709785d6:345:357"
+      ]
+    },
+    {
+      "label": "Login Gateway: operating notes",
+      "detail": "Identity API calls Auth Gateway during request validation.",
+      "source_id": "doc-002",
+      "ft_score": 2.25,
+      "evidence_ids": [
+        "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:157:169"
+      ]
+    },
+    {
+      "label": "Fulfillment API: operating notes",
+      "detail": "Avery Chen owns Auth Gateway.",
+      "source_id": "doc-018",
+      "ft_score": 1.66666666666667,
+      "evidence_ids": [
+        "mention:doc-018:954ec93037023476b6594c680cbeec9536b017e613c317b85479e92cf89cc1ff:216:228"
+      ]
+    },
+    {
+      "label": "Escalation Worker: operating notes",
+      "detail": "Project Atlas uses Auth Gateway for its delivery milestone.",
+      "source_id": "doc-036",
+      "ft_score": 1.25,
+      "evidence_ids": [
+        "mention:doc-036:09023b8451068e0f9b4cfa24bf7b37f5ff73e694849a64eb423fadc7d1caeb9b:251:263"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "mention:doc-001:f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b:163:175",
+      "source_id": "doc-001",
+      "anchor_field": "body",
+      "start": 163,
+      "end": 175,
+      "excerpt": "Auth Gateway",
+      "context": "Login Gateway depends on Auth Gateway for the documented request flow.",
+      "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+      "anchor_verified": true
+    },
+    {
+      "id": "mention:doc-003:9038489736e92a16e12dd2c45b7575a305b20db8891cac9155a49d13709785d6:345:357",
+      "source_id": "doc-003",
+      "anchor_field": "body",
+      "start": 345,
+      "end": 357,
+      "excerpt": "Auth Gateway",
+      "context": "Decision dec-auth-002 changes service Auth Gateway. This is a proposal awaiting explicit human acceptance.",
+      "source_sha256": "9038489736e92a16e12dd2c45b7575a305b20db8891cac9155a49d13709785d6",
+      "anchor_verified": true
+    },
+    {
+      "id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:157:169",
+      "source_id": "doc-002",
+      "anchor_field": "body",
+      "start": 157,
+      "end": 169,
+      "excerpt": "Auth Gateway",
+      "context": "Identity API calls Auth Gateway during request validation.",
+      "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+      "anchor_verified": true
+    },
+    {
+      "id": "mention:doc-018:954ec93037023476b6594c680cbeec9536b017e613c317b85479e92cf89cc1ff:216:228",
+      "source_id": "doc-018",
+      "anchor_field": "body",
+      "start": 216,
+      "end": 228,
+      "excerpt": "Auth Gateway",
+      "context": "Avery Chen owns Auth Gateway.",
+      "source_sha256": "954ec93037023476b6594c680cbeec9536b017e613c317b85479e92cf89cc1ff",
+      "anchor_verified": true
+    },
+    {
+      "id": "mention:doc-036:09023b8451068e0f9b4cfa24bf7b37f5ff73e694849a64eb423fadc7d1caeb9b:251:263",
+      "source_id": "doc-036",
+      "anchor_field": "body",
+      "start": 251,
+      "end": 263,
+      "excerpt": "Auth Gateway",
+      "context": "Project Atlas uses Auth Gateway for its delivery milestone.",
+      "source_sha256": "09023b8451068e0f9b4cfa24bf7b37f5ff73e694849a64eb423fadc7d1caeb9b",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-f944a248f5d4caa5ad414717",
+      "source_id": "doc-001",
+      "anchor_field": "body",
+      "start": 210,
+      "end": 247,
+      "excerpt": "This document describes Auth Gateway.",
+      "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+      "anchor_verified": true
+    }
+  ],
+  "counts": {},
+  "row_count": 5,
+  "graph_revision": 16,
+  "max_hops": 5,
+  "truncated": false,
+  "truncation_examples": [],
+  "cycle_detected": false,
+  "query_trace": [
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.414,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_ENTITIES",
+      "cypher": "MATCH (s:Service) RETURN s.id AS id,s.name AS name,s.aliases AS aliases ORDER BY s.id",
+      "params": {},
+      "row_count": 60,
+      "elapsed_ms": 1.996,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DOCUMENTS",
+      "cypher": "CALL db.idx.fulltext.queryNodes('Source',$safe_query) YIELD node,score\nWITH node,score WHERE node.kind = 'doc'\nMATCH (r:SourceRevision) WHERE r.id = node.active_revision\nRETURN node.id AS source_id,node.title AS title,r.body AS body,r.raw_text AS raw_text,\nr.sha256 AS sha256,score AS ft_score ORDER BY ft_score DESC,source_id LIMIT 80",
+      "params": {
+        "safe_query": "\"Auth Gateway\""
+      },
+      "row_count": 5,
+      "elapsed_ms": 0.963,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DOCUMENTS",
+      "cypher": "CALL db.idx.fulltext.queryNodes('Source',$safe_query) YIELD node,score\nWITH node,score WHERE node.kind = 'doc'\nMATCH (r:SourceRevision) WHERE r.id = node.active_revision\nRETURN node.id AS source_id,node.title AS title,r.body AS body,r.raw_text AS raw_text,\nr.sha256 AS sha256,score AS ft_score ORDER BY ft_score DESC,source_id LIMIT 80",
+      "params": {
+        "safe_query": "\"svc auth gateway\""
+      },
+      "row_count": 0,
+      "elapsed_ms": 0.41,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DESCRIPTIONS",
+      "cypher": "MATCH (doc:Source)-[d:DESCRIBES]->(s:Service) WHERE s.id IN $ids\nRETURN d.claim_id AS claim_id ORDER BY claim_id",
+      "params": {
+        "ids": [
+          "svc-auth-gateway"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.396,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_CITATIONS",
+      "cypher": "MATCH (c:Claim)-[:SUPPORTED_BY]->(r:SourceRevision) WHERE c.id IN $claim_ids\nRETURN properties(c) AS claim,r.sha256 AS source_sha256,r.body AS source_body,\nr.raw_text AS source_raw_text ORDER BY c.id",
+      "params": {
+        "claim_ids": [
+          "claim-f944a248f5d4caa5ad414717"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.646,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.298,
+      "graph_revision": 16
+    }
+  ],
+  "query_ms": 5.123,
+  "elapsed_ms": 9.475,
+  "source_mode": "live_falkordb"
+}

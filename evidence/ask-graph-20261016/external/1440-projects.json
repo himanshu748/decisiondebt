@@ -1,0 +1,127 @@
+{
+  "status": "answered",
+  "question": "Which projects use Billing API?",
+  "intent": "projects",
+  "service": {
+    "id": "svc-billing-api",
+    "name": "Billing API"
+  },
+  "message": "1 project has a verified direct USES relationship to Billing API.",
+  "supported_shapes": [
+    "Who owns <service>?",
+    "What depends on <service>?",
+    "What would replacing <service> affect?",
+    "Which projects use <service>?",
+    "Who should review a change to <service>?",
+    "What documents mention <service>?"
+  ],
+  "suggestions": [],
+  "rows": [
+    {
+      "project_id": "project-001",
+      "project": "Project Atlas",
+      "service_id": "svc-billing-api",
+      "claim_id": "claim-f7c286184f8b668c3370a91b",
+      "label": "Project Atlas",
+      "detail": "Directly uses Billing API",
+      "evidence_ids": [
+        "claim-f7c286184f8b668c3370a91b"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "claim-2d94ac9072df53f318755e4c",
+      "source_id": "doc-011",
+      "anchor_field": "body",
+      "start": 198,
+      "end": 234,
+      "excerpt": "This document describes Billing API.",
+      "source_sha256": "36f7806262de1331b56de4617f869d974d7830c152a5556e415835e4540df73d",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-f7c286184f8b668c3370a91b",
+      "source_id": "doc-036",
+      "anchor_field": "body",
+      "start": 293,
+      "end": 351,
+      "excerpt": "Project Atlas uses Billing API for its delivery milestone.",
+      "source_sha256": "09023b8451068e0f9b4cfa24bf7b37f5ff73e694849a64eb423fadc7d1caeb9b",
+      "anchor_verified": true
+    }
+  ],
+  "counts": {},
+  "row_count": 1,
+  "graph_revision": 16,
+  "max_hops": 5,
+  "truncated": false,
+  "truncation_examples": [],
+  "cycle_detected": false,
+  "query_trace": [
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.441,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_ENTITIES",
+      "cypher": "MATCH (s:Service) RETURN s.id AS id,s.name AS name,s.aliases AS aliases ORDER BY s.id",
+      "params": {},
+      "row_count": 60,
+      "elapsed_ms": 1.926,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_PROJECTS",
+      "cypher": "MATCH (p:Project)-[u:USES]->(s:Service) WHERE s.id IN $ids\nRETURN DISTINCT p.id AS project_id,p.name AS project,s.id AS service_id,u.claim_id AS claim_id\nORDER BY project_id,service_id",
+      "params": {
+        "ids": [
+          "svc-billing-api"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.614,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DESCRIPTIONS",
+      "cypher": "MATCH (doc:Source)-[d:DESCRIBES]->(s:Service) WHERE s.id IN $ids\nRETURN d.claim_id AS claim_id ORDER BY claim_id",
+      "params": {
+        "ids": [
+          "svc-billing-api"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.379,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_CITATIONS",
+      "cypher": "MATCH (c:Claim)-[:SUPPORTED_BY]->(r:SourceRevision) WHERE c.id IN $claim_ids\nRETURN properties(c) AS claim,r.sha256 AS source_sha256,r.body AS source_body,\nr.raw_text AS source_raw_text ORDER BY c.id",
+      "params": {
+        "claim_ids": [
+          "claim-2d94ac9072df53f318755e4c",
+          "claim-f7c286184f8b668c3370a91b"
+        ]
+      },
+      "row_count": 2,
+      "elapsed_ms": 0.687,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.296,
+      "graph_revision": 16
+    }
+  ],
+  "query_ms": 4.343,
+  "elapsed_ms": 8.135,
+  "source_mode": "live_falkordb"
+}

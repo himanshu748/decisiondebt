@@ -50,6 +50,8 @@ Use the [studio question box](https://decisiondebt.52.202.25.181.sslip.io/studio
 
 Every supported answer includes executed Cypher, bound parameters, raw query row counts, total answer rows, client-measured query durations and hash-verified source spans. Document search considers up to 80 candidates per recorded alias; a search score is not certainty. [Intent and ambiguity tests](backend/tests/unit/test_ask.py) · [Native template and public-boundary tests](backend/tests/integrations/test_ask_native.py) · [Browser and ticket-export tests](web/tests/ask-graph.spec.ts).
 
+[Fresh external Chromium verification](evidence/ask-graph-20261016/verification.json) records all five types at 1440 and 375 pixels, real answer timings, unchanged revision 16 and HTTP 403 write checks. [Screenshots and answers](evidence/ask-graph-20261016/external/receipt.json) · [EmbodiWeave isolation, including a concurrent rollout observed in the initial audit](evidence/ask-graph-20261016/isolation.json).
+
 The [Action Board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) can copy or download each draft as a Markdown ticket with its reason, evidence and suggested owner (or “unassigned: needs decision”). Exports happen entirely in the browser. All graph writes remain forbidden in public mode, with the existing rate limits and no provider key.
 
 The question box and client-side ticket exports were added after the [recorded demo](https://youtu.be/_a0vrYwOlME); the video is unchanged.

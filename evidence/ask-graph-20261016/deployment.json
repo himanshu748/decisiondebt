@@ -1,0 +1,38 @@
+{
+  "deployed_at": "2026-10-16T16:45:24.197382+00:00",
+  "source_commit": "05d3d1d6025e7be64e5fdbcfc113adc21f2bccfe",
+  "previous_api_id": "0dfebcf542fe1a3ab3f635cac30486265591010458568dc1f1790b1ad173a374",
+  "api_id": "4e2bf4c0ee8255f5eb98bdc246cceecbfccded6c4490e06028e0eb0abf876081",
+  "image": "decisiondebt-public:05d3d1d6025e7be64e5fdbcfc113adc21f2bccfe",
+  "trusted_proxy_ips": [
+    "172.18.0.3"
+  ],
+  "api_networks": [
+    "decisiondebt-public_graph",
+    "decisiondebt-public_web",
+    "embodiweave-net"
+  ],
+  "archived_previous_logs": "/opt/decisiondebt/log-archive/api-before-05d3d1d6025e7be64e5fdbcfc113adc21f2bccfe.log",
+  "health": {
+    "status": "ok",
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "provider_configured": false,
+    "mode": "public-readonly"
+  },
+  "credential_check": {
+    "api_key_present": false,
+    "admin_token_present": false,
+    "env_file_present": false
+  },
+  "proxy_direct_reachability": {
+    "status": "ok",
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "provider_configured": false,
+    "mode": "public-readonly"
+  },
+  "compose_output": " Container decisiondebt-public-api  Recreate\n Container decisiondebt-public-api  Recreated\n Container decisiondebt-public-api  Starting\n Container decisiondebt-public-api  Started\n"
+}

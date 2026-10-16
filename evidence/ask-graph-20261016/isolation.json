@@ -1,0 +1,26 @@
+{
+  "initial_window": {
+    "before": "host-before.json",
+    "after": "host-after.json",
+    "ew_api_changed": true,
+    "before_image": "embodiweave:a34b6fea3e40",
+    "after_image": "embodiweave:521712147808",
+    "content_changed": true,
+    "note": "A concurrent EmbodiWeave rollout is visible in the audits. Its actor is not established by these audits. DecisionDebt deployment issued only the scoped API operation recorded in deployment.json; this initial pair is not claimed as unchanged-content proof."
+  },
+  "verification_window": {
+    "before": "stability-before.json",
+    "after": "stability-after.json",
+    "all_four_audited_containers_unchanged": true,
+    "embodiweave_200_same_content": true,
+    "embodiweave_sha256": "6353c915f406fe060ea779d66c00f2d10143fa3bb46563829adae0ce4373c8ea",
+    "embodiweave_bytes": 24583,
+    "embodiweave_certificate_unchanged": true
+  },
+  "whole_task": {
+    "caddyfile_byte_identical": true,
+    "ew_proxy_unchanged": true,
+    "decisiondebt_db_unchanged": true
+  },
+  "external_proof": "external/receipt.json"
+}

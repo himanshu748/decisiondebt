@@ -1,0 +1,118 @@
+{
+  "status": "answered",
+  "question": "Who owns Token Cache?",
+  "intent": "owners",
+  "service": {
+    "id": "svc-token-cache",
+    "name": "Token Cache"
+  },
+  "message": "Ownership gap: no verified primary owner is recorded for Token Cache. This does not prove that nobody owns it.",
+  "supported_shapes": [
+    "Who owns <service>?",
+    "What depends on <service>?",
+    "What would replacing <service> affect?",
+    "Which projects use <service>?",
+    "Who should review a change to <service>?",
+    "What documents mention <service>?"
+  ],
+  "suggestions": [],
+  "rows": [
+    {
+      "service_id": "svc-token-cache",
+      "service": "Token Cache",
+      "owner_id": null,
+      "owner": null,
+      "claim_id": null,
+      "label": "No verified primary owner recorded",
+      "owner_status": "gap",
+      "detail": "Token Cache · gap",
+      "evidence_ids": []
+    }
+  ],
+  "citations": [
+    {
+      "id": "claim-68d7ba8e26e0e6f6254d991c",
+      "source_id": "doc-005",
+      "anchor_field": "body",
+      "start": 199,
+      "end": 235,
+      "excerpt": "This document describes Token Cache.",
+      "source_sha256": "76d798a62a96d31cfc620cabe267fa18c475d8f3dc29bcfcaaf8576566079480",
+      "anchor_verified": true
+    }
+  ],
+  "counts": {
+    "owners": 0
+  },
+  "row_count": 1,
+  "graph_revision": 16,
+  "max_hops": 5,
+  "truncated": false,
+  "truncation_examples": [],
+  "cycle_detected": false,
+  "query_trace": [
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.439,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_ENTITIES",
+      "cypher": "MATCH (s:Service) RETURN s.id AS id,s.name AS name,s.aliases AS aliases ORDER BY s.id",
+      "params": {},
+      "row_count": 60,
+      "elapsed_ms": 1.716,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_OWNERS",
+      "cypher": "MATCH (s:Service) WHERE s.id IN $ids\nOPTIONAL MATCH (p:Person)-[o:OWNS {role:'primary'}]->(s)\nRETURN s.id AS service_id,s.name AS service,p.id AS owner_id,p.name AS owner,o.claim_id AS claim_id\nORDER BY service_id,owner_id",
+      "params": {
+        "ids": [
+          "svc-token-cache"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.572,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DESCRIPTIONS",
+      "cypher": "MATCH (doc:Source)-[d:DESCRIBES]->(s:Service) WHERE s.id IN $ids\nRETURN d.claim_id AS claim_id ORDER BY claim_id",
+      "params": {
+        "ids": [
+          "svc-token-cache"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.382,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_CITATIONS",
+      "cypher": "MATCH (c:Claim)-[:SUPPORTED_BY]->(r:SourceRevision) WHERE c.id IN $claim_ids\nRETURN properties(c) AS claim,r.sha256 AS source_sha256,r.body AS source_body,\nr.raw_text AS source_raw_text ORDER BY c.id",
+      "params": {
+        "claim_ids": [
+          "claim-68d7ba8e26e0e6f6254d991c"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.645,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.309,
+      "graph_revision": 16
+    }
+  ],
+  "query_ms": 4.063,
+  "elapsed_ms": 8.187,
+  "source_mode": "live_falkordb"
+}

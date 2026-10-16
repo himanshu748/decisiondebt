@@ -1,0 +1,18 @@
+verify	Ask all five question types from fresh external Chromium profiles	﻿2026-10-16T16:45:09.6727442Z ##[group]Run node web/scripts/probe-ask.mjs
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:09.6727681Z [36;1mnode web/scripts/probe-ask.mjs[0m
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:09.6781733Z shell: /usr/bin/bash -e {0}
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:09.6781892Z env:
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:09.6782017Z   DD_PROBE_OUTPUT: work/external-ask
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:09.6782171Z ##[endgroup]
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3150402Z node:internal/process/promises:394
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3161060Z     triggerUncaughtException(err, true /* fromPromise */);
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3162641Z     ^
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3162745Z 
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3163099Z page.waitForResponse: Timeout 30000ms exceeded while waiting for event "response"
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3163671Z     at /home/runner/work/decisiondebt/decisiondebt/web/scripts/probe-ask.mjs:47:6 {
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3164037Z   log: [],
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3164232Z   name: 'TimeoutError'
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3164462Z }
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3164561Z 
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3164685Z Node.js v22.23.3
+verify	Ask all five question types from fresh external Chromium profiles	2026-10-16T16:45:40.3272971Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,593 @@
+{
+  "status": "answered",
+  "question": "What would replacing Auth Gateway affect?",
+  "intent": "dependents",
+  "service": {
+    "id": "svc-auth-gateway",
+    "name": "Auth Gateway"
+  },
+  "message": "11 downstream services plus Auth Gateway itself are in the verified 5-hop scope; 12 projects use those services.",
+  "supported_shapes": [
+    "Who owns <service>?",
+    "What depends on <service>?",
+    "What would replacing <service> affect?",
+    "Which projects use <service>?",
+    "Who should review a change to <service>?",
+    "What documents mention <service>?"
+  ],
+  "suggestions": [],
+  "rows": [
+    {
+      "service_id": "svc-auth-gateway",
+      "label": "Auth Gateway",
+      "depth": 0,
+      "detail": "Replacement target (included in scope)",
+      "evidence_ids": []
+    },
+    {
+      "service_id": "svc-identity-api",
+      "label": "Identity API",
+      "depth": 1,
+      "detail": "Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-login-gateway",
+      "label": "Login Gateway",
+      "depth": 1,
+      "detail": "Login Gateway → Auth Gateway",
+      "evidence_ids": [
+        "claim-509cb005f4c9750a255b2a9f"
+      ]
+    },
+    {
+      "service_id": "svc-billing-api",
+      "label": "Billing API",
+      "depth": 2,
+      "detail": "Billing API → Login Gateway → Auth Gateway",
+      "evidence_ids": [
+        "claim-0b2160acde6623e6576a2435",
+        "claim-509cb005f4c9750a255b2a9f"
+      ]
+    },
+    {
+      "service_id": "svc-invoice-engine",
+      "label": "Invoice Engine",
+      "depth": 2,
+      "detail": "Invoice Engine → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-3096967890b648a261427afa",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-session-broker",
+      "label": "Session Broker",
+      "depth": 2,
+      "detail": "Session Broker → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-checkout-api",
+      "label": "Checkout API",
+      "depth": 3,
+      "detail": "Checkout API → Billing API → Login Gateway → Auth Gateway",
+      "evidence_ids": [
+        "claim-a05b7a4ff8de87419be2313f",
+        "claim-0b2160acde6623e6576a2435",
+        "claim-509cb005f4c9750a255b2a9f"
+      ]
+    },
+    {
+      "service_id": "svc-payment-router",
+      "label": "Payment Router",
+      "depth": 3,
+      "detail": "Payment Router → Invoice Engine → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-3280c74c2324389f5f275d4c",
+        "claim-3096967890b648a261427afa",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-support-console",
+      "label": "Support Console",
+      "depth": 3,
+      "detail": "Support Console → Session Broker → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-eba780ecc9158b463749be71",
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-token-cache",
+      "label": "Token Cache",
+      "depth": 3,
+      "detail": "Token Cache → Session Broker → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-c692f47033683572befa0b30",
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-credential-vault",
+      "label": "Credential Vault",
+      "depth": 4,
+      "detail": "Credential Vault → Token Cache → Session Broker → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-3a26cecaf3eafb107d6df567",
+        "claim-c692f47033683572befa0b30",
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    },
+    {
+      "service_id": "svc-access-proxy",
+      "label": "Access Proxy",
+      "depth": 5,
+      "detail": "Access Proxy → Credential Vault → Token Cache → Session Broker → Identity API → Auth Gateway",
+      "evidence_ids": [
+        "claim-f6995a8d7ba4ff4f6ccb4fbf",
+        "claim-3a26cecaf3eafb107d6df567",
+        "claim-c692f47033683572befa0b30",
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "claim-05eac7e94a8f372248fd96ef",
+      "source_id": "ticket-047",
+      "anchor_field": "body",
+      "start": 352,
+      "end": 416,
+      "excerpt": "Project Waypoint uses Payment Router for its delivery milestone.",
+      "source_sha256": "11a1c6d2dcc689b2d06ce48363a1257a40dfdfb58906bd87dded9f857d67234f",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-0b2160acde6623e6576a2435",
+      "source_id": "doc-011",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 196,
+      "excerpt": "Billing API calls Login Gateway during request validation.",
+      "source_sha256": "36f7806262de1331b56de4617f869d974d7830c152a5556e415835e4540df73d",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-0bc71e937880333e732d18f0",
+      "source_id": "ticket-045",
+      "anchor_field": "body",
+      "start": 285,
+      "end": 347,
+      "excerpt": "Project Meridian uses Identity API for its delivery milestone.",
+      "source_sha256": "9fa0c9ffb22b5fbccd6477e22ac24b938d949cb3cd95503674f711f5c2695344",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-22e2df57cea83c9f1073c7d4",
+      "source_id": "ticket-043",
+      "anchor_field": "body",
+      "start": 297,
+      "end": 359,
+      "excerpt": "Project Keystone uses Auth Gateway for its delivery milestone.",
+      "source_sha256": "9a3bcb78c826a5852b122a652a76b920c26f08381488558d509bacbd6d1ef229",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-244be9185948c365a6b206dc",
+      "source_id": "doc-004",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 209,
+      "excerpt": "Session Broker depends on Identity API for the documented request flow.",
+      "source_sha256": "c67f3cebbae6d951a3a9077661e63dfa1c43e551a8956cc2fe78aa031a756808",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-2ba4681f9760fd3d9f851586",
+      "source_id": "doc-039",
+      "anchor_field": "body",
+      "start": 239,
+      "end": 303,
+      "excerpt": "Project Daybreak uses Session Broker for its delivery milestone.",
+      "source_sha256": "7fddb2e17a78c1fb7f24bf7ac2252e748236202620395b53cef03bfe0f37574d",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-3096967890b648a261427afa",
+      "source_id": "doc-022",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 209,
+      "excerpt": "Invoice Engine depends on Identity API for the documented request flow.",
+      "source_sha256": "801a83aec5faf46ba62ff059ccc059e7f7adbe255e2624e3afd62dff659ac5ba",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-3280c74c2324389f5f275d4c",
+      "source_id": "doc-023",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 200,
+      "excerpt": "Payment Router calls Invoice Engine during request validation.",
+      "source_sha256": "13d0b279a89f06bc1db2cce6993622bdafec4a1e5cad64c122fd2e1221d33430",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-34f9ff115e55e66c105f9601",
+      "source_id": "ticket-046",
+      "anchor_field": "body",
+      "start": 293,
+      "end": 358,
+      "excerpt": "Project Northstar uses Session Broker for its delivery milestone.",
+      "source_sha256": "c89ce0e0176063dfbfd4b243296bf3a3cb4ea6d870297c6f49fbe69071011a38",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-3a26cecaf3eafb107d6df567",
+      "source_id": "doc-007",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 210,
+      "excerpt": "Credential Vault depends on Token Cache for the documented request flow.",
+      "source_sha256": "facde35eb698ad2431bc825975a1b5d3dfd482b496ab6f52a49d9c8983c5dff9",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-3d7b966f557b87e2c072ac3b",
+      "source_id": "ticket-046",
+      "anchor_field": "body",
+      "start": 360,
+      "end": 425,
+      "excerpt": "Project Northstar uses Invoice Engine for its delivery milestone.",
+      "source_sha256": "c89ce0e0176063dfbfd4b243296bf3a3cb4ea6d870297c6f49fbe69071011a38",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-48d0f793177342ebf9160384",
+      "source_id": "doc-037",
+      "anchor_field": "body",
+      "start": 254,
+      "end": 315,
+      "excerpt": "Project Beacon uses Login Gateway for its delivery milestone.",
+      "source_sha256": "d428bed92ea974d4cfe3fd7e5edbbe5fbf18905f1f5159dcfbd310ab65507a46",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-509cb005f4c9750a255b2a9f",
+      "source_id": "doc-001",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 208,
+      "excerpt": "Login Gateway depends on Auth Gateway for the documented request flow.",
+      "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-86ea8a7f873708dc5516a182",
+      "source_id": "ticket-044",
+      "anchor_field": "body",
+      "start": 277,
+      "end": 339,
+      "excerpt": "Project Lantern uses Login Gateway for its delivery milestone.",
+      "source_sha256": "c724131f1cf126d3e576355946f30d6d73da78b5099c8d38384a8e3dd93b5009",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-87c67bef63161046d82ae850",
+      "source_id": "ticket-047",
+      "anchor_field": "body",
+      "start": 289,
+      "end": 350,
+      "excerpt": "Project Waypoint uses Token Cache for its delivery milestone.",
+      "source_sha256": "11a1c6d2dcc689b2d06ce48363a1257a40dfdfb58906bd87dded9f857d67234f",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-96ef30ca876f0d8fb3820e70",
+      "source_id": "ticket-041",
+      "anchor_field": "body",
+      "start": 239,
+      "end": 304,
+      "excerpt": "Project Foundry uses Credential Vault for its delivery milestone.",
+      "source_sha256": "87021b99d9ab3052050f220e80860c735d68c48ba241512bfea08118fca123dd",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-986852224d093e9c7c3e052f",
+      "source_id": "doc-038",
+      "anchor_field": "body",
+      "start": 233,
+      "end": 294,
+      "excerpt": "Project Compass uses Identity API for its delivery milestone.",
+      "source_sha256": "0146ef3e9262f56cd538775f61bc1961d7020be353ee12e705f2d141f07a3b7f",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-9e0f98e8368b224dc2e56163",
+      "source_id": "doc-009",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 197,
+      "excerpt": "Directory Sync uses Access Proxy for its upstream contract.",
+      "source_sha256": "a4d0a1d50565bb80fcfa902eca03acd4567a4431a4717194d4acd68dfcf4de61",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-a05b7a4ff8de87419be2313f",
+      "source_id": "doc-012",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 194,
+      "excerpt": "Checkout API uses Billing API for its upstream contract.",
+      "source_sha256": "8ed19c1164ccf767719ed803a4eb3af6760c8e1229cc1d171827930694a22cc8",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-ab72acb89dac97f212f009df",
+      "source_id": "doc-040",
+      "anchor_field": "body",
+      "start": 234,
+      "end": 296,
+      "excerpt": "Project Evergreen uses Token Cache for its delivery milestone.",
+      "source_sha256": "d044166b476404ab2246adf45c01b65ef02dc7ae42d31545b4ae61b318b34572",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-afcb1b8f7c99f42ad4970ee1",
+      "source_id": "doc-036",
+      "anchor_field": "body",
+      "start": 232,
+      "end": 291,
+      "excerpt": "Project Atlas uses Auth Gateway for its delivery milestone.",
+      "source_sha256": "09023b8451068e0f9b4cfa24bf7b37f5ff73e694849a64eb423fadc7d1caeb9b",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-c16143aea723549e156e608d",
+      "source_id": "doc-037",
+      "anchor_field": "body",
+      "start": 317,
+      "end": 377,
+      "excerpt": "Project Beacon uses Checkout API for its delivery milestone.",
+      "source_sha256": "d428bed92ea974d4cfe3fd7e5edbbe5fbf18905f1f5159dcfbd310ab65507a46",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-c692f47033683572befa0b30",
+      "source_id": "doc-005",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 197,
+      "excerpt": "Token Cache calls Session Broker during request validation.",
+      "source_sha256": "76d798a62a96d31cfc620cabe267fa18c475d8f3dc29bcfcaaf8576566079480",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-ea69945739a3a91f9c152519",
+      "source_id": "ticket-042",
+      "anchor_field": "body",
+      "start": 234,
+      "end": 294,
+      "excerpt": "Project Harbor uses Access Proxy for its delivery milestone.",
+      "source_sha256": "30e8f5950020a2ec360a3d22613eb07d46837d1233d4c93f5e17221d0e0ebdc3",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-eba780ecc9158b463749be71",
+      "source_id": "doc-034",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 212,
+      "excerpt": "Support Console depends on Session Broker for the documented request flow.",
+      "source_sha256": "1d1fd332a632b2520f4ad4b44bb56a0e7fb594ab8992e04f29b265eaa7c39a36",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-f329a336521bc8fa5ffd0dca",
+      "source_id": "doc-002",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 196,
+      "excerpt": "Identity API calls Auth Gateway during request validation.",
+      "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-f6995a8d7ba4ff4f6ccb4fbf",
+      "source_id": "doc-008",
+      "anchor_field": "body",
+      "start": 138,
+      "end": 200,
+      "excerpt": "Access Proxy calls Credential Vault during request validation.",
+      "source_sha256": "fc9eeb828a2f38f3ea1e3a2bfedb16a5dafe667b62b32028cc16a45fc2b4dbbd",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-f7c286184f8b668c3370a91b",
+      "source_id": "doc-036",
+      "anchor_field": "body",
+      "start": 293,
+      "end": 351,
+      "excerpt": "Project Atlas uses Billing API for its delivery milestone.",
+      "source_sha256": "09023b8451068e0f9b4cfa24bf7b37f5ff73e694849a64eb423fadc7d1caeb9b",
+      "anchor_verified": true
+    },
+    {
+      "id": "claim-f944a248f5d4caa5ad414717",
+      "source_id": "doc-001",
+      "anchor_field": "body",
+      "start": 210,
+      "end": 247,
+      "excerpt": "This document describes Auth Gateway.",
+      "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+      "anchor_verified": true
+    }
+  ],
+  "counts": {
+    "services": 12,
+    "projects": 12
+  },
+  "row_count": 12,
+  "graph_revision": 16,
+  "max_hops": 5,
+  "truncated": true,
+  "truncation_examples": [
+    {
+      "service_id": "svc-directory-sync",
+      "name": "Directory Sync",
+      "depth": 6
+    }
+  ],
+  "cycle_detected": true,
+  "query_trace": [
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.48,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_ENTITIES",
+      "cypher": "MATCH (s:Service) RETURN s.id AS id,s.name AS name,s.aliases AS aliases ORDER BY s.id",
+      "params": {},
+      "row_count": 60,
+      "elapsed_ms": 3.499,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DEPENDENTS",
+      "cypher": "MATCH p=(consumer:Service)-[:DEPENDS_ON*1..5]->(root:Service {id:$root_id})\nRETURN consumer.id AS service_id,length(p) AS hops,[n IN nodes(p) | n.id] AS service_path,\n[r IN relationships(p) | r.claim_id] AS claim_path ORDER BY hops,service_id",
+      "params": {
+        "root_id": "svc-auth-gateway"
+      },
+      "row_count": 18,
+      "elapsed_ms": 3.872,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_FRONTIER",
+      "cypher": "MATCH (s:Service)-[d:DEPENDS_ON]->(b:Service)\nWHERE b.id IN $boundary AND NOT s.id IN $ids\nRETURN DISTINCT s.id AS id,s.name AS name,d.claim_id AS claim_id ORDER BY name,id",
+      "params": {
+        "boundary": [
+          "svc-access-proxy"
+        ],
+        "ids": [
+          "svc-access-proxy",
+          "svc-auth-gateway",
+          "svc-billing-api",
+          "svc-checkout-api",
+          "svc-credential-vault",
+          "svc-identity-api",
+          "svc-invoice-engine",
+          "svc-login-gateway",
+          "svc-payment-router",
+          "svc-session-broker",
+          "svc-support-console",
+          "svc-token-cache"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 3.119,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_PROJECTS",
+      "cypher": "MATCH (p:Project)-[u:USES]->(s:Service) WHERE s.id IN $ids\nRETURN DISTINCT p.id AS project_id,p.name AS project,s.id AS service_id,u.claim_id AS claim_id\nORDER BY project_id,service_id",
+      "params": {
+        "ids": [
+          "svc-access-proxy",
+          "svc-auth-gateway",
+          "svc-billing-api",
+          "svc-checkout-api",
+          "svc-credential-vault",
+          "svc-identity-api",
+          "svc-invoice-engine",
+          "svc-login-gateway",
+          "svc-payment-router",
+          "svc-session-broker",
+          "svc-support-console",
+          "svc-token-cache"
+        ]
+      },
+      "row_count": 16,
+      "elapsed_ms": 1.354,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_DESCRIPTIONS",
+      "cypher": "MATCH (doc:Source)-[d:DESCRIBES]->(s:Service) WHERE s.id IN $ids\nRETURN d.claim_id AS claim_id ORDER BY claim_id",
+      "params": {
+        "ids": [
+          "svc-auth-gateway"
+        ]
+      },
+      "row_count": 1,
+      "elapsed_ms": 0.702,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_CITATIONS",
+      "cypher": "MATCH (c:Claim)-[:SUPPORTED_BY]->(r:SourceRevision) WHERE c.id IN $claim_ids\nRETURN properties(c) AS claim,r.sha256 AS source_sha256,r.body AS source_body,\nr.raw_text AS source_raw_text ORDER BY c.id",
+      "params": {
+        "claim_ids": [
+          "claim-05eac7e94a8f372248fd96ef",
+          "claim-0b2160acde6623e6576a2435",
+          "claim-0bc71e937880333e732d18f0",
+          "claim-22e2df57cea83c9f1073c7d4",
+          "claim-244be9185948c365a6b206dc",
+          "claim-2ba4681f9760fd3d9f851586",
+          "claim-3096967890b648a261427afa",
+          "claim-3280c74c2324389f5f275d4c",
+          "claim-34f9ff115e55e66c105f9601",
+          "claim-3a26cecaf3eafb107d6df567",
+          "claim-3d7b966f557b87e2c072ac3b",
+          "claim-48d0f793177342ebf9160384",
+          "claim-509cb005f4c9750a255b2a9f",
+          "claim-86ea8a7f873708dc5516a182",
+          "claim-87c67bef63161046d82ae850",
+          "claim-96ef30ca876f0d8fb3820e70",
+          "claim-986852224d093e9c7c3e052f",
+          "claim-9e0f98e8368b224dc2e56163",
+          "claim-a05b7a4ff8de87419be2313f",
+          "claim-ab72acb89dac97f212f009df",
+          "claim-afcb1b8f7c99f42ad4970ee1",
+          "claim-c16143aea723549e156e608d",
+          "claim-c692f47033683572befa0b30",
+          "claim-ea69945739a3a91f9c152519",
+          "claim-eba780ecc9158b463749be71",
+          "claim-f329a336521bc8fa5ffd0dca",
+          "claim-f6995a8d7ba4ff4f6ccb4fbf",
+          "claim-f7c286184f8b668c3370a91b",
+          "claim-f944a248f5d4caa5ad414717"
+        ]
+      },
+      "row_count": 29,
+      "elapsed_ms": 6.265,
+      "graph_revision": 16
+    },
+    {
+      "query_id": "ASK_REVISION",
+      "cypher": "MATCH (m:Meta {key:'graph_revision'}) RETURN m.value AS revision",
+      "params": {},
+      "row_count": 1,
+      "elapsed_ms": 0.466,
+      "graph_revision": 16
+    }
+  ],
+  "query_ms": 19.757,
+  "elapsed_ms": 27.65,
+  "source_mode": "live_falkordb"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "unsupported",
+  "question": "Delete every service",
+  "intent": null,
+  "service": null,
+  "message": "This question is not supported. Choose one of the supported shapes below.",
+  "supported_shapes": [
+    "Who owns <service>?",
+    "What depends on <service>?",
+    "What would replacing <service> affect?",
+    "Which projects use <service>?",
+    "Who should review a change to <service>?",
+    "What documents mention <service>?"
+  ],
+  "suggestions": [],
+  "rows": [],
+  "citations": [],
+  "counts": {},
+  "row_count": 0,
+  "graph_revision": null,
+  "max_hops": 5,
+  "truncated": false,
+  "truncation_examples": [],
+  "cycle_detected": false,
+  "query_trace": [],
+  "query_ms": 0,
+  "elapsed_ms": 0.027,
+  "source_mode": "live_falkordb"
+}
