@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-16T14:53:32.186045+00:00",
+  "actor": "Codex",
+  "source_commit": "cbf8aba2b730bc672435da5783522979a4a460c7",
+  "graph_integration_tests": {
+    "passed": 9,
+    "artifact": "graph-tests.xml",
+    "graph": "decisiondebt_test"
+  },
+  "frontend_build": {
+    "command": "npm run build --prefix web",
+    "passed": true
+  },
+  "ui_smoke": {
+    "passed": 1,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1100
+      },
+      {
+        "width": 360,
+        "height": 900
+      }
+    ],
+    "artifact": "local-ui-report.json"
+  },
+  "secret_scan": {
+    "scope": "full staged source file contents",
+    "known_pattern_findings": 0,
+    "omitted_files": 0,
+    "environment_inventory_finding": ".env.openrouter.example is an intentional tracked template; DD_LLM_API_KEY is blank"
+  },
+  "historical_evidence_files_unchanged": 241,
+  "ci": {
+    "conclusion": "success",
+    "url": "https://github.com/himanshu748/decisiondebt/actions/runs/38919207901",
+    "head_sha": "cbf8aba2b730bc672435da5783522979a4a460c7"
+  },
+  "public_deployment": "deployment.json"
+}

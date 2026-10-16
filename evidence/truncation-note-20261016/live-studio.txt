@@ -1,0 +1,261 @@
+Browser tab: 11, Title: "DecisionDebt | Decision studio", URL: "http://decisiondebt.52.202.25.181.sslip.io:8081/studio".
+0 AXWebArea DecisionDebt | Decision studio, URL: decisiondebt.52.202.25.181.sslip.io:8081/studio
+	1 container root
+		2 container
+			3 link Description: DecisionDebt home, Value: decisiondebt.52.202.25.181.sslip.io:8081/
+			4 text A Aster Works Synthetic company
+			5 image
+			6 text WORKSPACE
+			7 container Studio navigation
+				8 button Preview
+					9 image
+					10 text Preview
+				11 button Evidence
+					12 image
+					13 text Evidence
+				14 button Action Board 3
+					15 image
+					16 text Action Board
+					43 text 3
+			17 image
+			18 text No consequence without a source. Every consequence has a path. Every path has a source.
+			19 image
+			20 text FalkorDB native Graph connected
+			21 image
+			22 text 60 services 95 sources Entirely fictional data · seed 42
+			23 button (disabled) Public read-only demo
+				24 image
+				25 text Public read-only demo
+				26 image
+		27 container
+			28 text Aster Works
+			29 image
+			30 text Decision studio
+			31 button (disabled) Import source
+				32 image
+				33 text Import source
+			34 text Live FalkorDB AW DECISION INTELLIGENCE
+			35 heading Decision workspace, Value: 1
+				36 text Decision workspace
+			37 text Preview the change. Follow the evidence. Keep uncertainty in view. COMPANY BRAIN 03
+			38 tab group Decision views
+				39 tab (selected, settable, boolean) 01 Preview, Value: 1
+0
+1
+Preview
+				40 tab (selectable, settable, boolean) 02 Evidence, Value: 0
+0
+2
+Evidence
+				41 tab (selectable, settable, boolean) 03 Action Board 3, Value: 0
+0
+3
+Action Board
+3
+				42 text Revision 16
+			44 image
+			45 text dec-auth-002 PROPOSED
+			46 heading Replace OrionAuth with NovaID, Value: 2
+				47 text Replace OrionAuth with NovaID
+			48 container
+				49 text Comparison: dec-auth-001 / Acceptance is a separate human action.
+			50 button Refresh preview
+				51 image
+				52 text Refresh preview
+			53 text Affected services
+			54 image
+			55 text 12
+			56 text Within 5 dependency hops
+			57 text Projects in scope
+			58 image
+			59 text 12
+			60 text Linked through service usage
+			61 text Knowledge drift
+			62 image
+			63 text 5
+			64 text 1 citation · 1 suspect · 3 overdue
+			65 text Ownership to resolve
+			66 image
+			67 text 2
+			68 text 1 unassigned · 1 conflict
+			69 heading Follow the blast radius LIVE QUERY, Value: 2
+				70 text Follow the blast radius LIVE QUERY
+			71 text Consumer → provider. Select a service to inspect its path and proof.
+			72 container
+				73 text Depth
+				74 pop up button (collapsed, settable) Description: Maximum displayed depth, Value: 3, Secondary Actions: Expand
+					75 menu
+						76 1
+						77 2
+						78 (selected) 3
+						79 4
+						80 5
+			81 button Company map
+				82 image
+				83 text Company map
+			84 container Live source-backed dependency graph
+				85 container
+					86 container
+						87 image
+							88 container Edge from svc-identity-api to svc-auth-gateway
+						89 image
+							90 container Edge from svc-login-gateway to svc-auth-gateway
+						91 image
+							92 container Edge from svc-billing-api to svc-login-gateway
+						93 image
+							94 container Edge from svc-invoice-engine to svc-identity-api
+						95 image
+							96 container Edge from svc-session-broker to svc-identity-api
+						97 image
+							98 container Edge from svc-session-broker to svc-login-gateway
+						99 image
+							100 container Edge from svc-checkout-api to svc-billing-api
+						101 image
+							102 container Edge from svc-payment-router to svc-invoice-engine
+						103 image
+							104 container Edge from svc-support-console to svc-session-broker
+						105 image
+							106 container Edge from svc-token-cache to svc-session-broker
+						107 container
+							108 text CHANGE ROOT
+							109 text Auth Gateway
+							110 text Proposed change
+						111 container
+							112 text SERVICE / 02
+							113 text Session Broker
+							114 text Conflicting owners
+						115 container
+							116 text SERVICE / 01
+							117 text Login Gateway
+							118 text Source verified
+						119 container
+							120 text SERVICE / 01
+							121 text Identity API
+							122 text Source verified
+						123 container
+							124 text SERVICE / 02
+							125 text Billing API
+							126 text Source verified
+						127 container
+							128 text SERVICE / 03
+							129 text Token Cache
+							130 text Owner unassigned
+						131 container
+							132 text SERVICE / 02
+							133 text Invoice Engine
+							134 text Source verified
+						135 container
+							136 text SERVICE / 03
+							137 text Checkout API
+							138 text Source verified
+						139 container
+							140 text SERVICE / 03
+							141 text Payment Router
+							142 text Source verified
+						143 container
+							144 text SERVICE / 03
+							145 text Support Console
+							146 text Source verified
+					147 image
+					148 container Control Panel
+						149 button Zoom In
+							150 image
+						151 button Zoom Out
+							152 image
+						153 button Fit View
+							154 image
+					155 link Description: React Flow attribution, Value: reactflow.dev/?utm_source=attribution
+				156 container
+					157 text Change root Verified dependency Ownership needs review
+			158 container
+				159 text SELECTED SERVICE
+				160 image
+				161 heading Session Broker, Value: 3
+					162 text Session Broker
+				163 text P1 Score  65  / 100 WHY IT IS AFFECTED Session Broker
+				164 text depends on
+				165 text Identity Api
+				166 text depends on
+				167 text Auth Gateway Depth  2  ·  2  verified path s PRIMARY OWNERSHIP Needs owner resolution Devon Shah / Taylor Roy SOURCE PROOF
+				168 button doc-021 “Session Broker is owned by Devon Shah.” Exact span verified · explicit_rule
+					169 image
+					170 text doc-021
+					171 image
+					172 container
+						173 text “ Session Broker is owned by Devon Shah. ”
+					174 image
+					175 text Exact span verified · 
+					176 text explicit_rule
+				177 button chat-077 “Taylor Roy owns Session Broker.” Exact span verified · explicit_rule
+					178 image
+					179 text chat-077
+					180 image
+					181 container
+						182 text “ Taylor Roy owns Session Broker. ”
+					183 image
+					184 text Exact span verified · 
+					185 text explicit_rule
+				186 button doc-004 “Session Broker depends on Identity API for the documented request flow.” Exact span verified · explicit_rule
+					187 image
+					188 text doc-004
+					189 image
+					190 container
+						191 text “ Session Broker depends on Identity API for the documented request flow. ”
+					192 image
+					193 text Exact span verified · 
+					194 text explicit_rule
+			195 image
+			196 text Max depth  5  · Cycle paths bounded · Truncated
+			197 container
+				198 text We bound traversal to  5  hops to keep query work predictable; these 12  services and 12  projects are verified in scope, with further affected services  including Directory Sync at hop 6.
+			199 text 22.8  ms · revision 16
+			200 image
+			201 text THE NEXT QUESTION MATTERS
+			202 heading Some consequences need a closer look., Value: 3
+				203 text Some consequences need a closer look.
+			204 text Investigate the owner gap, conflicting claims, and unlinked OrionAuth mention.
+			205 pop up button (collapsed, settable) Description: Investigation mode, Value: Deterministic rule run, Secondary Actions: Expand
+				206 menu
+					207 (selected) Deterministic rule run
+					208 Configured LLM
+			209 button (disabled) Run investigation
+				210 image
+				211 text Run investigation
+			212 text Unlock local admin to run.
+			213 heading Knowledge that needs attention, Value: 3
+				214 text Knowledge that needs attention
+			215 button View evidence
+				216 text View evidence
+				217 image
+			218 button T1 Stale reference doc-001 · confirmed reference obsolete
+				219 text T
+				220 text 1
+				221 text Stale reference
+				222 container
+					223 text doc-001  · confirmed reference obsolete
+				224 image
+			225 button T2 Suspect mention doc-002 · suspected drift
+				226 text T
+				227 text 2
+				228 text Suspect mention
+				229 container
+					230 text doc-002  · suspected drift
+				231 image
+			232 button T3 Review overdue doc-001 · needs review
+				233 text T
+				234 text 3
+				235 text Review overdue
+				236 container
+					237 text doc-001  · needs review
+				238 image
+			239 image
+			240 heading A new source can change the story., Value: 3
+				241 text A new source can change the story.
+			242 text Import a synthetic ticket to connect External Portal. Then remove its dependency and watch the live graph retract the claim.
+			243 button (disabled) Import new evidence
+				244 text Import new evidence
+				245 image
+			246 image
+			247 text Source text → verified claim → live graph → reviewable action Aster Works is synthetic. All counts come from FalkorDB.
+
+The focused UI element is 0 AXWebArea DecisionDebt | Decision studio, URL: decisiondebt.52.202.25.181.sslip.io:8081/studio

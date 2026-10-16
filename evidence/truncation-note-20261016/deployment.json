@@ -1,0 +1,220 @@
+{
+  "deployed_at": "2026-10-16T14:54:46.825603+00:00",
+  "verified_at": "2026-10-16T14:55:38.934823+00:00",
+  "actor": "Codex",
+  "url": "http://decisiondebt.52.202.25.181.sslip.io:8081/studio",
+  "source_commit": "cbf8aba2b730bc672435da5783522979a4a460c7",
+  "change": "Graph-driven truncation explanation with an unseen service at hop 6",
+  "ci_url": "https://github.com/himanshu748/decisiondebt/actions/runs/38919207901",
+  "health": {
+    "status": "ok",
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "provider_configured": false,
+    "mode": "public-readonly"
+  },
+  "truncation_examples": [
+    {
+      "service_id": "svc-directory-sync",
+      "name": "Directory Sync",
+      "depth": 6
+    }
+  ],
+  "preview_counts": {
+    "services": 12,
+    "projects": 12,
+    "drift_t1": 1,
+    "drift_t2": 1,
+    "drift_t3": 3,
+    "owner_gaps": 1,
+    "owner_conflicts": 1
+  },
+  "query_count": 38,
+  "new_run_elapsed_ms": 23.14,
+  "write_statuses": {
+    "/api/admin/import": 403,
+    "/api/admin/agent/runs": 403,
+    "/api/admin/tasks/test/approve": 403,
+    "/api/admin/decisions/dec-auth-002/accept": 403
+  },
+  "before": {
+    "timestamp": "2026-10-16T14:52:06.016383+00:00",
+    "containers": {
+      "decisiondebt-public-api": {
+        "id": "ed01de41db80bd52c0ac9a84953f5d1c0e14b4598a682b3e1aa9a67b533eb8ec",
+        "started_at": "2026-10-16T11:50:01.498511485Z",
+        "image": "decisiondebt-public:d841816",
+        "image_id": "sha256:bbf6e1368caf992dcf3eb7f214316c87f6372095aacc8ad17d2c7433b0e03139",
+        "ports": {
+          "8000/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "8081"
+            }
+          ]
+        }
+      },
+      "decisiondebt-public-db": {
+        "id": "08c207b749a03f3d5d385dc89823a7461c23966a97d2722f72f794a5a14a8492",
+        "started_at": "2026-10-16T11:53:44.965035451Z",
+        "image": "falkordb/falkordb:6.0.2",
+        "image_id": "sha256:107455e862a824e45e8e9f5a7fbfdf5e00a08b14e13eae2577c72fd9e3f59ba6",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null
+        }
+      },
+      "ew-api": {
+        "id": "fad558d96094a1c8de0385192eb4294be40bf8019483d3bf29682d823f92f04e",
+        "started_at": "2026-10-16T14:28:05.176867744Z",
+        "image": "embodiweave:89854dd3030e",
+        "image_id": "sha256:0991b58e20e78e13f05f4898ad96a94a9f680077c653a76b08c300b3510f988c",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null,
+          "8000/tcp": null
+        }
+      },
+      "ew-proxy": {
+        "id": "3d8e57543f80fce991a940f6ce332c69066425182c32165031ce885c48ea73cd",
+        "started_at": "2026-10-16T14:28:05.541270926Z",
+        "image": "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+        "image_id": "sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+        "ports": {
+          "2019/tcp": null,
+          "443/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "443"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "443"
+            }
+          ],
+          "443/udp": null,
+          "80/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "80"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "80"
+            }
+          ]
+        }
+      }
+    },
+    "health": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    },
+    "api_revision": "d841816",
+    "api_read_only": true,
+    "api_cap_drop": [
+      "ALL"
+    ]
+  },
+  "after": {
+    "credential_check": {
+      "api_key_present": false,
+      "admin_token_present": false,
+      "env_file_present": false
+    },
+    "timestamp": "2026-10-16T14:54:46.825603+00:00",
+    "containers": {
+      "decisiondebt-public-api": {
+        "id": "de1ee049edf090f4fa5b9eda8306a7c97b310a12d9733f48b370e46b8e594a6b",
+        "started_at": "2026-10-16T14:54:13.795775478Z",
+        "image": "decisiondebt-public:cbf8aba2b730bc672435da5783522979a4a460c7",
+        "image_id": "sha256:c1cca8fa0f651a32c73b4b785e1f48d2192a3cb0dfdbda318a5d35c7133ccfe6",
+        "ports": {
+          "8000/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "8081"
+            }
+          ]
+        }
+      },
+      "decisiondebt-public-db": {
+        "id": "08c207b749a03f3d5d385dc89823a7461c23966a97d2722f72f794a5a14a8492",
+        "started_at": "2026-10-16T11:53:44.965035451Z",
+        "image": "falkordb/falkordb:6.0.2",
+        "image_id": "sha256:107455e862a824e45e8e9f5a7fbfdf5e00a08b14e13eae2577c72fd9e3f59ba6",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null
+        }
+      },
+      "ew-api": {
+        "id": "fad558d96094a1c8de0385192eb4294be40bf8019483d3bf29682d823f92f04e",
+        "started_at": "2026-10-16T14:28:05.176867744Z",
+        "image": "embodiweave:89854dd3030e",
+        "image_id": "sha256:0991b58e20e78e13f05f4898ad96a94a9f680077c653a76b08c300b3510f988c",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null,
+          "8000/tcp": null
+        }
+      },
+      "ew-proxy": {
+        "id": "3d8e57543f80fce991a940f6ce332c69066425182c32165031ce885c48ea73cd",
+        "started_at": "2026-10-16T14:28:05.541270926Z",
+        "image": "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+        "image_id": "sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+        "ports": {
+          "2019/tcp": null,
+          "443/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "443"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "443"
+            }
+          ],
+          "443/udp": null,
+          "80/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "80"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "80"
+            }
+          ]
+        }
+      }
+    },
+    "health": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    },
+    "api_revision": "cbf8aba2b730bc672435da5783522979a4a460c7",
+    "api_read_only": true,
+    "api_cap_drop": [
+      "ALL"
+    ]
+  },
+  "unchanged_containers": [
+    "decisiondebt-public-db",
+    "ew-api",
+    "ew-proxy"
+  ],
+  "historical_evidence_files_unchanged": 241,
+  "screenshot": "live-studio.png",
+  "public_smoke": "public-smoke.json"
+}
