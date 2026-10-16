@@ -90,6 +90,17 @@ for (const width of [1440, 375]) {
         await expect(
           page.getByRole("heading", { name: "Decision workspace" }),
         ).toBeVisible();
+        if (name === "action-board") {
+          await expect(
+            page.getByRole("tab", { name: /03 Action Board/ }),
+          ).toHaveAttribute("aria-selected", "true");
+          await expect(
+            page.getByText(
+              "Local drafts only. Approval creates an audit event.",
+            ),
+          ).toBeVisible();
+          await page.getByRole("tab", { name: /01 Preview/ }).click();
+        }
         await expect(page.locator(".metrics strong").first()).toHaveText("12", {
           timeout: 15000,
         });
