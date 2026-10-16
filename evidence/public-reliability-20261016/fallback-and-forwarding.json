@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-16T15:52:01.051408+00:00",
+  "spoofed_forwarding_after_rate_limit": [
+    {
+      "status": 200,
+      "retry_after": null
+    },
+    {
+      "status": 200,
+      "retry_after": null
+    },
+    {
+      "status": 429,
+      "retry_after": "3"
+    },
+    {
+      "status": 200,
+      "retry_after": null
+    },
+    {
+      "status": 429,
+      "retry_after": "3"
+    }
+  ],
+  "fallback": {
+    "origin": "http://decisiondebt.52.202.25.181.sslip.io:8081",
+    "pages": {
+      "/": 200,
+      "/studio": 200
+    },
+    "health": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    },
+    "write_statuses": {
+      "/api/admin/import": 403,
+      "/api/admin/agent/runs": 403,
+      "/api/admin/tasks/test/approve": 403,
+      "/api/admin/decisions/dec-auth-002/accept": 403
+    }
+  },
+  "passed": true
+}

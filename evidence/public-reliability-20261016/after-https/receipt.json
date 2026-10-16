@@ -1,0 +1,735 @@
+{
+  "started_at": "2026-10-16T15:47:03.603Z",
+  "origin": "https://decisiondebt.52.202.25.181.sslip.io",
+  "runner": "GitHub-hosted ubuntu-24.04",
+  "commit": "b3c893fa95c9893e86d9c3a4d61158fdbfb6b963",
+  "run_url": "https://github.com/himanshu748/decisiondebt/actions/runs/38926642267",
+  "cases": [
+    {
+      "route": "/",
+      "width": 1440,
+      "started_at": "2026-10-16T15:47:03.917Z",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "responses": [
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/",
+          "status": 200,
+          "resource_type": "document"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-4RAFEYBX.css",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/motion-BhE2f7cB.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/graph-Dw4Jvv4x.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-DB9urZXx.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/knowledge-still-life.webp",
+          "status": 200,
+          "resource_type": "image"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/summary",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+          "status": 200,
+          "resource_type": "fetch"
+        }
+      ],
+      "passed": true,
+      "document_status": 200,
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "graph_revision": 16
+      },
+      "style": {
+        "stylesheets": 2,
+        "document_background": "rgb(246, 247, 250)",
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "1440-landing.png",
+      "finished_at": "2026-10-16T15:47:05.035Z"
+    },
+    {
+      "route": "/studio",
+      "width": 1440,
+      "started_at": "2026-10-16T15:47:20.164Z",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "responses": [
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/studio",
+          "status": 200,
+          "resource_type": "document"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-4RAFEYBX.css",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/motion-BhE2f7cB.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-DB9urZXx.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/graph-Dw4Jvv4x.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/health",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/summary",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/tasks",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims?status=candidate",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-a95d41576b896f0d8b140a35",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-244be9185948c365a6b206dc",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-14c45e7d019b11ff49072d05",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+          "status": 200,
+          "resource_type": "fetch"
+        }
+      ],
+      "passed": true,
+      "document_status": 200,
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "graph_revision": 16
+      },
+      "style": {
+        "stylesheets": 2,
+        "document_background": "rgb(246, 247, 250)",
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "1440-studio.png",
+      "finished_at": "2026-10-16T15:47:21.472Z"
+    },
+    {
+      "route": "/studio?tab=Action%20Board",
+      "width": 1440,
+      "started_at": "2026-10-16T15:47:36.591Z",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "responses": [
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board",
+          "status": 200,
+          "resource_type": "document"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-4RAFEYBX.css",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/graph-Dw4Jvv4x.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/motion-BhE2f7cB.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-DB9urZXx.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/health",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/summary",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/tasks",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims?status=candidate",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-244be9185948c365a6b206dc",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-a95d41576b896f0d8b140a35",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-14c45e7d019b11ff49072d05",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+          "status": 200,
+          "resource_type": "fetch"
+        }
+      ],
+      "passed": true,
+      "document_status": 200,
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "graph_revision": 16
+      },
+      "style": {
+        "stylesheets": 2,
+        "document_background": "rgb(246, 247, 250)",
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "1440-action-board.png",
+      "finished_at": "2026-10-16T15:47:37.998Z"
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "started_at": "2026-10-16T15:47:53.136Z",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "responses": [
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/",
+          "status": 200,
+          "resource_type": "document"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-4RAFEYBX.css",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-DB9urZXx.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/graph-Dw4Jvv4x.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/motion-BhE2f7cB.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/knowledge-still-life.webp",
+          "status": 200,
+          "resource_type": "image"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/summary",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+          "status": 200,
+          "resource_type": "fetch"
+        }
+      ],
+      "passed": true,
+      "document_status": 200,
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "graph_revision": 16
+      },
+      "style": {
+        "stylesheets": 2,
+        "document_background": "rgb(246, 247, 250)",
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "375-landing.png",
+      "finished_at": "2026-10-16T15:47:53.857Z"
+    },
+    {
+      "route": "/studio",
+      "width": 375,
+      "started_at": "2026-10-16T15:48:08.990Z",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "responses": [
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/studio",
+          "status": 200,
+          "resource_type": "document"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-4RAFEYBX.css",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-DB9urZXx.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/motion-BhE2f7cB.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/graph-Dw4Jvv4x.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/health",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/summary",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/tasks",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims?status=candidate",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-a95d41576b896f0d8b140a35",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-14c45e7d019b11ff49072d05",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-244be9185948c365a6b206dc",
+          "status": 200,
+          "resource_type": "fetch"
+        }
+      ],
+      "passed": true,
+      "document_status": 200,
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "graph_revision": 16
+      },
+      "style": {
+        "stylesheets": 2,
+        "document_background": "rgb(246, 247, 250)",
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "375-studio.png",
+      "finished_at": "2026-10-16T15:48:10.131Z"
+    },
+    {
+      "route": "/studio?tab=Action%20Board",
+      "width": 375,
+      "started_at": "2026-10-16T15:48:25.258Z",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "responses": [
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board",
+          "status": 200,
+          "resource_type": "document"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-4RAFEYBX.css",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/motion-BhE2f7cB.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+          "status": 200,
+          "resource_type": "stylesheet"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/graph-Dw4Jvv4x.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/assets/index-DB9urZXx.js",
+          "status": 200,
+          "resource_type": "script"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+          "status": 200,
+          "resource_type": "font"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/health",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/tasks",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/company/summary",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims?status=candidate",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-a95d41576b896f0d8b140a35",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-244be9185948c365a6b206dc",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/claims/claim-14c45e7d019b11ff49072d05",
+          "status": 200,
+          "resource_type": "fetch"
+        },
+        {
+          "url": "https://decisiondebt.52.202.25.181.sslip.io/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+          "status": 200,
+          "resource_type": "fetch"
+        }
+      ],
+      "passed": true,
+      "document_status": 200,
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "counts": {
+          "services": 12,
+          "projects": 12,
+          "drift_t1": 1,
+          "drift_t2": 1,
+          "drift_t3": 3,
+          "owner_gaps": 1,
+          "owner_conflicts": 1
+        },
+        "graph_revision": 16
+      },
+      "style": {
+        "stylesheets": 2,
+        "document_background": "rgb(246, 247, 250)",
+        "no_horizontal_overflow": true
+      },
+      "screenshot": "375-action-board.png",
+      "finished_at": "2026-10-16T15:48:26.453Z"
+    }
+  ],
+  "finished_at": "2026-10-16T15:48:41.494Z",
+  "passed": true
+}

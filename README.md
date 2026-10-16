@@ -2,7 +2,7 @@
 
 **Know what a decision breaks before you make it**
 
-**[Live demo](http://decisiondebt.52.202.25.181.sslip.io:8081/) · [Video · 2:57](https://youtu.be/_a0vrYwOlME) · [Public repository](https://github.com/himanshu748/decisiondebt)**
+**[Live demo](https://decisiondebt.52.202.25.181.sslip.io/) · [Video · 2:57](https://youtu.be/_a0vrYwOlME) · [Public repository](https://github.com/himanshu748/decisiondebt)**
 
 **Track: Company Brain (Track 03)** — WeMakeDevs x FalkorDB Graph Hacks
 
@@ -30,9 +30,9 @@ The demo imports an additional source, so a used local graph can have 95 sources
 The [Track 03 brief](https://www.wemakedevs.org/hackathons/falkordb#tracks) asks for connected company knowledge that an agent can use to answer questions and get work done. DecisionDebt maps that brief to these working paths:
 
 - **One company graph:** people belong to teams, people own services and author sources, projects use services, and decisions change services. Documents, tickets and chats supply anchored claims. See the [graph model](#graph-model), [extractor](backend/app/ingest/extract.py) and [synthetic graph snapshot](evidence/deployment/graph-snapshot-20261016.json).
-- **Answer a company question:** “What would replacing OrionAuth affect?” The [reverse multi-hop query](backend/app/graph/queries.py) finds services; connected project, owner and document queries add responsibility and review context. Inspect the [live preview](http://decisiondebt.52.202.25.181.sslip.io:8081/api/decisions/dec-auth-002/preview).
-- **Trace the decision:** the [live decision lineage record](http://decisiondebt.52.202.25.181.sslip.io:8081/api/decisions) preserves the accepted predecessor, proposed successor and approval history. The proposal remains proposed; a `SUPERSEDES` edge is created only after separate acceptance. The [source-anchored preview receipt](evidence/query-results/initial-preview.json) records the intended comparison.
-- **Turn evidence into work:** the [recorded agent trace](evidence/agent-traces/llm-run.json) investigates missing ownership, conflicting primary owners and an unlinked mention. The [action board](http://decisiondebt.52.202.25.181.sslip.io:8081/studio?tab=Action%20Board) presents its local drafts. The [recorded import/retraction](evidence/query-results/dynamic-import.json) shows how a new source changes the graph and its affected set.
+- **Answer a company question:** “What would replacing OrionAuth affect?” The [reverse multi-hop query](backend/app/graph/queries.py) finds services; connected project, owner and document queries add responsibility and review context. Inspect the [live preview](https://decisiondebt.52.202.25.181.sslip.io/api/decisions/dec-auth-002/preview).
+- **Trace the decision:** the [live decision lineage record](https://decisiondebt.52.202.25.181.sslip.io/api/decisions) preserves the accepted predecessor, proposed successor and approval history. The proposal remains proposed; a `SUPERSEDES` edge is created only after separate acceptance. The [source-anchored preview receipt](evidence/query-results/initial-preview.json) records the intended comparison.
+- **Turn evidence into work:** the [recorded agent trace](evidence/agent-traces/llm-run.json) investigates missing ownership, conflicting primary owners and an unlinked mention. The [action board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) presents its local drafts. The [recorded import/retraction](evidence/query-results/dynamic-import.json) shows how a new source changes the graph and its affected set.
 
 The prototype answers bounded decision-impact and ownership questions. Team membership is stored as source-backed graph knowledge; general company chat and external ticket execution are outside its implemented scope.
 
@@ -107,9 +107,9 @@ The redesign uses the requested `custom-design` guide and explicitly requested `
 
 ### Public read-only deployment
 
-The [live deployment](http://decisiondebt.52.202.25.181.sslip.io:8081/) runs FastAPI plus built React assets and **FalkorDB 6.0.2** on the existing AWS Lightsail host, with separate `decisiondebt-public-api` / `decisiondebt-public-db` containers, graph `decisiondebt_public`, network and volume. Its own port is 8081. It uses HTTP so EmbodiWeave's existing HTTPS proxy, containers, ports 80/443 and graph remain untouched. Do not enter credentials into this public demo.
+The [live deployment](https://decisiondebt.52.202.25.181.sslip.io/) runs FastAPI plus built React assets and **FalkorDB 6.0.2** on the existing AWS Lightsail host, with separate `decisiondebt-public-api` / `decisiondebt-public-db` containers, graph `decisiondebt_public`, network and volume. Its primary URL uses HTTPS on port 443 through an added hostname-specific Caddy site. Port 8081 remains an [HTTP fallback](http://decisiondebt.52.202.25.181.sslip.io:8081/). Only the DecisionDebt API joins the existing proxy ingress network; its graph stays on a separate internal network. EmbodiWeave's route, certificate, containers, port mappings and page content are unchanged, as recorded in the [isolation receipt](evidence/public-reliability-20261016/isolation.json). Do not enter credentials into this public demo.
 
-Public mode discards `ADMIN_TOKEN` and `DD_LLM_API_KEY` even if accidentally supplied, disables the provider, and returns 403 for every admin route and non-read request. Uvicorn trusts the direct peer address, not forwarded headers. API requests use per-peer and global token buckets with a bounded client map; overload returns 429 with `Retry-After`. The database has no published port. [Boundary tests](backend/tests/unit/test_public_mode.py), [public smoke results](evidence/deployment/public-smoke-20261016.json) and the [deployment receipt](evidence/deployment/receipt-20261016.json) record these checks.
+Public mode discards `ADMIN_TOKEN` and `DD_LLM_API_KEY` even if accidentally supplied, disables the provider, and returns 403 for every admin route and non-read request. Forwarded client addresses are accepted only from the verified Caddy address (`172.18.0.3`); the DecisionDebt site overwrites incoming forwarding claims. Direct fallback requests cannot supply a trusted forwarded address. API requests use per-peer and global token buckets with a bounded client map; overload returns 429 with `Retry-After`. The database has no published port. [Boundary tests](backend/tests/unit/test_public_mode.py), [HTTPS public smoke results](evidence/public-reliability-20261016/https-smoke.json) and the [API deployment receipt](evidence/public-reliability-20261016/api-deployment.json) record these checks. The [external fresh-profile Chromium receipt](evidence/public-reliability-20261016/after-https/receipt.json) covers the landing page, studio, direct Action Board entry and all studio tabs at 1440 and 375 pixels. The [proxy receipt](evidence/public-reliability-20261016/proxy-change.json) records config backup, validation and additive reload. Dedicated rotating access logs now retain request paths, statuses and user agents.
 
 The public graph is an unchanged synthetic snapshot of the locally recorded run and source history. Queries execute against its live FalkorDB; the provider trace is explicitly recorded evidence. [Snapshot export receipt](evidence/deployment/snapshot-export-20261016.json) identifies its hash and source revision. No provider credential or `.env` is in the image.
 
@@ -129,6 +129,8 @@ curl -fsS http://127.0.0.1:8081/api/health
 python tools/smoke_public.py --url http://127.0.0.1:8081 \
   --output work/public-smoke.json --test-rate-limit
 ```
+
+The shared Lightsail host additionally uses [the optional HTTPS ingress override](deploy/compose.https.yaml) and [the additive Caddy site](deploy/Caddyfile.decisiondebt). Set `DD_TRUSTED_PROXY_IPS` to the verified proxy container address when using that override. Its default is empty, which accepts no forwarded client identity. The [initial deployment receipt](evidence/deployment/receipt-20261016.json) and earlier measurements remain unchanged.
 
 Seed only an empty `decisiondebt_public` graph; the importer refuses to overwrite existing state. The default separate volume persists across container restarts. Use `DD_BIND_ADDRESS=127.0.0.1` before Compose when keeping this instance local. The image's `/api/health` check validates the graph, public mode and disabled provider.
 

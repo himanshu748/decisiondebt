@@ -1,0 +1,19 @@
+{
+  "source": "https-request-log.json",
+  "not_found": [
+    {
+      "at": "2026-10-16T15:45:45.843625+00:00",
+      "method": "GET",
+      "path": "/xmlrpc.php?rsd",
+      "status": 404,
+      "user_agent": [
+        "Mozilla/5.0 (compatible; CT-WP-Scanner/1.0; +https://example.com/bot)"
+      ]
+    }
+  ],
+  "classification": "The only new 404 is /xmlrpc.php?rsd with a CT-WP-Scanner user agent, outside DecisionDebt routes. The external Chromium runs have no failed requests, console errors or application HTTP errors.",
+  "expected_verification_statuses": {
+    "403": "Deliberate public write-denial checks",
+    "429": "Deliberate rate-limit and spoofed-forwarding checks"
+  }
+}

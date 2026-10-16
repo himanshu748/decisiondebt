@@ -1,0 +1,1850 @@
+{
+  "scope": "New HTTPS requests after this remediation, not the missing historical window",
+  "source": "ew-proxy:/data/decisiondebt/access.jsonl",
+  "peer_addresses_and_unrelated_headers_omitted": true,
+  "requests": [
+    {
+      "at": "2026-10-16T15:45:43.519681+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (compatible; CT-WP-Scanner/1.0; +https://example.com/bot)"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:45:45.843625+00:00",
+      "method": "GET",
+      "path": "/xmlrpc.php?rsd",
+      "status": 404,
+      "user_agent": [
+        "Mozilla/5.0 (compatible; CT-WP-Scanner/1.0; +https://example.com/bot)"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:02.112248+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:02.467396+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:02.815505+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:03.377354+00:00",
+      "method": "GET",
+      "path": "/studio?tab=Action%20Board",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:14.532588+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 308,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:14.681237+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:46:15.135751+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.085886+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.133392+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.141515+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.142812+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.146554+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.245259+00:00",
+      "method": "GET",
+      "path": "/assets/knowledge-still-life.webp",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.262739+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.266642+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.288684+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.320182+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:04.492162+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.200715+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.248127+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.252448+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.255868+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.266606+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.383965+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.407734+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.415906+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.417478+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.450883+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.452137+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.522973+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.525863+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.526899+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.541566+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:20.996982+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.627207+00:00",
+      "method": "GET",
+      "path": "/studio?tab=Action%20Board",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.679334+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.679647+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.679740+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.684819+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.824208+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.829849+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.834877+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.858747+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.886883+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.888037+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.920486+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.920776+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.922385+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:36.926091+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:37.705453+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.168873+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.219528+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.225636+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.225608+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.225868+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.347181+00:00",
+      "method": "GET",
+      "path": "/assets/knowledge-still-life.webp",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.360598+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.385354+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.391114+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.412566+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:47:53.547833+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:07.124995+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:07.534152+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:07.534442+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:08.182130+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:08.501544+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.025458+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.065219+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.069025+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.069094+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.076356+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.200258+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.220450+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.240029+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.244664+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.250163+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.256227+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.288811+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.291355+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.293689+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.293855+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.348972+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.351362+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.352729+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.353927+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.639595+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.641120+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.679352+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.681295+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.682668+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.845070+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:09.974249+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:11.461375+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.297263+00:00",
+      "method": "GET",
+      "path": "/studio?tab=Action%20Board",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.334918+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.339803+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.347585+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.347703+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.482147+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.498049+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.503322+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.509916+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.536778+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.538421+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.558094+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.561906+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.563925+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:25.564766+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:26.245121+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:27.671060+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:28.751656+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.088727+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.088897+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.090095+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.842095+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.847600+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.874218+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:29.876217+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:30.226587+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:30.228355+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:30.266335+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:30.267888+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:30.269637+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:48:30.584595+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:38.119594+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:38.503883+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:39.135494+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:39.453863+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:39.454115+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.184038+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.192805+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.195489+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.219806+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.583592+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.586448+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.615132+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.625095+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.626451+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:40.901670+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:42.656040+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:49:59.364240+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:00.058434+00:00",
+      "method": "GET",
+      "path": "/assets/index-4RAFEYBX.css",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:00.066610+00:00",
+      "method": "GET",
+      "path": "/assets/motion-BhE2f7cB.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:01.022336+00:00",
+      "method": "GET",
+      "path": "/assets/graph-Dw4Jvv4x.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:01.022464+00:00",
+      "method": "GET",
+      "path": "/assets/index-DB9urZXx.js",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:01.848368+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:01.934800+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:01.938061+00:00",
+      "method": "GET",
+      "path": "/api/tasks",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.225344+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.558615+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.561848+00:00",
+      "method": "GET",
+      "path": "/api/claims?status=candidate",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.660952+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-a95d41576b896f0d8b140a35",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.677535+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-244be9185948c365a6b206dc",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.679206+00:00",
+      "method": "GET",
+      "path": "/api/claims/claim-14c45e7d019b11ff49072d05",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:02.893932+00:00",
+      "method": "GET",
+      "path": "/api/agent/runs/run-07fef4a6b0464a57b15fb2e809e30e02",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:50:04.104115+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:36.585932+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 308,
+      "user_agent": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.51"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:36.630648+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.51"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:39.931668+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:40.257093+00:00",
+      "method": "GET",
+      "path": "/api/company/summary",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:40.610462+00:00",
+      "method": "GET",
+      "path": "/api/decisions/dec-auth-002/preview",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:40.949363+00:00",
+      "method": "GET",
+      "path": "/api/decisions",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:41.278644+00:00",
+      "method": "GET",
+      "path": "/api/sources/search?q=OrionAuth",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:41.610011+00:00",
+      "method": "POST",
+      "path": "/api/admin/import",
+      "status": 403,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:41.943243+00:00",
+      "method": "POST",
+      "path": "/api/admin/agent/runs",
+      "status": 403,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:42.278083+00:00",
+      "method": "POST",
+      "path": "/api/admin/tasks/test/approve",
+      "status": 403,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:42.607432+00:00",
+      "method": "POST",
+      "path": "/api/admin/decisions/dec-auth-002/accept",
+      "status": 403,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:42.922823+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:43.248031+00:00",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:43.568233+00:00",
+      "method": "GET",
+      "path": "/studio",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:43.906954+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:44.251342+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:44.586905+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:44.931393+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:45.266631+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:45.691181+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:46.028245+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:46.352808+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:46.726385+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:47.051757+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:47.386275+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:47.746689+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:48.091562+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:48.427056+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:48.866890+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:49.211631+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:49.546585+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:49.872389+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:50.211471+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:50.537437+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:50.867546+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:51.211679+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:51.531237+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:51.850928+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:52.171316+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:52.506040+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:52.835362+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 429,
+      "user_agent": [
+        "python-httpx/0.28.1"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:53.910633+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "DecisionDebt-verification/2026-10-16"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:54.353595+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "DecisionDebt-verification/2026-10-16"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:54.681827+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 429,
+      "user_agent": [
+        "DecisionDebt-verification/2026-10-16"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:55.042211+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "user_agent": [
+        "DecisionDebt-verification/2026-10-16"
+      ]
+    },
+    {
+      "at": "2026-10-16T15:51:55.536655+00:00",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 429,
+      "user_agent": [
+        "DecisionDebt-verification/2026-10-16"
+      ]
+    }
+  ],
+  "status_counts": {
+    "200": 194,
+    "404": 1,
+    "308": 2,
+    "403": 4,
+    "429": 3
+  }
+}

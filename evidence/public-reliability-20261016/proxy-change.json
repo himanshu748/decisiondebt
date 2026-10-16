@@ -1,0 +1,13 @@
+{
+  "applied_at": "2026-10-16T15:45:36.765212+00:00",
+  "backup": "/opt/decisiondebt/proxy-backups/Caddyfile.before-89d7250",
+  "before_sha256": "7ecc5ee39d10302b2a8d651b8f1866a1efe15058bdbd53c522561b6b30116346",
+  "after_sha256": "27d69ec58dbcd2ba94fb58bd8b6dea150715fe4810dd9d93a69065df4c2a467d",
+  "original_prefix_unchanged": true,
+  "embodiweave_route_unchanged": true,
+  "validation": "Valid configuration\n",
+  "reload": "",
+  "reload_succeeded": true,
+  "decisiondebt_log": "/data/decisiondebt/access.jsonl",
+  "upstream": "decisiondebt-public-api:8000"
+}

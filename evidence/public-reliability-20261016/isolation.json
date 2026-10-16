@@ -1,0 +1,210 @@
+{
+  "checked_at": "2026-10-16T15:46:10.619772+00:00",
+  "unchanged_containers": [
+    "ew-api",
+    "ew-proxy",
+    "decisiondebt-public-db"
+  ],
+  "same_embodiweave_content": true,
+  "same_embodiweave_certificate": true,
+  "original_proxy_configuration_prefix_unchanged": true,
+  "before": {
+    "timestamp": "2026-10-16T15:36:50.667924+00:00",
+    "containers": {
+      "ew-api": {
+        "id": "fad558d96094a1c8de0385192eb4294be40bf8019483d3bf29682d823f92f04e",
+        "started_at": "2026-10-16T14:28:05.176867744Z",
+        "restart_count": 0,
+        "image": "embodiweave:89854dd3030e",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null,
+          "8000/tcp": null
+        },
+        "networks": {
+          "embodiweave-net": "172.18.0.2"
+        }
+      },
+      "ew-proxy": {
+        "id": "3d8e57543f80fce991a940f6ce332c69066425182c32165031ce885c48ea73cd",
+        "started_at": "2026-10-16T14:28:05.541270926Z",
+        "restart_count": 0,
+        "image": "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+        "ports": {
+          "2019/tcp": null,
+          "443/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "443"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "443"
+            }
+          ],
+          "443/udp": null,
+          "80/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "80"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "80"
+            }
+          ]
+        },
+        "networks": {
+          "embodiweave-net": "172.18.0.3"
+        }
+      },
+      "decisiondebt-public-api": {
+        "id": "de1ee049edf090f4fa5b9eda8306a7c97b310a12d9733f48b370e46b8e594a6b",
+        "started_at": "2026-10-16T14:54:13.795775478Z",
+        "restart_count": 0,
+        "image": "decisiondebt-public:cbf8aba2b730bc672435da5783522979a4a460c7",
+        "ports": {
+          "8000/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "8081"
+            }
+          ]
+        },
+        "networks": {
+          "decisiondebt-public_graph": "172.19.0.3",
+          "decisiondebt-public_web": "172.20.0.2"
+        }
+      },
+      "decisiondebt-public-db": {
+        "id": "08c207b749a03f3d5d385dc89823a7461c23966a97d2722f72f794a5a14a8492",
+        "started_at": "2026-10-16T11:53:44.965035451Z",
+        "restart_count": 0,
+        "image": "falkordb/falkordb:6.0.2",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null
+        },
+        "networks": {
+          "decisiondebt-public_graph": "172.19.0.2"
+        }
+      }
+    },
+    "embodiweave": {
+      "status": 200,
+      "sha256": "2416f307a6273769cdfc1d121d6add67037c52a459f6ff7e36c8c1290700537c",
+      "bytes": 24265
+    },
+    "embodiweave_certificate_sha256": "e29e91599047305aa4a4ec901891c4b0df5628955e87ff3bb7895e6e7c79ea3f",
+    "caddyfile": "{$EW_PUBLIC_HOST} {\n    encode zstd gzip\n    reverse_proxy ew-api:8000\n    header {\n        X-Content-Type-Options nosniff\n        Referrer-Policy strict-origin-when-cross-origin\n    }\n}\n",
+    "caddyfile_sha256": "7ecc5ee39d10302b2a8d651b8f1866a1efe15058bdbd53c522561b6b30116346",
+    "decisiondebt_health": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    }
+  },
+  "after": {
+    "timestamp": "2026-10-16T15:46:10.619772+00:00",
+    "containers": {
+      "ew-api": {
+        "id": "fad558d96094a1c8de0385192eb4294be40bf8019483d3bf29682d823f92f04e",
+        "started_at": "2026-10-16T14:28:05.176867744Z",
+        "restart_count": 0,
+        "image": "embodiweave:89854dd3030e",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null,
+          "8000/tcp": null
+        },
+        "networks": {
+          "embodiweave-net": "172.18.0.2"
+        }
+      },
+      "ew-proxy": {
+        "id": "3d8e57543f80fce991a940f6ce332c69066425182c32165031ce885c48ea73cd",
+        "started_at": "2026-10-16T14:28:05.541270926Z",
+        "restart_count": 0,
+        "image": "caddy:2@sha256:685ae3d7c34d9b5f8caeddc5d14051db7bbd88ff1f5a2fa0c16bd8ca328fb7af",
+        "ports": {
+          "2019/tcp": null,
+          "443/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "443"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "443"
+            }
+          ],
+          "443/udp": null,
+          "80/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "80"
+            },
+            {
+              "HostIp": "::",
+              "HostPort": "80"
+            }
+          ]
+        },
+        "networks": {
+          "embodiweave-net": "172.18.0.3"
+        }
+      },
+      "decisiondebt-public-api": {
+        "id": "0dfebcf542fe1a3ab3f635cac30486265591010458568dc1f1790b1ad173a374",
+        "started_at": "2026-10-16T15:45:08.07025526Z",
+        "restart_count": 0,
+        "image": "decisiondebt-public:b3c893fa95c9893e86d9c3a4d61158fdbfb6b963",
+        "ports": {
+          "8000/tcp": [
+            {
+              "HostIp": "0.0.0.0",
+              "HostPort": "8081"
+            }
+          ]
+        },
+        "networks": {
+          "decisiondebt-public_graph": "172.19.0.3",
+          "decisiondebt-public_web": "172.20.0.2",
+          "embodiweave-net": "172.18.0.4"
+        }
+      },
+      "decisiondebt-public-db": {
+        "id": "08c207b749a03f3d5d385dc89823a7461c23966a97d2722f72f794a5a14a8492",
+        "started_at": "2026-10-16T11:53:44.965035451Z",
+        "restart_count": 0,
+        "image": "falkordb/falkordb:6.0.2",
+        "ports": {
+          "3000/tcp": null,
+          "6379/tcp": null
+        },
+        "networks": {
+          "decisiondebt-public_graph": "172.19.0.2"
+        }
+      }
+    },
+    "embodiweave": {
+      "status": 200,
+      "sha256": "2416f307a6273769cdfc1d121d6add67037c52a459f6ff7e36c8c1290700537c",
+      "bytes": 24265
+    },
+    "embodiweave_certificate_sha256": "e29e91599047305aa4a4ec901891c4b0df5628955e87ff3bb7895e6e7c79ea3f",
+    "caddyfile": "{$EW_PUBLIC_HOST} {\n    encode zstd gzip\n    reverse_proxy ew-api:8000\n    header {\n        X-Content-Type-Options nosniff\n        Referrer-Policy strict-origin-when-cross-origin\n    }\n}\n\ndecisiondebt.52.202.25.181.sslip.io {\n    encode zstd gzip\n    reverse_proxy decisiondebt-public-api:8000 {\n        header_up X-Forwarded-For {remote_host}\n    }\n    header {\n        X-Content-Type-Options nosniff\n        Referrer-Policy same-origin\n    }\n    log {\n        output file /data/decisiondebt/access.jsonl {\n            roll_size 5MiB\n            roll_keep 5\n        }\n        format json\n    }\n}\n",
+    "caddyfile_sha256": "27d69ec58dbcd2ba94fb58bd8b6dea150715fe4810dd9d93a69065df4c2a467d",
+    "decisiondebt_health": {
+      "status": "ok",
+      "graph_revision": 16,
+      "synthetic": true,
+      "source_mode": "live_falkordb",
+      "provider_configured": false,
+      "mode": "public-readonly"
+    }
+  }
+}

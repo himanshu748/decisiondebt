@@ -1,0 +1,52 @@
+{
+  "reported_window_utc": {
+    "start": "2026-10-16T14:30:00Z",
+    "end": "2026-10-16T14:50:00Z"
+  },
+  "historical_request_logs": {
+    "available": false,
+    "reason": "The previous API container was removed during the 14:54 UTC deployment; its json-file logs and directory are gone. Retained Docker events and the Docker journal contain no entries for the requested window.",
+    "failed_request_paths": null,
+    "failed_statuses": null,
+    "user_agents": null,
+    "user_agent_limit": "The existing Uvicorn access format did not log User-Agent.",
+    "whether_reported_requests_reached_container": "unknown"
+  },
+  "restart_evidence": {
+    "previous_container": {
+      "id": "ed01de41db80bd52c0ac9a84953f5d1c0e14b4598a682b3e1aa9a67b533eb8ec",
+      "started_at": "2026-10-16T11:50:01.498511485Z",
+      "image": "decisiondebt-public:d841816",
+      "image_id": "sha256:bbf6e1368caf992dcf3eb7f214316c87f6372095aacc8ad17d2c7433b0e03139",
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "8081"
+          }
+        ]
+      }
+    },
+    "observed_before_redeployment_at": "2026-10-16T14:52:06.016383+00:00",
+    "replacement_at": "2026-10-16T14:54:46.825603+00:00",
+    "reference": "../truncation-note-20261016/deployment.json",
+    "conclusion": "The prior container retained its 11:50 UTC start time immediately before replacement at 14:54 UTC; there is no restart or replacement in the reported window."
+  },
+  "baseline": {
+    "artifact": "before-http/receipt.json",
+    "github_run": "https://github.com/himanshu748/decisiondebt/actions/runs/38923625409",
+    "passed": true,
+    "fresh_processes": 6,
+    "viewports": [
+      1440,
+      375
+    ],
+    "same_origin_http_errors": 0,
+    "failed_requests": 0,
+    "console_errors": 0,
+    "page_errors": 0
+  },
+  "root_cause": "Unconfirmed historical failure. The reported blank, unstyled and 404 states did not reproduce from GitHub-hosted fresh Chromium against the unchanged HTTP deployment.",
+  "transport_inference": "An intermediary or client transport issue on nonstandard HTTP remains possible, but is not proven by available logs. HTTPS is a mitigation, not retrospective proof of cause.",
+  "fault_injection": "Local tests deliberately block JavaScript, return malformed preview data to trigger a render error, and return graph/health 503 responses. These verify recovery, not the historical incident."
+}

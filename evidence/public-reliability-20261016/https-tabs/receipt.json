@@ -1,0 +1,86 @@
+{
+  "started_at": "2026-10-16T15:49:36.746Z",
+  "origin": "https://decisiondebt.52.202.25.181.sslip.io",
+  "runner": "Fresh headless Chromium on participant Mac, outside Lightsail",
+  "deployed_commit": "b3c893fa95c9893e86d9c3a4d61158fdbfb6b963",
+  "cases": [
+    {
+      "width": 1440,
+      "browser_version": "156.0.8078.4",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "views": [
+        {
+          "tab": "preview",
+          "heading": "Decision workspace",
+          "screenshot": "1440-preview.png",
+          "passed": true
+        },
+        {
+          "tab": "evidence",
+          "heading": "Follow the evidence.",
+          "screenshot": "1440-evidence.png",
+          "passed": true
+        },
+        {
+          "tab": "action-board",
+          "heading": "Turn uncertainty into action.",
+          "screenshot": "1440-action-board.png",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "services": 12,
+        "projects": 12,
+        "graph_revision": 16
+      },
+      "finished_at": "2026-10-16T15:49:42.686Z"
+    },
+    {
+      "width": 375,
+      "browser_version": "156.0.8078.4",
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "views": [
+        {
+          "tab": "preview",
+          "heading": "Decision workspace",
+          "screenshot": "375-preview.png",
+          "passed": true
+        },
+        {
+          "tab": "evidence",
+          "heading": "Follow the evidence.",
+          "screenshot": "375-evidence.png",
+          "passed": true
+        },
+        {
+          "tab": "action-board",
+          "heading": "Turn uncertainty into action.",
+          "screenshot": "375-action-board.png",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "preview": {
+        "status": 200,
+        "decision_id": "dec-auth-002",
+        "services": 12,
+        "projects": 12,
+        "graph_revision": 16
+      },
+      "finished_at": "2026-10-16T15:50:04.133Z"
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-10-16T15:50:19.169Z"
+}

@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-16T15:46:05.780428+00:00",
+  "origin": "https://decisiondebt.52.202.25.181.sslip.io",
+  "tls_verified": true,
+  "certificate_sha256": "7fabf438992f39a21e854717038b9f4f7d8ec915e76dc0c1054c4712ef703643",
+  "certificate_not_after": "Jan 14 14:47:07 2027 GMT",
+  "health": {
+    "status": "ok",
+    "graph_revision": 16,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "provider_configured": false,
+    "mode": "public-readonly"
+  },
+  "pages": {
+    "/": {
+      "status": 200,
+      "cache_control": "no-store"
+    },
+    "/studio": {
+      "status": 200,
+      "cache_control": "no-store"
+    },
+    "/studio?tab=Action%20Board": {
+      "status": 200,
+      "cache_control": "no-store"
+    }
+  }
+}

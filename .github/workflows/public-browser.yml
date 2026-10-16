@@ -5,7 +5,7 @@ on:
       url:
         description: Public DecisionDebt origin
         required: true
-        default: http://decisiondebt.52.202.25.181.sslip.io:8081
+        default: https://decisiondebt.52.202.25.181.sslip.io
 permissions:
   contents: read
 jobs:
