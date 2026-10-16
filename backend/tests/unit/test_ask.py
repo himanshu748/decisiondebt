@@ -29,6 +29,7 @@ def test_unsupported_never_reads_or_guesses(question):
             raise AssertionError("Unsupported questions must not query")
     result = ask(NoReads(), question)
     assert result["status"] == "unsupported"
+    assert result["graph_revision"] is None  # No graph revision was read.
     assert result["rows"] == result["query_trace"] == result["citations"] == []
     assert len(result["supported_shapes"]) == 6
 

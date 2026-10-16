@@ -98,7 +98,7 @@ def ask(g, question):
                   message="This question is not supported. Choose one of the supported shapes below.",
                   supported_shapes=SHAPES, suggestions=[], rows=[], citations=[],
                   counts={}, max_hops=5, truncated=False, truncation_examples=[], cycle_detected=False,
-                  row_count=0, graph_revision=0, query_trace=trace, query_ms=0.0,
+                  row_count=0, graph_revision=None, query_trace=trace, query_ms=0.0,
                   elapsed_ms=0.0, source_mode="live_falkordb")
     parsed = parse_question(question)
     # Unsupported questions do no database work and never call a model.
@@ -180,7 +180,7 @@ def ask(g, question):
                 raw = g.read(Q.PROJECTS, {"ids": [ident]}, "ASK_PROJECTS", trace)
                 rows = [dict(**r, label=r["project"], detail=f"Directly uses {name}", evidence_ids=[r["claim_id"]]) for r in raw]
                 claim_ids.update(r["claim_id"] for r in raw)
-                result["message"] = f"{len(rows)} projects have a verified direct USES relationship to {name}."
+                result["message"] = f"{len(rows)} {'project has' if len(rows) == 1 else 'projects have'} a verified direct USES relationship to {name}."
             else:
                 # Tokenize live aliases into quoted FT phrases, never accept FT operators.
                 aliases = sorted({name, *(service.get("aliases") or [])})

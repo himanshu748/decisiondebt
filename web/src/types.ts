@@ -66,7 +66,7 @@ export interface AskAnswer {
   }[];
   counts: Record<string, number>;
   row_count: number;
-  graph_revision: number;
+  graph_revision: number | null;
   max_hops: number;
   truncated: boolean;
   truncation_examples: { service_id: string; name: string; depth: number }[];

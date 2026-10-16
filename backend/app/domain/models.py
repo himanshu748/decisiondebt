@@ -128,7 +128,7 @@ class AskResponse(Strict):
     citations: list[dict]
     counts: dict[str, int]
     row_count: int
-    graph_revision: int
+    graph_revision: int | None
     max_hops: int
     truncated: bool
     truncation_examples: list[TruncationExample]
