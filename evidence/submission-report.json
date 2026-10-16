@@ -64,7 +64,7 @@
     "graph_revision": 16,
     "synthetic": true,
     "source_mode": "live_falkordb",
-    "elapsed_ms": 8.79
+    "elapsed_ms": 12.28
   },
   "preview_counts": {
     "services": 12,
@@ -147,7 +147,7 @@
     "fps": "30/1"
   },
   "limitations": [
-    "No remote push, public deployment or portal submission was performed.",
+    "No public deployment or portal submission was performed. Repository publication is a separate Git operation.",
     "Single API worker only; CLI ingestion requires API stopped.",
     "Extraction accuracy is measured on the synthetic fixture, not arbitrary enterprise language."
   ]

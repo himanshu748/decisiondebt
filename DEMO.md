@@ -52,4 +52,4 @@ The `browser-video-recording` skill's screenshot-sequence renderer was used beca
 8. Open Import source again, choose Use retraction text and import. The same source gets a new immutable revision, its previous support retracts, and the affected count returns to 12.
 9. Run `DD_TEST_LIFECYCLE=1 pytest -q` with the local API running and no browser mutations in progress. It stops only `decisiondebt-db`, verifies 503, restarts it in a `finally` block and verifies persisted state.
 
-The canonical preview is truncated beyond five hops. The used demo graph retains 95 sources and source revision history. Public deployment, remote push and portal submission were not performed.
+The canonical preview is truncated beyond five hops. The used demo graph retains 95 sources and source revision history. Repository publication was separately approved; public deployment and portal submission were not performed.

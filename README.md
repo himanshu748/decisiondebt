@@ -2,6 +2,8 @@
 
 **Know what a decision breaks before you make it.**
 
+[GitHub repository](https://github.com/himanshu748/decisiondebt) · [Demo](evidence/decisiondebt-demo.mp4) · [Verification report](evidence/submission-report.json)
+
 A FalkorDB-native company-intelligence agent for **WeMakeDevs x FalkorDB Graph Hacks, Company Brain (Track 03)**. Import messy synthetic company knowledge, preview a proposed authentication migration, inspect the actual dependency paths and source evidence, investigate uncertainty, and import a new ticket to change the live blast radius.
 
 **All Aster Works data is fictional.** This repository uses no employer data, Gmail, Slack, Jira, private integrations, or external business writes.
@@ -174,7 +176,7 @@ The extractor recognizes explicit supported language. Negated, hedged, unresolve
 - General language parsing is deliberately bounded. Full-text has an 80-hit review cap and search APIs return at most 20 records; search score is not certainty.
 - Review-date parse failures are not automatically overdue. Default analysis clock is `2026-10-15T12:00:00+05:30`; a timezone-aware `as_of` can be provided.
 - Browser checks cover Chromium at 1440 px and 375 px, not every browser/device. Fonts use Google Fonts and degrade to sans-serif offline.
-- No remote push, public deployment, release, portal submission or external ticket/email operation was performed.
+- Repository publication was explicitly approved. No public deployment, release, portal submission or external ticket/email operation was performed.
 
 ## AI coding disclosure
 

@@ -50,7 +50,7 @@ Aster Works and all source records are synthetic. Measurements below describe th
 
 The application uses one API worker and an in-process RLock for graph-dependent operations. CLI ingestion runs with the API stopped. This is neither a distributed lock nor snapshot isolation. Source validation precedes writes, but a process crash during a multi-query source batch can require rerunning the importer; no transactional recovery guarantee is claimed. Single-instance local operation is the supported mode.
 
-Public mode is supported in code and tested locally. The user explicitly approved reusing the existing EmbodiWeave OpenRouter key for this private local project and the bounded free-model run. The successful run used eight turns, eleven tools and 51.6 seconds, with $0 reported cost. Groq remains an optional configuration, not the recorded provider. Publishing, remote Git push, and hackathon portal submission have not been authorized or performed.
+Public mode is supported in code and tested locally. The user explicitly approved reusing the existing EmbodiWeave OpenRouter key for this private local project and the bounded free-model run. The successful run used eight turns, eleven tools and 51.6 seconds, with $0 reported cost. Groq remains an optional configuration, not the recorded provider. The owner subsequently approved creating the public `himanshu748/decisiondebt` repository and uploading the code, synthetic data, demo, screenshots and verification evidence. The ignored `.env` and credentials remain excluded. Public deployment and hackathon portal submission were not performed.
 
 ## Real-run corrections and outcome
 

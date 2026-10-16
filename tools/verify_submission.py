@@ -158,7 +158,7 @@ def verify():
         )
     limitations.extend(
         [
-            "No remote push, public deployment or portal submission was performed.",
+            "No public deployment or portal submission was performed. Repository publication is a separate Git operation.",
             "Single API worker only; CLI ingestion requires API stopped.",
             "Extraction accuracy is measured on the synthetic fixture, not arbitrary enterprise language.",
         ]
