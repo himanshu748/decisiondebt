@@ -44,6 +44,7 @@ import ImpactGraph from "./components/ImpactGraph";
 import EvidenceDrawer from "./components/EvidenceDrawer";
 import InvestigationTrace from "./components/InvestigationTrace";
 import ActionBoard from "./components/ActionBoard";
+import AskGraph from "./components/AskGraph";
 import "./studio.css";
 import StudioView from "./components/StudioView";
 const decision = "dec-auth-002";
@@ -481,6 +482,7 @@ export default function App() {
                   : "Connecting to graph"}
               </span>
             </div>
+            <AskGraph onSource={(id) => void openSource(id)} />
             {error && (
               <div className="alert" role="alert">
                 <TriangleAlert size={18} />

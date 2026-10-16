@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { api } from "./api";
+import { companyQuestions } from "./companyQuestions";
 import type { Preview, Summary, Run } from "./types";
 import { motionIdentity as timing } from "./motion";
 import "./landing.css";
@@ -296,6 +297,44 @@ export default function Landing() {
           <a href="/studio?tab=Evidence">
             Inspect the sources <ArrowUpRight size={15} />
           </a>
+        </section>
+        <section className="landing-ask" aria-labelledby="landing-ask-heading">
+          <div>
+            <span className="section-eyebrow">
+              ANSWERS FROM CONNECTED KNOWLEDGE
+            </span>
+            <h2 id="landing-ask-heading">Ask the company graph.</h2>
+            <p>
+              Find an owner, trace a dependency, or find the right reviewers.
+              Live FalkorDB answers with exact source citations. No model or
+              key.
+            </p>
+          </div>
+          <div>
+            <form action="/studio" method="get">
+              <label htmlFor="landing-question">Your company question</label>
+              <div>
+                <input
+                  id="landing-question"
+                  name="q"
+                  required
+                  maxLength={240}
+                  defaultValue="Who owns Session Broker?"
+                />
+                <button className="button primary" type="submit">
+                  Ask graph <ArrowRight size={15} />
+                </button>
+              </div>
+            </form>
+            <div className="landing-ask-examples">
+              {companyQuestions.map((q) => (
+                <a key={q} href={"/studio?q=" + encodeURIComponent(q)}>
+                  {q}
+                  <ArrowUpRight size={12} />
+                </a>
+              ))}
+            </div>
+          </div>
         </section>
         <section className="knowledge-story" id="how-it-works">
           <div className="story-art">

@@ -1,7 +1,8 @@
-import { Check, ArrowUpRight, UserRound } from "lucide-react";
+import { Check, ArrowUpRight, UserRound, Copy, Download } from "lucide-react";
 import { useState } from "react";
 import type { Task } from "../types";
 import { PUBLIC_WRITE_REASON } from "../deployment";
+import { ticketMarkdown, downloadTicket } from "../ticket";
 export default function ActionBoard({
   tasks,
   onApprove,
@@ -18,6 +19,23 @@ export default function ActionBoard({
   busy: boolean;
 }) {
   const [history, setHistory] = useState(false);
+  const [feedback, setFeedback] = useState<Record<string, string>>({});
+  async function copyTicket(task: Task) {
+    try {
+      await navigator.clipboard.writeText(
+        ticketMarkdown(task, window.location.origin),
+      );
+      setFeedback((f) => ({
+        ...f,
+        [task.id]: "Ticket copied. No external ticket was created.",
+      }));
+    } catch {
+      setFeedback((f) => ({
+        ...f,
+        [task.id]: "Clipboard unavailable. Download the .md file instead.",
+      }));
+    }
+  }
   const latestRevision = Math.max(0, ...tasks.map((t) => t.analysis_revision));
   const visibleTasks = history
     ? tasks
@@ -56,7 +74,7 @@ export default function ActionBoard({
       </div>
       <div className="action-grid">
         {visibleTasks.map((t) => (
-          <article className="task-card" key={t.id}>
+          <article className="task-card" data-task-id={t.id} key={t.id}>
             <div className="between">
               <span className={"priority " + t.priority}>{t.priority}</span>
               <span className="mono">{t.service_id.replace("svc-", "")}</span>
@@ -95,6 +113,30 @@ export default function ActionBoard({
                 </button>
               )}
             </div>
+            {t.status !== "approved" && (
+              <div
+                className="ticket-exports"
+                aria-label={"Export draft: " + t.title}
+              >
+                <button
+                  className="text-button"
+                  onClick={() => void copyTicket(t)}
+                >
+                  <Copy size={13} /> Copy as ticket
+                </button>
+                <button
+                  className="text-button"
+                  onClick={() => downloadTicket(t)}
+                >
+                  <Download size={13} /> Download .md
+                </button>
+              </div>
+            )}
+            {feedback[t.id] && (
+              <p className="ticket-feedback" role="status">
+                {feedback[t.id]}
+              </p>
+            )}
           </article>
         ))}
       </div>

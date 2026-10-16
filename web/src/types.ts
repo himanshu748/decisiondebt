@@ -39,6 +39,42 @@ export interface Query {
   elapsed_ms: number;
   graph_revision?: number;
 }
+export interface AskAnswer {
+  status: "answered" | "ambiguous" | "unsupported" | "not_found";
+  question: string;
+  intent: string | null;
+  service: { id: string; name: string } | null;
+  message: string;
+  supported_shapes: string[];
+  suggestions: { id: string; name: string }[];
+  rows: {
+    label: string;
+    detail: string;
+    depth?: number;
+    evidence_ids: string[];
+  }[];
+  citations: {
+    id: string;
+    source_id: string;
+    anchor_field: string;
+    start: number;
+    end: number;
+    excerpt: string;
+    context?: string;
+    source_sha256: string;
+    anchor_verified: boolean;
+  }[];
+  counts: Record<string, number>;
+  row_count: number;
+  graph_revision: number;
+  max_hops: number;
+  truncated: boolean;
+  truncation_examples: { service_id: string; name: string; depth: number }[];
+  cycle_detected: boolean;
+  query_trace: Query[];
+  query_ms: number;
+  elapsed_ms: number;
+}
 export interface Preview {
   decision_id: string;
   decision_status: string;

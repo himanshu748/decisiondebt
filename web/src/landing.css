@@ -1273,3 +1273,83 @@
   border-top: 0;
   border-bottom: 3px solid #93b1e3;
 }
+.landing-ask {
+  margin: 40px 0 70px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  border: 1px solid #354563;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #151e30, #10151f);
+}
+.landing-ask h2 {
+  font-size: 30px;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  margin: 12px 0;
+}
+.landing-ask p {
+  color: #a7b3c9;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.landing-ask label {
+  display: block;
+  font-size: 12px;
+  color: #bdcce8;
+  margin-bottom: 10px;
+}
+.landing-ask form > div {
+  display: flex;
+  gap: 10px;
+}
+.landing-ask input {
+  width: 100%;
+  min-width: 0;
+  background: #0a101b;
+  border: 1px solid #4a5e83;
+  color: #eff4ff;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+}
+.landing-ask form .button {
+  flex-shrink: 0;
+}
+.landing-ask-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 15px;
+}
+.landing-ask-examples a {
+  color: #b9cbf0;
+  font-size: 11px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 30px;
+}
+.landing-ask input:focus-visible {
+  outline: 2px solid #b2c6ff;
+  outline-offset: 3px;
+}
+@media (max-width: 800px) {
+  .landing-ask {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .landing-ask form > div {
+    flex-direction: column;
+  }
+  .landing-ask form .button {
+    justify-content: center;
+  }
+  .landing-ask h2 {
+    font-size: 26px;
+  }
+}
