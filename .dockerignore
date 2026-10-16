@@ -1,0 +1,15 @@
+**
+!Dockerfile
+!requirements.txt
+!backend/
+!backend/app/
+!backend/app/**
+!data/
+!data/synthetic/
+!data/synthetic/**
+!tools/
+!tools/ingest.py
+!tools/public_snapshot.py
+!web/
+!web/dist/
+!web/dist/**

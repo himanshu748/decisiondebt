@@ -71,6 +71,28 @@ def test_api_preview_pure(client, graph):
     )
 
 
+def test_public_readonly_limits_requests_and_never_offers_a_provider(
+    client, monkeypatch
+):
+    from backend.app.rate_limit import PublicRateLimiter
+
+    monkeypatch.setattr(settings, "mode", "public-readonly")
+    monkeypatch.setattr(settings, "api_key", "test-only-provider")
+    monkeypatch.setattr(settings, "agent_mode", "llm")
+    monkeypatch.setattr("backend.app.main.public_limiter", PublicRateLimiter(burst=2))
+    assert client.get("/api/health").json()["provider_configured"] is False
+    assert client.get("/api/health").status_code == 200
+    limited = client.get("/api/health", headers={"X-Forwarded-For": "198.51.100.2"})
+    assert limited.status_code == 429 and limited.headers["retry-after"]
+    # Rejected writes do not consume a database call or invoke a provider.
+    assert (
+        client.post(
+            "/api/admin/agent/runs", headers=HEAD, json={"mode": "llm"}
+        ).status_code
+        == 403
+    )
+
+
 def test_agent_deterministic_and_task_approval(client, graph):
     r = client.post(
         "/api/admin/agent/runs", headers=HEAD, json={"mode": "deterministic"}

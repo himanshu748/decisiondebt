@@ -1,0 +1,54 @@
+name: decisiondebt-public
+services:
+  db:
+    image: falkordb/falkordb:6.0.2
+    container_name: decisiondebt-public-db
+    environment:
+      REDIS_ARGS: "--appendonly yes --appendfsync everysec --maxmemory 192mb --maxmemory-policy noeviction"
+    volumes:
+      - decisiondebt-public-data:/data
+    networks: [graph]
+    mem_limit: 384m
+    cpus: 0.5
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  api:
+    image: decisiondebt-public:${DD_COMMIT:-local}
+    build:
+      context: ..
+      args:
+        DD_COMMIT: ${DD_COMMIT:-local}
+    container_name: decisiondebt-public-api
+    ports:
+      - "${DD_BIND_ADDRESS:-0.0.0.0}:${DD_PUBLIC_PORT:-8081}:8000"
+    environment:
+      DD_MODE: public-readonly
+      DD_GRAPH_HOST: db
+      DD_GRAPH_PORT: "6379"
+      DD_GRAPH_NAME: decisiondebt_public
+      DD_AGENT_MODE: disabled
+      DD_LLM_API_KEY: ""
+      ADMIN_TOKEN: ""
+    networks: [graph, web]
+    mem_limit: 384m
+    cpus: 0.5
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,noexec,nosuid
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+networks:
+  graph:
+    internal: true
+  web: {}
+volumes:
+  decisiondebt-public-data:
+    name: decisiondebt-public-data

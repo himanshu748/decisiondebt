@@ -34,6 +34,7 @@ from backend.app.ingest.parsers import parse
 from backend.app.ingest.refresh import refresh
 from backend.app.routes.admin import accept, approve_task
 from backend.app.agent.loop import run
+from backend.app.rate_limit import public_limiter
 
 app = FastAPI(
     title="DecisionDebt",
@@ -77,9 +78,9 @@ async def domain_error(request, exc):
 
 @app.middleware("http")
 async def boundaries(request: Request, call_next):
-    if (
+    if settings.mode == "public-readonly" and (
         request.url.path.startswith("/api/admin/")
-        and settings.mode == "public-readonly"
+        or request.method not in ("GET", "HEAD", "OPTIONS")
     ):
         return JSONResponse(
             status_code=403,
@@ -88,6 +89,23 @@ async def boundaries(request: Request, call_next):
                     "code": "FORBIDDEN",
                     "message": "Public demo is read-only.",
                     "request_id": uuid.uuid4().hex,
+                }
+            },
+        )
+    if (
+        settings.mode == "public-readonly"
+        and request.url.path.startswith("/api/")
+        and not public_limiter.allow(
+            request.client.host if request.client else "unknown"
+        )
+    ):
+        return JSONResponse(
+            status_code=429,
+            headers={"Retry-After": "3"},
+            content={
+                "error": {
+                    "code": "RATE_LIMITED",
+                    "message": "Public demo request limit reached. Retry shortly.",
                 }
             },
         )
@@ -116,7 +134,11 @@ def health(g=Depends(graph)):
         graph_revision=g.health(),
         synthetic=True,
         source_mode="live_falkordb",
-        provider_configured=bool(settings.api_key and settings.agent_mode == "llm"),
+        provider_configured=bool(
+            settings.mode != "public-readonly"
+            and settings.api_key
+            and settings.agent_mode == "llm"
+        ),
         mode=settings.mode,
     )
 

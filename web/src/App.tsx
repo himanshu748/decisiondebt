@@ -368,9 +368,17 @@ export default function App() {
           </div>
           <small>Entirely fictional data · seed 42</small>
         </div>
-        <button className="admin-link" onClick={() => setAdminDialog(true)}>
+        <button
+          className="admin-link"
+          disabled={mode === "public-readonly"}
+          onClick={() => setAdminDialog(true)}
+        >
           <LockKeyhole size={15} />
-          {admin ? "Local admin unlocked" : "Local admin"}
+          {mode === "public-readonly"
+            ? "Public read-only demo"
+            : admin
+              ? "Local admin unlocked"
+              : "Local admin"}
           <ChevronRight size={13} />
         </button>
       </aside>

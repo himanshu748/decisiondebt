@@ -16,6 +16,12 @@ class Settings:
     base_url = os.getenv("DD_LLM_BASE_URL", "https://api.groq.com/openai/v1")
     model = os.getenv("DD_LLM_MODEL", "openai/gpt-oss-120b")
     api_key = os.getenv("DD_LLM_API_KEY", "")
+    if mode == "public-readonly":
+        # Public deployments never retain an admin credential or provider key,
+        # even if the process environment is accidentally over-configured.
+        admin_token = ""
+        api_key = ""
+        agent_mode = "disabled"
 
 
 settings = Settings()
