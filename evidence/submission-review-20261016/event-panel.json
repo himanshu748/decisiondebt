@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-16T13:53:40.977Z",
+  "url": "https://www.wemakedevs.org/hackathons/falkordb",
+  "observed_registration_panel": "Unavailable",
+  "observed_message": "Couldn't reach the server. Check your connection.",
+  "signed_in": false,
+  "scope": "Observed in this in-app browser session. This does not establish a global outage or the owner’s registration/submission state.",
+  "submission_attempted": false,
+  "proof": "event-panel-unavailable.png"
+}
