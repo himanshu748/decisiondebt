@@ -88,7 +88,12 @@ for (const width of [1440, 375]) {
         );
       } else {
         await expect(
-          page.getByRole("heading", { name: "Decision workspace" }),
+          page.getByRole("heading", {
+            name:
+              name === "action-board"
+                ? "Turn uncertainty into action."
+                : "Decision workspace",
+          }),
         ).toBeVisible();
         if (name === "action-board") {
           await expect(
