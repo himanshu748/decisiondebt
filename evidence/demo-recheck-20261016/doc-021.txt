@@ -1,0 +1,34 @@
+Browser tab: 9, Title: "DecisionDebt | Decision studio", URL: "http://decisiondebt.52.202.25.181.sslip.io:8081/studio".
+1 AXWebArea DecisionDebt | Decision studio, URL: decisiondebt.52.202.25.181.sslip.io:8081/studio
+	2 container Source evidence
+		3 text Doc  · Synthetic
+		4 button Close source evidence
+			5 image
+		6 heading Invoice Engine: operating notes, Value: 2
+			7 text Invoice Engine: operating notes
+		8 container
+			9 text doc-021  ·  1  revision
+		10 container
+			11 text SHA-256  2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590
+		12 text Synthetic Aster Works doc record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.
+
+Partner Checkout uses Pricing Engine for its upstream contract.
+
+Session Broker is owned by Devon Shah.
+
+This document describes Invoice Engine. Review the linked evidence before changing its operating procedure.
+
+Keep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.
+
+		13 heading Claims and exact source spans, Value: 3
+			14 text Claims and exact source spans
+		15 container
+			16 text Verified AUTHORED author_id: person-021 claim-565fbf3f61b3a39645d69554  ·  raw_text [ 55 : 76 ] ·  metadata
+		17 container
+			18 text Verified OWNS Session Broker is owned by Devon Shah. claim-a95d41576b896f0d8b140a35  ·  body [ 203 : 241 ] ·  explicit_rule
+		19 container
+			20 text Verified DESCRIBES This document describes Invoice Engine. claim-bdc00c78573c7a8acb80fba0  ·  body [ 243 : 282 ] ·  explicit_rule
+		21 container
+			22 text Verified DEPENDS_ON Partner Checkout uses Pricing Engine for its upstream contract. claim-eef551e9558acdb15225cfb5  ·  body [ 138 : 201 ] ·  explicit_rule
+
+The focused UI element is 4 button Close source evidence

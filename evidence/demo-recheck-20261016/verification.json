@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-10-16T14:16:27.877930+00:00",
+  "actor": "Codex",
+  "method": "New live in-app browser session plus unauthenticated HTTP requests to the deployed synthetic demo.",
+  "url": "http://decisiondebt.52.202.25.181.sslip.io:8081/",
+  "source_commit_before_edit": "f241cb2c39eb14436038328426a77e29235269ab",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Decision impact",
+      "passed": true,
+      "observed": {
+        "affected_services": 12,
+        "unique_projects": 12,
+        "project_service_rows": 16,
+        "session_broker_paths": [
+          [
+            "svc-session-broker",
+            "svc-identity-api",
+            "svc-auth-gateway"
+          ],
+          [
+            "svc-session-broker",
+            "svc-login-gateway",
+            "svc-auth-gateway"
+          ]
+        ],
+        "decision_status": "proposed",
+        "graph_revision": 16
+      },
+      "evidence": [
+        "public-smoke.json",
+        "preview.txt",
+        "preview.png"
+      ]
+    },
+    {
+      "name": "Ownership and original sources",
+      "passed": true,
+      "observed": {
+        "token_cache_owner_status": "unowned",
+        "token_cache_owner_ids": [],
+        "session_broker_owner_status": "conflict",
+        "session_broker_ownership_claims": [
+          {
+            "owner_id": "person-004",
+            "name": "Devon Shah",
+            "role": "primary",
+            "claim_id": "claim-a95d41576b896f0d8b140a35"
+          },
+          {
+            "owner_id": "person-020",
+            "name": "Taylor Roy",
+            "role": "primary",
+            "claim_id": "claim-14c45e7d019b11ff49072d05"
+          }
+        ],
+        "doc_021_owns_span": [
+          203,
+          241
+        ],
+        "chat_077_owns_span": [
+          180,
+          211
+        ]
+      },
+      "evidence": [
+        "public-smoke.json",
+        "doc-021.txt",
+        "doc-021.png",
+        "chat-077.txt",
+        "chat-077.png"
+      ]
+    },
+    {
+      "name": "Public read-only behavior",
+      "passed": true,
+      "observed": {
+        "write_statuses": {
+          "/api/admin/import": 403,
+          "/api/admin/agent/runs": 403,
+          "/api/admin/tasks/test/approve": 403,
+          "/api/admin/decisions/dec-auth-002/accept": 403
+        },
+        "revision_unchanged": true,
+        "provider_configured": false
+      },
+      "evidence": [
+        "public-smoke.json"
+      ]
+    }
+  ],
+  "historical_evidence": {
+    "preserved_files": 227,
+    "all_remaining_hashes_unchanged": true,
+    "explicitly_removed_at_user_request": [
+      "evidence/submission-review-20261016/event-panel-unavailable.png",
+      "evidence/submission-review-20261016/event-panel.json"
+    ]
+  },
+  "limits": [
+    "These checks were performed by Codex and are not represented as manual participant testing.",
+    "No new provider LLM investigation or successful graph write was invoked.",
+    "Rate-limit saturation and database outage were not rerun during this check; separately retained historical receipts cover them."
+  ]
+}

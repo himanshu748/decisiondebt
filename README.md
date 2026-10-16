@@ -140,7 +140,7 @@ Local approval and import/retraction were performed in a separate recording data
 
 [YouTube publication and 2160p playback receipt](evidence/demo-v3/youtube-upload-receipt.json) confirms the new unlisted upload, English captions and selected 2160p playback.
 
-The previous [silent 90-second cut](evidence/decisiondebt-demo.mp4), [its YouTube upload](https://youtu.be/_9faaH35xPI), [capture manifest](evidence/demo-v2/manifest.json), [upload receipt](evidence/youtube/upload-20261016.json), and [historical walkthrough](DEMO.md) remain unchanged. Earlier measurements and source evidence are retained in their original paths.
+The previous [silent 90-second cut](evidence/decisiondebt-demo.mp4), [its YouTube upload](https://youtu.be/_9faaH35xPI), [capture manifest](evidence/demo-v2/manifest.json), [upload receipt](evidence/youtube/upload-20261016.json), and [historical walkthrough](DEMO.md) remain unchanged. Earlier application measurements and source evidence are retained in their original paths.
 
 1. Preview `dec-auth-002` while it remains proposed. `dec-auth-001` stays accepted, with no `SUPERSEDES` edge until explicit acceptance.
 2. Select Session Broker. Its two actual claim-backed paths form a diamond. Token Cache exposes a missing owner; Session Broker has competing primary owners.
@@ -267,11 +267,19 @@ The extractor recognizes explicit supported language. Negated, hedged, unresolve
 - Browser checks cover Chromium at 1440 px and 375 px, not every browser/device. Fonts use Google Fonts and degrade to sans-serif offline.
 - The public read-only deployment and unlisted YouTube upload are linked above. No release, hackathon form submission or external business ticket/email operation was performed.
 
-The [final automated submission review](evidence/submission-review-20261016/review.json) rechecks the public workflow, submission links, disclosure scope and preservation of earlier evidence. Participant technical understanding and the event-form record remain outside automated verification.
+The [submission review](evidence/submission-review-20261016/review.json) records the link and workflow checks. The fresh demo rerun is recorded below.
+
+## Verification
+
+Codex reran the public demo on October 16, 2026, using the live browser UI and unauthenticated API requests. The [rerun receipt](evidence/demo-recheck-20261016/verification.json) and [HTTP results](evidence/demo-recheck-20261016/public-smoke.json) record these checks:
+
+- **Decision impact:** the proposed OrionAuth migration returned 12 affected services and 12 projects. Session Broker had two verified paths to Auth Gateway; the decision remained proposed.
+- **Ownership and source evidence:** Token Cache remained unassigned. Session Broker retained conflicting Devon Shah and Taylor Roy claims; the original source views showed the exact ownership statements, claim offsets and source hashes.
+- **Public read-only behavior:** import, investigation, task approval and decision acceptance requests each returned HTTP 403. The graph stayed at revision 16 and the public provider remained disabled.
 
 ## AI coding disclosure
 
-I originated the core idea for DecisionDebt and directed its UI. AI expanded the idea into the detailed specification. Codex generated most of the implementation, tests and styling. The sections below record my contribution, the generated work and the automated checks. [Rules 11–13](https://www.wemakedevs.org/hackathons/falkordb/rules) govern AI disclosure and participant responsibility.
+I originated the core idea for DecisionDebt and directed its UI. AI expanded the idea into the detailed specification. Codex generated most of the implementation, tests and styling. The sections below record my contribution and the generated work. The verification section above records the checks run by Codex. [Rules 11–13](https://www.wemakedevs.org/hackathons/falkordb/rules) govern AI disclosure and participant responsibility.
 
 ### What I designed
 
@@ -283,14 +291,10 @@ I chose the landing page at `/` and the studio at `/studio`, and gave redesign f
 
 I required a genuine LLM investigation covering all three ambiguity cases ([recorded outcome](DECISIONS.md#real-run-corrections-and-outcome)). I also required a replacement demo using actual 4K browser recording, close-ups and Deepgram narration, and asked for a cut below three minutes ([demo decision](DECISIONS.md#native-4k-narrated-demo--2026-10-16)). These are my requirements and review decisions; the linked records also contain implementation choices made by Codex.
 
-### What I verified myself
-
-Personal verification details are not included in this submission. The linked [CI](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml), [deployment smoke](evidence/deployment/public-smoke-20261016.json), [database outage](evidence/deployment/receipt-20261016.json), [provider proof](evidence/agent-traces/llm-proof.json) and [video checks](evidence/demo-v3/verification.json) describe checks performed by Codex automation.
-
 ### What Codex generated
 
 Codex generated most of the implementation, tests and styling, including backend and frontend code, the synthetic corpus, graph/query and drift logic, source verification, agent integration, deployment and CI configuration, documentation, browser automation and video editing. AI expanded the detailed specification from my core idea. Deepgram generated the demo's narration; the original generated concept artwork has [asset provenance](web/public/assets/ASSETS.md).
 
-I remain responsible for understanding and explaining the submitted graph model, queries, architecture and technical choices under Rules 12–13. This disclosure does not turn automated checks into personal verification. The [submission draft](docs/submission.md) is ready for entry into the event form. This automation has not submitted the entry. The [event-panel check](evidence/submission-review-20261016/event-panel.json) records that registration was unavailable in this browser session; a saved submission record could not be verified. The deadline is **October 18, 2026, 11:59 PM IST**.
+I remain responsible for understanding and explaining the submitted graph model, queries, architecture and technical choices under Rules 12–13. The [submission draft](docs/submission.md) is ready for entry into the event form. This automation has not submitted the entry. The deadline is **October 18, 2026, 11:59 PM IST**.
 
 Official references: [FalkorDB Python client](https://github.com/FalkorDB/falkordb-py), [full-text documentation](https://docs.falkordb.com/cypher/indexing/fulltext-index), [event rules](https://www.wemakedevs.org/hackathons/falkordb/rules). Test results here, not those reference pages, establish this repository's measured behavior.

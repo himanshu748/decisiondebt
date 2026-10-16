@@ -1,0 +1,29 @@
+Browser tab: 9, Title: "DecisionDebt | Decision studio", URL: "http://decisiondebt.52.202.25.181.sslip.io:8081/studio".
+1 AXWebArea DecisionDebt | Decision studio, URL: decisiondebt.52.202.25.181.sslip.io:8081/studio
+	2 container Source evidence
+		3 text Chat  · Synthetic
+		4 button Close source evidence
+			5 image
+		6 heading Order Router: handoff record, Value: 2
+			7 text Order Router: handoff record
+		8 container
+			9 text chat-077  ·  1  revision
+		10 container
+			11 text SHA-256  7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d
+		12 text Synthetic Aster Works chat record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.
+
+External Portal is owned by Lane Mehta.
+
+Taylor Roy owns Session Broker. The support handoff names a different primary contact than the formal record; reconcile both before assigning work.
+
+Keep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.
+		13 heading Claims and exact source spans, Value: 3
+			14 text Claims and exact source spans
+		15 container
+			16 text Verified OWNS Taylor Roy owns Session Broker. claim-14c45e7d019b11ff49072d05  ·  body [ 180 : 211 ] ·  explicit_rule
+		17 container
+			18 text Verified OWNS External Portal is owned by Lane Mehta. claim-54ac65276143907363058a37  ·  body [ 139 : 178 ] ·  explicit_rule
+		19 container
+			20 text Verified AUTHORED "author_id": "person-005" claim-9afedf498c8a671f08c05012  ·  raw_text [ 60 : 85 ] ·  metadata
+
+The focused UI element is 4 button Close source evidence

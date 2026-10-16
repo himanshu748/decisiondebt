@@ -85,3 +85,7 @@ The [edit receipt](evidence/demo-v3/under3-edit-receipt.json), [Deepgram speech 
 ## Participant disclosure — 2026-10-16
 
 The participant confirmed originating the core idea, with AI expanding the specification, and supplying UI direction. The [completed disclosure](README.md#ai-coding-disclosure) credits the recorded route, redesign, deployment and demo requirements as participant product decisions. Codex-generated implementation and automated verification remain attributed to Codex. Personal verification details are not published, and the submission does not treat automated receipts as evidence of participant understanding. The [submission text](docs/submission.md) uses absolute repository links so its references work when pasted into the event form.
+
+## Demo verification rerun — 2026-10-16
+
+The personal-verification section was removed from the submission copy. A separate [Verification section](README.md#verification) records concrete checks run by Codex: live decision impact, original ownership evidence, and public write denials. The [fresh receipt](evidence/demo-recheck-20261016/verification.json) identifies the actor and preserves the measured responses. The event-panel JSON and screenshot were removed at the owner's request; earlier application, provider and video evidence is retained.
