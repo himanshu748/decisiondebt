@@ -35,6 +35,15 @@ test("public company-brain workflow uses live graph evidence and blocks writes",
   await expect(page.locator(".metrics strong").first()).toHaveText(
     String(preview.counts.services),
   );
+  expect(preview.truncation_examples[0]).toEqual({
+    service_id: "svc-directory-sync",
+    name: "Directory Sync",
+    depth: 6,
+  });
+  await expect(page.locator(".graph-boundary-status")).toContainText("Truncated");
+  await expect(page.locator(".truncation-note")).toHaveText(
+    `We bound traversal to ${preview.max_hops} hops to keep query work predictable; these ${preview.counts.services} services and ${preview.counts.projects} projects are verified in scope, with further affected services including Directory Sync at hop 6.`,
+  );
   await expect(
     page.getByRole("button", { name: "Public read-only demo", exact: true }),
   ).toBeDisabled();
@@ -69,8 +78,9 @@ test("public company-brain workflow uses live graph evidence and blocks writes",
   ]) {
     expect((await request.post(path, { data: {} })).status()).toBe(403);
   }
-  await page.setViewportSize({ width: 375, height: 900 });
+  await page.setViewportSize({ width: 360, height: 900 });
   await page.getByRole("tab", { name: /01 Preview/ }).click();
+  await expect(page.locator(".truncation-note")).toBeVisible();
   await expect(page.locator(".metrics strong").first()).toHaveText(
     String(preview.counts.services),
   );

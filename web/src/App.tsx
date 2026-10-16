@@ -691,17 +691,31 @@ export default function App() {
                         />
                       </div>
                       <div className="graph-bottom">
-                        <span>
-                          <GitBranch size={14} />
-                          Max depth {preview.max_hops}
-                          {preview.cycle_detected
-                            ? " · Cycle paths bounded"
-                            : ""}{" "}
-                          ·{" "}
-                          {preview.truncated
-                            ? "Further consumers exist beyond this boundary"
-                            : "No additional consumers found at boundary"}
-                        </span>
+                        <div className="graph-coverage">
+                          <span className="graph-boundary-status">
+                            <GitBranch size={14} />
+                            Max depth {preview.max_hops}
+                            {preview.cycle_detected
+                              ? " · Cycle paths bounded"
+                              : ""}{" "}
+                            ·{" "}
+                            {preview.truncated
+                              ? "Truncated"
+                              : "No additional consumers found at boundary"}
+                          </span>
+                          {preview.truncated && (
+                            <p className="truncation-note">
+                              We bound traversal to {preview.max_hops} hops to
+                              keep query work predictable; these{" "}
+                              {preview.counts.services} services and{" "}
+                              {preview.counts.projects} projects are verified in
+                              scope, with further affected services
+                              {preview.truncation_examples?.[0]
+                                ? ` including ${preview.truncation_examples[0].name} at hop ${preview.truncation_examples[0].depth}.`
+                                : " beyond this boundary."}
+                            </p>
+                          )}
+                        </div>
                         <span className="mono">
                           {preview.elapsed_ms.toFixed(1)} ms · revision{" "}
                           {preview.graph_revision}

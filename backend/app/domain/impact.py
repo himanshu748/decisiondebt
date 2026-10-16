@@ -125,7 +125,7 @@ def preview(g, decision_id, as_of=DEFAULT_AS_OF):
         projects = g.read(Q3, {"affected_ids": ids}, "Q3", trace)
         boundary = [i["service_id"] for i in impacts if i["depth"] == 5]
         beyond = g.read(
-            "MATCH (s:Service)-[:DEPENDS_ON]->(b:Service) WHERE b.id IN $boundary AND NOT s.id IN $ids RETURN DISTINCT s.id AS id",
+            "MATCH (s:Service)-[:DEPENDS_ON]->(b:Service) WHERE b.id IN $boundary AND NOT s.id IN $ids RETURN DISTINCT s.id AS id,s.name AS name ORDER BY name,id",
             {"boundary": boundary, "ids": ids},
             "TRUNCATION",
             trace,
@@ -149,6 +149,10 @@ def preview(g, decision_id, as_of=DEFAULT_AS_OF):
             as_of=as_of,
             max_hops=5,
             truncated=bool(beyond),
+            truncation_examples=[
+                dict(service_id=row["id"], name=row["name"], depth=6)
+                for row in beyond[:3]
+            ],
             counts=counts,
             impacts=impacts,
             projects=projects,

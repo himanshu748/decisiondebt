@@ -32,6 +32,10 @@ def test_blast_radius_and_oracle(graph):
         and p["max_hops"] == 5
         and p["truncated"]
     )
+    assert p["truncation_examples"] == [
+        {"service_id": "svc-directory-sync", "name": "Directory Sync", "depth": 6}
+    ]
+    assert "svc-directory-sync" not in expected
 
 
 def test_diamond_cycle_owners(graph):
@@ -51,6 +55,26 @@ def test_diamond_cycle_owners(graph):
     for i in p["impacts"]:
         for path, claims in zip(i["paths"], i["path_claim_ids"]):
             assert len(path) - 1 == len(claims)
+
+
+def test_truncation_example_disappears_when_already_in_scope(graph):
+    ident = "ticket-frontier-shortcut"
+    try:
+        refresh(
+            graph,
+            [make("Directory Sync depends on Auth Gateway for identity.", ident)],
+            Catalog(),
+        )
+        result = preview(graph, "dec-auth-002")
+        assert any(
+            item["service_id"] == "svc-directory-sync" and item["depth"] == 1
+            for item in result["impacts"]
+        )
+        assert result["cycle_detected"]
+        assert not result["truncated"]
+        assert result["truncation_examples"] == []
+    finally:
+        refresh(graph, [make("The review is still open.", ident)], Catalog())
 
 
 def test_preview_readonly(graph):

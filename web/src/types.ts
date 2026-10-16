@@ -47,6 +47,7 @@ export interface Preview {
   counts: Record<string, number>;
   max_hops: number;
   truncated: boolean;
+  truncation_examples?: { service_id: string; name: string; depth: number }[];
   cycle_detected: boolean;
   review_date_issues: { source_id: string; kind: string; reason: string }[];
   impacts: Impact[];

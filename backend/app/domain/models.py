@@ -49,6 +49,12 @@ class AcceptRequest(Strict):
     confirm: bool = False
 
 
+class TruncationExample(Strict):
+    service_id: str
+    name: str
+    depth: int
+
+
 class PreviewResponse(BaseModel):
     decision_id: str
     decision_status: str
@@ -57,6 +63,7 @@ class PreviewResponse(BaseModel):
     as_of: str
     max_hops: int = 5
     truncated: bool
+    truncation_examples: list[TruncationExample] = Field(default_factory=list)
     cycle_detected: bool = False
     review_date_issues: list[dict] = Field(default_factory=list)
     counts: dict

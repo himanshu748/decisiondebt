@@ -743,6 +743,23 @@
   color: #718ab3;
   font-size: 8px;
 }
+.studio .graph-coverage {
+  min-width: 0;
+  flex: 1;
+}
+.studio .graph-boundary-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.studio .truncation-note {
+  max-width: 760px;
+  margin: 7px 0 0;
+  color: #b5c4dc;
+  font-size: 11px;
+  line-height: 1.65;
+}
 .studio .investigation-callout {
   background:
     radial-gradient(ellipse at 10% 0, #304d8045, transparent 60%),
@@ -1568,6 +1585,9 @@
   }
   .studio .graph-bottom > .mono {
     font-size: 8px;
+  }
+  .studio .graph-coverage {
+    flex-basis: 100%;
   }
   .studio .investigation-callout {
     padding: 23px 20px;
