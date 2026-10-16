@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+web/node_modules/
+web/dist/
+work/
+.DS_Store
+
+.ruff_cache/
+web/*.tsbuildinfo
+evidence/test-results/server.log

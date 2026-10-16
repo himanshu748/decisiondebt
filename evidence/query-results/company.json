@@ -1,0 +1,42 @@
+{
+  "counts": {
+    "service": 60,
+    "person": 24,
+    "team": 8,
+    "project": 12,
+    "source": 94,
+    "sourcerevision": 94,
+    "claim": 319,
+    "task": 0,
+    "decision": 3,
+    "semantic_edges": 315
+  },
+  "source_types": [
+    {
+      "kind": "chat",
+      "count": 24
+    },
+    {
+      "kind": "doc",
+      "count": 40
+    },
+    {
+      "kind": "ticket",
+      "count": 30
+    }
+  ],
+  "claim_statuses": [
+    {
+      "status": "candidate",
+      "count": 4
+    },
+    {
+      "status": "verified",
+      "count": 315
+    }
+  ],
+  "graph_revision": 1,
+  "synthetic": true,
+  "source_mode": "live_falkordb",
+  "elapsed_ms": 20.51
+}

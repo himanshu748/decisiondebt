@@ -1,0 +1,93 @@
+{
+  "status": "local_checks_pass",
+  "checks": {
+    "required_files": true,
+    "local_document_links": true,
+    "corpus_graph": true,
+    "proposed_preview": true,
+    "preview_readonly": true,
+    "all_active_edges_anchored": true,
+    "three_drift_tiers": true,
+    "owner_ambiguities": true,
+    "precision_recall": true,
+    "pytest": true,
+    "browser": true,
+    "outage_persistence": true,
+    "dynamic_import_retraction": true
+  },
+  "missing": [],
+  "broken_links": [],
+  "pytest_passed": 34,
+  "live_summary": {
+    "counts": {
+      "service": 60,
+      "person": 24,
+      "team": 8,
+      "project": 12,
+      "source": 95,
+      "sourcerevision": 96,
+      "claim": 322,
+      "task": 6,
+      "decision": 3,
+      "semantic_edges": 316
+    },
+    "source_types": [
+      {
+        "kind": "chat",
+        "count": 24
+      },
+      {
+        "kind": "doc",
+        "count": 40
+      },
+      {
+        "kind": "ticket",
+        "count": 31
+      }
+    ],
+    "claim_statuses": [
+      {
+        "status": "candidate",
+        "count": 4
+      },
+      {
+        "status": "retracted",
+        "count": 2
+      },
+      {
+        "status": "verified",
+        "count": 316
+      }
+    ],
+    "graph_revision": 6,
+    "synthetic": true,
+    "source_mode": "live_falkordb",
+    "elapsed_ms": 59.23
+  },
+  "preview_counts": {
+    "services": 12,
+    "projects": 12,
+    "drift_t1": 1,
+    "drift_t2": 1,
+    "drift_t3": 3,
+    "owner_gaps": 1,
+    "owner_conflicts": 1
+  },
+  "max_hops": 5,
+  "truncated": true,
+  "precision_recall": {
+    "expected": 315,
+    "actual": 315,
+    "true_positives": 315,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positives": [],
+    "false_negatives": []
+  },
+  "limitations": [
+    "No genuine LLM provider trace. The included investigation is explicitly deterministic.",
+    "No remote push, public deployment or portal submission was performed.",
+    "Single API worker only; CLI ingestion requires API stopped.",
+    "Extraction accuracy is measured on the synthetic fixture, not arbitrary enterprise language."
+  ]
+}

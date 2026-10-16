@@ -1,0 +1,664 @@
+{
+  "sources": [
+    {
+      "id": "chat-071",
+      "changed": true,
+      "claims": 2,
+      "verified": 2,
+      "candidates": 0
+    },
+    {
+      "id": "chat-072",
+      "changed": true,
+      "claims": 2,
+      "verified": 2,
+      "candidates": 0
+    },
+    {
+      "id": "chat-073",
+      "changed": true,
+      "claims": 2,
+      "verified": 2,
+      "candidates": 0
+    },
+    {
+      "id": "chat-074",
+      "changed": true,
+      "claims": 2,
+      "verified": 2,
+      "candidates": 0
+    },
+    {
+      "id": "chat-075",
+      "changed": true,
+      "claims": 2,
+      "verified": 2,
+      "candidates": 0
+    },
+    {
+      "id": "chat-076",
+      "changed": true,
+      "claims": 2,
+      "verified": 2,
+      "candidates": 0
+    },
+    {
+      "id": "chat-077",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "chat-078",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-079",
+      "changed": true,
+      "claims": 3,
+      "verified": 1,
+      "candidates": 2
+    },
+    {
+      "id": "chat-080",
+      "changed": true,
+      "claims": 2,
+      "verified": 1,
+      "candidates": 1
+    },
+    {
+      "id": "chat-081",
+      "changed": true,
+      "claims": 2,
+      "verified": 1,
+      "candidates": 1
+    },
+    {
+      "id": "chat-082",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-083",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-084",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-085",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-086",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-087",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-088",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-089",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-090",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-091",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-092",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-093",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "chat-094",
+      "changed": true,
+      "claims": 1,
+      "verified": 1,
+      "candidates": 0
+    },
+    {
+      "id": "doc-001",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-002",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-003",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-004",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-005",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-006",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-007",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-008",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-009",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-010",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-011",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-012",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-013",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-014",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-015",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-016",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-017",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-018",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-019",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-020",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-021",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-022",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "doc-023",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-024",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-025",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-026",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-027",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-028",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-029",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-030",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-031",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-032",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-033",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-034",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-035",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "doc-036",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "doc-037",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "doc-038",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "doc-039",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "doc-040",
+      "changed": true,
+      "claims": 7,
+      "verified": 7,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-041",
+      "changed": true,
+      "claims": 5,
+      "verified": 5,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-042",
+      "changed": true,
+      "claims": 5,
+      "verified": 5,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-043",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-044",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-045",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-046",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-047",
+      "changed": true,
+      "claims": 6,
+      "verified": 6,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-048",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-049",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-050",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-051",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-052",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-053",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-054",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-055",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-056",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-057",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-058",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-059",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-060",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-061",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-062",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-063",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-064",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-065",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-066",
+      "changed": true,
+      "claims": 4,
+      "verified": 4,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-067",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-068",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-069",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    },
+    {
+      "id": "ticket-070",
+      "changed": true,
+      "claims": 3,
+      "verified": 3,
+      "candidates": 0
+    }
+  ],
+  "graph_revision": 1,
+  "changed": 94
+}

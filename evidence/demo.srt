@@ -1,0 +1,49 @@
+1
+00:00:00,000 --> 00:00:09,900
+DecisionDebt | Synthetic Aster Works data
+Proposed migration. Counts come from live FalkorDB.
+
+2
+00:00:10,000 --> 00:00:14,900
+Two source-backed paths. One affected service.
+Conflicting primary owners stay unresolved.
+
+3
+00:00:15,000 --> 00:00:21,900
+Every relationship has an exact source quote,
+Claim ID, immutable revision and SHA-256 hash.
+
+4
+00:00:22,000 --> 00:00:27,900
+Native full-text search finds an unlinked mention.
+T1 citation, T2 suspect, T3 overdue review.
+
+5
+00:00:28,000 --> 00:00:39,900
+Deterministic rule run, clearly labeled.
+12 bounded tools inspect evidence and draft local tasks.
+
+6
+00:00:40,000 --> 00:00:49,900
+Missing and disputed owners remain unassigned.
+Human approval is a separate local action.
+
+7
+00:00:50,000 --> 00:00:55,900
+Import one synthetic ticket:
+External Portal depends on Billing API.
+
+8
+00:00:56,000 --> 00:01:04,900
+New source, new claim, new Cypher result.
+The affected service count increases by one.
+
+9
+00:01:05,000 --> 00:01:21,900
+Inspect the new path, then remove the source assertion.
+Only that source's dependency support retracts.
+
+10
+00:01:22,000 --> 00:01:30,000
+The count returns. The decision is still proposed.
+Source text to verified claim to reviewable action.

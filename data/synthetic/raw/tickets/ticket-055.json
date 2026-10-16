@@ -1,0 +1,8 @@
+{
+  "id": "ticket-055",
+  "title": "Secrets Proxy: handoff record",
+  "author_id": "person-007",
+  "created_at": "2026-06-01T10:00:00+05:30",
+  "last_reviewed_at": "2026-10-02T10:00:00+05:30",
+  "body": "Synthetic Aster Works ticket record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nAudit Stream depends on Experiment Service for the documented request flow.\n\nStatus API is owned by Noor Patel.\n\nMorgan Das is a member of Insights Team.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question."
+}

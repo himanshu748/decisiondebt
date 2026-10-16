@@ -1,0 +1,1054 @@
+{
+  "synthetic": true,
+  "seed": 42,
+  "entities": [
+    {
+      "id": "svc-auth-gateway",
+      "label": "Service",
+      "name": "Auth Gateway",
+      "aliases": [
+        "Auth Gateway",
+        "svc-auth-gateway"
+      ],
+      "criticality": 3,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-login-gateway",
+      "label": "Service",
+      "name": "Login Gateway",
+      "aliases": [
+        "Login Gateway",
+        "svc-login-gateway"
+      ],
+      "criticality": 1,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-identity-api",
+      "label": "Service",
+      "name": "Identity API",
+      "aliases": [
+        "Identity API",
+        "svc-identity-api"
+      ],
+      "criticality": 1,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-session-broker",
+      "label": "Service",
+      "name": "Session Broker",
+      "aliases": [
+        "Session Broker",
+        "svc-session-broker"
+      ],
+      "criticality": 3,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-token-cache",
+      "label": "Service",
+      "name": "Token Cache",
+      "aliases": [
+        "Token Cache",
+        "svc-token-cache"
+      ],
+      "criticality": 2,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-credential-vault",
+      "label": "Service",
+      "name": "Credential Vault",
+      "aliases": [
+        "Credential Vault",
+        "svc-credential-vault"
+      ],
+      "criticality": 1,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-access-proxy",
+      "label": "Service",
+      "name": "Access Proxy",
+      "aliases": [
+        "Access Proxy",
+        "svc-access-proxy"
+      ],
+      "criticality": 1,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-directory-sync",
+      "label": "Service",
+      "name": "Directory Sync",
+      "aliases": [
+        "Directory Sync",
+        "svc-directory-sync"
+      ],
+      "criticality": 1,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-consent-service",
+      "label": "Service",
+      "name": "Consent Service",
+      "aliases": [
+        "Consent Service",
+        "svc-consent-service"
+      ],
+      "criticality": 3,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-account-registry",
+      "label": "Service",
+      "name": "Account Registry",
+      "aliases": [
+        "Account Registry",
+        "svc-account-registry"
+      ],
+      "criticality": 1,
+      "domain": "identity"
+    },
+    {
+      "id": "svc-billing-api",
+      "label": "Service",
+      "name": "Billing API",
+      "aliases": [
+        "Billing API",
+        "svc-billing-api"
+      ],
+      "criticality": 3,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-checkout-api",
+      "label": "Service",
+      "name": "Checkout API",
+      "aliases": [
+        "Checkout API",
+        "svc-checkout-api"
+      ],
+      "criticality": 3,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-cart-service",
+      "label": "Service",
+      "name": "Cart Service",
+      "aliases": [
+        "Cart Service",
+        "svc-cart-service"
+      ],
+      "criticality": 3,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-catalog-api",
+      "label": "Service",
+      "name": "Catalog API",
+      "aliases": [
+        "Catalog API",
+        "svc-catalog-api"
+      ],
+      "criticality": 1,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-inventory-service",
+      "label": "Service",
+      "name": "Inventory Service",
+      "aliases": [
+        "Inventory Service",
+        "svc-inventory-service"
+      ],
+      "criticality": 3,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-pricing-engine",
+      "label": "Service",
+      "name": "Pricing Engine",
+      "aliases": [
+        "Pricing Engine",
+        "svc-pricing-engine"
+      ],
+      "criticality": 2,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-order-router",
+      "label": "Service",
+      "name": "Order Router",
+      "aliases": [
+        "Order Router",
+        "svc-order-router"
+      ],
+      "criticality": 1,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-fulfillment-api",
+      "label": "Service",
+      "name": "Fulfillment API",
+      "aliases": [
+        "Fulfillment API",
+        "svc-fulfillment-api"
+      ],
+      "criticality": 1,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-returns-service",
+      "label": "Service",
+      "name": "Returns Service",
+      "aliases": [
+        "Returns Service",
+        "svc-returns-service"
+      ],
+      "criticality": 1,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-partner-checkout",
+      "label": "Service",
+      "name": "Partner Checkout",
+      "aliases": [
+        "Partner Checkout",
+        "svc-partner-checkout"
+      ],
+      "criticality": 1,
+      "domain": "commerce"
+    },
+    {
+      "id": "svc-invoice-engine",
+      "label": "Service",
+      "name": "Invoice Engine",
+      "aliases": [
+        "Invoice Engine",
+        "svc-invoice-engine"
+      ],
+      "criticality": 1,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-payment-router",
+      "label": "Service",
+      "name": "Payment Router",
+      "aliases": [
+        "Payment Router",
+        "svc-payment-router"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-ledger-api",
+      "label": "Service",
+      "name": "Ledger API",
+      "aliases": [
+        "Ledger API",
+        "svc-ledger-api"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-tax-service",
+      "label": "Service",
+      "name": "Tax Service",
+      "aliases": [
+        "Tax Service",
+        "svc-tax-service"
+      ],
+      "criticality": 1,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-receipt-store",
+      "label": "Service",
+      "name": "Receipt Store",
+      "aliases": [
+        "Receipt Store",
+        "svc-receipt-store"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-subscription-api",
+      "label": "Service",
+      "name": "Subscription API",
+      "aliases": [
+        "Subscription API",
+        "svc-subscription-api"
+      ],
+      "criticality": 1,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-usage-meter",
+      "label": "Service",
+      "name": "Usage Meter",
+      "aliases": [
+        "Usage Meter",
+        "svc-usage-meter"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-credit-service",
+      "label": "Service",
+      "name": "Credit Service",
+      "aliases": [
+        "Credit Service",
+        "svc-credit-service"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-payout-worker",
+      "label": "Service",
+      "name": "Payout Worker",
+      "aliases": [
+        "Payout Worker",
+        "svc-payout-worker"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-billing-scheduler",
+      "label": "Service",
+      "name": "Billing Scheduler",
+      "aliases": [
+        "Billing Scheduler",
+        "svc-billing-scheduler"
+      ],
+      "criticality": 3,
+      "domain": "billing"
+    },
+    {
+      "id": "svc-support-console",
+      "label": "Service",
+      "name": "Support Console",
+      "aliases": [
+        "Support Console",
+        "svc-support-console"
+      ],
+      "criticality": 2,
+      "domain": "support"
+    },
+    {
+      "id": "svc-case-router",
+      "label": "Service",
+      "name": "Case Router",
+      "aliases": [
+        "Case Router",
+        "svc-case-router"
+      ],
+      "criticality": 1,
+      "domain": "support"
+    },
+    {
+      "id": "svc-help-center",
+      "label": "Service",
+      "name": "Help Center",
+      "aliases": [
+        "Help Center",
+        "svc-help-center"
+      ],
+      "criticality": 2,
+      "domain": "support"
+    },
+    {
+      "id": "svc-notification-hub",
+      "label": "Service",
+      "name": "Notification Hub",
+      "aliases": [
+        "Notification Hub",
+        "svc-notification-hub"
+      ],
+      "criticality": 3,
+      "domain": "support"
+    },
+    {
+      "id": "svc-contact-api",
+      "label": "Service",
+      "name": "Contact API",
+      "aliases": [
+        "Contact API",
+        "svc-contact-api"
+      ],
+      "criticality": 2,
+      "domain": "support"
+    },
+    {
+      "id": "svc-escalation-worker",
+      "label": "Service",
+      "name": "Escalation Worker",
+      "aliases": [
+        "Escalation Worker",
+        "svc-escalation-worker"
+      ],
+      "criticality": 1,
+      "domain": "support"
+    },
+    {
+      "id": "svc-feedback-service",
+      "label": "Service",
+      "name": "Feedback Service",
+      "aliases": [
+        "Feedback Service",
+        "svc-feedback-service"
+      ],
+      "criticality": 1,
+      "domain": "support"
+    },
+    {
+      "id": "svc-status-api",
+      "label": "Service",
+      "name": "Status API",
+      "aliases": [
+        "Status API",
+        "svc-status-api"
+      ],
+      "criticality": 3,
+      "domain": "support"
+    },
+    {
+      "id": "svc-incident-router",
+      "label": "Service",
+      "name": "Incident Router",
+      "aliases": [
+        "Incident Router",
+        "svc-incident-router"
+      ],
+      "criticality": 2,
+      "domain": "support"
+    },
+    {
+      "id": "svc-support-search",
+      "label": "Service",
+      "name": "Support Search",
+      "aliases": [
+        "Support Search",
+        "svc-support-search"
+      ],
+      "criticality": 2,
+      "domain": "support"
+    },
+    {
+      "id": "svc-event-collector",
+      "label": "Service",
+      "name": "Event Collector",
+      "aliases": [
+        "Event Collector",
+        "svc-event-collector"
+      ],
+      "criticality": 2,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-analytics-api",
+      "label": "Service",
+      "name": "Analytics API",
+      "aliases": [
+        "Analytics API",
+        "svc-analytics-api"
+      ],
+      "criticality": 1,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-report-worker",
+      "label": "Service",
+      "name": "Report Worker",
+      "aliases": [
+        "Report Worker",
+        "svc-report-worker"
+      ],
+      "criticality": 1,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-warehouse-sync",
+      "label": "Service",
+      "name": "Warehouse Sync",
+      "aliases": [
+        "Warehouse Sync",
+        "svc-warehouse-sync"
+      ],
+      "criticality": 2,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-metrics-api",
+      "label": "Service",
+      "name": "Metrics API",
+      "aliases": [
+        "Metrics API",
+        "svc-metrics-api"
+      ],
+      "criticality": 1,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-experiment-service",
+      "label": "Service",
+      "name": "Experiment Service",
+      "aliases": [
+        "Experiment Service",
+        "svc-experiment-service"
+      ],
+      "criticality": 1,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-cohort-engine",
+      "label": "Service",
+      "name": "Cohort Engine",
+      "aliases": [
+        "Cohort Engine",
+        "svc-cohort-engine"
+      ],
+      "criticality": 2,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-audit-stream",
+      "label": "Service",
+      "name": "Audit Stream",
+      "aliases": [
+        "Audit Stream",
+        "svc-audit-stream"
+      ],
+      "criticality": 1,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-data-export",
+      "label": "Service",
+      "name": "Data Export",
+      "aliases": [
+        "Data Export",
+        "svc-data-export"
+      ],
+      "criticality": 2,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-insight-scheduler",
+      "label": "Service",
+      "name": "Insight Scheduler",
+      "aliases": [
+        "Insight Scheduler",
+        "svc-insight-scheduler"
+      ],
+      "criticality": 2,
+      "domain": "analytics"
+    },
+    {
+      "id": "svc-config-api",
+      "label": "Service",
+      "name": "Config API",
+      "aliases": [
+        "Config API",
+        "svc-config-api"
+      ],
+      "criticality": 3,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-deploy-router",
+      "label": "Service",
+      "name": "Deploy Router",
+      "aliases": [
+        "Deploy Router",
+        "svc-deploy-router"
+      ],
+      "criticality": 2,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-artifact-store",
+      "label": "Service",
+      "name": "Artifact Store",
+      "aliases": [
+        "Artifact Store",
+        "svc-artifact-store"
+      ],
+      "criticality": 1,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-build-worker",
+      "label": "Service",
+      "name": "Build Worker",
+      "aliases": [
+        "Build Worker",
+        "svc-build-worker"
+      ],
+      "criticality": 3,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-secrets-proxy",
+      "label": "Service",
+      "name": "Secrets Proxy",
+      "aliases": [
+        "Secrets Proxy",
+        "svc-secrets-proxy"
+      ],
+      "criticality": 2,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-health-monitor",
+      "label": "Service",
+      "name": "Health Monitor",
+      "aliases": [
+        "Health Monitor",
+        "svc-health-monitor"
+      ],
+      "criticality": 3,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-queue-broker",
+      "label": "Service",
+      "name": "Queue Broker",
+      "aliases": [
+        "Queue Broker",
+        "svc-queue-broker"
+      ],
+      "criticality": 1,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-edge-router",
+      "label": "Service",
+      "name": "Edge Router",
+      "aliases": [
+        "Edge Router",
+        "svc-edge-router"
+      ],
+      "criticality": 2,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-internal-portal",
+      "label": "Service",
+      "name": "Internal Portal",
+      "aliases": [
+        "Internal Portal",
+        "svc-internal-portal"
+      ],
+      "criticality": 1,
+      "domain": "platform"
+    },
+    {
+      "id": "svc-external-portal",
+      "label": "Service",
+      "name": "External Portal",
+      "aliases": [
+        "External Portal",
+        "svc-external-portal"
+      ],
+      "criticality": 3,
+      "domain": "platform"
+    },
+    {
+      "id": "team-001",
+      "label": "Team",
+      "name": "Identity Team",
+      "aliases": [
+        "Identity Team"
+      ]
+    },
+    {
+      "id": "team-002",
+      "label": "Team",
+      "name": "Commerce Team",
+      "aliases": [
+        "Commerce Team"
+      ]
+    },
+    {
+      "id": "team-003",
+      "label": "Team",
+      "name": "Revenue Team",
+      "aliases": [
+        "Revenue Team"
+      ]
+    },
+    {
+      "id": "team-004",
+      "label": "Team",
+      "name": "Experience Team",
+      "aliases": [
+        "Experience Team"
+      ]
+    },
+    {
+      "id": "team-005",
+      "label": "Team",
+      "name": "Insights Team",
+      "aliases": [
+        "Insights Team"
+      ]
+    },
+    {
+      "id": "team-006",
+      "label": "Team",
+      "name": "Runtime Team",
+      "aliases": [
+        "Runtime Team"
+      ]
+    },
+    {
+      "id": "team-007",
+      "label": "Team",
+      "name": "Trust Team",
+      "aliases": [
+        "Trust Team"
+      ]
+    },
+    {
+      "id": "team-008",
+      "label": "Team",
+      "name": "Delivery Team",
+      "aliases": [
+        "Delivery Team"
+      ]
+    },
+    {
+      "id": "person-001",
+      "label": "Person",
+      "name": "Avery Chen",
+      "aliases": [
+        "Avery Chen"
+      ]
+    },
+    {
+      "id": "person-002",
+      "label": "Person",
+      "name": "Blair Iyer",
+      "aliases": [
+        "Blair Iyer"
+      ]
+    },
+    {
+      "id": "person-003",
+      "label": "Person",
+      "name": "Casey Park",
+      "aliases": [
+        "Casey Park"
+      ]
+    },
+    {
+      "id": "person-004",
+      "label": "Person",
+      "name": "Devon Shah",
+      "aliases": [
+        "Devon Shah"
+      ]
+    },
+    {
+      "id": "person-005",
+      "label": "Person",
+      "name": "Ellis Reed",
+      "aliases": [
+        "Ellis Reed"
+      ]
+    },
+    {
+      "id": "person-006",
+      "label": "Person",
+      "name": "Finley Rao",
+      "aliases": [
+        "Finley Rao"
+      ]
+    },
+    {
+      "id": "person-007",
+      "label": "Person",
+      "name": "Gray Kim",
+      "aliases": [
+        "Gray Kim"
+      ]
+    },
+    {
+      "id": "person-008",
+      "label": "Person",
+      "name": "Harper Ali",
+      "aliases": [
+        "Harper Ali"
+      ]
+    },
+    {
+      "id": "person-009",
+      "label": "Person",
+      "name": "Indigo Bose",
+      "aliases": [
+        "Indigo Bose"
+      ]
+    },
+    {
+      "id": "person-010",
+      "label": "Person",
+      "name": "Jules Hart",
+      "aliases": [
+        "Jules Hart"
+      ]
+    },
+    {
+      "id": "person-011",
+      "label": "Person",
+      "name": "Kai Sen",
+      "aliases": [
+        "Kai Sen"
+      ]
+    },
+    {
+      "id": "person-012",
+      "label": "Person",
+      "name": "Lane Mehta",
+      "aliases": [
+        "Lane Mehta"
+      ]
+    },
+    {
+      "id": "person-013",
+      "label": "Person",
+      "name": "Morgan Das",
+      "aliases": [
+        "Morgan Das"
+      ]
+    },
+    {
+      "id": "person-014",
+      "label": "Person",
+      "name": "Noor Patel",
+      "aliases": [
+        "Noor Patel"
+      ]
+    },
+    {
+      "id": "person-015",
+      "label": "Person",
+      "name": "Oakley Wu",
+      "aliases": [
+        "Oakley Wu"
+      ]
+    },
+    {
+      "id": "person-016",
+      "label": "Person",
+      "name": "Parker Gill",
+      "aliases": [
+        "Parker Gill"
+      ]
+    },
+    {
+      "id": "person-017",
+      "label": "Person",
+      "name": "Quinn Ray",
+      "aliases": [
+        "Quinn Ray"
+      ]
+    },
+    {
+      "id": "person-018",
+      "label": "Person",
+      "name": "Remy Khan",
+      "aliases": [
+        "Remy Khan"
+      ]
+    },
+    {
+      "id": "person-019",
+      "label": "Person",
+      "name": "Sage Lin",
+      "aliases": [
+        "Sage Lin"
+      ]
+    },
+    {
+      "id": "person-020",
+      "label": "Person",
+      "name": "Taylor Roy",
+      "aliases": [
+        "Taylor Roy"
+      ]
+    },
+    {
+      "id": "person-021",
+      "label": "Person",
+      "name": "Uma Cole",
+      "aliases": [
+        "Uma Cole"
+      ]
+    },
+    {
+      "id": "person-022",
+      "label": "Person",
+      "name": "Val River",
+      "aliases": [
+        "Val River"
+      ]
+    },
+    {
+      "id": "person-023",
+      "label": "Person",
+      "name": "Wren Jain",
+      "aliases": [
+        "Wren Jain"
+      ]
+    },
+    {
+      "id": "person-024",
+      "label": "Person",
+      "name": "Yael Moon",
+      "aliases": [
+        "Yael Moon"
+      ]
+    },
+    {
+      "id": "project-001",
+      "label": "Project",
+      "name": "Project Atlas",
+      "aliases": [
+        "Project Atlas"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-002",
+      "label": "Project",
+      "name": "Project Beacon",
+      "aliases": [
+        "Project Beacon"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-003",
+      "label": "Project",
+      "name": "Project Compass",
+      "aliases": [
+        "Project Compass"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-004",
+      "label": "Project",
+      "name": "Project Daybreak",
+      "aliases": [
+        "Project Daybreak"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-005",
+      "label": "Project",
+      "name": "Project Evergreen",
+      "aliases": [
+        "Project Evergreen"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-006",
+      "label": "Project",
+      "name": "Project Foundry",
+      "aliases": [
+        "Project Foundry"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-007",
+      "label": "Project",
+      "name": "Project Harbor",
+      "aliases": [
+        "Project Harbor"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-008",
+      "label": "Project",
+      "name": "Project Keystone",
+      "aliases": [
+        "Project Keystone"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-009",
+      "label": "Project",
+      "name": "Project Lantern",
+      "aliases": [
+        "Project Lantern"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-010",
+      "label": "Project",
+      "name": "Project Meridian",
+      "aliases": [
+        "Project Meridian"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-011",
+      "label": "Project",
+      "name": "Project Northstar",
+      "aliases": [
+        "Project Northstar"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "project-012",
+      "label": "Project",
+      "name": "Project Waypoint",
+      "aliases": [
+        "Project Waypoint"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "dec-auth-001",
+      "label": "Decision",
+      "name": "dec-auth-001",
+      "aliases": [
+        "dec-auth-001"
+      ]
+    },
+    {
+      "id": "dec-auth-002",
+      "label": "Decision",
+      "name": "dec-auth-002",
+      "aliases": [
+        "dec-auth-002"
+      ]
+    },
+    {
+      "id": "dec-auth-003",
+      "label": "Decision",
+      "name": "dec-auth-003",
+      "aliases": [
+        "dec-auth-003"
+      ]
+    }
+  ]
+}

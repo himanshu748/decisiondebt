@@ -1,0 +1,125 @@
+{
+  "source": "ticket-live-portal",
+  "before": {
+    "counts": {
+      "services": 12,
+      "projects": 12,
+      "drift_t1": 1,
+      "drift_t2": 1,
+      "drift_t3": 3,
+      "owner_gaps": 1,
+      "owner_conflicts": 1
+    },
+    "revision": 2
+  },
+  "after": {
+    "counts": {
+      "services": 13,
+      "projects": 12,
+      "drift_t1": 1,
+      "drift_t2": 1,
+      "drift_t3": 3,
+      "owner_gaps": 1,
+      "owner_conflicts": 1
+    },
+    "revision": 5,
+    "external": {
+      "service_id": "svc-external-portal",
+      "name": "External Portal",
+      "criticality": 3,
+      "depth": 3,
+      "paths": [
+        [
+          "svc-external-portal",
+          "svc-billing-api",
+          "svc-login-gateway",
+          "svc-auth-gateway"
+        ]
+      ],
+      "path_claim_ids": [
+        [
+          "claim-971c03bfe50420241802f8d2",
+          "claim-0b2160acde6623e6576a2435",
+          "claim-509cb005f4c9750a255b2a9f"
+        ]
+      ],
+      "alternative_path_count": 1,
+      "score": 45,
+      "priority": "P1",
+      "owner_status": "single_primary",
+      "owner_ids": [
+        "person-012"
+      ],
+      "ownership_claims": [
+        {
+          "owner_id": "person-012",
+          "name": "Lane Mehta",
+          "role": "primary",
+          "claim_id": "claim-54ac65276143907363058a37"
+        }
+      ],
+      "drift_ids": [],
+      "evidence_ids": [
+        "claim-0b2160acde6623e6576a2435",
+        "claim-509cb005f4c9750a255b2a9f",
+        "claim-54ac65276143907363058a37",
+        "claim-971c03bfe50420241802f8d2"
+      ]
+    }
+  },
+  "reverted": {
+    "counts": {
+      "services": 12,
+      "projects": 12,
+      "drift_t1": 1,
+      "drift_t2": 1,
+      "drift_t3": 3,
+      "owner_gaps": 1,
+      "owner_conflicts": 1
+    },
+    "revision": 6,
+    "status": "proposed"
+  },
+  "events": [
+    {
+      "seconds": 1.92,
+      "event": "Live proposed preview: 12 services; revision 2"
+    },
+    {
+      "seconds": 10.11,
+      "event": "Diamond path and conflicting owners"
+    },
+    {
+      "seconds": 15.62,
+      "event": "Source excerpt, SHA-256 and exact-span claims"
+    },
+    {
+      "seconds": 22.43,
+      "event": "Native full-text search and three distinct drift tiers"
+    },
+    {
+      "seconds": 28.13,
+      "event": "Deterministic rule investigation, real tool results, local draft tasks"
+    },
+    {
+      "seconds": 40.09,
+      "event": "Action board preserves unassigned and disputed owners"
+    },
+    {
+      "seconds": 46.89,
+      "event": "Separate authenticated local task approval"
+    },
+    {
+      "seconds": 50.22,
+      "event": "New synthetic ticket states External Portal depends on Billing API"
+    },
+    {
+      "seconds": 56.4,
+      "event": "Live Cypher changed: 12 to 13 affected services"
+    },
+    {
+      "seconds": 71.2,
+      "event": "Removing the source assertion retracts that support: 12 services, decision still proposed"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Live proposed preview: 12 services; revision 2
+Diamond path and conflicting owners
+Source excerpt, SHA-256 and exact-span claims
+Native full-text search and three distinct drift tiers
+Deterministic rule investigation, real tool results, local draft tasks
+Action board preserves unassigned and disputed owners
+Separate authenticated local task approval
+New synthetic ticket states External Portal depends on Billing API
+Live Cypher changed: 12 to 13 affected services
+Removing the source assertion retracts that support: 12 services, decision still proposed
+Native browser capture complete

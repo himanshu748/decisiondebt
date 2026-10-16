@@ -1,0 +1,8 @@
+{
+  "id": "ticket-062",
+  "title": "Login Gateway: handoff record",
+  "author_id": "person-014",
+  "created_at": "2026-06-01T10:00:00+05:30",
+  "last_reviewed_at": "2026-10-02T10:00:00+05:30",
+  "body": "Synthetic Aster Works ticket record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nBuild Worker calls Config API during request validation.\n\nUma Cole owns Metrics API.\n\nTaylor Roy is a member of Experience Team.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question."
+}

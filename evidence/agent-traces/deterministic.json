@@ -1,0 +1,642 @@
+{
+  "id": "run-7bf6265dc00f47b8a252f0089f2c9d3b",
+  "mode": "deterministic",
+  "model": "deterministic-rules-v1",
+  "provider": "local",
+  "decision_id": "dec-auth-002",
+  "status": "completed",
+  "started_at": "2026-10-16T08:40:31.148948+00:00",
+  "graph_revision": 1,
+  "trace": [
+    {
+      "tool": "investigate_ownership",
+      "args": {
+        "service_id": "svc-session-broker"
+      },
+      "at": "2026-10-16T08:40:31.149930+00:00",
+      "result": {
+        "owner_status": "conflict",
+        "owner_ids": [
+          "person-004",
+          "person-020"
+        ],
+        "ownership_claims": [
+          {
+            "owner_id": "person-004",
+            "name": "Devon Shah",
+            "role": "primary",
+            "claim_id": "claim-a95d41576b896f0d8b140a35"
+          },
+          {
+            "owner_id": "person-020",
+            "name": "Taylor Roy",
+            "role": "primary",
+            "claim_id": "claim-14c45e7d019b11ff49072d05"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "claim-a95d41576b896f0d8b140a35",
+            "status": "verified",
+            "source_id": "doc-021",
+            "relation": "OWNS",
+            "subject_id": "person-004",
+            "object_id": "svc-session-broker",
+            "source_revision_id": "rev-fb0448e7d488ef849c6c4fe7",
+            "anchor_field": "body",
+            "start": 203,
+            "end": 241,
+            "excerpt": "Session Broker is owned by Devon Shah.",
+            "method": "explicit_rule",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-14c45e7d019b11ff49072d05",
+            "status": "verified",
+            "source_id": "chat-077",
+            "relation": "OWNS",
+            "subject_id": "person-020",
+            "object_id": "svc-session-broker",
+            "source_revision_id": "rev-4852c5427e644c893e08c307",
+            "anchor_field": "body",
+            "start": 180,
+            "end": 211,
+            "excerpt": "Taylor Roy owns Session Broker.",
+            "method": "explicit_rule",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d",
+            "anchor_verified": true
+          }
+        ],
+        "evidence_ids": [
+          "claim-a95d41576b896f0d8b140a35",
+          "claim-14c45e7d019b11ff49072d05"
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 17.09
+    },
+    {
+      "tool": "read_evidence",
+      "args": {
+        "source_id": "doc-021",
+        "claim_ids": [
+          "claim-a95d41576b896f0d8b140a35"
+        ],
+        "max_chars": 500
+      },
+      "at": "2026-10-16T08:40:31.172391+00:00",
+      "result": {
+        "source_id": "doc-021",
+        "source_sha256": "2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590",
+        "untrusted_source_text": "Synthetic Aster Works doc record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nPartner Checkout uses Pricing Engine for its upstream contract.\n\nSession Broker is owned by Devon Shah.\n\nThis document describes Invoice Engine. Review the linked evidence before changing its operating procedure.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.\n",
+        "claims": [
+          {
+            "id": "claim-a95d41576b896f0d8b140a35",
+            "status": "verified",
+            "source_id": "doc-021",
+            "relation": "OWNS",
+            "subject_id": "person-004",
+            "object_id": "svc-session-broker",
+            "source_revision_id": "rev-fb0448e7d488ef849c6c4fe7",
+            "anchor_field": "body",
+            "start": 203,
+            "end": 241,
+            "excerpt": "Session Broker is owned by Devon Shah.",
+            "method": "explicit_rule",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "2e50d63296a73a8185eb621b12709917443fb876269671f346f2de03737b2590",
+            "anchor_verified": true
+          }
+        ],
+        "source_text_budget_remaining": 11931
+      },
+      "status": "ok",
+      "elapsed_ms": 44.16
+    },
+    {
+      "tool": "read_evidence",
+      "args": {
+        "source_id": "chat-077",
+        "claim_ids": [
+          "claim-14c45e7d019b11ff49072d05"
+        ],
+        "max_chars": 500
+      },
+      "at": "2026-10-16T08:40:31.224784+00:00",
+      "result": {
+        "source_id": "chat-077",
+        "source_sha256": "7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d",
+        "untrusted_source_text": "Synthetic Aster Works chat record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nExternal Portal is owned by Lane Mehta.\n\nTaylor Roy owns Session Broker. The support handoff names a different primary contact than the formal record; reconcile both before assigning work.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.",
+        "claims": [
+          {
+            "id": "claim-14c45e7d019b11ff49072d05",
+            "status": "verified",
+            "source_id": "chat-077",
+            "relation": "OWNS",
+            "subject_id": "person-020",
+            "object_id": "svc-session-broker",
+            "source_revision_id": "rev-4852c5427e644c893e08c307",
+            "anchor_field": "body",
+            "start": 180,
+            "end": 211,
+            "excerpt": "Taylor Roy owns Session Broker.",
+            "method": "explicit_rule",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "7ca42774b1b151820a2cf2a4b7a01a75fe5a732dd4014c75a7b87ea8d98cd96d",
+            "anchor_verified": true
+          }
+        ],
+        "source_text_budget_remaining": 11404
+      },
+      "status": "ok",
+      "elapsed_ms": 20.19
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-session-broker",
+        "kind": "verify_owner",
+        "title": "Verify primary ownership for Session Broker",
+        "reason": "Review source evidence before assigning work. Ownership is conflict.",
+        "evidence_ids": [
+          "claim-a95d41576b896f0d8b140a35",
+          "claim-14c45e7d019b11ff49072d05"
+        ],
+        "owner_id": null
+      },
+      "at": "2026-10-16T08:40:31.244998+00:00",
+      "result": {
+        "draft_task": {
+          "id": "task-0b8a62f3dd4769d03e467d96",
+          "decision_id": "dec-auth-002",
+          "service_id": "svc-session-broker",
+          "kind": "verify_owner",
+          "title": "Verify primary ownership for Session Broker",
+          "reason": "Review source evidence before assigning work. Ownership is conflict.",
+          "evidence_ids": [
+            "claim-a95d41576b896f0d8b140a35",
+            "claim-14c45e7d019b11ff49072d05"
+          ],
+          "owner_id": "",
+          "owner_status": "conflict",
+          "status": "proposed",
+          "priority": "P1",
+          "score": 65,
+          "analysis_revision": 1,
+          "path_json": "[\"svc-session-broker\", \"svc-identity-api\", \"svc-auth-gateway\"]",
+          "path_claim_ids": [
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ],
+          "uncertainty": ""
+        }
+      },
+      "status": "ok",
+      "elapsed_ms": 19.66
+    },
+    {
+      "tool": "investigate_ownership",
+      "args": {
+        "service_id": "svc-token-cache"
+      },
+      "at": "2026-10-16T08:40:31.264695+00:00",
+      "result": {
+        "owner_status": "unowned",
+        "owner_ids": [],
+        "ownership_claims": [],
+        "evidence": [],
+        "evidence_ids": []
+      },
+      "status": "ok",
+      "elapsed_ms": 5.86
+    },
+    {
+      "tool": "search_sources",
+      "args": {
+        "alias": "Token Cache",
+        "limit": 4
+      },
+      "at": "2026-10-16T08:40:31.270574+00:00",
+      "result": {
+        "sources": [
+          {
+            "source_id": "doc-005",
+            "title": "Token Cache: operating notes",
+            "kind": "doc",
+            "ft_score": 6.0,
+            "excerpt": "Token Cache",
+            "context": "ures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nToken Cache calls Session Broker during request validation.\n\nThis document describes Token Cache. Review the linked evidence before changing its operating procedure.\n\nKeep",
+            "start": 138,
+            "end": 149,
+            "source_sha256": "76d798a62a96d31cfc620cabe267fa18c475d8f3dc29bcfcaaf8576566079480",
+            "mention_id": "mention:doc-005:76d798a62a96d31cfc620cabe267fa18c475d8f3dc29bcfcaaf8576566079480:138:149",
+            "exact_match": true
+          },
+          {
+            "source_id": "chat-079",
+            "title": "Returns Service: handoff record",
+            "kind": "chat",
+            "ft_score": 4.0,
+            "excerpt": "Token Cache",
+            "context": "off for review. Names, systems and dates are fictional.\n\nI think Casey Park probably owns Token Cache. Token Cache may depend on External Portal. These are open questions, not assignments.\n\nKeep this record with the original context and source author so future ",
+            "start": 172,
+            "end": 183,
+            "source_sha256": "398d4db03a260768ac6ae707e76b7270f5ccfca554821d3a5040d771e6f8af04",
+            "mention_id": "mention:chat-079:398d4db03a260768ac6ae707e76b7270f5ccfca554821d3a5040d771e6f8af04:172:183",
+            "exact_match": true
+          },
+          {
+            "source_id": "doc-006",
+            "title": "Credential Vault: operating notes",
+            "kind": "doc",
+            "ft_score": 2.0,
+            "excerpt": "Token Cache",
+            "context": "ures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nToken Cache uses Credential Vault for its upstream contract.\n\nThis document describes Credential Vault. Review the linked evidence before changing its operating procedure.",
+            "start": 138,
+            "end": 149,
+            "source_sha256": "53fe941a796a11ef62b409087869ccfceef275f66afd5e7cc7c221ed5cd7449d",
+            "mention_id": "mention:doc-006:53fe941a796a11ef62b409087869ccfceef275f66afd5e7cc7c221ed5cd7449d:138:149",
+            "exact_match": true
+          },
+          {
+            "source_id": "doc-007",
+            "title": "Access Proxy: operating notes",
+            "kind": "doc",
+            "ft_score": 2.0,
+            "excerpt": "Token Cache",
+            "context": " handoff for review. Names, systems and dates are fictional.\n\nCredential Vault depends on Token Cache for the documented request flow.\n\nThis document describes Access Proxy. Review the linked evidence before changing its operating procedure.\n\nKeep this record w",
+            "start": 166,
+            "end": 177,
+            "source_sha256": "facde35eb698ad2431bc825975a1b5d3dfd482b496ab6f52a49d9c8983c5dff9",
+            "mention_id": "mention:doc-007:facde35eb698ad2431bc825975a1b5d3dfd482b496ab6f52a49d9c8983c5dff9:166:177",
+            "exact_match": true
+          }
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 76.56
+    },
+    {
+      "tool": "trace_dependency",
+      "args": {
+        "service_id": "svc-token-cache",
+        "max_hops": 5
+      },
+      "at": "2026-10-16T08:40:31.347154+00:00",
+      "result": {
+        "service_id": "svc-token-cache",
+        "depth": 3,
+        "paths": [
+          [
+            "svc-token-cache",
+            "svc-session-broker",
+            "svc-identity-api",
+            "svc-auth-gateway"
+          ],
+          [
+            "svc-token-cache",
+            "svc-session-broker",
+            "svc-login-gateway",
+            "svc-auth-gateway"
+          ],
+          [
+            "svc-token-cache",
+            "svc-credential-vault",
+            "svc-token-cache",
+            "svc-session-broker",
+            "svc-identity-api",
+            "svc-auth-gateway"
+          ]
+        ],
+        "path_claim_ids": [
+          [
+            "claim-c692f47033683572befa0b30",
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ],
+          [
+            "claim-c692f47033683572befa0b30",
+            "claim-0ff32af1aa8343172c979c3a",
+            "claim-509cb005f4c9750a255b2a9f"
+          ],
+          [
+            "claim-535fda068fafe46ec343e33e",
+            "claim-3a26cecaf3eafb107d6df567",
+            "claim-c692f47033683572befa0b30",
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ]
+        ],
+        "evidence_ids": [
+          "claim-0ff32af1aa8343172c979c3a",
+          "claim-244be9185948c365a6b206dc",
+          "claim-3a26cecaf3eafb107d6df567",
+          "claim-509cb005f4c9750a255b2a9f",
+          "claim-535fda068fafe46ec343e33e",
+          "claim-c692f47033683572befa0b30",
+          "claim-f329a336521bc8fa5ffd0dca"
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 4.08
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-token-cache",
+        "kind": "verify_owner",
+        "title": "Verify primary ownership for Token Cache",
+        "reason": "Review source evidence before assigning work. Ownership is unowned.",
+        "evidence_ids": [
+          "claim-0ff32af1aa8343172c979c3a"
+        ],
+        "owner_id": null
+      },
+      "at": "2026-10-16T08:40:31.351263+00:00",
+      "result": {
+        "draft_task": {
+          "id": "task-cc8f490dd9d585abf6ea8674",
+          "decision_id": "dec-auth-002",
+          "service_id": "svc-token-cache",
+          "kind": "verify_owner",
+          "title": "Verify primary ownership for Token Cache",
+          "reason": "Review source evidence before assigning work. Ownership is unowned.",
+          "evidence_ids": [
+            "claim-0ff32af1aa8343172c979c3a"
+          ],
+          "owner_id": "",
+          "owner_status": "unowned",
+          "status": "proposed",
+          "priority": "P1",
+          "score": 52,
+          "analysis_revision": 1,
+          "path_json": "[\"svc-token-cache\", \"svc-session-broker\", \"svc-identity-api\", \"svc-auth-gateway\"]",
+          "path_claim_ids": [
+            "claim-c692f47033683572befa0b30",
+            "claim-244be9185948c365a6b206dc",
+            "claim-f329a336521bc8fa5ffd0dca"
+          ],
+          "uncertainty": ""
+        }
+      },
+      "status": "ok",
+      "elapsed_ms": 20.66
+    },
+    {
+      "tool": "search_sources",
+      "args": {
+        "alias": "OrionAuth",
+        "kind": "doc",
+        "limit": 10
+      },
+      "at": "2026-10-16T08:40:31.372078+00:00",
+      "result": {
+        "sources": [
+          {
+            "source_id": "doc-002",
+            "title": "Login Gateway: operating notes",
+            "kind": "doc",
+            "ft_score": 1.0,
+            "excerpt": "OrionAuth",
+            "context": "s Login Gateway. Review the linked evidence before changing its operating procedure.\n\nThe OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.\n\nKeep",
+            "start": 310,
+            "end": 319,
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "mention_id": "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319",
+            "exact_match": true
+          },
+          {
+            "source_id": "doc-001",
+            "title": "Auth Gateway: operating notes",
+            "kind": "doc",
+            "ft_score": 0.8,
+            "excerpt": "OrionAuth",
+            "context": "e before changing its operating procedure.\n\nThis procedure follows decision dec-auth-001. OrionAuth remains the named legacy provider in this historical procedure.\n\nKeep this record with the original context and source author so future reviews can distinguish",
+            "start": 363,
+            "end": 372,
+            "source_sha256": "f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b",
+            "mention_id": "mention:doc-001:f48eeaaf47ad632fff8abbdcadc34cd9b434ae4f687a79f9bf33eb3011b0e25b:363:372",
+            "exact_match": true
+          }
+        ]
+      },
+      "status": "ok",
+      "elapsed_ms": 246.17
+    },
+    {
+      "tool": "read_evidence",
+      "args": {
+        "source_id": "doc-002",
+        "max_chars": 1000
+      },
+      "at": "2026-10-16T08:40:31.618261+00:00",
+      "result": {
+        "source_id": "doc-002",
+        "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+        "untrusted_source_text": "Synthetic Aster Works doc record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nIdentity API calls Auth Gateway during request validation.\n\nThis document describes Login Gateway. Review the linked evidence before changing its operating procedure.\n\nThe OrionAuth token rotation checklist is still pinned here. This mention alone does not establish a provider dependency. Ask the runbook reviewer to verify its scope.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question.\n",
+        "claims": [
+          {
+            "id": "claim-2194ad61d74e55ea3f16d5e4",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "AUTHORED",
+            "subject_id": "person-002",
+            "object_id": "doc-002",
+            "source_revision_id": "rev-f9b78422c20747d8964322e7",
+            "anchor_field": "raw_text",
+            "start": 54,
+            "end": 75,
+            "excerpt": "author_id: person-002",
+            "method": "metadata",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-497235829aed4ac6e94ef50c",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "DESCRIBES",
+            "subject_id": "doc-002",
+            "object_id": "svc-login-gateway",
+            "source_revision_id": "rev-f9b78422c20747d8964322e7",
+            "anchor_field": "body",
+            "start": 198,
+            "end": 236,
+            "excerpt": "This document describes Login Gateway.",
+            "method": "explicit_rule",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          },
+          {
+            "id": "claim-f329a336521bc8fa5ffd0dca",
+            "status": "verified",
+            "source_id": "doc-002",
+            "relation": "DEPENDS_ON",
+            "subject_id": "svc-identity-api",
+            "object_id": "svc-auth-gateway",
+            "source_revision_id": "rev-f9b78422c20747d8964322e7",
+            "anchor_field": "body",
+            "start": 138,
+            "end": 196,
+            "excerpt": "Identity API calls Auth Gateway during request validation.",
+            "method": "explicit_rule",
+            "confidence": 1.0,
+            "uncertainty": "",
+            "source_sha256": "dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585",
+            "anchor_verified": true
+          }
+        ],
+        "source_text_budget_remaining": 9284
+      },
+      "status": "ok",
+      "elapsed_ms": 94.4
+    },
+    {
+      "tool": "propose_remediation",
+      "args": {
+        "service_id": "svc-login-gateway",
+        "kind": "review_doc",
+        "title": "Review possible obsolete OrionAuth mention",
+        "reason": "Verify this unlinked mention with the document reviewer. It does not prove an implementation dependency.",
+        "evidence_ids": [
+          "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319"
+        ],
+        "owner_id": null
+      },
+      "at": "2026-10-16T08:40:31.712695+00:00",
+      "result": {
+        "draft_task": {
+          "id": "task-6f1199cf1b748f89d49a0c02",
+          "decision_id": "dec-auth-002",
+          "service_id": "svc-login-gateway",
+          "kind": "review_doc",
+          "title": "Review possible obsolete OrionAuth mention",
+          "reason": "Verify this unlinked mention with the document reviewer. It does not prove an implementation dependency.",
+          "evidence_ids": [
+            "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319"
+          ],
+          "owner_id": "",
+          "owner_status": "single_primary",
+          "status": "proposed",
+          "priority": "P1",
+          "score": 61,
+          "analysis_revision": 1,
+          "path_json": "[\"svc-login-gateway\", \"svc-auth-gateway\"]",
+          "path_claim_ids": [
+            "claim-509cb005f4c9750a255b2a9f"
+          ],
+          "uncertainty": "suspected_drift"
+        }
+      },
+      "status": "ok",
+      "elapsed_ms": 28.63
+    },
+    {
+      "tool": "abstain",
+      "args": {
+        "target_id": "svc-token-cache",
+        "reason": "No verified primary owner exists. I abstain from assigning a person.",
+        "evidence_ids": []
+      },
+      "at": "2026-10-16T08:40:31.741370+00:00",
+      "result": {
+        "abstention": {
+          "target_id": "svc-token-cache",
+          "reason": "No verified primary owner exists. I abstain from assigning a person.",
+          "evidence_ids": []
+        }
+      },
+      "status": "ok",
+      "elapsed_ms": 16.07
+    }
+  ],
+  "tool_calls": 12,
+  "turns": 0,
+  "usage_json": "{}",
+  "elapsed_ms": 608.59,
+  "source_chars": 3445,
+  "tasks": [
+    {
+      "id": "task-0b8a62f3dd4769d03e467d96",
+      "decision_id": "dec-auth-002",
+      "service_id": "svc-session-broker",
+      "kind": "verify_owner",
+      "title": "Verify primary ownership for Session Broker",
+      "reason": "Review source evidence before assigning work. Ownership is conflict.",
+      "evidence_ids": [
+        "claim-a95d41576b896f0d8b140a35",
+        "claim-14c45e7d019b11ff49072d05"
+      ],
+      "owner_id": "",
+      "owner_status": "conflict",
+      "status": "proposed",
+      "priority": "P1",
+      "score": 65,
+      "analysis_revision": 1,
+      "path_json": "[\"svc-session-broker\", \"svc-identity-api\", \"svc-auth-gateway\"]",
+      "path_claim_ids": [
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ],
+      "uncertainty": ""
+    },
+    {
+      "id": "task-cc8f490dd9d585abf6ea8674",
+      "decision_id": "dec-auth-002",
+      "service_id": "svc-token-cache",
+      "kind": "verify_owner",
+      "title": "Verify primary ownership for Token Cache",
+      "reason": "Review source evidence before assigning work. Ownership is unowned.",
+      "evidence_ids": [
+        "claim-0ff32af1aa8343172c979c3a"
+      ],
+      "owner_id": "",
+      "owner_status": "unowned",
+      "status": "proposed",
+      "priority": "P1",
+      "score": 52,
+      "analysis_revision": 1,
+      "path_json": "[\"svc-token-cache\", \"svc-session-broker\", \"svc-identity-api\", \"svc-auth-gateway\"]",
+      "path_claim_ids": [
+        "claim-c692f47033683572befa0b30",
+        "claim-244be9185948c365a6b206dc",
+        "claim-f329a336521bc8fa5ffd0dca"
+      ],
+      "uncertainty": ""
+    },
+    {
+      "id": "task-6f1199cf1b748f89d49a0c02",
+      "decision_id": "dec-auth-002",
+      "service_id": "svc-login-gateway",
+      "kind": "review_doc",
+      "title": "Review possible obsolete OrionAuth mention",
+      "reason": "Verify this unlinked mention with the document reviewer. It does not prove an implementation dependency.",
+      "evidence_ids": [
+        "mention:doc-002:dabc7916cff16b82507871a52ca2976ec0e4195dd900a94acc16af880d7f2585:310:319"
+      ],
+      "owner_id": "",
+      "owner_status": "single_primary",
+      "status": "proposed",
+      "priority": "P1",
+      "score": 61,
+      "analysis_revision": 1,
+      "path_json": "[\"svc-login-gateway\", \"svc-auth-gateway\"]",
+      "path_claim_ids": [
+        "claim-509cb005f4c9750a255b2a9f"
+      ],
+      "uncertainty": "suspected_drift"
+    }
+  ],
+  "saved_revision": 2
+}

@@ -1,0 +1,15 @@
+name: decisiondebt
+services:
+  db:
+    container_name: decisiondebt-db
+    image: falkordb/falkordb:6.0.2
+    ports:
+      - "127.0.0.1:16380:6379"
+    environment:
+      REDIS_ARGS: "--appendonly yes --appendfsync everysec"
+    volumes:
+      - decisiondebt-data:/data
+    restart: unless-stopped
+volumes:
+  decisiondebt-data:
+    name: decisiondebt-data

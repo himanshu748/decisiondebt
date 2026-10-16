@@ -1,0 +1,94 @@
+ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.0.123.102)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.1.2_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      60. 26.102 / 60. 26.102
+  libavcodec     62. 28.102 / 62. 28.102
+  libavformat    62. 12.102 / 62. 12.102
+  libavdevice    62.  3.102 / 62.  3.102
+  libavfilter    11. 14.102 / 11. 14.102
+  libswscale      9.  5.102 /  9.  5.102
+  libswresample   6.  3.102 /  6.  3.102
+Input #0, matroska,webm, from 'evidence/decisiondebt-demo.webm':
+  Metadata:
+    ENCODER         : Lavf61.1.100
+  Duration: 00:01:37.80, start: 0.000000, bitrate: 569 kb/s
+  Stream #0:0(eng): Video: vp8, yuv420p(progressive), 1280x960, SAR 1:1 DAR 4:3, 25 fps, 25 tbr, 1k tbn (default)
+    Metadata:
+      ENCODER         : Lavc61.3.100 libvpx
+      DURATION        : 00:01:37.800000000
+Input #1, srt, from 'evidence/demo.srt':
+  Duration: N/A, bitrate: N/A
+  Stream #1:0: Subtitle: subrip (srt)
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp8 (native) -> h264 (libx264))
+  Stream #1:0 -> #0:1 (subrip (srt) -> mov_text (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x7acc3d180] using SAR=1/1
+[libx264 @ 0x7acc3d180] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[libx264 @ 0x7acc3d180] profile High, level 3.2, 4:2:0, 8-bit
+[libx264 @ 0x7acc3d180] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=15 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'evidence/decisiondebt-demo.mp4':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 1280x960 [SAR 1:1 DAR 4:3], q=2-31, 25 fps, 12800 tbn (default)
+    Metadata:
+      encoder         : Lavc62.28.102 libx264
+      DURATION        : 00:01:37.800000000
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Subtitle: mov_text (tx3g / 0x67337874) (default)
+    Metadata:
+      encoder         : Lavc62.28.102 mov_text
+      title           : Synthetic data, live graph, deterministic investigation
+frame=  122 fps=0.0 q=28.0 size=       0KiB time=00:00:04.80 bitrate=   0.1kbits/s speed=9.52x elapsed=0:00:00.50
+frame=  200 fps=199 q=28.0 size=       0KiB time=00:00:07.92 bitrate=   0.0kbits/s speed=7.88x elapsed=0:00:01.00
+frame=  271 fps=180 q=28.0 size=     256KiB time=00:00:10.76 bitrate= 194.9kbits/s speed=7.14x elapsed=0:00:01.50
+frame=  365 fps=181 q=28.0 size=     256KiB time=00:00:14.52 bitrate= 144.5kbits/s speed=7.22x elapsed=0:00:02.01
+frame=  448 fps=178 q=28.0 size=     256KiB time=00:00:17.84 bitrate= 117.6kbits/s speed=7.09x elapsed=0:00:02.51
+frame=  524 fps=173 q=28.0 size=     256KiB time=00:00:20.88 bitrate= 100.5kbits/s speed=6.91x elapsed=0:00:03.02
+frame=  596 fps=169 q=28.0 size=     256KiB time=00:00:23.76 bitrate=  88.3kbits/s speed=6.74x elapsed=0:00:03.52
+frame=  658 fps=163 q=28.0 size=     256KiB time=00:00:26.24 bitrate=  79.9kbits/s speed=6.51x elapsed=0:00:04.03
+frame=  709 fps=156 q=28.0 size=     512KiB time=00:00:28.28 bitrate= 148.3kbits/s speed=6.24x elapsed=0:00:04.53
+frame=  782 fps=155 q=28.0 size=     512KiB time=00:00:31.20 bitrate= 134.4kbits/s speed= 6.2x elapsed=0:00:05.03
+frame=  857 fps=155 q=28.0 size=     512KiB time=00:00:34.20 bitrate= 122.7kbits/s speed=6.17x elapsed=0:00:05.54
+frame=  930 fps=154 q=28.0 size=     512KiB time=00:00:37.12 bitrate= 113.0kbits/s speed=6.14x elapsed=0:00:06.04
+frame=  995 fps=152 q=28.0 size=     768KiB time=00:00:39.72 bitrate= 158.4kbits/s speed=6.06x elapsed=0:00:06.55
+frame= 1063 fps=151 q=28.0 size=     768KiB time=00:00:42.44 bitrate= 148.3kbits/s speed=6.01x elapsed=0:00:07.05
+frame= 1147 fps=152 q=28.0 size=     768KiB time=00:00:45.80 bitrate= 137.4kbits/s speed=6.06x elapsed=0:00:07.56
+frame= 1222 fps=152 q=28.0 size=     768KiB time=00:00:48.80 bitrate= 128.9kbits/s speed=6.05x elapsed=0:00:08.06
+frame= 1282 fps=149 q=28.0 size=    1024KiB time=00:00:51.20 bitrate= 163.8kbits/s speed=5.97x elapsed=0:00:08.57
+frame= 1362 fps=150 q=28.0 size=    1024KiB time=00:00:54.40 bitrate= 154.2kbits/s speed=5.99x elapsed=0:00:09.07
+frame= 1441 fps=150 q=28.0 size=    1024KiB time=00:00:57.56 bitrate= 145.7kbits/s speed=6.01x elapsed=0:00:09.57
+frame= 1522 fps=151 q=28.0 size=    1024KiB time=00:01:00.80 bitrate= 138.0kbits/s speed=6.03x elapsed=0:00:10.08
+frame= 1590 fps=150 q=28.0 size=    1024KiB time=00:01:03.52 bitrate= 132.1kbits/s speed=   6x elapsed=0:00:10.59
+frame= 1662 fps=150 q=28.0 size=    1280KiB time=00:01:06.40 bitrate= 157.9kbits/s speed=5.98x elapsed=0:00:11.09
+frame= 1750 fps=151 q=28.0 size=    1280KiB time=00:01:09.92 bitrate= 150.0kbits/s speed=6.03x elapsed=0:00:11.60
+frame= 1818 fps=150 q=28.0 size=    1536KiB time=00:01:12.64 bitrate= 173.2kbits/s speed=   6x elapsed=0:00:12.11
+frame= 1894 fps=150 q=28.0 size=    1536KiB time=00:01:15.68 bitrate= 166.3kbits/s speed=   6x elapsed=0:00:12.61
+frame= 1978 fps=151 q=28.0 size=    1536KiB time=00:01:19.04 bitrate= 159.2kbits/s speed=6.02x elapsed=0:00:13.12
+frame= 2062 fps=151 q=28.0 size=    1536KiB time=00:01:22.40 bitrate= 152.7kbits/s speed=6.05x elapsed=0:00:13.62
+frame= 2146 fps=152 q=28.0 size=    1536KiB time=00:01:25.76 bitrate= 146.7kbits/s speed=6.07x elapsed=0:00:14.12
+frame= 2227 fps=152 q=28.0 size=    1536KiB time=00:01:29.00 bitrate= 141.4kbits/s speed=6.08x elapsed=0:00:14.62
+frame= 2312 fps=153 q=28.0 size=    1536KiB time=00:01:32.44 bitrate= 136.1kbits/s speed=6.11x elapsed=0:00:15.13
+frame= 2424 fps=155 q=28.0 size=    1536KiB time=00:01:37.00 bitrate= 129.7kbits/s speed= 6.2x elapsed=0:00:15.63
+[mp4 @ 0x7acc2c500] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0x7ad04c0c0] video:1875KiB audio:0KiB subtitle:1KiB other streams:0KiB global headers:0KiB muxing overhead: 1.619436%
+frame= 2445 fps=156 q=-1.0 Lsize=    1907KiB time=00:01:30.00 bitrate= 173.5kbits/s speed=5.73x elapsed=0:00:15.71
+[libx264 @ 0x7acc3d180] frame I:19    Avg QP:12.79  size: 34970
+[libx264 @ 0x7acc3d180] frame P:620   Avg QP:15.88  size:  1276
+[libx264 @ 0x7acc3d180] frame B:1806  Avg QP:13.40  size:   257
+[libx264 @ 0x7acc3d180] consecutive B-frames:  1.3%  0.3%  1.2% 97.2%
+[libx264 @ 0x7acc3d180] mb I  I16..4: 57.8% 30.9% 11.3%
+[libx264 @ 0x7acc3d180] mb P  I16..4:  1.8%  1.5%  0.2%  P16..4:  2.3%  0.1%  0.1%  0.0%  0.0%    skip:94.0%
+[libx264 @ 0x7acc3d180] mb B  I16..4:  0.4%  0.1%  0.0%  B16..8:  0.2%  0.0%  0.0%  direct: 1.6%  skip:97.6%  L0:43.9% L1:54.6% BI: 1.5%
+[libx264 @ 0x7acc3d180] 8x8 transform intra:33.2% inter:47.3%
+[libx264 @ 0x7acc3d180] coded y,uvDC,uvAC intra: 8.1% 10.6% 6.2% inter: 0.2% 1.6% 0.0%
+[libx264 @ 0x7acc3d180] i16 v,h,dc,p: 63% 32%  5%  0%
+[libx264 @ 0x7acc3d180] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 40% 19% 39%  0%  0%  0%  0%  0%  1%
+[libx264 @ 0x7acc3d180] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 33% 22%  2%  2%  2%  4%  2%  4%
+[libx264 @ 0x7acc3d180] i8c dc,h,v,p: 66% 26%  8%  0%
+[libx264 @ 0x7acc3d180] Weighted P-Frames: Y:0.8% UV:0.3%
+[libx264 @ 0x7acc3d180] ref P L0: 62.0% 38.0%
+[libx264 @ 0x7acc3d180] ref B L0: 81.8% 18.2%
+[libx264 @ 0x7acc3d180] ref B L1: 91.4%  8.6%
+[libx264 @ 0x7acc3d180] kb/s:157.02

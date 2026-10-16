@@ -1,0 +1,23 @@
+{
+  "spec_procedure": {
+    "cypher": "CALL db.idx.fulltext.createNodeIndex('Source','title','body')",
+    "error": "ResponseError",
+    "message": "Received 3 arguments to procedure 'db.idx.fulltext.createNodeIndex', expected at most 1"
+  },
+  "ddl": {
+    "cypher": "CREATE FULLTEXT INDEX FOR (s:Source) ON (s.title,s.body)",
+    "rows": []
+  },
+  "native_search": {
+    "cypher": "CALL db.idx.fulltext.queryNodes('Source',$term) YIELD node,score RETURN node.id AS id,score",
+    "params": {
+      "term": "OrionAuth"
+    },
+    "rows": [
+      {
+        "id": "smoke",
+        "score": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "ticket-058",
+  "title": "Edge Router: handoff record",
+  "author_id": "person-010",
+  "created_at": "2026-06-01T10:00:00+05:30",
+  "last_reviewed_at": "2026-10-02T10:00:00+05:30",
+  "body": "Synthetic Aster Works ticket record. This note captures an explicit engineering handoff for review. Names, systems and dates are fictional.\n\nInsight Scheduler depends on Event Collector for the documented request flow.\n\nQuinn Ray owns Event Collector.\n\nParker Gill is a member of Delivery Team.\n\nKeep this record with the original context and source author so future reviews can distinguish an assertion from an unresolved question."
+}
