@@ -2,6 +2,8 @@
 
 import json
 import hashlib
+import argparse
+from datetime import datetime, timezone
 import re
 import sys
 from pathlib import Path
@@ -15,7 +17,7 @@ from backend.app.domain.evidence import claim_evidence
 from backend.app.agent.proof import llm_proof
 
 
-def verify():
+def verify(output=None, test_log=None):
     checks = {}
     limitations = []
     required = [
@@ -41,17 +43,25 @@ def verify():
         "evidence/agent-traces/llm-run.json",
         "evidence/agent-traces/llm-proof.json",
         "evidence/demo-v2/manifest.json",
+        "docs/submission.md",
+        ".github/workflows/ci.yml",
     ]
     checks["required_files"] = all(
         (ROOT / p).is_file() and (ROOT / p).stat().st_size > 0 for p in required
     )
     missing = [p for p in required if not (ROOT / p).is_file()]
     broken = []
-    for doc in ["README.md", "DECISIONS.md", "LEARNING.md", "DEMO.md"]:
+    for doc in [
+        "README.md",
+        "DECISIONS.md",
+        "LEARNING.md",
+        "DEMO.md",
+        "docs/submission.md",
+    ]:
         for link in re.findall(r"\]\(([^)]+)\)", (ROOT / doc).read_text()):
             if (
                 not link.startswith(("http:", "https:", "#"))
-                and not (ROOT / link.split("#")[0]).exists()
+                and not (ROOT / doc).parent.joinpath(link.split("#")[0]).exists()
             ):
                 broken.append(f"{doc}: {link}")
     checks["local_document_links"] = not broken
@@ -84,7 +94,7 @@ def verify():
         (ROOT / "evidence/test-results/precision-recall.json").read_text()
     )
     checks["precision_recall"] = score["precision"] == 1 and score["recall"] >= 0.95
-    log = (ROOT / "evidence/test-results/pytest.txt").read_text()
+    log = (test_log or ROOT / "evidence/test-results/pytest.txt").read_text()
     test_result = re.search(r"(\d+) passed", log)
     checks["pytest"] = bool(test_result) and not re.search(
         r"\d+ (failed|errors?)\b", log
@@ -158,12 +168,13 @@ def verify():
         )
     limitations.extend(
         [
-            "No public deployment or portal submission was performed. Repository publication is a separate Git operation.",
+            "Public read-only deployment and video publication have separate receipts. The event form has not been submitted.",
             "Single API worker only; CLI ingestion requires API stopped.",
             "Extraction accuracy is measured on the synthetic fixture, not arbitrary enterprise language.",
         ]
     )
     report = dict(
+        checked_at=datetime.now(timezone.utc).isoformat(),
         status="local_checks_pass" if all(checks.values()) else "incomplete",
         checks=checks,
         missing=missing,
@@ -193,12 +204,22 @@ def verify():
         },
         limitations=limitations,
     )
-    (ROOT / "evidence/submission-report.json").write_text(
-        json.dumps(report, indent=2) + "\n"
-    )
+    destination = output or ROOT / "work/verification-report.json"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report, indent=2))
     return 0 if all(checks.values()) else 1
 
 
 if __name__ == "__main__":
-    raise SystemExit(verify())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--output",
+        type=Path,
+        help="Write a new report without replacing historical evidence",
+    )
+    parser.add_argument(
+        "--test-log", type=Path, help="Read a separately labeled current test run"
+    )
+    args = parser.parse_args()
+    raise SystemExit(verify(args.output, args.test_log))

@@ -1,6 +1,6 @@
 # DecisionDebt implementation decisions
 
-Aster Works and all source records are synthetic. Measurements below describe this machine and this repository, not a hosted deployment.
+Aster Works and all source records are synthetic. The initial measurements below describe the local build; the separately labeled public deployment and CI receipts are linked in the final entry.
 
 ## Frozen choices
 
@@ -65,3 +65,13 @@ Public mode is supported in code and tested locally. The user explicitly approve
 See [investigation findings](evidence/LLM-INVESTIGATION.md), [provider proof](evidence/agent-traces/llm-proof.json) and [capture manifest](evidence/demo-v2/manifest.json).
 
 The outcome-stage tool restriction is applied per provider response: completing coverage during a batch does not revoke tools already offered in that response. The next turn receives the narrowed tool set. Both single-call and batched retrieval variants pass the eight-turn regression.
+
+## Public deployment and CI — 2026-10-16
+
+The owner requested a separate read-only service on the existing Lightsail host. DecisionDebt uses its own API container, FalkorDB 6.0.2 container, `decisiondebt_public` graph, network and volume, with public HTTP on port 8081. This preserves EmbodiWeave's existing HTTPS proxy and ports 80/443. The [deployment receipt](evidence/deployment/receipt-20261016.json) records the source commit, runtime identities, absence of credentials and actual database outage/restart; the before/after EmbodiWeave identities and start times match during that outage test. The [isolation review](evidence/deployment/isolation-review-20261016.json) records that EmbodiWeave changed between the original preflight and the later test; its cause was not established by DecisionDebt checks.
+
+Public mode discards provider/admin credentials and rejects all admin routes and non-read methods before graph or provider work. Per-peer and global token buckets bound public API work. Uvicorn does not trust forwarded headers. The [public smoke receipt](evidence/deployment/public-smoke-20261016.json) records 403 write denials, 429 with `Retry-After`, live native search and unchanged revision. The deployed graph copies the [recorded synthetic snapshot](evidence/deployment/snapshot-export-20261016.json); seeding makes no provider request and refuses to overwrite a populated graph.
+
+CI starts the pinned graph service, builds the frontend, runs the full pytest suite including outage/restart, then runs Chromium smoke against credential-free public mode. The first workflow placed a service-container expression at job scope; moving it to the test step fixed validation. The [successful CI run](evidence/ci/run-38896361671.json) and [test output](evidence/ci/38896361671/pytest.txt) record the actual result. New local, CI and deployed runs have separate evidence paths; historical measurements are preserved.
+
+The owner requested upload of the existing demo. It was uploaded unchanged as an unlisted YouTube video, matching the latest entries on the channel, with its existing English SRT captions and a description containing the repository, live URL and chapters. No narration was added. The [upload receipt](evidence/youtube/upload-20261016.json) records persisted visibility and captioned playback. Participant contribution statements remain TODO fields in README; automated implementation or verification is not attributed to the participant.
