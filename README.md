@@ -2,7 +2,7 @@
 
 **Know what a decision breaks before you make it**
 
-**[Live demo](http://decisiondebt.52.202.25.181.sslip.io:8081/) · [Video](https://youtu.be/_9faaH35xPI) · [Public repository](https://github.com/himanshu748/decisiondebt)**
+**[Live demo](http://decisiondebt.52.202.25.181.sslip.io:8081/) · [Video · 2:57](https://youtu.be/_a0vrYwOlME) · [Public repository](https://github.com/himanshu748/decisiondebt)**
 
 **Track: Company Brain (Track 03)** — WeMakeDevs x FalkorDB Graph Hacks
 
@@ -132,9 +132,15 @@ python tools/smoke_public.py --url http://127.0.0.1:8081 \
 
 Seed only an empty `decisiondebt_public` graph; the importer refuses to overwrite existing state. The default separate volume persists across container restarts. Use `DD_BIND_ADDRESS=127.0.0.1` before Compose when keeping this instance local. The image's `/api/health` check validates the graph, public mode and disabled provider.
 
-## The 90-second story
+## The narrated 4K walkthrough
 
-See [DEMO.md](DEMO.md) for exact actions and narration. The 90-second [demo](evidence/decisiondebt-demo.mp4) is an edited walkthrough of actual redesigned browser captures and the recorded genuine provider run. Its [capture manifest](evidence/demo-v2/manifest.json) retains source frame hashes and capture times. The [YouTube upload receipt](evidence/youtube/upload-20261016.json) records unlisted publication, the original file hash and verified English-caption playback. The [quality review](evidence/youtube/quality-review-20261016.json) records a 1280×960 source and YouTube playback currently capped at 720p; small dashboard text is a presentation limitation. The original continuous browser video remains in the archive, labeled as original UI and deterministic.
+The **2:57.4** [4K screen recording](evidence/demo-v3/decisiondebt-demo-4k-under3.mp4) captures actual browser interaction at **3840×2160, 30 fps**, with close-ups, **Deepgram Aura-2 Thalia AI narration**, and [word-timed English captions](evidence/demo-v3/captions-under3.en.srt). The [native capture receipt](evidence/demo-v3/capture-receipt.json), [final edit receipt](evidence/demo-v3/under3-edit-receipt.json), and [speech verification](evidence/demo-v3/speech-verification-under3.json) record how it was produced. The [video verification](evidence/demo-v3/verification.json) records the delivered file and historical-evidence hashes.
+
+Local approval and import/retraction were performed in a separate recording database seeded from the unchanged synthetic snapshot. The genuine provider investigation is the previously recorded run displayed in the UI; the new recording makes no LLM call. Automated browser actions are not participant verification.
+
+[YouTube publication and 2160p playback receipt](evidence/demo-v3/youtube-upload-receipt.json) confirms the new unlisted upload, English captions and selected 2160p playback.
+
+The previous [silent 90-second cut](evidence/decisiondebt-demo.mp4), [its YouTube upload](https://youtu.be/_9faaH35xPI), [capture manifest](evidence/demo-v2/manifest.json), [upload receipt](evidence/youtube/upload-20261016.json), and [historical walkthrough](DEMO.md) remain unchanged. Earlier measurements and source evidence are retained in their original paths.
 
 1. Preview `dec-auth-002` while it remains proposed. `dec-auth-001` stays accepted, with no `SUPERSEDES` edge until explicit acceptance.
 2. Select Session Broker. Its two actual claim-backed paths form a diamond. Token Cache exposes a missing owner; Session Broker has competing primary owners.

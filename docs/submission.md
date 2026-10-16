@@ -10,7 +10,7 @@ DecisionDebt connects a company's people, teams, projects, services, documents a
 |---|---|
 | Public repository | https://github.com/himanshu748/decisiondebt |
 | Live read-only demo | http://decisiondebt.52.202.25.181.sslip.io:8081/ |
-| YouTube demo, unlisted | https://youtu.be/_9faaH35xPI |
+| YouTube demo, unlisted · 2:57 | https://youtu.be/_a0vrYwOlME |
 | Complete local setup | [README: Run locally](../README.md#run-locally) |
 | Graph data model | [README: Graph model](../README.md#graph-model) |
 | Product Cypher queries | [Actual query templates](../backend/app/graph/queries.py) |
@@ -33,7 +33,11 @@ The [deployment receipt](../evidence/deployment/receipt-20261016.json) records t
 
 [CI test output](../evidence/ci/38896361671/pytest.txt) records 46 passing tests. The [successful run receipt](../evidence/ci/run-38896361671.json) also verifies the frontend build and Chromium UI smoke. New runs are labeled separately; earlier measured evidence remains unchanged.
 
-The video is the original silent, captioned MP4, uploaded unchanged. It is an edited walkthrough of actual browser captures; local write demonstrations are recorded, while the live site permits reads only. [Capture manifest](../evidence/demo-v2/manifest.json) · [Original MP4](../evidence/decisiondebt-demo.mp4). The [quality review](../evidence/youtube/quality-review-20261016.json) records the 1280×960 source and currently available 720p playback; dense dashboard text can be difficult to read.
+The **2:57.4** [narrated 4K demo](../evidence/demo-v3/decisiondebt-demo-4k-under3.mp4) uses actual browser video captured at 3840×2160 and 30 fps, with close-ups and Deepgram AI narration. It shows live source inspection, the previously recorded genuine LLM trace, local task approval, and a new import/retraction demonstration in an isolated synthetic recording database. The public site permits reads only. Automated recording actions are not attributed to the participant as personal verification. [Capture receipt](../evidence/demo-v3/capture-receipt.json) · [Edit receipt](../evidence/demo-v3/under3-edit-receipt.json) · [Speech verification](../evidence/demo-v3/speech-verification-under3.json) · [Video and preservation verification](../evidence/demo-v3/verification.json).
+
+[YouTube publication and 2160p playback receipt](../evidence/demo-v3/youtube-upload-receipt.json) confirms the new unlisted upload, English captions and selected 2160p playback.
+
+The [previous silent MP4](../evidence/decisiondebt-demo.mp4), [historical capture manifest](../evidence/demo-v2/manifest.json), and all earlier measured evidence remain unchanged.
 
 ## AI disclosure and participant completion
 
