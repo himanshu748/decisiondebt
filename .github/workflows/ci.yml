@@ -1,0 +1,92 @@
+name: DecisionDebt CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      falkordb:
+        image: falkordb/falkordb:6.0.2
+        ports: ["16380:6379"]
+        env:
+          REDIS_ARGS: "--appendonly yes --appendfsync everysec"
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 20
+    env:
+      DD_GRAPH_HOST: 127.0.0.1
+      DD_GRAPH_PORT: "16380"
+      DD_GRAPH_NAME: decisiondebt
+      DD_AGENT_MODE: deterministic
+      DD_LLM_API_KEY: ""
+      ADMIN_TOKEN: ci-only-local-admin-placeholder
+      DD_TEST_EVIDENCE_DIR: work/ci-evidence
+      DD_LIFECYCLE_RECEIPT: work/ci-evidence/lifecycle.json
+      DD_TEST_DB_CONTAINER: ${{ job.services.falkordb.id }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install backend and build frontend
+        run: |
+          mkdir -p work/ci-evidence
+          python -m pip install -r requirements.txt
+          npm ci --prefix web
+          npm run build --prefix web | tee work/ci-evidence/web-build.txt
+      - name: Seed synthetic corpus and prove native database operations
+        run: |
+          python tools/ingest.py > work/ci-evidence/ingest.json
+          python tools/smoke_falkordb.py > work/ci-evidence/db-smoke.json
+          python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-proxy-headers > work/ci-evidence/api.log 2>&1 &
+          echo $! > work/ci-evidence/api.pid
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8000/api/health > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:8000/api/health > work/ci-evidence/health.json
+      - name: Pytest including real outage and restart persistence
+        env:
+          DD_TEST_LIFECYCLE: "1"
+        run: python -m pytest -q --junitxml=work/ci-evidence/pytest.xml | tee work/ci-evidence/pytest.txt
+      - name: Start credential-free public mode
+        run: |
+          kill "$(cat work/ci-evidence/api.pid)"
+          DD_MODE=public-readonly python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8001 --workers 1 --no-proxy-headers > work/ci-evidence/public-api.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8001/api/health > /dev/null; then break; fi
+            sleep 1
+          done
+      - name: Chromium UI smoke at desktop and mobile
+        working-directory: web
+        env:
+          DD_BASE_URL: http://127.0.0.1:8001
+          DD_UI_OUTPUT: ../work/ci-evidence/ui
+          DD_UI_REPORT: ../work/ci-evidence/ui-report.json
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test
+      - name: Upload separately labeled CI evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ci-evidence-${{ github.sha }}
+          path: work/ci-evidence
+          retention-days: 14

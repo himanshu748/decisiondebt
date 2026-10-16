@@ -1,4 +1,6 @@
 import json
+import os
+from pathlib import Path
 from backend.app.settings import ROOT
 from backend.app.ingest.entities import Catalog
 from backend.app.ingest.parsers import load_directory
@@ -32,7 +34,9 @@ def test_precision_recall():
         false_positives=sorted(actual - expected),
         false_negatives=sorted(expected - actual),
     )
-    (ROOT / "evidence/test-results/precision-recall.json").write_text(
+    destination = Path(os.getenv("DD_TEST_EVIDENCE_DIR", ROOT / "work/test-evidence"))
+    destination.mkdir(parents=True, exist_ok=True)
+    (destination / "precision-recall.json").write_text(
         json.dumps(report, indent=2) + "\n"
     )
     assert precision == 1, report

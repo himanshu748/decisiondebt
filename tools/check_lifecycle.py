@@ -1,6 +1,7 @@
 """Explicit local-only outage/restart proof for the dedicated DecisionDebt container."""
 
 import json
+import os
 import subprocess
 import sys
 import time
@@ -14,13 +15,17 @@ from backend.app.domain.company import summary
 
 if __name__ == "__main__":
     receipt = {}
-    client = httpx.Client(base_url="http://127.0.0.1:8000", timeout=45)
+    container = os.getenv("DD_TEST_DB_CONTAINER", "decisiondebt-db")
+    receipt_path = Path(
+        os.getenv("DD_LIFECYCLE_RECEIPT", ROOT / "work/test-evidence/lifecycle.json")
+    )
+    client = httpx.Client(
+        base_url=os.getenv("DD_TEST_API_URL", "http://127.0.0.1:8000"), timeout=45
+    )
     before = summary(Graph())
     receipt["before"] = before
     try:
-        subprocess.run(
-            ["docker", "stop", "decisiondebt-db"], check=True, capture_output=True
-        )
+        subprocess.run(["docker", "stop", container], check=True, capture_output=True)
         for path, method in [
             ("/api/decisions/dec-auth-002/preview", "GET"),
             ("/api/admin/agent/runs", "POST"),
@@ -40,9 +45,7 @@ if __name__ == "__main__":
                 and r.json()["error"]["code"] == "GRAPH_UNAVAILABLE"
             )
     finally:
-        subprocess.run(
-            ["docker", "start", "decisiondebt-db"], check=True, capture_output=True
-        )
+        subprocess.run(["docker", "start", container], check=True, capture_output=True)
     for _ in range(40):
         try:
             Graph().health()
@@ -71,7 +74,7 @@ if __name__ == "__main__":
         [
             "docker",
             "exec",
-            "decisiondebt-db",
+            container,
             "redis-cli",
             "CONFIG",
             "GET",
@@ -84,7 +87,6 @@ if __name__ == "__main__":
     )
     assert smoke and smoke[0]["body"] == "Verified synthetic persistence marker"
     receipt["smoke_marker_persisted"] = True
-    (ROOT / "evidence/test-results/lifecycle.json").write_text(
-        json.dumps(receipt, indent=2) + "\n"
-    )
+    receipt_path.parent.mkdir(parents=True, exist_ok=True)
+    receipt_path.write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt, indent=2))
