@@ -6,6 +6,14 @@
 
 **Track: Company Brain (Track 03)** — WeMakeDevs x FalkorDB Graph Hacks
 
+### Why this is a company brain
+
+> Owners, services, projects, reviewers and documents connect in one [FalkorDB graph](#graph-model).  
+> [Company questions](#ask-the-company-graph) return answers cited to exact source spans.  
+> [Blast-radius queries](backend/app/graph/ask_queries.py) and [ticket drafts](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) turn that knowledge into work.  
+> [Protected local workflows](#run-locally) keep approval with a person before a draft or decision is accepted.  
+> Public mode uses [deterministic Cypher](backend/app/graph/ask_queries.py): no LLM, no keys exposed; a [recorded provider investigation](evidence/agent-traces/llm-run.json) is available separately.
+
 [![DecisionDebt CI](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml)
 
 DecisionDebt connects a company's people, teams, projects, documents and decisions in one source-backed graph. It shows which services and projects a proposed decision affects, and who needs to be involved. Its agent investigates missing or conflicting knowledge and proposes remediation drafts for a person to review before local approval.
