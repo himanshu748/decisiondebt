@@ -1,0 +1,154 @@
+{
+  "provider": "Deepgram",
+  "model": "aura-2-thalia-en",
+  "encoding": "linear16",
+  "sample_rate": 48000,
+  "voice_disclosure": "AI-generated narration",
+  "segments": [
+    {
+      "id": "01-owner",
+      "chapter": "Live company question and source proof",
+      "text": "This is Decision Debt's live, read-only company graph. Ask who owns Billing API. The answer cites its source span and exposes the executed Cypher, parameters, rows and timing.",
+      "hold_seconds": 12,
+      "path": "evidence/ask-addendum-20261017/01-owner.wav",
+      "requested_at": "2026-10-17T03:30:40.585322+00:00",
+      "status": 200,
+      "request_id": "01a147e9-69c3-7a10-9ba0-700affda4a54",
+      "characters": 175,
+      "request_elapsed_seconds": 4.642,
+      "duration_seconds": 11.279979,
+      "sha256": "66c1cd9ae9a6b04b7426154acdf4e9af92efa33e3c5fb28619a4d3c03b26984a",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "11.279979",
+          "size": "1082922"
+        }
+      }
+    },
+    {
+      "id": "02-impact",
+      "chapter": "Bounded blast radius and executed Cypher",
+      "text": "Replacing Auth Gateway reaches twelve services and twelve projects within five hops. The boundary is explicit: Directory Sync is one example at hop six. Here is the actual reverse dependency query.",
+      "hold_seconds": 13.5,
+      "path": "evidence/ask-addendum-20261017/02-impact.wav",
+      "requested_at": "2026-10-17T03:30:45.229458+00:00",
+      "status": 200,
+      "request_id": "01a147e9-7847-7672-b000-9c2fdb5e33cb",
+      "characters": 197,
+      "request_elapsed_seconds": 4.106,
+      "duration_seconds": 13.399979,
+      "sha256": "53ac7870340985c5b515f076bd725ff5720ae695a14e6366fddea69b16eecbbb",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "13.399979",
+          "size": "1286442"
+        }
+      }
+    },
+    {
+      "id": "03-typo",
+      "chapter": "Suggestions require confirmation",
+      "text": "A misspelled Billing API offers a recorded name as a suggestion. No entity is selected until you confirm.",
+      "hold_seconds": 9,
+      "path": "evidence/ask-addendum-20261017/03-typo.wav",
+      "requested_at": "2026-10-17T03:30:49.337555+00:00",
+      "status": 200,
+      "request_id": "01a147e9-884f-7d53-868f-4862694ebbe5",
+      "characters": 105,
+      "request_elapsed_seconds": 2.354,
+      "duration_seconds": 6.919979,
+      "sha256": "d9c5fdd39f440a205df9e788ba72e37acacba0a28835b00e36802893c6e41e84",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "6.919979",
+          "size": "664362"
+        }
+      }
+    },
+    {
+      "id": "04-unsupported",
+      "chapter": "Unsupported request rejected",
+      "text": "An unsupported request is rejected with the supported shapes. No query is run and no answer is guessed.",
+      "hold_seconds": 8,
+      "path": "evidence/ask-addendum-20261017/04-unsupported.wav",
+      "requested_at": "2026-10-17T03:30:51.692986+00:00",
+      "status": 200,
+      "request_id": "01a147e9-9187-7e91-af21-5240ae10057d",
+      "characters": 103,
+      "request_elapsed_seconds": 2.169,
+      "duration_seconds": 6.359979,
+      "sha256": "9c7a2ab287d2e688f51dac8ffc46e1d0281a9682946207341ac68d7a9469cedc",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "6.359979",
+          "size": "610602"
+        }
+      }
+    },
+    {
+      "id": "05-ticket",
+      "chapter": "Client-side Markdown ticket export",
+      "text": "The Action Board exports an evidence-linked Markdown draft. Conflicting ownership stays unassigned for a human decision. Public mode uses deterministic Cypher, no model or exposed key. Narration by Deepgram.",
+      "hold_seconds": 12,
+      "path": "evidence/ask-addendum-20261017/05-ticket.wav",
+      "requested_at": "2026-10-17T03:30:53.863761+00:00",
+      "status": 200,
+      "request_id": "01a147e9-9a02-7941-ba8b-48e076e69e7d",
+      "characters": 207,
+      "request_elapsed_seconds": 4.303,
+      "duration_seconds": 14.159979,
+      "sha256": "15e79e14d879e81e24b68f6d892fe110c461c40e8609039c8f6652fd8ed662c6",
+      "audio_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "pcm_s16le",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "14.159979",
+          "size": "1359402"
+        }
+      }
+    }
+  ]
+}

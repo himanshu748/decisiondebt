@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a147ec-42f4-7113-b467-b821c105a67c",
+    "sha256": "9c7a2ab287d2e688f51dac8ffc46e1d0281a9682946207341ac68d7a9469cedc",
+    "created": "2026-10-17T03:33:48.969Z",
+    "duration": 6.36,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "An unsupported request is rejected with the supported shapes. No query is run, and no answer is guessed.",
+            "confidence": 1.0,
+            "words": [
+              {
+                "word": "an",
+                "start": 0.16,
+                "end": 0.48,
+                "confidence": 0.97998047,
+                "punctuated_word": "An"
+              },
+              {
+                "word": "unsupported",
+                "start": 0.48,
+                "end": 1.12,
+                "confidence": 1.0,
+                "punctuated_word": "unsupported"
+              },
+              {
+                "word": "request",
+                "start": 1.12,
+                "end": 1.52,
+                "confidence": 1.0,
+                "punctuated_word": "request"
+              },
+              {
+                "word": "is",
+                "start": 1.52,
+                "end": 1.76,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "rejected",
+                "start": 1.76,
+                "end": 2.08,
+                "confidence": 1.0,
+                "punctuated_word": "rejected"
+              },
+              {
+                "word": "with",
+                "start": 2.08,
+                "end": 2.32,
+                "confidence": 1.0,
+                "punctuated_word": "with"
+              },
+              {
+                "word": "the",
+                "start": 2.32,
+                "end": 2.48,
+                "confidence": 0.99902344,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "supported",
+                "start": 2.48,
+                "end": 2.8799999,
+                "confidence": 0.9980469,
+                "punctuated_word": "supported"
+              },
+              {
+                "word": "shapes",
+                "start": 2.8799999,
+                "end": 3.6799998,
+                "confidence": 0.9790039,
+                "punctuated_word": "shapes."
+              },
+              {
+                "word": "no",
+                "start": 3.76,
+                "end": 4.08,
+                "confidence": 1.0,
+                "punctuated_word": "No"
+              },
+              {
+                "word": "query",
+                "start": 4.08,
+                "end": 4.4,
+                "confidence": 1.0,
+                "punctuated_word": "query"
+              },
+              {
+                "word": "is",
+                "start": 4.4,
+                "end": 4.64,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "run",
+                "start": 4.64,
+                "end": 5.04,
+                "confidence": 0.8979492,
+                "punctuated_word": "run,"
+              },
+              {
+                "word": "and",
+                "start": 5.04,
+                "end": 5.12,
+                "confidence": 1.0,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "no",
+                "start": 5.12,
+                "end": 5.3599997,
+                "confidence": 1.0,
+                "punctuated_word": "no"
+              },
+              {
+                "word": "answer",
+                "start": 5.3599997,
+                "end": 5.68,
+                "confidence": 1.0,
+                "punctuated_word": "answer"
+              },
+              {
+                "word": "is",
+                "start": 5.68,
+                "end": 5.92,
+                "confidence": 1.0,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "guessed",
+                "start": 5.92,
+                "end": 6.3199997,
+                "confidence": 0.99332684,
+                "punctuated_word": "guessed."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nAn unsupported request is rejected with the supported shapes. No query is run, and no answer is guessed.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "An unsupported request is rejected with the supported shapes.",
+                      "start": 0.16,
+                      "end": 3.6799998
+                    },
+                    {
+                      "text": "No query is run, and no answer is guessed.",
+                      "start": 3.76,
+                      "end": 6.3199997
+                    }
+                  ],
+                  "num_words": 18,
+                  "start": 0.16,
+                  "end": 6.3199997
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

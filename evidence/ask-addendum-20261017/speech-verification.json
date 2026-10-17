@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-17T03:35:22.248906+00:00",
+  "provider": "Deepgram",
+  "asr_model": "nova-3",
+  "method": "Per-segment recognition of actual narration audio; source hashes verified, real word times shifted onto edited clips",
+  "checks": {
+    "source_audio_hashes_match": true,
+    "script_transcript_similarity_above_point_nine": true,
+    "unsupported_no_query_negation_present": true,
+    "ending_discloses_voice_provider": true,
+    "public_no_model_statement_present": true
+  },
+  "passed": true,
+  "caption_cues": 19,
+  "caption_text_changes": "Brand orthography only, including Auth Gateway misrecognized as off gateway; raw provider transcripts retained.",
+  "source_transcriptions": [
+    {
+      "id": "01-owner",
+      "request_id": "01a147ec-30d8-75c1-8dfd-e86459b7f084",
+      "audio_sha256": "66c1cd9ae9a6b04b7426154acdf4e9af92efa33e3c5fb28619a4d3c03b26984a",
+      "script_transcript_similarity": 0.992857,
+      "transcript": "This is DecisionDebt's live read only company graph. Ask who owns Billing API. The answer cites its source span and exposes the executed cipher, parameters, rows, and timing.",
+      "hash_matches_narration": true,
+      "words": 28
+    },
+    {
+      "id": "02-impact",
+      "request_id": "01a147ec-3a88-76c1-b1f9-21029f48838a",
+      "audio_sha256": "53ac7870340985c5b515f076bd725ff5720ae695a14e6366fddea69b16eecbbb",
+      "script_transcript_similarity": 0.927445,
+      "transcript": "Replacing off gateway reaches 12 services and 12 projects within five hops. The boundary is explicit. Directory sync is one example at hop six. Here is the actual reverse dependency query.",
+      "hash_matches_narration": true,
+      "words": 31
+    },
+    {
+      "id": "03-typo",
+      "request_id": "01a147ec-4014-7043-9850-8819e7cafd8b",
+      "audio_sha256": "d9c5fdd39f440a205df9e788ba72e37acacba0a28835b00e36802893c6e41e84",
+      "script_transcript_similarity": 1.0,
+      "transcript": "A misspelled billing API offers a recorded name as a suggestion. No entity is selected until you confirm.",
+      "hash_matches_narration": true,
+      "words": 18
+    },
+    {
+      "id": "04-unsupported",
+      "request_id": "01a147ec-42f4-7113-b467-b821c105a67c",
+      "audio_sha256": "9c7a2ab287d2e688f51dac8ffc46e1d0281a9682946207341ac68d7a9469cedc",
+      "script_transcript_similarity": 1.0,
+      "transcript": "An unsupported request is rejected with the supported shapes. No query is run, and no answer is guessed.",
+      "hash_matches_narration": true,
+      "words": 18
+    },
+    {
+      "id": "05-ticket",
+      "request_id": "01a147ec-468f-7a50-a66c-de94c6420236",
+      "audio_sha256": "15e79e14d879e81e24b68f6d892fe110c461c40e8609039c8f6652fd8ed662c6",
+      "script_transcript_similarity": 0.99422,
+      "transcript": "The action board exports an evidence linked markdown draft. Conflicting ownership stays unassigned for a human decision. Public mode uses deterministic cipher. No model or exposed key. Narration by Deepgram.",
+      "hash_matches_narration": true,
+      "words": 30
+    }
+  ]
+}

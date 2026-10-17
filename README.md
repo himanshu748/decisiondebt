@@ -2,7 +2,7 @@
 
 **Know what a decision breaks before you make it**
 
-**[Live demo](https://decisiondebt.52.202.25.181.sslip.io/) · [Video · 2:57](https://youtu.be/_a0vrYwOlME) · [Public repository](https://github.com/himanshu748/decisiondebt)**
+**[Live demo](https://decisiondebt.52.202.25.181.sslip.io/) · [Video · 2:57](https://youtu.be/_a0vrYwOlME) · [Ask graph addendum · 0:58](https://youtu.be/zfEJ-rkodyI) · [Public repository](https://github.com/himanshu748/decisiondebt)**
 
 **Track: Company Brain (Track 03)** — WeMakeDevs x FalkorDB Graph Hacks
 
@@ -54,7 +54,7 @@ Every supported answer includes executed Cypher, bound parameters, raw query row
 
 The [Action Board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) can copy or download each draft as a Markdown ticket with its reason, evidence and suggested owner (or “unassigned: needs decision”). Exports happen entirely in the browser. All graph writes remain forbidden in public mode, with the existing rate limits and no provider key.
 
-The question box and client-side ticket exports were added after the [recorded demo](https://youtu.be/_a0vrYwOlME); the video is unchanged.
+The [58-second Ask graph addendum](https://youtu.be/zfEJ-rkodyI) shows live cited answers, executed Cypher and timings, typo suggestions, unsupported-question rejection and a Markdown ticket export. The [2:57 main demo](https://youtu.be/_a0vrYwOlME) is unchanged. [Addendum manifest and capture proof](evidence/ask-addendum-20261017/manifest.json) · [Deepgram speech checks](evidence/ask-addendum-20261017/speech-verification.json) · [Unlisted upload receipt](evidence/ask-addendum-20261017/youtube-upload-receipt.json).
 
 ## Run locally
 

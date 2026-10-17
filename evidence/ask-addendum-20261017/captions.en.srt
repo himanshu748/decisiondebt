@@ -1,0 +1,83 @@
+1
+00:00:00,250 --> 00:00:03,530
+This is DecisionDebt's live read only
+company graph.
+
+2
+00:00:03,610 --> 00:00:05,680
+Ask who owns Billing API.
+
+3
+00:00:05,690 --> 00:00:08,560
+The answer cites its source span and exposes
+the
+
+4
+00:00:08,570 --> 00:00:11,610
+executed cipher, parameters, rows, and
+timing.
+
+5
+00:00:12,317 --> 00:00:16,067
+Replacing Auth Gateway reaches 12 services
+and 12 projects
+
+6
+00:00:16,077 --> 00:00:17,677
+within five hops.
+
+7
+00:00:17,757 --> 00:00:19,597
+The boundary is explicit.
+
+8
+00:00:19,677 --> 00:00:22,867
+Directory Sync is one example at hop six.
+
+9
+00:00:22,877 --> 00:00:25,757
+Here is the actual reverse dependency query.
+
+10
+00:00:26,677 --> 00:00:29,707
+A misspelled billing API offers a recorded
+name as
+
+11
+00:00:29,717 --> 00:00:30,757
+a suggestion.
+
+12
+00:00:30,917 --> 00:00:33,477
+No entity is selected until you confirm.
+
+13
+00:00:35,677 --> 00:00:39,267
+An unsupported request is rejected with the
+supported shapes.
+
+14
+00:00:39,277 --> 00:00:41,917
+No query is run, and no answer is guessed.
+
+15
+00:00:43,597 --> 00:00:47,197
+The action board exports an evidence linked
+markdown draft.
+
+16
+00:00:47,597 --> 00:00:51,037
+Conflicting ownership stays unassigned for a
+human decision.
+
+17
+00:00:51,277 --> 00:00:53,987
+Public mode uses deterministic cipher.
+
+18
+00:00:53,997 --> 00:00:56,157
+No model or exposed key.
+
+19
+00:00:56,237 --> 00:00:57,597
+Narration by Deepgram.

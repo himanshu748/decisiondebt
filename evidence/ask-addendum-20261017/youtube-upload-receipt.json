@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-17T03:40:17.140Z",
+  "url": "https://youtu.be/zfEJ-rkodyI",
+  "video_id": "zfEJ-rkodyI",
+  "studio_url": "https://studio.youtube.com/video/zfEJ-rkodyI/edit",
+  "channel": "Himanshu Jha",
+  "visibility": "Unlisted",
+  "title": "DecisionDebt | Ask the Company Graph | 4K Addendum | Graph Hacks Track 03",
+  "description": "Know what a decision breaks before you make it.\nTrack 03: Company Brain — WeMakeDevs x FalkorDB Graph Hacks.\n\nLive read-only demo: https://decisiondebt.52.202.25.181.sslip.io/\nRepository: https://github.com/himanshu748/decisiondebt\nMain demo, unchanged (2:57): https://youtu.be/_a0vrYwOlME\nAsk graph templates: https://github.com/himanshu748/decisiondebt/blob/main/backend/app/graph/ask_queries.py\n\nA 58.2-second addendum recorded from the live site at 3840×2160 and 30 fps, with digital close-ups and Deepgram AI narration (Aura 2 Thalia). All Aster Works records are synthetic.\n\nIt shows: Who owns Billing API?; What would replacing Auth Gateway affect?; the typo Biling API offering Billing API as a suggestion; an unsupported question rejected without a query; and the real client-side Markdown ticket export. Cypher, parameters, row counts, query timings and exact source spans appear on screen. The public graph stayed at revision 16.\n\nPublic questions use deterministic intent matching and fixed parameterized read-only Cypher through GRAPH.RO_QUERY. No model is called and no provider key is exposed. A previously recorded genuine provider investigation is available in the main demo and repository. Approval workflows require the protected local setup; this addendum performs reads and a client-side export only.\n\nChapters\n00:00 Live cited question and executed Cypher\n00:12 Bounded impact, suggestions and unsupported questions\n00:43 Markdown ticket export\n\nAI disclosure: The participant originated the core idea and directed the UI; AI expanded the specification. Codex generated most of the implementation, tests and styling, plus the recording and editing automation. Deepgram generated the narration. These automated recording actions are not attributed to the participant as personal verification.\n\nThe existing main video and all earlier evidence are preserved unchanged. The recording manifest, exact answers, speech checks and upload receipt are in evidence/ask-addendum-20261017 on the addendum branch.\n",
+  "file": "evidence/ask-addendum-20261017/decisiondebt-ask-graph-addendum-4k.mp4",
+  "local_duration_seconds": 58.2,
+  "sha256": "b65f85db6e64626a86b219f5b6f9597de57d0d45f46584be240ac721658d4484",
+  "language": "English",
+  "captions": "captions.en.srt",
+  "captions_visible_in_playback": true,
+  "ai_use_disclosed": true,
+  "copyright_check": "No issues found at upload",
+  "quality_selected": "2160p 4K",
+  "playback": {
+    "currentTime": 50.567031,
+    "duration": 58.241,
+    "error": null,
+    "height": 2160,
+    "paused": true,
+    "readyState": 4,
+    "width": 3840
+  },
+  "proof": [
+    "youtube-published.jpg",
+    "youtube-2160p-playback.jpg"
+  ],
+  "old_video": "https://youtu.be/_a0vrYwOlME",
+  "old_video_modified": false,
+  "submission_performed": false
+}

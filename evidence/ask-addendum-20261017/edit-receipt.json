@@ -1,0 +1,440 @@
+{
+  "format": "Edited continuous native 4K Chromium compositor recording",
+  "source": "evidence/ask-addendum-20261017/raw/page@260122d9318ca4052fccf799b1270106.webm",
+  "source_sha256": "15756e218025d33c5ce2ca23c1e0d71fc63bc7f6c7b4a3fa355c94d0ad8507b1",
+  "source_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "vp9",
+        "codec_long_name": "Google VP9",
+        "profile": "Profile 0",
+        "codec_type": "video",
+        "codec_tag_string": "[0][0][0][0]",
+        "codec_tag": "0x0000",
+        "mime_codec_string": "vp09.00.50.08",
+        "width": 3840,
+        "height": 2160,
+        "coded_width": 3840,
+        "coded_height": 2160,
+        "has_b_frames": 0,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": -99,
+        "color_range": "tv",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/1000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "ENCODER": "Lavc61.3.100 libvpx-vp9",
+          "DURATION": "00:01:03.733000000"
+        }
+      }
+    ],
+    "format": {
+      "filename": "evidence/ask-addendum-20261017/raw/page@260122d9318ca4052fccf799b1270106.webm",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "matroska,webm",
+      "format_long_name": "Matroska / WebM",
+      "start_time": "0.000000",
+      "duration": "63.733000",
+      "size": "32901273",
+      "bit_rate": "4129888",
+      "probe_score": 100,
+      "tags": {
+        "creation_time": "2026-10-17T03:32:08.646000Z",
+        "ENCODER": "Lavf61.1.100"
+      }
+    }
+  },
+  "wall_clock_offset_seconds": 0.15400004386901855,
+  "output_size": [
+    3840,
+    2160
+  ],
+  "fps": 30,
+  "screenshots_used_as_video": false,
+  "closeups": "Digital reframing of live video frames captured at native 3840x2160; no still-image montage",
+  "omitted": "Initial page load; chronological public question and export scenes are retained.",
+  "segments": [
+    {
+      "id": "01-owner",
+      "chapter": "Live company question and source proof",
+      "source_start_seconds": 5.331000043869018,
+      "source_end_seconds": 17.397666710535685,
+      "start_seconds": 0.0,
+      "duration_seconds": 12.066666666666666,
+      "frames": 362,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          5.370000000000001,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          6.670000000000001,
+          1.1286283638415688,
+          2138.82,
+          1080.375
+        ],
+        [
+          7.476000000000001,
+          1.1286283638415688,
+          2138.82,
+          1080.375
+        ],
+        [
+          8.776000000000002,
+          1.1286283638415688,
+          2138.82,
+          1080.453125
+        ],
+        [
+          9.782,
+          1.1286283638415688,
+          2138.82,
+          1080.453125
+        ],
+        [
+          11.082,
+          1.1286283638415688,
+          2138.82,
+          1079.828125
+        ]
+      ],
+      "narration_file": "evidence/ask-addendum-20261017/01-owner.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/ask-addendum-20261017/render/01-owner.mp4"
+    },
+    {
+      "id": "02-impact",
+      "chapter": "Bounded blast radius and executed Cypher",
+      "source_start_seconds": 17.41600004386902,
+      "source_end_seconds": 31.61600004386902,
+      "start_seconds": 12.066666666666666,
+      "duration_seconds": 14.2,
+      "frames": 426,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.934000000000001,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          3.234000000000001,
+          1.1286283638415688,
+          2138.82,
+          1080.375
+        ],
+        [
+          5.140999999999998,
+          1.1286283638415688,
+          2138.82,
+          1080.375
+        ],
+        [
+          6.440999999999998,
+          1.1286283638415688,
+          2138.82,
+          1079.53125
+        ]
+      ],
+      "narration_file": "evidence/ask-addendum-20261017/02-impact.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/ask-addendum-20261017/render/02-impact.mp4"
+    },
+    {
+      "id": "03-typo",
+      "chapter": "Suggestions require confirmation",
+      "source_start_seconds": 31.618000043869017,
+      "source_end_seconds": 40.61800004386902,
+      "start_seconds": 26.266666666666666,
+      "duration_seconds": 9.0,
+      "frames": 270,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.6900000000000048,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          2.9900000000000047,
+          1.1286283638415688,
+          2138.82,
+          1079.8203125
+        ]
+      ],
+      "narration_file": "evidence/ask-addendum-20261017/03-typo.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/ask-addendum-20261017/render/03-typo.mp4"
+    },
+    {
+      "id": "04-unsupported",
+      "chapter": "Unsupported request rejected",
+      "source_start_seconds": 40.62100004386902,
+      "source_end_seconds": 48.62100004386902,
+      "start_seconds": 35.266666666666666,
+      "duration_seconds": 8.0,
+      "frames": 240,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          3.057000000000002,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          4.357000000000002,
+          1.1286283638415688,
+          2138.82,
+          1080.046875
+        ]
+      ],
+      "narration_file": "evidence/ask-addendum-20261017/04-unsupported.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/ask-addendum-20261017/render/04-unsupported.mp4"
+    },
+    {
+      "id": "05-ticket",
+      "chapter": "Client-side Markdown ticket export",
+      "source_start_seconds": 48.62600004386902,
+      "source_end_seconds": 63.55933337720235,
+      "start_seconds": 43.266666666666666,
+      "duration_seconds": 14.933333333333334,
+      "frames": 448,
+      "camera_keyframes": [
+        [
+          0.0,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          1.7370000000000019,
+          1.0,
+          1920.0,
+          1080.0
+        ],
+        [
+          3.0370000000000017,
+          1.9,
+          1125.328125,
+          1069.9765625
+        ],
+        [
+          4.115000000000002,
+          1.9,
+          1125.328125,
+          1069.9765625
+        ],
+        [
+          5.415000000000002,
+          1.0,
+          1920.0,
+          1080.0
+        ]
+      ],
+      "narration_file": "evidence/ask-addendum-20261017/05-ticket.wav",
+      "narration_delay_seconds": 0.25,
+      "rendered_clip": "work/ask-addendum-20261017/render/05-ticket.mp4"
+    }
+  ],
+  "output": "evidence/ask-addendum-20261017/decisiondebt-ask-graph-addendum-4k.mp4",
+  "duration_seconds": 58.2,
+  "sha256": "b65f85db6e64626a86b219f5b6f9597de57d0d45f46584be240ac721658d4484",
+  "output_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640033",
+        "width": 3840,
+        "height": 2160,
+        "coded_width": 3840,
+        "coded_height": 2160,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "level": 51,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 893952,
+        "duration": "58.200000",
+        "bit_rate": "2443153",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1746",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc62.28.102 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 1,
+        "channel_layout": "mono",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 2793600,
+        "duration": "58.200000",
+        "bit_rate": "176292",
+        "nb_frames": "2730",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "eng",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "evidence/ask-addendum-20261017/decisiondebt-demo-4k-narrated.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "58.200000",
+      "size": "19122053",
+      "bit_rate": "2628460",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf62.12.102"
+      }
+    }
+  },
+  "public_readonly_capture": true
+}
