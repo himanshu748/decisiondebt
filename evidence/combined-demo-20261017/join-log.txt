@@ -1,0 +1,39 @@
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa28c20280] Auto-inserting h264_mp4toannexb bitstream filter
+Input #0, concat, from 'work/combined-demo-20261017/concat.txt':
+  Duration: N/A, start: -0.021333, bitrate: 2556 kb/s
+  Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/unknown/unknown, progressive), 3840x2160 [SAR 1:1 DAR 16:9], 2375 kb/s, 30 fps, 30 tbr, 15360 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.102 libx264
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 181 kb/s, start -0.021333
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Output #0, mp4, to 'evidence/combined-demo-20261017/decisiondebt-complete-4k-demo.mp4':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/unknown/unknown, progressive), 3840x2160 [SAR 1:1 DAR 16:9], q=2-31, 2375 kb/s, 30 fps, 30 tbr, 15360 tbn
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.102 libx264
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 192 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 aac
+      handler_name    : SoundHandler
+frame=  671 fps=0.0 q=-1.0 size=    6656KiB time=00:00:21.95 bitrate=2483.9kbits/s speed=43.9x elapsed=0:00:00.50
+frame= 1204 fps=1197 q=-1.0 size=   13312KiB time=00:00:39.72 bitrate=2745.3kbits/s speed=39.5x elapsed=0:00:01.00
+frame= 1929 fps=1277 q=-1.0 size=   20736KiB time=00:01:03.87 bitrate=2659.5kbits/s speed=42.3x elapsed=0:00:01.51
+frame= 2664 fps=1322 q=-1.0 size=   26112KiB time=00:01:28.36 bitrate=2420.8kbits/s speed=43.9x elapsed=0:00:02.01
+frame= 3305 fps=1313 q=-1.0 size=   33792KiB time=00:01:49.73 bitrate=2522.6kbits/s speed=43.6x elapsed=0:00:02.51
+frame= 3979 fps=1318 q=-1.0 size=   40704KiB time=00:02:12.22 bitrate=2521.8kbits/s speed=43.8x elapsed=0:00:03.01
+frame= 4728 fps=1342 q=-1.0 size=   49152KiB time=00:02:37.18 bitrate=2561.7kbits/s speed=44.6x elapsed=0:00:03.52
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0xa28c91400] Auto-inserting h264_mp4toannexb bitstream filter
+frame= 5425 fps=1347 q=-1.0 size=   55552KiB time=00:03:00.41 bitrate=2522.4kbits/s speed=44.8x elapsed=0:00:04.02
+frame= 6139 fps=1355 q=-1.0 size=   62464KiB time=00:03:24.22 bitrate=2505.6kbits/s speed=45.1x elapsed=0:00:04.53
+frame= 6944 fps=1379 q=-1.0 size=   73472KiB time=00:03:51.06 bitrate=2604.9kbits/s speed=45.9x elapsed=0:00:05.03
+[mp4 @ 0xa28c20780] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0xa28c50900] video:68804KiB audio:5165KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.342881%
+frame= 7068 fps=1371 q=-1.0 Lsize=   74223KiB time=00:03:55.55 bitrate=2581.3kbits/s speed=45.7x elapsed=0:00:05.15
+[aac @ 0xa29042300] Qavg: 44531.934

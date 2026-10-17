@@ -2,7 +2,7 @@
 
 **Know what a decision breaks before you make it**
 
-**[Live demo](https://decisiondebt.52.202.25.181.sslip.io/) · [Video · 2:57](https://youtu.be/_a0vrYwOlME) · [Ask graph addendum · 0:58](https://youtu.be/zfEJ-rkodyI) · [Public repository](https://github.com/himanshu748/decisiondebt)**
+**[Live demo](https://decisiondebt.52.202.25.181.sslip.io/) · [Complete video · 3:56](https://youtu.be/6-azewUt2Z4) · [Public repository](https://github.com/himanshu748/decisiondebt)**
 
 **Track: Company Brain (Track 03)** — WeMakeDevs x FalkorDB Graph Hacks
 
@@ -62,7 +62,7 @@ Every supported answer includes executed Cypher, bound parameters, raw query row
 
 The [Action Board](https://decisiondebt.52.202.25.181.sslip.io/studio?tab=Action%20Board) can copy or download each draft as a Markdown ticket with its reason, evidence and suggested owner (or “unassigned: needs decision”). Exports happen entirely in the browser. All graph writes remain forbidden in public mode, with the existing rate limits and no provider key.
 
-The [58-second Ask graph addendum](https://youtu.be/zfEJ-rkodyI) shows live cited answers, executed Cypher and timings, typo suggestions, unsupported-question rejection and a Markdown ticket export. The [2:57 main demo](https://youtu.be/_a0vrYwOlME) is unchanged. [Addendum manifest and capture proof](evidence/ask-addendum-20261017/manifest.json) · [Deepgram speech checks](evidence/ask-addendum-20261017/speech-verification.json) · [Unlisted upload receipt](evidence/ask-addendum-20261017/youtube-upload-receipt.json).
+The [complete 3:56 judge demo](https://youtu.be/6-azewUt2Z4) includes the full decision walkthrough and Ask graph sequence in one video: live cited answers, executed Cypher and timings, typo suggestions, unsupported-question rejection and a Markdown ticket export. [Combined-video manifest](evidence/combined-demo-20261017/manifest.json) · [Upload and playback receipt](evidence/combined-demo-20261017/youtube-upload-receipt.json). The [original 2:57 video](https://youtu.be/_a0vrYwOlME), [58-second addendum](https://youtu.be/zfEJ-rkodyI) and their [capture and speech proof](evidence/ask-addendum-20261017/manifest.json) remain unchanged.
 
 ## Run locally
 
@@ -164,7 +164,9 @@ Seed only an empty `decisiondebt_public` graph; the importer refuses to overwrit
 
 ## The narrated 4K walkthrough
 
-The **2:57.4** [4K screen recording](evidence/demo-v3/decisiondebt-demo-4k-under3.mp4) captures actual browser interaction at **3840×2160, 30 fps**, with close-ups, **Deepgram Aura-2 Thalia AI narration**, and [word-timed English captions](evidence/demo-v3/captions-under3.en.srt). The [native capture receipt](evidence/demo-v3/capture-receipt.json), [final edit receipt](evidence/demo-v3/under3-edit-receipt.json), and [speech verification](evidence/demo-v3/speech-verification-under3.json) record how it was produced. The [video verification](evidence/demo-v3/verification.json) records the delivered file and historical-evidence hashes.
+Watch the [complete 3:56 primary demo](https://youtu.be/6-azewUt2Z4). It joins both original recordings in full, with native 4K video packets preserved and the existing Deepgram narration retained. [Combined MP4](evidence/combined-demo-20261017/decisiondebt-complete-4k-demo.mp4) · [English captions](evidence/combined-demo-20261017/captions.en.srt) · [Edit and preservation manifest](evidence/combined-demo-20261017/manifest.json).
+
+The original **2:57.4** [4K screen recording](evidence/demo-v3/decisiondebt-demo-4k-under3.mp4) captures actual browser interaction at **3840×2160, 30 fps**, with close-ups, **Deepgram Aura-2 Thalia AI narration**, and [word-timed English captions](evidence/demo-v3/captions-under3.en.srt). The [native capture receipt](evidence/demo-v3/capture-receipt.json), [final edit receipt](evidence/demo-v3/under3-edit-receipt.json), and [speech verification](evidence/demo-v3/speech-verification-under3.json) record how it was produced. The [video verification](evidence/demo-v3/verification.json) records the delivered file and historical-evidence hashes.
 
 Local approval and import/retraction were performed in a separate recording database seeded from the unchanged synthetic snapshot. The genuine provider investigation is the previously recorded run displayed in the UI; the new recording makes no LLM call. Automated browser actions are not participant verification.
 
@@ -297,7 +299,7 @@ The extractor recognizes explicit supported language. Negated, hedged, unresolve
 - Browser checks cover Chromium at 1440 px and 375 px, not every browser/device. Fonts use Google Fonts and degrade to sans-serif offline.
 - The public read-only deployment and unlisted YouTube upload are linked above. No release, hackathon form submission or external business ticket/email operation was performed.
 
-The [addendum submission review](evidence/submission-review-20261017/review.json) records the current video links, repository metadata and preservation checks. The [original submission review](evidence/submission-review-20261016/review.json) remains unchanged. The fresh demo rerun is recorded below.
+The [combined-video review](evidence/submission-review-20261017/combined-video.json) records the single primary video and preservation checks. The [addendum review](evidence/submission-review-20261017/review.json) and [original submission review](evidence/submission-review-20261016/review.json) remain unchanged. The fresh demo rerun is recorded below.
 
 ## Verification
 

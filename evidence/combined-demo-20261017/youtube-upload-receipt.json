@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-17T04:20:16.934Z",
+  "url": "https://youtu.be/6-azewUt2Z4",
+  "video_id": "6-azewUt2Z4",
+  "studio_url": "https://studio.youtube.com/video/6-azewUt2Z4/edit",
+  "title": "DecisionDebt | Complete 4K Demo | Company Brain | FalkorDB Graph Hacks",
+  "description": "Know what a decision breaks before you make it.\nTrack 03: Company Brain — WeMakeDevs x FalkorDB Graph Hacks.\n\nLive read-only demo: https://decisiondebt.52.202.25.181.sslip.io/\nRepository: https://github.com/himanshu748/decisiondebt\nSetup and graph model: https://github.com/himanshu748/decisiondebt#run-locally\nCompany-question Cypher: https://github.com/himanshu748/decisiondebt/blob/main/backend/app/graph/ask_queries.py\n\nOne complete judge-facing demo, about 3:56, combining the full original 2:57 recording and full 58-second Ask graph addendum. Native browser footage at 3840×2160, 30 fps. The video is stream-copied without scaling or video re-encoding; the original Deepgram AI narration is retained. English captions and chapters included. All Aster Works data is synthetic.\n\nThe first recording shows decision impact, ownership conflicts and gaps, source spans, knowledge drift, a previously recorded genuine provider investigation, separate local approval, and import/retraction in an isolated synthetic recording database. The appended recording shows the current public site's live company-question box, executed Cypher and timings, typo suggestions, an unsupported question rejected without a query, and a real client-side Markdown ticket export.\n\nPublic mode uses deterministic intent matching and fixed parameterized GRAPH.RO_QUERY templates. It exposes no provider key and makes no LLM call. The public graph remains revision 16. Import and approval demonstrations use the protected local setup; they are disabled on the public site.\n\nChapters\n00:00 Know what a decision breaks\n00:11 Multi-hop impact graph\n00:28 Conflicting owners and source proof\n00:44 Missing ownership\n00:58 Knowledge drift tiers\n01:15 Previously recorded provider investigation\n01:31 Drafts and separate local approval\n01:48 Import a synthetic dependency\n02:07 Source-specific retraction\n02:24 Cypher and connected projects\n02:41 Public demo and closing\n02:57 Ask the company graph and exact source spans\n03:09 Live impact question and executed Cypher\n03:23 Typos and unsupported questions\n03:40 Markdown ticket export\n\nOriginal recordings, preserved unchanged:\nhttps://youtu.be/_a0vrYwOlME\nhttps://youtu.be/zfEJ-rkodyI\n\nAI disclosure: The participant originated the core idea and directed the UI; AI expanded the specification. Codex generated most of the implementation, tests and styling, plus browser recording and video editing automation. Deepgram generated the narration (Aura 2 Thalia). Automated recording and checks are not attributed to the participant as personal verification.\n",
+  "visibility": "Unlisted",
+  "language": "English",
+  "captions": "captions.en.srt",
+  "captions_visible_in_playback": true,
+  "narration": "Existing Deepgram Aura 2 Thalia narration retained in full",
+  "file": "decisiondebt-complete-4k-demo.mp4",
+  "sha256": "c38e93802478c8f30523feac14def6eed36734be1dfad865b57e3a1b3e3e93b0",
+  "duration_seconds": 235.648,
+  "playback": {
+    "currentTime": 225.881655,
+    "duration": 235.661,
+    "error": null,
+    "height": 2160,
+    "paused": false,
+    "readyState": 4,
+    "width": 3840
+  },
+  "quality": "Auto (2160p 4K)",
+  "full_addendum_played_through_to_ended_without_media_error": true,
+  "source_videos_preserved": [
+    "https://youtu.be/_a0vrYwOlME",
+    "https://youtu.be/zfEJ-rkodyI"
+  ],
+  "processing_note": "The initial watch page was opened before SD processing completed. Playback was verified after processing, including the join and the end.",
+  "proof": [
+    "youtube-4k-playback.jpg"
+  ],
+  "submitted": false
+}

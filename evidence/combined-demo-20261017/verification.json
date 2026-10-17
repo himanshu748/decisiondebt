@@ -1,0 +1,11 @@
+{
+  "scope": "Full staged blobs including binary video; installed skill known patterns and exact configured private values",
+  "staged_files_scanned": 14,
+  "omitted": 0,
+  "findings": [],
+  "configured_private_values_absent": true,
+  "caption_cues": 80,
+  "all_captions_within_duration_and_nonoverlapping": true,
+  "old_blank_key_example_verified": true,
+  "passed": true
+}
