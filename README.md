@@ -262,7 +262,7 @@ The UI includes template names, Cypher, bound parameters, actual revision, row c
 
 ## Verify and inspect
 
-[GitHub Actions](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml) starts the pinned FalkorDB service, builds the frontend, runs pytest including real DB outage/restart, and runs Chromium UI smoke at desktop and mobile sizes. [Successful CI receipt](evidence/ci/run-38896361671.json) · [CI test output](evidence/ci/38896361671/pytest.txt) · [New local test run](evidence/submission-ready-20261016/pytest-full.txt). The new runs report **46 passed**; the earlier 42-test results remain unchanged in their original evidence files.
+[GitHub Actions](https://github.com/himanshu748/decisiondebt/actions/workflows/ci.yml) starts the pinned FalkorDB service, builds the frontend, runs pytest including real DB outage/restart, and runs Chromium checks at desktop and mobile sizes. The [successful CI run](https://github.com/himanshu748/decisiondebt/actions/runs/38935524152) passed **76 pytest tests and 7 browser checks**. [Recorded CI receipt](evidence/ask-graph-20261016/application-ci.json) · [Pytest output](evidence/ask-graph-20261016/ci-pytest.txt) · [Browser report](evidence/ask-graph-20261016/ci-ui-report.json). Earlier 46-test and 42-test results remain unchanged in their original evidence files.
 
 ```bash
 pytest -q
