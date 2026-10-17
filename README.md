@@ -297,7 +297,7 @@ The extractor recognizes explicit supported language. Negated, hedged, unresolve
 - Browser checks cover Chromium at 1440 px and 375 px, not every browser/device. Fonts use Google Fonts and degrade to sans-serif offline.
 - The public read-only deployment and unlisted YouTube upload are linked above. No release, hackathon form submission or external business ticket/email operation was performed.
 
-The [submission review](evidence/submission-review-20261016/review.json) records the link and workflow checks. The fresh demo rerun is recorded below.
+The [addendum submission review](evidence/submission-review-20261017/review.json) records the current video links, repository metadata and preservation checks. The [original submission review](evidence/submission-review-20261016/review.json) remains unchanged. The fresh demo rerun is recorded below.
 
 ## Verification
 

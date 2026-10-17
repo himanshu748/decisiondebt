@@ -11,6 +11,8 @@ DecisionDebt connects a company's people, teams, projects, services, documents a
 | Public repository | https://github.com/himanshu748/decisiondebt |
 | Live read-only demo | https://decisiondebt.52.202.25.181.sslip.io/ |
 | YouTube demo, unlisted · 2:57 | https://youtu.be/_a0vrYwOlME |
+| Ask graph addendum, unlisted · 0:58 | https://youtu.be/zfEJ-rkodyI |
+| Addendum manifest and receipts | [Native 4K capture, exact answers, Deepgram verification and upload](https://github.com/himanshu748/decisiondebt/tree/3c2bc7f/evidence/ask-addendum-20261017) |
 | Complete local setup | [README: Run locally](https://github.com/himanshu748/decisiondebt/blob/main/README.md#run-locally) |
 | Graph data model | [README: Graph model](https://github.com/himanshu748/decisiondebt/blob/main/README.md#graph-model) |
 | Product Cypher queries | [Actual query templates](https://github.com/himanshu748/decisiondebt/blob/main/backend/app/graph/queries.py) |
@@ -22,7 +24,9 @@ DecisionDebt connects a company's people, teams, projects, services, documents a
 
 ## What the working demonstration establishes
 
-The question box and client-side ticket exports were added after the [recorded demo](https://youtu.be/_a0vrYwOlME); the video is unchanged. Public visitors can ask the five supported company-question types using deterministic, source-cited FalkorDB reads, and copy/download existing draft tasks without changing the graph or creating external tickets.
+The [58.2-second Ask graph addendum](https://youtu.be/zfEJ-rkodyI) shows the live question box answering “Who owns Billing API?” and “What would replacing Auth Gateway affect?”, with executed Cypher, parameters, query timings and exact source spans. It also shows a typo producing suggestions, an unsupported question rejected without a query, and a real Markdown ticket export. [Capture and edit manifest](https://github.com/himanshu748/decisiondebt/blob/3c2bc7f/evidence/ask-addendum-20261017/manifest.json) · [Unlisted publication and 2160p playback](https://github.com/himanshu748/decisiondebt/blob/3c2bc7f/evidence/ask-addendum-20261017/youtube-upload-receipt.json). The [2:57 main demo](https://youtu.be/_a0vrYwOlME) is unchanged.
+
+Public visitors can ask the five supported company-question types using deterministic, source-cited FalkorDB reads, and copy/download existing draft tasks without changing the graph or creating external tickets. Public mode uses no LLM or exposed provider key; the genuine recorded provider investigation remains available separately.
 
 All records belong to fictional Aster Works. The [original corpus receipt](https://github.com/himanshu748/decisiondebt/blob/main/evidence/query-results/initial-preview.json) and [synthetic snapshot](https://github.com/himanshu748/decisiondebt/blob/main/evidence/deployment/graph-snapshot-20261016.json) make the dataset reproducible. Native graph queries establish multi-hop impact, ownership, connected projects and document provenance; the browser displays those returned results.
 
@@ -42,7 +46,7 @@ The **2:57.4** [narrated 4K demo](https://github.com/himanshu748/decisiondebt/bl
 
 The [previous silent MP4](https://github.com/himanshu748/decisiondebt/blob/main/evidence/decisiondebt-demo.mp4), [historical capture manifest](https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-v2/manifest.json), and earlier application, provider and video measurements remain unchanged.
 
-The [final automated submission review](https://github.com/himanshu748/decisiondebt/blob/main/evidence/submission-review-20261016/review.json) records fresh public workflow checks and preserved historical evidence. The [updated video disclosure receipt](https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-recheck-20261016/youtube-description.json) records the matching YouTube description; the video and captions are unchanged.
+The [addendum submission review](https://github.com/himanshu748/decisiondebt/blob/codex/ask-graph-video-addendum/evidence/submission-review-20261017/review.json) records the current video links, repository website/topics, live capture and preservation checks. The [original automated review](https://github.com/himanshu748/decisiondebt/blob/main/evidence/submission-review-20261016/review.json) and [main-video disclosure receipt](https://github.com/himanshu748/decisiondebt/blob/main/evidence/demo-recheck-20261016/youtube-description.json) remain unchanged.
 
 ## AI disclosure and participant responsibility
 
