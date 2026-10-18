@@ -222,6 +222,11 @@ The [deployed outage receipt](evidence/deployment/receipt-20261016.json) records
 
 ## Graph model
 
+![DecisionDebt graph model: nodes and edges](docs/diagrams/graph-model.png)
+
+<details>
+<summary>Mermaid source</summary>
+
 ```mermaid
 graph LR
   Consumer[Service consumer] -->|DEPENDS_ON, claim_id| Provider[Service provider]
@@ -237,6 +242,8 @@ graph LR
   Task -->|CITES| Claim
   Task -->|AFFECTS| Consumer
 ```
+
+</details>
 
 Every semantic edge carries a verified Claim ID. The Claim stores subject, predicate, object, source ID, source revision, exact start/end offsets, anchor field, excerpt, extraction method and status. SourceRevision retains normalized original text and parsed body. Metadata claims anchor to raw front matter/JSON; relation claims anchor to parsed body. Updating one source retracts only its claims and parallel claim-specific edges, preserving independent support.
 
